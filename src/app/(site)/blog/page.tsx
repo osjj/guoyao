@@ -1,79 +1,69 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
-import { ArticleCard } from "@/components/site/article-card";
+import { ArrowUpRight } from "lucide-react";
 import { getPublishedBlogPosts } from "@/lib/public-blog";
-import { GuideClusterCards } from "@/components/site/guide-cluster-cards";
-import { EditorialHero } from "@/components/site/editorial-hero";
-import styles from "@/components/site/editorial-pages.module.css";
+import { ContentState, EditorialImage, EditorialIntro, loadEditorialContent } from "@/components/site/metal-editorial";
+import styles from "@/components/site/metal-editorial.module.css";
 
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "Practical glassware buying guides covering product selection, capacity, decoration, packaging and wholesale sourcing.",
+  title: "Blog — The Material Journal",
+  description: "Perspectives on architectural metal, surface finishes and the details that shape a space. Read the Guoyao Metal journal.",
   alternates: { canonical: "/blog" },
 };
 
+const topics = ["Materials & finishes", "Architecture & interiors", "Details & craftsmanship"];
+
 export default async function BlogPage() {
-  const articles = await getPublishedBlogPosts();
-  const featuredArticle = articles.find((article) => article.featured) ?? articles[0];
-  const remainingArticles = featuredArticle
-    ? articles.filter((article) => article.id !== featuredArticle.id)
-    : [];
+  const result = await loadEditorialContent(getPublishedBlogPosts());
+  const articles = result.available ? result.data : [];
+  const featured = articles.find((article) => article.featured) ?? articles[0];
+  const remaining = featured ? articles.filter((article) => article.id !== featured.id) : [];
 
-  return (
-    <div className={styles.page}>
-      <EditorialHero
-        eyebrow="Glarivo journal"
-        title="Clear notes for better glassware decisions."
-        description="Practical guidance for comparing glassware, confirming product specifications and preparing your next wholesale order."
-        image="/images/home/editorial/shot-glass-guide.webp"
-        imageAlt="Glassware selection arranged for a closer look at shape and proportions"
-      />
+  return <div className={styles.page}>
+    <EditorialIntro label="The material journal / Blog" title={<>A closer look.<br /><em>A new perspective.</em></>}
+      description="Ideas, observations and practical notes from the world of architectural metal. A place to explore what a material can bring to a space."
+      note="Material / Detail / Perspective" />
+    <EditorialImage src="/images/metal/material-study.webp" alt="Architectural metal surfaces arranged as a material and finish study" caption="Material study · Concept imagery" />
 
-      {featuredArticle ? (
-        <section className={styles.featuredSection} aria-label="Featured article">
-          <Link href={`/blog/${featuredArticle.slug}`} className={`${styles.container} ${styles.featured}`}>
-            <div className={styles.featuredImage}>
-              <Image src={featuredArticle.coverImage} alt={featuredArticle.coverImageAlt} fill unoptimized sizes="(min-width: 900px) 50vw, 100vw" className={featuredArticle.coverImageFit === "contain" ? "object-contain" : "object-cover"} />
-            </div>
-            <div className={styles.featuredCopy}>
-              <div className={styles.kicker}><span>Featured article</span><span>{featuredArticle.readTime}</span></div>
-              <h2>{featuredArticle.title}</h2>
-              <p>{featuredArticle.excerpt}</p>
-              <span className={styles.textLink}>Read the article<ArrowRight size={18} aria-hidden="true" /></span>
-            </div>
-          </Link>
-        </section>
-      ) : (
-        <section className={`${styles.container} ${styles.section}`}>
-          <div className={styles.empty}>
-            <h2>New articles are being prepared.</h2>
-            <p>Published Glarivo guides will appear here as soon as they are ready.</p>
+    <section className={`${styles.container} ${styles.section}`} aria-labelledby="journal-heading">
+      <div className={styles.sectionHeading}>
+        <div><p className={styles.eyebrow}>From the journal</p><h2 id="journal-heading">Notes worth a closer look.</h2></div>
+        {result.available && <span className={styles.count}>{String(articles.length).padStart(2, "0")} / {articles.length === 1 ? "ARTICLE" : "ARTICLES"}</span>}
+      </div>
+
+      {!result.available ? <ContentState unavailable type="articles" /> : !featured ? <ContentState type="articles" /> : <>
+        <Link href={`/blog/${featured.slug}`} className={styles.featured} aria-label={`Read ${featured.title}`}>
+          <div className={`${styles.cardImage} ${featured.coverImageFit === "contain" ? styles.contain : ""}`}>
+            <Image src={featured.coverImage} alt={featured.coverImageAlt} fill unoptimized sizes="(min-width: 1000px) 55vw, 92vw" />
           </div>
-        </section>
-      )}
-
-      <section className={styles.topics} aria-labelledby="buying-topics">
-        <div className={styles.container}>
-          <h2 id="buying-topics">Explore buying topics</h2>
-          <GuideClusterCards />
-        </div>
-      </section>
-
-      {featuredArticle ? (
-        <section className={`${styles.container} ${styles.section}`}>
-          <div className={styles.sectionHeading}>
-            <div><p className={styles.kicker}>All articles</p><h2>The latest from Glarivo</h2></div>
-            <span>{articles.length} {articles.length === 1 ? "article" : "articles"}</span>
+          <div className={styles.featuredCopy}>
+            <div className={styles.meta}><span>Featured perspective</span><span>{featured.readTime}</span></div>
+            <h3>{featured.title}</h3><p>{featured.excerpt}</p>
+            <span className={styles.textLink}>Read the story<ArrowUpRight size={19} aria-hidden="true" /></span>
           </div>
-          {remainingArticles.length ? (
-            <div className={styles.articleGrid}>{remainingArticles.map((article) => <ArticleCard key={article.id} article={article} />)}</div>
-          ) : <p className={styles.moreNotes}>More practical notes are on the way.</p>}
-        </section>
-      ) : null}
-    </div>
-  );
+        </Link>
+        {remaining.length > 0 && <div className={styles.articleGrid}>
+          {remaining.map((article) => <article key={article.id} className={styles.articleCard}>
+            <Link href={`/blog/${article.slug}`}>
+              <div className={`${styles.cardImage} ${article.coverImageFit === "contain" ? styles.contain : ""}`}>
+                <Image src={article.coverImage} alt={article.coverImageAlt} fill unoptimized sizes="(min-width: 1000px) 30vw, (min-width: 461px) 45vw, 92vw" />
+              </div>
+              <div className={styles.meta}><span>{article.category}</span><time dateTime={article.publishedAt}>{article.publishedLabel}</time></div>
+              <h3>{article.title}</h3>
+            </Link>
+            <p>{article.excerpt}</p>
+            <Link href={`/blog/${article.slug}`} className={styles.textLink}>Read the story<ArrowUpRight size={17} aria-hidden="true" /></Link>
+          </article>)}
+        </div>}
+      </>}
+
+      <div className={styles.topics}>
+        <div><p className={styles.eyebrow}>Our editorial lens</p><h2>The conversations<br />that shape our thinking.</h2></div>
+        <ul className={styles.topicList}>{topics.map((topic, index) => <li key={topic}><span>{String(index + 1).padStart(2, "0")}</span>{topic}<ArrowUpRight size={16} aria-hidden="true" /></li>)}</ul>
+      </div>
+    </section>
+  </div>;
 }

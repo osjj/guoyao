@@ -24,10 +24,10 @@ export function InquiryProvider({ children }: { children: ReactNode }) {
   }
   return <InquiryContextValue.Provider value={open}>
     {children}
-    <aside className={styles.rail} aria-label="Contact sales">
-      <a href={`mailto:${SALES_EMAIL}`} title={SALES_EMAIL}><EnvelopeSimple size={25} weight="regular" aria-hidden="true" /><span>Email</span></a>
-      <a className={styles.whatsapp} href={SALES_WHATSAPP} target="_blank" rel="noopener noreferrer" title="WhatsApp +86 18825913441"><WhatsappLogo size={27} weight="regular" aria-hidden="true" /><span>WhatsApp</span></a>
-      <button className={styles.inquire} type="button" onClick={() => open()} aria-haspopup="dialog"><ChatTeardropText size={25} weight="regular" aria-hidden="true" /><span>Inquire</span></button>
+    <aside className={styles.rail} aria-label="Project enquiries">
+      <a href={`mailto:${SALES_EMAIL}`} aria-label={`Email ${SALES_EMAIL}`} title={SALES_EMAIL}><EnvelopeSimple size={21} weight="regular" aria-hidden="true" /></a>
+      <a href={SALES_WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +86 18825913441" title="WhatsApp +86 18825913441"><WhatsappLogo size={22} weight="regular" aria-hidden="true" /></a>
+      <button className={styles.inquire} type="button" onClick={() => open()} aria-label="Discuss a project" aria-haspopup="dialog"><ChatTeardropText size={21} weight="regular" aria-hidden="true" /><span>Discuss a project</span></button>
     </aside>
     {request && <InquiryModal key={request.id} submissionId={request.id} product={request.product} sourcePath={request.sourcePath} productSlug={request.productSlug} onClose={() => setRequest(null)} />}
   </InquiryContextValue.Provider>;
@@ -49,7 +49,7 @@ function InquiryModal({ submissionId, product, sourcePath, productSlug, onClose 
     element?.showModal();
     document.body.style.overflow = "hidden";
     document.documentElement.style.overflow = "hidden";
-    return () => { element?.close(); document.body.style.overflow = previousOverflow; document.documentElement.style.overflow = previousRootOverflow; previousFocus?.focus(); };
+    return () => { element?.close(); document.body.style.overflow = previousOverflow; document.documentElement.style.overflow = previousRootOverflow; if (previousFocus?.isConnected) previousFocus.focus(); };
   }, []);
 
   function change(field: keyof typeof values, value: string) { setValues((current) => ({ ...current, [field]: value })); }
@@ -71,43 +71,50 @@ function InquiryModal({ submissionId, product, sourcePath, productSlug, onClose 
     } finally { submitting.current = false; setBusy(false); }
   }
 
-  return <dialog ref={dialog} className={styles.dialog} aria-labelledby="inquiry-title" onCancel={(event) => { event.preventDefault(); if (!busy) onClose(); }} onClick={(event) => { if (event.target === event.currentTarget && !busy) onClose(); }}>
+  return <dialog ref={dialog} className={styles.dialog} aria-labelledby="inquiry-title" aria-describedby={success ? "inquiry-received" : "inquiry-description"} onCancel={(event) => { event.preventDefault(); if (!busy) onClose(); }} onClick={(event) => { if (event.target === event.currentTarget && !busy) onClose(); }}>
     <div className={styles.panel}>
       <button type="button" className={styles.close} aria-label="Close inquiry" disabled={busy} onClick={onClose}><X size={23} /></button>
       {success ? <div className={styles.success} role="status">
         <CheckCircle2 size={48} aria-hidden="true" />
-        <p className={styles.kicker}>REQUEST RECEIVED</p>
-        <h2 id="inquiry-title">Thank you for your inquiry.</h2>
-        <p>Your request has been saved. Our team will respond to <strong>{values.email}</strong> within one business day.</p>
-        <button type="button" className={styles.submit} onClick={onClose}>Back to browsing <ArrowRight size={18} /></button>
+        <p className={styles.kicker}>A CONVERSATION BEGINS</p>
+        <h2 id="inquiry-title">Your project enquiry<br />has been received.</h2>
+        <p id="inquiry-received">Thank you for sharing the details. Your message and contact information have been saved for our team to review.</p>
+        <button type="button" className={styles.submit} onClick={onClose}>Continue exploring <ArrowRight size={18} /></button>
       </div> : <>
-        <p className={styles.kicker}>— GET INSTANT QUOTE</p>
-        <h2 id="inquiry-title">Tell us what you need.<br />We respond within 24 hours.</h2>
-        {product && <p className={styles.product}>{product.name}{product.sku ? ` · ${product.sku}` : ""}</p>}
-        <form onSubmit={submit}>
+        <div className={styles.intro}>
+          <p className={styles.kicker}>LET’S TALK MATERIALS</p>
+          <h2 id="inquiry-title">Start with<br /> an idea.</h2>
+          <p id="inquiry-description" className={styles.description}>Tell us about the space, the material, and the detail you have in mind.</p>
+          <div className={styles.directContact}>
+            <span>Prefer a direct conversation?</span>
+            <a href={`mailto:${SALES_EMAIL}`}><EnvelopeSimple size={18} aria-hidden="true" />{SALES_EMAIL}</a>
+            <a href={SALES_WHATSAPP} target="_blank" rel="noopener noreferrer"><WhatsappLogo size={19} aria-hidden="true" />+86 18825913441</a>
+          </div>
+          <p className={styles.note}>Project context is a good place to begin. Drawings, dimensions and finish references can follow in the conversation.</p>
+        </div>
+        <form className={styles.form} onSubmit={submit} aria-busy={busy}>
+          {product && <p className={styles.product}>{product.name}{product.sku ? ` · ${product.sku}` : ""}</p>}
           <fieldset disabled={busy} className={styles.fields}>
-            <label className={styles.field}><span>Email <b>*</b></span><div className={styles.inputWrap}>
+            <label className={`${styles.field} ${styles.fullWidth}`}><span>Email <b>*</b></span><div className={styles.inputWrap}>
               <input autoFocus name="email" type="email" autoComplete="email" required maxLength={100} placeholder="you@company.com" value={values.email} onChange={(e) => change("email", e.target.value)} />
-              <small>{values.email.length}/100</small>
             </div></label>
-            <div className={styles.field}><label htmlFor="inquiry-phone">Mobile/WhatsApp <em>(optional)</em></label>
+            <label className={styles.field}><span>Name <b>*</b></span><div className={styles.inputWrap}><input name="name" autoComplete="name" required maxLength={100} placeholder="Your name" value={values.name} onChange={(e) => change("name", e.target.value)} /></div></label>
+            <label className={styles.field}><span>Company <em>(optional)</em></span><div className={styles.inputWrap}><input name="companyName" autoComplete="organization" maxLength={200} placeholder="Company or studio" value={values.companyName} onChange={(e) => change("companyName", e.target.value)} /></div></label>
+            <div className={`${styles.field} ${styles.fullWidth}`}><label htmlFor="inquiry-phone">Mobile / WhatsApp <em>(optional)</em></label>
               <div className={styles.phoneRow}>
                 <input name="countryCode" aria-label="Country calling code" type="tel" list="inquiry-country-codes" placeholder="Code" autoComplete="tel-country-code" maxLength={5} value={values.countryCode} onChange={(e) => change("countryCode", e.target.value)} />
                 <datalist id="inquiry-country-codes">
                   {[["+1", "US / Canada"], ["+44", "UK"], ["+86", "China"], ["+91", "India"], ["+971", "UAE"], ["+966", "Saudi Arabia"], ["+20", "Egypt"], ["+49", "Germany"], ["+33", "France"], ["+61", "Australia"], ["+55", "Brazil"], ["+27", "South Africa"], ["+234", "Nigeria"], ["+7", "Russia / Kazakhstan"], ["+90", "Türkiye"], ["+62", "Indonesia"], ["+60", "Malaysia"], ["+65", "Singapore"], ["+81", "Japan"], ["+82", "South Korea"]].map(([code, country]) => <option key={code} value={code}>{country}</option>)}
                 </datalist>
-                <div className={styles.inputWrap}><input id="inquiry-phone" name="phone" type="tel" autoComplete="tel-national" maxLength={100} placeholder="Please enter your mobile phone" value={values.phone} onChange={(e) => change("phone", e.target.value)} /><small>{values.phone.length}/100</small></div>
+                <div className={styles.inputWrap}><input id="inquiry-phone" name="phone" type="tel" autoComplete="tel-national" maxLength={100} placeholder="Mobile number" value={values.phone} onChange={(e) => change("phone", e.target.value)} /></div>
               </div>
               <p className={styles.hint}>Select or enter your country code, e.g. +86.</p>
             </div>
-            <label className={styles.field}><span>Name <b>*</b></span><div className={styles.inputWrap}><input name="name" autoComplete="name" required maxLength={100} placeholder="Please enter your name" value={values.name} onChange={(e) => change("name", e.target.value)} /><small>{values.name.length}/100</small></div></label>
-            <label className={styles.field}><span>Company name <em>(optional)</em></span><div className={styles.inputWrap}><input name="companyName" autoComplete="organization" maxLength={200} placeholder="Please enter your company name" value={values.companyName} onChange={(e) => change("companyName", e.target.value)} /><small>{values.companyName.length}/200</small></div></label>
-            <label className={styles.field}><span>Message <b>*</b></span><div className={styles.inputWrap}><textarea name="message" required maxLength={1000} rows={product?.brief ? 8 : 4} placeholder="Which products are you interested in? And what is the quantity?" value={values.message} onChange={(e) => change("message", e.target.value)} /><small>{values.message.length}/1000</small></div></label>
+            <label className={`${styles.field} ${styles.fullWidth}`}><span>Project details <b>*</b></span><div className={styles.inputWrap}><textarea name="message" required maxLength={1000} rows={product?.brief ? 8 : 5} placeholder="Share your project context, materials, approximate dimensions, and the finish you have in mind." value={values.message} onChange={(e) => change("message", e.target.value)} /><small>{values.message.length}/1000</small></div></label>
             <label className={styles.trap} aria-hidden="true">Website<input tabIndex={-1} autoComplete="off" name="website" value={values.website} onChange={(e) => change("website", e.target.value)} /></label>
           </fieldset>
           {error && <p className={styles.error} role="alert">{error}</p>}
-          <button className={styles.submit} type="submit" disabled={busy}>{busy ? "Submitting…" : "Submit Request"}<ArrowRight size={20} aria-hidden="true" /></button>
-          <p className={styles.footnote}>✓ We respond within one business day</p>
+          <button className={styles.submit} type="submit" disabled={busy}>{busy ? "Sending your enquiry…" : "Send project enquiry"}<ArrowRight size={20} aria-hidden="true" /></button>
           <p className={styles.privacy}>We use your contact details to respond to this inquiry.</p>
         </form>
       </>}

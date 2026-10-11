@@ -3,6 +3,7 @@ import {
   SALES_TELEPHONES,
   SITE_ALTERNATE_NAME,
   SITE_NAME,
+  COMPANY_NAME,
 } from "@/lib/site-identity";
 import { getSiteUrl } from "@/lib/site-url";
 
@@ -10,7 +11,7 @@ export function SiteStructuredData() {
   const siteUrl = getSiteUrl();
   const organizationId = `${siteUrl}/#organization`;
   const websiteId = `${siteUrl}/#website`;
-  const logoUrl = `${siteUrl}/brand/glarivo-logo-blue.png`;
+  const logoUrl = `${siteUrl}/brand/guoyao-logo-source.png`;
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -18,20 +19,22 @@ export function SiteStructuredData() {
         "@type": "Organization",
         "@id": organizationId,
         name: SITE_NAME,
+        legalName: COMPANY_NAME,
         alternateName: SITE_ALTERNATE_NAME,
         url: `${siteUrl}/`,
         logo: {
           "@type": "ImageObject",
           url: logoUrl,
           contentUrl: logoUrl,
-          width: 1378,
-          height: 748,
+          width: 1254,
+          height: 1254,
         },
         email: SALES_EMAIL,
         telephone: SALES_TELEPHONES,
         address: {
           "@type": "PostalAddress",
           addressRegion: "Guangdong",
+          addressLocality: "Guangzhou",
           addressCountry: "CN",
         },
         contactPoint: SALES_TELEPHONES.map((telephone) => ({

@@ -1,10 +1,10 @@
 # Example for a separate Nginx site on the existing server.
 # Adjust certificate paths to the files installed through BaoTa or your ACME client.
 # The certificate must cover guoyaometal.com and www.guoyaometal.com.
-# Remove any existing guoyaometal.com -> www.guoyaometal.com redirect;
-# Cloudflare already redirects www to the root domain and preserves the path/query.
+# Keep guoyaometal.com -> www.guoyaometal.com redirects and preserve the path/query.
+# Cloudflare redirects must also target www; remove any www -> root redirect.
 # Fill .env using .env.example and the separate Guoyao database/R2 credentials.
-# Set NEXT_PUBLIC_SITE_URL before building, then run:
+# Set NEXT_PUBLIC_SITE_URL=https://www.guoyaometal.com before building, then run:
 # npm ci
 # npm run db:generate
 # npm run build
@@ -12,12 +12,23 @@
 server {
     listen 80;
     server_name guoyaometal.com www.guoyaometal.com;
-    return 301 https://guoyaometal.com$request_uri;
+    return 301 https://www.guoyaometal.com$request_uri;
 }
 
 server {
     listen 443 ssl;
-    server_name guoyaometal.com www.guoyaometal.com;
+    server_name guoyaometal.com;
+
+    ssl_certificate /www/server/panel/vhost/cert/guoyaometal.com/fullchain.pem;
+    ssl_certificate_key /www/server/panel/vhost/cert/guoyaometal.com/privkey.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+
+    return 301 https://www.guoyaometal.com$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name www.guoyaometal.com;
 
     ssl_certificate /www/server/panel/vhost/cert/guoyaometal.com/fullchain.pem;
     ssl_certificate_key /www/server/panel/vhost/cert/guoyaometal.com/privkey.pem;

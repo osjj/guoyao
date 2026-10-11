@@ -1,14 +1,11 @@
 import "server-only";
 
 import { cache } from "react";
-import { prisma } from "@/lib/prisma";
-import { editorialPosts } from "@/data/editorial-posts";
+import type { BlogPost } from "@/generated/prisma/client";
 
-const DEFAULT_COVER_IMAGE = "/images/home/category-colored.webp";
+const DEFAULT_COVER_IMAGE = "/images/metal/material-study.webp";
 
-type PublishedBlogPostRecord = Awaited<
-  ReturnType<typeof prisma.blogPost.findFirst>
->;
+type PublishedBlogPostRecord = BlogPost | null;
 
 export type PublicBlogPost = {
   id: string;
@@ -41,7 +38,7 @@ function serializeBlogPost(post: NonNullable<PublishedBlogPostRecord>): PublicBl
     readTimeMinutes: post.readTimeMinutes,
     content: post.content,
     coverImage: post.coverImage || DEFAULT_COVER_IMAGE,
-    coverImageAlt: post.coverImageAlt || post.title,
+    coverImageAlt: post.coverImage ? post.coverImageAlt || post.title : "Illustrative material study",
     featured: post.featured,
     publishedAt: publishedAt.toISOString(),
     publishedLabel: new Intl.DateTimeFormat("en", {
@@ -55,25 +52,19 @@ function serializeBlogPost(post: NonNullable<PublishedBlogPostRecord>): PublicBl
 }
 
 export const getPublishedBlogPosts = cache(async (): Promise<PublicBlogPost[]> => {
+  const { prisma } = await import("@/lib/prisma");
   const now = new Date();
   const posts = await prisma.blogPost.findMany({
-    where: { OR: [
-      { status: "PUBLISHED", publishedAt: { lte: now } },
-      { slug: { in: editorialPosts.map((post) => post.slug) } },
-    ] },
+    where: { status: "PUBLISHED", publishedAt: { lte: now } },
     orderBy: [{ featured: "desc" }, { publishedAt: "desc" }, { updatedAt: "desc" }],
   });
 
-  const databaseSlugs = new Set(posts.map((post) => post.slug));
-  const published = posts.filter((post) => post.status === "PUBLISHED" && post.publishedAt && post.publishedAt <= now);
-  return [
-    ...editorialPosts.filter((post) => !databaseSlugs.has(post.slug) && new Date(post.publishedAt) <= now),
-    ...published.map(serializeBlogPost),
-  ].sort((a, b) => Number(b.featured) - Number(a.featured) || Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
+  return posts.map(serializeBlogPost);
 });
 
 export const getPublishedBlogPostBySlug = cache(
   async (slug: string): Promise<PublicBlogPost | null> => {
+    const { prisma } = await import("@/lib/prisma");
     const post = await prisma.blogPost.findFirst({
       where: { slug },
     });
@@ -81,7 +72,7 @@ export const getPublishedBlogPostBySlug = cache(
     const now = new Date();
     if (post) return post.status === "PUBLISHED" && post.publishedAt && post.publishedAt <= now
       ? serializeBlogPost(post) : null;
-    return editorialPosts.find((article) => article.slug === slug && new Date(article.publishedAt) <= now) ?? null;
+    return null;
   },
 );
 

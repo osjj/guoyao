@@ -1,50 +1,24 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
+import { ArrowUpRight } from "lucide-react";
 import { Logo } from "./logo";
-import { HomeFooter } from "./home-footer";
-
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/products", label: "Products" },
-  { href: "/case-studies", label: "Case Studies" },
-  { href: "/blog", label: "Blog" },
-  { href: "/about", label: "About" },
-] as const;
+import { InquiryButton } from "./inquiry-contact";
+import { COMPANY_NAME, SALES_EMAIL, SALES_TELEPHONES } from "@/lib/site-identity";
+import styles from "./metal-shell.module.css";
 
 export function SiteFooter() {
-  const pathname = usePathname();
-  if (["/", "/about", "/products", "/case-studies", "/blog"].includes(pathname)
-    || ["/products/", "/case-studies/", "/guides/", "/blog/"].some((prefix) => pathname.startsWith(prefix))) return <HomeFooter />;
   return (
-    <footer className="bg-[var(--navy)] text-white">
-      <div className="site-container py-14 sm:py-20">
-        <div className="grid gap-12 border-b border-white/15 pb-12 lg:grid-cols-[1.25fr_0.75fr]">
-          <div>
-            <Logo variant="white" />
-            <p className="mt-6 max-w-xl text-balance text-2xl font-semibold leading-snug text-white/90 sm:text-3xl">
-              Crafted glassware collections and practical sourcing guidance for confident decisions.
-            </p>
-          </div>
-          <nav className="grid grid-cols-2 gap-3 self-end" aria-label="Footer navigation">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="flex items-center justify-between rounded-lg border border-white/15 px-4 py-3 text-sm font-bold text-white/80 transition hover:border-[#d5b77b] hover:text-[#e1c995]"
-              >
-                {link.label}
-                <ArrowUpRight size={17} weight="bold" aria-hidden="true" />
-              </Link>
-            ))}
-          </nav>
+    <footer className={styles.footer}>
+      <div className={styles.footerInner}>
+        <div className={styles.footerInvitation}>
+          <div><p className={styles.footerKicker}>LET’S MAKE SOMETHING CONSIDERED.</p><h2>Your vision.<br /><em>A new material expression.</em></h2></div>
+          <InquiryButton className={styles.footerCta}>Discuss your project <ArrowUpRight size={20} aria-hidden="true" /></InquiryButton>
         </div>
-        <div className="flex flex-col gap-3 pt-7 text-xs font-medium uppercase tracking-[0.14em] text-white/45 sm:flex-row sm:items-center sm:justify-between">
-          <span>© {new Date().getFullYear()} Glarivo Glassware</span>
-          <span>Glassware for modern living</span>
+        <div className={styles.footerGrid}>
+          <div><Logo variant="white" /><p className={styles.company}>{COMPANY_NAME}</p><p className={styles.footerNote}>Material. Form. Possibility.</p></div>
+          <nav aria-label="Footer navigation"><span>EXPLORE</span><Link href="/">Home</Link><Link href="/case-studies">Case Studies</Link><Link href="/blog">Blog</Link><Link href="/about">About</Link></nav>
+          <div className={styles.contacts}><span>START A CONVERSATION</span><a href={`mailto:${SALES_EMAIL}`}>{SALES_EMAIL}<ArrowUpRight size={15} aria-hidden="true" /></a>{SALES_TELEPHONES.map(phone => <a href={`tel:${phone.replace(/\s/g, "")}`} key={phone}>{phone}</a>)}<p>Guangzhou, China</p></div>
         </div>
+        <div className={styles.footerBottom}><span>© {new Date().getFullYear()} GUOYAO METAL</span><span>ARCHITECTURAL METALWORKS</span><a href="#main-content">Back to top ↑</a></div>
       </div>
     </footer>
   );

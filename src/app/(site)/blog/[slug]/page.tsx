@@ -1,129 +1,92 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { notFound } from "next/navigation";
 import { ArticleContentRenderer, headingId } from "@/components/site/article-content-renderer";
+import { DetailUnavailable, loadEditorialContent } from "@/components/site/metal-editorial";
 import { getPublishedBlogPostBySlug } from "@/lib/public-blog";
-import { guideClusters } from "@/data/guide-clusters";
 import { plainTextFromEditorHtml, readStoredArticleContent } from "@/lib/article-content-server";
 import { getSiteUrl } from "@/lib/site-url";
 import { SITE_NAME } from "@/lib/site-identity";
-import { ReadingHeader } from "@/components/site/reading-header";
-import { ArticleProducts, ShotGlassInquiry } from "@/components/site/article-products";
-import { getArticleProducts } from "@/lib/article-products";
-import { getArticleProductSection, shotGlassArticleSlug } from "@/data/article-products";
-import theme from "@/components/site/editorial-pages.module.css";
-import styles from "@/components/site/reading-pages.module.css";
+import styles from "@/components/site/metal-editorial.module.css";
 
 export const dynamic = "force-dynamic";
+type Props = { params: Promise<{ slug: string }> };
 
-type BlogPostPageProps = { params: Promise<{ slug: string }> };
-
-export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const article = await getPublishedBlogPostBySlug(slug);
-  if (!article) return {};
-
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const result = await loadEditorialContent(getPublishedBlogPostBySlug((await params).slug));
+  if (!result.available) return { title: "Article temporarily unavailable", robots: { index: false } };
+  const article = result.data;
+  if (!article) return { title: "Article not found", robots: { index: false } };
   return {
-    title: article.title,
-    description: article.excerpt,
+    title: article.title, description: article.excerpt,
     alternates: { canonical: `/blog/${article.slug}` },
     openGraph: {
-      type: "article",
-      siteName: SITE_NAME,
-      url: `/blog/${article.slug}`,
-      title: article.title,
-      description: article.excerpt,
-      publishedTime: article.publishedAt,
-      modifiedTime: article.updatedAt.toISOString(),
+      type: "article", siteName: SITE_NAME, url: `/blog/${article.slug}`,
+      title: article.title, description: article.excerpt,
+      publishedTime: article.publishedAt, modifiedTime: article.updatedAt.toISOString(),
       images: [{ url: article.coverImage, alt: article.coverImageAlt }],
     },
-    twitter: {
-      card: "summary_large_image",
-      title: article.title,
-      description: article.excerpt,
-      images: [{ url: article.coverImage, alt: article.coverImageAlt }],
-    },
+    twitter: { card: "summary_large_image", title: article.title, description: article.excerpt, images: [article.coverImage] },
   };
 }
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const { slug } = await params;
-  const article = await getPublishedBlogPostBySlug(slug);
+export default async function BlogPostPage({ params }: Props) {
+  const result = await loadEditorialContent(getPublishedBlogPostBySlug((await params).slug));
+  if (!result.available) return <DetailUnavailable type="article" />;
+  const article = result.data;
   if (!article) notFound();
-  const isShotGlassGuide = slug === shotGlassArticleSlug;
-  const productSection = getArticleProductSection(slug);
-  const comparisonProducts = productSection ? await getArticleProducts(slug) : [];
-  const cluster = guideClusters.find((item) => item.title === article.category);
-  const usedHeadingIds = new Set<string>();
+
+  const usedIds = new Set<string>();
   const outline: { id: string; title: string }[] = [];
   readStoredArticleContent(article.content).blocks.forEach((block, index) => {
     if (block.type !== "header") return;
-    const baseId = headingId(String(block.data.text ?? ""), index);
-    let id = baseId;
+    const base = headingId(String(block.data.text ?? ""), index);
+    let id = base;
     let suffix = 2;
-    while (usedHeadingIds.has(id)) id = `${baseId}-${suffix++}`;
-    usedHeadingIds.add(id);
-    if (Number(block.data.level) === 2) {
-      outline.push({ id, title: plainTextFromEditorHtml(block.data.text) });
-    }
+    while (usedIds.has(id)) id = `${base}-${suffix++}`;
+    usedIds.add(id);
+    if (Number(block.data.level) === 2) outline.push({ id, title: plainTextFromEditorHtml(block.data.text) });
   });
+
   const siteUrl = getSiteUrl();
-  const schema = {
-    "@context": "https://schema.org", "@type": "Article",
-    headline: article.title, description: article.excerpt,
-    image: new URL(article.coverImage, siteUrl).href,
-    datePublished: article.publishedAt, dateModified: article.updatedAt.toISOString(),
-    mainEntityOfPage: `${siteUrl}/blog/${article.slug}`,
-    publisher: {
-      "@type": "Organization",
-      "@id": `${siteUrl}/#organization`,
-      name: SITE_NAME,
-      url: `${siteUrl}/`,
-    },
-    articleSection: article.category,
-  };
-  const breadcrumbItems = [
-    { name: "Home", item: siteUrl },
-    { name: "Blog", item: `${siteUrl}/blog` },
-    ...(cluster ? [{ name: cluster.title, item: `${siteUrl}/guides/${cluster.slug}` }] : []),
-    { name: article.title, item: `${siteUrl}/blog/${article.slug}` },
-  ];
-  const breadcrumbs = {
-    "@context": "https://schema.org", "@type": "BreadcrumbList",
-    itemListElement: breadcrumbItems.map((item, index) => ({ "@type": "ListItem", position: index + 1, ...item })),
+  const structuredData = {
+    "@context": "https://schema.org", "@graph": [
+      {
+        "@type": "Article", headline: article.title, description: article.excerpt,
+        image: new URL(article.coverImage, siteUrl).href,
+        datePublished: article.publishedAt, dateModified: article.updatedAt.toISOString(),
+        mainEntityOfPage: `${siteUrl}/blog/${article.slug}`, articleSection: article.category,
+        publisher: { "@type": "Organization", "@id": `${siteUrl}/#organization`, name: SITE_NAME },
+      },
+      {
+        "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+          { "@type": "ListItem", position: 2, name: "Blog", item: `${siteUrl}/blog` },
+          { "@type": "ListItem", position: 3, name: article.title, item: `${siteUrl}/blog/${article.slug}` },
+        ],
+      },
+    ],
   };
 
-  return (
-    <article className={theme.page}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs).replace(/</g, "\\u003c") }} />
-      <ReadingHeader title={article.title} eyebrow={article.category} description={article.excerpt}
-        navigation={<><Link href="/blog"><ArrowLeft size={17} aria-hidden="true" />Back to blog</Link>{cluster && <nav aria-label="Guide topic"><span aria-hidden="true">/ </span><Link href={`/guides/${cluster.slug}`}>{cluster.title}</Link></nav>}</>}>
-        <div className={styles.meta}><time dateTime={article.publishedAt}>{article.publishedLabel}</time><span>{article.readTime}</span></div>
-      </ReadingHeader>
-      <div className={`${theme.container} ${styles.cover}`}>
-        <div className={`${styles.coverImage} ${article.coverImageFit === "contain" ? styles.containCover : ""}`}>
-          <Image src={article.coverImage} alt={article.coverImageAlt} fill preload unoptimized sizes="(min-width: 1280px) 1100px, 90vw" className={article.coverImageFit === "contain" ? "object-contain" : "object-cover"} />
-        </div>
-      </div>
-      <div className={`${theme.container} ${styles.section} ${outline.length > 0 ? styles.articleLayout : ""}`}>
-        {outline.length > 0 && <aside className={styles.articleOutline}>
-          <nav aria-label="On this page">
-            <h2>In this article</h2>
-            <ul>{outline.map((item) => <li key={item.id}><a href={`#${item.id}`}>{item.title}</a></li>)}</ul>
-          </nav>
-        </aside>}
-        <div className={`prose-glarivo ${styles.prose}`}>
-          <ArticleContentRenderer content={article.content} insertBeforeHeading={productSection && comparisonProducts.length ? {
-            id: productSection.beforeHeadingId,
-            content: <ArticleProducts products={comparisonProducts} articleSlug={slug} />,
-          } : undefined} />
-        </div>
-      </div>
-      {isShotGlassGuide && <div className={theme.container}><ShotGlassInquiry /></div>}
-      <footer className={styles.articleEnd}><div className={theme.container}><div><p>Keep reading</p><h2>Explore more Glarivo notes.</h2></div><Link href="/blog">All articles<ArrowRight size={17} aria-hidden="true" /></Link></div></footer>
-    </article>
-  );
+  return <article className={styles.page}>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
+    <header className={`${styles.container} ${styles.detailHeader}`}>
+      <Link href="/blog" className={styles.back}><ArrowLeft size={15} aria-hidden="true" />Back to the journal</Link>
+      <p className={styles.eyebrow}>{article.category}</p>
+      <h1>{article.title}</h1><p className={styles.detailSummary}>{article.excerpt}</p>
+      <div className={styles.meta}><time dateTime={article.publishedAt}>{article.publishedLabel}</time><span>{article.readTime}</span><span>Guoyao Metal / Journal</span></div>
+    </header>
+    <div className={styles.container}><div className={`${styles.detailCover} ${article.coverImageFit === "contain" ? styles.contain : ""}`}>
+      <Image src={article.coverImage} alt={article.coverImageAlt} fill preload unoptimized sizes="(min-width: 1600px) 1440px, 92vw" />
+    </div></div>
+    <div className={`${styles.container} ${styles.readingLayout}`}>
+      <aside className={styles.contents}>
+        {outline.length > 0 ? <nav aria-label="In this article"><p className={styles.eyebrow}>In this article</p><ol>{outline.map((item) => <li key={item.id}><a href={`#${item.id}`}>{item.title}</a></li>)}</ol></nav> : <p className={styles.eyebrow}>The material journal<br />Guoyao Metal</p>}
+      </aside>
+      <div className={styles.prose}><ArticleContentRenderer content={article.content} /></div>
+    </div>
+    <footer className={styles.readingEnd}><div className={styles.container}><span>More perspectives on material and space.</span><Link href="/blog" className={styles.textLink}>Explore the journal<ArrowUpRight size={18} aria-hidden="true" /></Link></div></footer>
+  </article>;
 }

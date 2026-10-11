@@ -1,27 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import styles from "./metal-shell.module.css";
 
-export function Logo({
-  variant = "blue",
-  compact = false,
-}: {
-  variant?: "blue" | "white";
-  compact?: boolean;
-}) {
+export function Logo({ variant = "blue", compact = false }: { variant?: "blue" | "white"; compact?: boolean }) {
   return (
-    <Link
-      href="/"
-      className="inline-flex shrink-0 items-center"
-      aria-label="Glarivo Glassware home"
-    >
-      <Image
-        src={variant === "white" ? "/brand/glarivo-logo-white.png" : "/brand/glarivo-logo-blue.png"}
-        alt="Glarivo Glassware"
-        width={1378}
-        height={748}
-        priority
-        className={compact ? "h-14 w-auto" : "h-[4.5rem] w-auto sm:h-[4.8rem]"}
-      />
+    <Link href="/" className={`${styles.logo} ${variant === "white" ? styles.logoLight : ""} ${compact ? styles.logoCompact : ""}`} aria-label="Guoyao Metal home">
+      <span className={styles.logoMark} aria-hidden="true">
+        <Image src="/brand/guoyao-logo-source.png" alt="" width={1254} height={1254} sizes="128px" loading="eager" />
+      </span>
+      <span className={styles.logoWords}><strong>GUOYAO METAL</strong><span>ARCHITECTURAL METALWORKS</span></span>
     </Link>
   );
 }

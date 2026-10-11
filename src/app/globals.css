@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+.metal-site {
+  --paper: #f5f2ec;
+  --surface: #ece7df;
+  --surface-blue: #ece7df;
+  --navy: #22231f;
+  --navy-soft: #3a3c34;
+  --blue: #8c704d;
+  --ink: #22231f;
+  --ink-muted: #706f65;
+  --line: #d4cec3;
+  --lime: #c1a17a;
+  --lime-strong: #a8875e;
+  min-height: 100vh;
+  background: #f5f2ec;
+  color: #22231f;
+  font-family: var(--font-home-sans), Arial, sans-serif;
+}
+.metal-main { padding-top: 88px; }
+.metal-main:focus { outline: none; }
+.metal-skip-link { position: fixed; z-index: 100; top: 10px; left: 10px; transform: translateY(-180%); background: #f5f2ec; color: #22231f; padding: 12px 20px; }
+.metal-skip-link:focus { transform: translateY(0); }
+
 :root {
   --paper: #ffffff;
   --surface: #f5f7fa;

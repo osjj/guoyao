@@ -1,18 +1,17 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { Bodoni_Moda, DM_Sans } from "next/font/google";
 import { SITE_NAME } from "@/lib/site-identity";
 import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
-const manrope = Manrope({
+const sans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-home-sans",
   display: "swap",
 });
 
-const cormorant = Cormorant_Garamond({
+const display = Bodoni_Moda({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
   variable: "--font-home-display",
   display: "swap",
 });
@@ -23,20 +22,21 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   applicationName: SITE_NAME,
   title: {
-    default: `${SITE_NAME} | Clear collections for confident sourcing`,
+    default: `${SITE_NAME} | Architectural Metalworks`,
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Explore focused Glarivo glassware collections and practical product sourcing guides.",
+    "A material perspective on architecture. Discover Guoyao Metal, architectural metalwork, design studies and ideas for considered spaces.",
   alternates: { canonical: "./" },
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: SITE_NAME,
-    title: `${SITE_NAME} | Clear collections for confident sourcing`,
+    title: `${SITE_NAME} | Architectural Metalworks`,
     description:
-      "A focused glassware catalog and practical sourcing knowledge hub.",
+      "Metal, made remarkable. Architectural metalworks and a considered approach to material, form and detail.",
     url: siteUrl,
+    images: [{ url: "/images/metal/hero-sculpture.webp", width: 1672, height: 941, alt: "Architectural metalwork concept study" }],
   },
   robots: {
     index: true,
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#102a59",
+  themeColor: "#22231f",
 };
 
 export default function RootLayout({
@@ -58,7 +58,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${manrope.variable} ${cormorant.variable}`}
+      className={`${sans.variable} ${display.variable}`}
       suppressHydrationWarning
       data-scroll-behavior="smooth"
     >
