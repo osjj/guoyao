@@ -10,7 +10,7 @@ import styles from "./metal-shell.module.css";
 
 const navigation = [
   { href: "/", label: "Home" },
-  { href: "/case-studies", label: "Case Studies" },
+  { href: "/case-studies", label: "Case" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
 ] as const;

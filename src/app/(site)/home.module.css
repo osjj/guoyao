@@ -3,6 +3,7 @@
 .hero { position: relative; min-height: 660px; height: min(760px, calc(100svh - 88px)); color: #f5f2ec; background: #22231f; isolation: isolate; }
 .heroImage { object-fit: cover; object-position: center; z-index: -2; }
 .heroShade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #141512bf 0%, #14151275 32%, #14151208 66%), linear-gradient(0deg, #10110f85, transparent 28%); }
+.heroConcept { position: absolute; top: 24px; right: 60px; padding: 7px 9px; background: #22231faa; color: #e5dece; font-size: 10px; line-height: 1.5; letter-spacing: .12em; }
 .heroContent { width: min(1340px, calc(100% - 120px)); margin: auto; padding-top: clamp(85px, 9vw, 130px); }
 .kickerLight, .kicker { font-size: 11px; font-weight: 500; letter-spacing: .16em; line-height: 1.6; margin: 0 0 26px; }
 .kickerLight { display: flex; align-items: center; gap: 10px; color: #ddc8ac; }
@@ -51,6 +52,7 @@
 .applicationFigure { margin: 0; display: flex; flex-direction: column; min-width: 0; }
 .applicationImage { position: relative; flex: 1; min-height: 600px; background: #d4cec3; overflow: hidden; }
 .applicationImage img { object-fit: cover; object-position: 51% center; }
+.applicationConcept { position: absolute; left: 18px; bottom: 18px; padding: 7px 9px; background: #22231fcc; color: #f5f2ec; font-size: 10px; letter-spacing: .1em; }
 .applicationFigure figcaption { display: flex; justify-content: space-between; gap: 15px; font-size: 10px; line-height: 1.6; letter-spacing: .1em; color: #806443; margin-top: 13px; }
 .detailSection { padding: 100px 0; }
 .detailGrid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 85px; align-items: center; }
@@ -85,6 +87,7 @@
 @media (max-width: 900px) { .applicationGrid { grid-template-columns: 1fr; gap: 30px; } .applicationList { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; } .applicationItem { display: block; } .applicationNumber { display: block; padding: 0; margin-bottom: 13px; } .applicationItem h3 { font-size: 27px; } .applicationItem p { font-size: 14px; } .applicationImage { flex: none; min-height: 0; aspect-ratio: 1.65; } }
 @media (max-width: 800px) { .applications { padding-top: 65px; } .sectionDescription { max-width: 450px; } .heroDescription { font-size: 15px; } .journalTopics { gap: 22px; } .journalTopics h3 { font-size: 26px; } }
 @media (max-width: 600px) { .applicationList { display: block; } .applicationItem { display: flex; gap: 20px; padding: 25px 0; } .applicationItem p { font-size: 15px; } .applicationNumber { margin: 6px 0 0; } .applicationImage { aspect-ratio: 1.04; } .applicationFigure figcaption { font-size: 9px; } .journalTopics { grid-template-columns: 1fr; gap: 25px; margin-top: 35px; } .journalTopics h3 { margin: 12px 0; } .journalTopics p { max-width: none; } }
-@media (max-width: 540px) { .kickerLight { font-size: 10px; } .heroDescription { font-size: 15px; } .heroBottom { font-size: 8px; letter-spacing: .08em; } .heroBottom > span { font-size: 8px; } .studyImage > span { font-size: 9px; } }
-@media (max-width: 360px) { .hero h1 { font-size: 53px; } .heroDescription { font-size: 14px; } .heroBottom > span { display: none; } .materialWords { font-size: 26px; } .page h2 { font-size: 35px; } .kicker { font-size: 10px; letter-spacing: .12em; } .applicationFigure figcaption { flex-direction: column; gap: 3px; } }
+@media (max-width: 800px) { .heroConcept { right: 24px; top: 20px; } }
+@media (max-width: 540px) { .hero { height: auto; min-height: 715px; padding-bottom: 110px; } .kickerLight { font-size: 10px; } .heroDescription { font-size: 15px; } .heroBottom { font-size: 9px; letter-spacing: .08em; } .heroBottom > span { font-size: 8px; } .studyImage > span { font-size: 9px; } }
+@media (max-width: 360px) { .hero h1 { font-size: 49px; } .heroDescription { font-size: 14px; } .heroBottom > span { display: none; } .materialWords { font-size: 26px; } .page h2 { font-size: 35px; } .kicker { font-size: 10px; letter-spacing: .12em; } }
 @media (prefers-reduced-motion: reduce) { .solidButton, .studyImage img, .detailQuestions summary svg { transition: none; } }

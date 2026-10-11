@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { InquiryButton } from "@/components/site/inquiry-contact";
 import { COMPANY_NAME } from "@/lib/site-identity";
@@ -8,25 +7,73 @@ import styles from "./about.module.css";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Meet GUOYAO METAL. A material-focused perspective on architectural metalwork, form, surface and the details that shape a space.",
+  description: "Meet GUOYAO METAL. Explore our perspective on architectural metalwork, how to consider a material in its setting, and what to bring to a project conversation.",
   alternates: { canonical: "/about" },
 };
 
 const principles = [
   {
     number: "01",
-    title: "Begin with the space.",
-    description: "A metal detail belongs to a larger story. Its proportions, placement and relationship to the architecture give it purpose.",
+    title: "Intent before labels.",
+    description: "Begin with what the element should bring to the architecture. A finish name is more useful when the intended visual effect is clear.",
   },
   {
     number: "02",
-    title: "Let the material speak.",
-    description: "Brushed or reflective. Quiet or expressive. A surface changes how light moves, and how a space feels.",
+    title: "References before assumptions.",
+    description: "Drawings, material references and photographs make a design direction easier to discuss. Identify what matters in each reference: its colour, texture, proportion or relationship to the space.",
   },
   {
     number: "03",
-    title: "Resolve the detail.",
-    description: "Edges, transitions and connections deserve the same consideration as the overall form. The smallest decisions shape the whole.",
+    title: "Questions before conclusions.",
+    description: "Keep open questions visible. Separate the requirements already defined from the choices still being explored, so the next conversation has a useful starting point.",
+  },
+];
+
+const materialObservations = [
+  {
+    number: "01",
+    title: "Under the intended light.",
+    description: "Look at the reference in the lighting planned for the space. Notice the direction of the highlights, the depth of the tone and what the surface reflects.",
+    prompt: "What should stand out, and what should stay quiet?",
+  },
+  {
+    number: "02",
+    title: "At an architectural scale.",
+    description: "Think beyond the small sample. Consider how the direction of a texture or a repeated element will read across a larger plane, and from the usual viewing distance.",
+    prompt: "Is the effect about a close detail or a distant rhythm?",
+  },
+  {
+    number: "03",
+    title: "Beside the other materials.",
+    description: "Place the metal reference alongside the stone, timber, glass or painted surfaces in the scheme. Compare the overall composition as well as each individual finish.",
+    prompt: "Should the metal create contrast or continuity?",
+  },
+];
+
+const briefItems = [
+  {
+    number: "01",
+    title: "The setting",
+    description: "Show where the element belongs. A plan, a site photograph or a short description helps establish its relationship to the surrounding architecture.",
+    details: ["Location and intended use", "Interior or exterior setting", "Adjacent materials"],
+  },
+  {
+    number: "02",
+    title: "The design direction",
+    description: "Share the images or sketches that express your idea. A short note about what you like in each reference is more useful than a collection of unexplained pictures.",
+    details: ["Sketches or concept drawings", "Colour and finish references", "The visual effect you want"],
+  },
+  {
+    number: "03",
+    title: "The known information",
+    description: "Include the information available at this stage, and mark anything still provisional. Early discussions can begin with a concept; more detailed questions need more detailed references.",
+    details: ["Indicative dimensions", "Element types and quantities, if known", "Drawing version or design stage"],
+  },
+  {
+    number: "04",
+    title: "The questions to resolve",
+    description: "Make the priorities explicit. Appearance, touch, maintenance, interfaces and project requirements can each shape the conversation in a different way.",
+    details: ["Fixed requirements and open choices", "Questions about the intended finish", "What you need to clarify next"],
   },
 ];
 
@@ -79,11 +126,38 @@ export default function AboutPage() {
         <figcaption className={styles.container}><span>A study in surface and light</span><span>Illustrative material study</span></figcaption>
       </figure>
 
+      <section id="material-perspective" className={`${styles.container} ${styles.materialPerspective}`} aria-labelledby="material-perspective-heading">
+        <figure className={styles.detailFigure}>
+          <div className={styles.detailImage}>
+            <Image
+              src="/images/metal/bronze-detail.webp"
+              alt="Illustrative close study of a brushed bronze corner and the direction of its surface texture"
+              fill
+              sizes="(max-width: 760px) calc(100vw - 40px), 41vw"
+            />
+          </div>
+          <figcaption><span>Surface &amp; proportion</span><span>Illustrative detail study</span></figcaption>
+        </figure>
+        <div className={styles.materialPerspectiveCopy}>
+          <p className={styles.kicker}>02 / Reading the material</p>
+          <h2 id="material-perspective-heading">Look at the sample.<br /><em>Then at the space.</em></h2>
+          <p className={styles.materialIntroduction}>A material choice is also a choice about its setting. These three observations help frame the discussion beyond a finish name.</p>
+          <div className={styles.observationList}>
+            {materialObservations.map((item) => (
+              <article className={styles.observation} key={item.number}>
+                <span className={styles.observationNumber}>{item.number}</span>
+                <div><h3>{item.title}</h3><p>{item.description}</p><p className={styles.observationPrompt}>{item.prompt}</p></div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className={styles.principles} aria-labelledby="principles-heading">
         <div className={`${styles.container} ${styles.principlesInner}`}>
           <div className={styles.principlesHeading}>
-            <p className={styles.kicker}>02 / What guides us</p>
-            <h2 id="principles-heading">The detail<br />defines<br /><em>the whole.</em></h2>
+            <p className={styles.kicker}>03 / What guides the conversation</p>
+            <h2 id="principles-heading">Clarity<br />before<br /><em>decisions.</em></h2>
           </div>
           <div className={styles.principleList}>
             {principles.map((principle) => (
@@ -96,15 +170,40 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className={`${styles.container} ${styles.conversation}`} aria-labelledby="conversation-heading">
-        <p className={styles.kicker}>03 / A conversation starts here</p>
-        <div className={styles.conversationRow}>
-          <h2 id="conversation-heading">An idea in mind?<br /><em>Let&apos;s give it form.</em></h2>
-          <div className={styles.conversationCopy}>
-            <p>A sketch, a reference, a material direction. Share what you are considering, and let&apos;s discuss the details that matter to your project.</p>
-            <InquiryButton className={styles.button}>Discuss a project <ArrowUpRight size={20} aria-hidden="true" /></InquiryButton>
-            <Link href="/case-studies" className={styles.textLink}>Explore case studies <ArrowUpRight size={18} aria-hidden="true" /></Link>
+      <section id="project-conversation" className={`${styles.container} ${styles.projectConversation}`} aria-labelledby="conversation-heading">
+        <div className={styles.conversationHeading}>
+          <div>
+            <p className={styles.kicker}>04 / Preparing the first conversation</p>
+            <h2 id="conversation-heading">A project starts<br /><em>with a shared brief.</em></h2>
           </div>
+          <p>The more clearly an idea is described, the more useful the conversation becomes. Bring the context, the references and the questions that matter to your project.</p>
+        </div>
+        <figure className={styles.processFigure}>
+          <div className={styles.processImage}>
+            <Image
+              src="/images/metal/process-table.webp"
+              alt="Illustrative design study with an architectural sketch, a small metal model and material references"
+              fill
+              sizes="(max-width: 1600px) 90vw, 1440px"
+            />
+          </div>
+          <figcaption><span>From a reference to a discussion</span><span>Illustrative design study</span></figcaption>
+        </figure>
+        <div className={styles.briefGrid}>
+          {briefItems.map((item) => (
+            <article className={styles.briefItem} key={item.number}>
+              <span className={styles.briefNumber}>{item.number}</span>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <ul aria-label={`Useful references for ${item.title.toLowerCase()}`}>
+                {item.details.map((detail) => <li key={detail}>{detail}</li>)}
+              </ul>
+            </article>
+          ))}
+        </div>
+        <div className={styles.startConversation}>
+          <div><h3>Bring what you have.</h3><p>A complete brief is not required to begin. Share your current references and tell us which decisions are still open.</p></div>
+          <InquiryButton className={styles.button}>Start the conversation <ArrowUpRight size={20} aria-hidden="true" /></InquiryButton>
         </div>
       </section>
     </div>

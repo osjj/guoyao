@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useRef, useState, useSyncExternalStore } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { InquiryButton } from "./inquiry-contact";
 import styles from "./material-explorer.module.css";
@@ -12,8 +12,18 @@ const studies = [
   { name: "Rhythm & shadow", number: "03", title: "A rhythm written in light.", text: "Repeating lines create a measured architectural rhythm. Light and shadow make the same surface feel different throughout the day.", image: "/images/metal/project-bronze.webp", alt: "Bronze facade design concept with repeated vertical fins", tone: "#655c43" },
 ];
 
+const desktopQuery = "(min-width: 901px)";
+function subscribeLayout(onChange: () => void) {
+  const query = window.matchMedia(desktopQuery);
+  query.addEventListener("change", onChange);
+  return () => query.removeEventListener("change", onChange);
+}
+const getDesktopLayout = () => window.matchMedia(desktopQuery).matches;
+const getServerLayout = () => true;
+
 export function MaterialExplorer() {
   const [selected, setSelected] = useState(0);
+  const isDesktop = useSyncExternalStore(subscribeLayout, getDesktopLayout, getServerLayout);
   const buttons = useRef<(HTMLButtonElement | null)[]>([]);
   const study = studies[selected];
   return (
@@ -21,11 +31,11 @@ export function MaterialExplorer() {
       <div className={styles.inner}>
         <div className={styles.heading}><p>03 / MATERIAL EXPLORATIONS</p><h2 id="material-title">Same material.<br /><em>Different possibilities.</em></h2><span>A visual exploration of texture, reflection and rhythm.</span></div>
         <div className={styles.explorer}>
-          <div className={styles.tabs} role="tablist" aria-label="Material perspectives">
+          <div className={styles.tabs} role="tablist" aria-label="Material perspectives" aria-orientation={isDesktop ? "vertical" : "horizontal"}>
             {studies.map((item, index) => <button key={item.name} ref={node => { buttons.current[index] = node; }} id={`material-tab-${index}`} role="tab" type="button" tabIndex={selected === index ? 0 : -1} aria-selected={selected === index} aria-controls="material-panel" onClick={() => setSelected(index)} onKeyDown={event => {
               let next = index;
-              if (event.key === "ArrowRight" || event.key === "ArrowDown") next = (index + 1) % studies.length;
-              else if (event.key === "ArrowLeft" || event.key === "ArrowUp") next = (index + studies.length - 1) % studies.length;
+              if (event.key === (isDesktop ? "ArrowDown" : "ArrowRight")) next = (index + 1) % studies.length;
+              else if (event.key === (isDesktop ? "ArrowUp" : "ArrowLeft")) next = (index + studies.length - 1) % studies.length;
               else if (event.key === "Home") next = 0;
               else if (event.key === "End") next = studies.length - 1;
               else return;

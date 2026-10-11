@@ -15,7 +15,7 @@ export function SiteFooter() {
         </div>
         <div className={styles.footerGrid}>
           <div><Logo variant="white" /><p className={styles.company}>{COMPANY_NAME}</p><p className={styles.footerNote}>Material. Form. Possibility.</p></div>
-          <nav aria-label="Footer navigation"><span>EXPLORE</span><Link href="/">Home</Link><Link href="/case-studies">Case Studies</Link><Link href="/blog">Blog</Link><Link href="/about">About</Link></nav>
+          <nav aria-label="Footer navigation"><span>EXPLORE</span><Link href="/">Home</Link><Link href="/case-studies">Case</Link><Link href="/blog">Blog</Link><Link href="/about">About</Link></nav>
           <div className={styles.contacts}><span>START A CONVERSATION</span><a href={`mailto:${SALES_EMAIL}`}>{SALES_EMAIL}<ArrowUpRight size={15} aria-hidden="true" /></a>{SALES_TELEPHONES.map(phone => <a href={`tel:${phone.replace(/\s/g, "")}`} key={phone}>{phone}</a>)}<p>Guangzhou, China</p></div>
         </div>
         <div className={styles.footerBottom}><span>© {new Date().getFullYear()} GUOYAO METAL</span><span>ARCHITECTURAL METALWORKS</span><a href="#main-content">Back to top ↑</a></div>

@@ -21,7 +21,7 @@ const detailQuestions = [
 
 export const metadata: Metadata = {
   title: { absolute: "GUOYAO METAL | Architectural Metalworks" },
-  description: "Metal, made remarkable. Explore a considered world of architectural metalwork, material expression and sculptural detail with Guoyao Metal.",
+  description: "Explore architectural metal ideas for facades, interiors and sculptural forms. Discover material, finish and detail considerations with Guoyao Metal.",
   alternates: { canonical: "/" },
 };
 
@@ -31,6 +31,7 @@ export default function HomePage() {
       <section className={styles.hero} aria-labelledby="home-title">
         <Image src="/images/metal/hero-sculpture.webp" alt="Geometric bronze and reflective metal sculpture in a dark architectural setting" fill preload sizes="100vw" className={styles.heroImage} />
         <div className={styles.heroShade} />
+        <span className={styles.heroConcept}>CONCEPT VISUAL</span>
         <div className={styles.heroContent}>
           <p className={styles.kickerLight}><span />ARCHITECTURAL METALWORKS</p>
           <h1 id="home-title">Metal, made<br /><em>remarkable.</em></h1>
@@ -40,7 +41,7 @@ export default function HomePage() {
             <InquiryButton className={styles.lightLink}>Start a conversation <ArrowUpRight size={16} aria-hidden="true" /></InquiryButton>
           </div>
         </div>
-        <div className={styles.heroBottom}><a href="#perspective"><ArrowDown size={15} aria-hidden="true" />DISCOVER THE PERSPECTIVE</a><span>GUANGZHOU, CHINA</span><span>CONCEPT VISUAL</span></div>
+        <div className={styles.heroBottom}><a href="#perspective"><ArrowDown size={15} aria-hidden="true" />DISCOVER THE PERSPECTIVE</a><span>GUANGZHOU, CHINA</span></div>
       </section>
 
       <section id="perspective" className={styles.intro} aria-labelledby="perspective-title">
@@ -58,11 +59,11 @@ export default function HomePage() {
           <div className={styles.sectionHead} data-metal-reveal><div><p className={styles.kicker}>02 / DESIGN IN CONTEXT</p><h2 id="studies-title">Ideas with <em>presence.</em></h2></div><Link href="/case-studies" className={styles.textLink}>The case study collection <ArrowUpRight size={17} aria-hidden="true" /></Link></div>
           <div className={styles.studyGrid}>
             <a href="#exterior-rhythm" className={styles.studyCard} data-metal-reveal>
-              <div className={styles.studyImage}><Image src="/images/metal/project-bronze.webp" alt="Concept study of a building facade with rhythmic bronze fins" fill sizes="(min-width: 800px) 56vw, 100vw" /><span>01 / ARCHITECTURAL EXPRESSION</span></div>
+              <div className={styles.studyImage}><Image src="/images/metal/project-bronze.webp" alt="Concept study of a building facade with rhythmic bronze fins" fill sizes="(min-width: 1460px) 774px, (min-width: 541px) 55vw, calc(100vw - 48px)" /><span>01 / ARCHITECTURAL EXPRESSION</span></div>
               <div className={styles.cardTitle}><h3>Rhythm in architecture</h3><ArrowUpRight size={22} aria-hidden="true" /></div><p>Line, repetition and the changing character of light.</p><span className={styles.conceptLabel}>DESIGN CONCEPT</span>
             </a>
             <a href="#sculptural-presence" className={styles.studyCard} data-metal-reveal>
-              <div className={styles.studyImage}><Image src="/images/metal/project-reflective.webp" alt="Concept study of a polished reflective metal form in a stone interior" fill sizes="(min-width: 800px) 38vw, 100vw" /><span>02 / SCULPTURAL FORM</span></div>
+              <div className={styles.studyImage}><Image src="/images/metal/project-reflective.webp" alt="Concept study of a polished reflective metal form in a stone interior" fill sizes="(min-width: 1460px) 534px, (min-width: 541px) 38vw, calc(100vw - 48px)" /><span>02 / SCULPTURAL FORM</span></div>
               <div className={styles.cardTitle}><h3>A dialogue with space</h3><ArrowUpRight size={22} aria-hidden="true" /></div><p>Soft reflections. A strong sense of form.</p><span className={styles.conceptLabel}>DESIGN CONCEPT</span>
             </a>
           </div>
@@ -82,8 +83,8 @@ export default function HomePage() {
               {applications.map(item => <article id={item.id} key={item.id} className={styles.applicationItem} data-metal-reveal><span className={styles.applicationNumber}>{item.number}</span><div><h3>{item.title}</h3><p>{item.text}</p><span className={styles.applicationNote}>{item.note}</span></div></article>)}
             </div>
             <figure className={styles.applicationFigure} data-metal-reveal>
-              <div className={styles.applicationImage}><Image src="/images/metal/spatial-installation.webp" alt="Concept of flowing bronze ribbons suspended in a tall stone interior" fill sizes="(min-width: 900px) 56vw, 100vw" /></div>
-              <figcaption><span>FORM IN DIALOGUE WITH SPACE</span><span>DESIGN CONCEPT</span></figcaption>
+              <div className={styles.applicationImage}><Image src="/images/metal/spatial-installation.webp" alt="Concept of flowing bronze ribbons suspended in a tall stone interior" fill sizes="(min-width: 900px) 56vw, 100vw" /><span className={styles.applicationConcept}>DESIGN CONCEPT</span></div>
+              <figcaption>FORM IN DIALOGUE WITH SPACE</figcaption>
             </figure>
           </div>
         </div>

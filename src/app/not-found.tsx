@@ -4,7 +4,7 @@ import { Logo } from "@/components/site/logo";
 
 const destinations = [
   { href: "/", label: "Home" },
-  { href: "/case-studies", label: "Case Studies" },
+  { href: "/case-studies", label: "Case" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
 ];
