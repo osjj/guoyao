@@ -1,0 +1,38 @@
+# Example for a separate Nginx site on the existing server.
+# Adjust certificate paths to the files installed through BaoTa or your ACME client.
+# The certificate must cover guoyaometal.com and www.guoyaometal.com.
+# Remove any existing guoyaometal.com -> www.guoyaometal.com redirect;
+# Cloudflare already redirects www to the root domain and preserves the path/query.
+# Fill .env using .env.example and the separate Guoyao database/R2 credentials.
+# Set NEXT_PUBLIC_SITE_URL before building, then run:
+# npm ci
+# npm run db:generate
+# npm run build
+# npm run start -- --hostname 127.0.0.1 --port 4000
+server {
+    listen 80;
+    server_name guoyaometal.com www.guoyaometal.com;
+    return 301 https://guoyaometal.com$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name guoyaometal.com www.guoyaometal.com;
+
+    ssl_certificate /www/server/panel/vhost/cert/guoyaometal.com/fullchain.pem;
+    ssl_certificate_key /www/server/panel/vhost/cert/guoyaometal.com/privkey.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+
+    client_max_body_size 25m;
+
+    location / {
+        proxy_pass http://127.0.0.1:4000;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_buffering off;
+        proxy_read_timeout 120s;
+    }
+}
