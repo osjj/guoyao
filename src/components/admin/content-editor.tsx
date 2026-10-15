@@ -12,6 +12,7 @@ import {
 import { ImagePlus, Link2, Loader2 } from "lucide-react";
 import type EditorJS from "@editorjs/editorjs";
 import type { ArticleEditorData } from "@/lib/article-content";
+import { ImagePreviewDialog } from "@/components/admin/image-preview";
 
 export type ContentEditorRef = {
   save: () => Promise<ArticleEditorData | null>;
@@ -24,6 +25,7 @@ type ContentEditorProps = {
   placeholder?: string;
   uploadEndpoint?: "/api/admin/blog-images" | "/api/admin/product-images";
   contentLabel?: string;
+  enableImagePreview?: boolean;
 };
 
 function validImageUrl(value: string) {
@@ -39,6 +41,7 @@ export const ContentEditor = forwardRef<ContentEditorRef, ContentEditorProps>(
       placeholder = "Start writing your article…",
       uploadEndpoint = "/api/admin/blog-images",
       contentLabel = "article",
+      enableImagePreview = false,
     },
     ref,
   ) {
@@ -49,6 +52,7 @@ export const ContentEditor = forwardRef<ContentEditorRef, ContentEditorProps>(
     const [ready, setReady] = useState(false);
     const [imageUrl, setImageUrl] = useState("");
     const [imageError, setImageError] = useState<string | null>(null);
+    const [previewImage, setPreviewImage] = useState<{ src: string; alt: string } | null>(null);
 
     useEffect(() => {
       uploadContextRef.current = { slug, imageAlt };
@@ -187,6 +191,64 @@ export const ContentEditor = forwardRef<ContentEditorRef, ContentEditorProps>(
       };
     }, [contentLabel, holderId, placeholder, uploadEndpoint]);
 
+    useEffect(() => {
+      if (!enableImagePreview || !ready) return;
+      const holder = document.getElementById(holderId);
+      if (!holder) return;
+
+      const selector = "img.image-tool__image-picture";
+      const attributes = ["role", "tabindex", "aria-label", "aria-haspopup", "title"];
+      const originalAttributes = new Map<HTMLImageElement, (string | null)[]>();
+
+      const prepareImages = () => {
+        holder.querySelectorAll<HTMLImageElement>(selector).forEach((image) => {
+          if (originalAttributes.has(image)) return;
+          originalAttributes.set(image, attributes.map((attribute) => image.getAttribute(attribute)));
+          image.setAttribute("role", "button");
+          image.tabIndex = 0;
+          image.setAttribute("aria-label", "Enlarge image");
+          image.setAttribute("aria-haspopup", "dialog");
+          image.title = "Click to enlarge image";
+        });
+      };
+
+      const openImage = (event: Event) => {
+        const target = event.target;
+        if (!(target instanceof HTMLImageElement) || !holder.contains(target) || !target.matches(selector)) return;
+        if (event instanceof KeyboardEvent && event.key !== "Enter" && event.key !== " ") return;
+        const src = target.currentSrc || target.getAttribute("src");
+        if (!src) return;
+
+        // Keep preview activation out of EditorJS shortcuts and the surrounding form.
+        event.preventDefault();
+        event.stopPropagation();
+        target.focus({ preventScroll: true });
+        const caption = target.closest(".image-tool")?.querySelector(".image-tool__caption")?.textContent;
+        setPreviewImage({ src, alt: target.alt || caption?.trim() || imageAlt || "Article image" });
+      };
+
+      // EditorJS owns these nodes, including images added after the editor becomes ready.
+      prepareImages();
+      const observer = new MutationObserver(prepareImages);
+      observer.observe(holder, { childList: true, subtree: true });
+      holder.addEventListener("click", openImage, true);
+      // EditorJS also captures keys on document, so intercept preview keys at window first.
+      window.addEventListener("keydown", openImage, true);
+
+      return () => {
+        observer.disconnect();
+        holder.removeEventListener("click", openImage, true);
+        window.removeEventListener("keydown", openImage, true);
+        originalAttributes.forEach((values, image) => {
+          attributes.forEach((attribute, index) => {
+            const originalValue = values[index];
+            if (originalValue === null) image.removeAttribute(attribute);
+            else image.setAttribute(attribute, originalValue);
+          });
+        });
+      };
+    }, [enableImagePreview, holderId, imageAlt, ready]);
+
     const insertImageUrl = useCallback(() => {
       const trimmed = imageUrl.trim();
       if (!validImageUrl(trimmed)) {
@@ -247,7 +309,9 @@ export const ContentEditor = forwardRef<ContentEditorRef, ContentEditorProps>(
           </p>
         ) : null}
 
-        <div className="article-editor-shell relative min-h-[28rem] rounded-2xl border border-[#ccd3ce] bg-white px-3 py-5 shadow-sm sm:px-6">
+        <div
+          className={`article-editor-shell relative min-h-[28rem] rounded-2xl border border-[#ccd3ce] bg-white px-3 py-5 shadow-sm sm:px-6 ${enableImagePreview ? "[&_img.image-tool__image-picture]:cursor-zoom-in [&_img.image-tool__image-picture:focus-visible]:outline-2 [&_img.image-tool__image-picture:focus-visible]:outline-offset-[-2px] [&_img.image-tool__image-picture:focus-visible]:outline-[var(--accent)]" : ""}`}
+        >
           {!ready ? (
             <div className="absolute inset-x-0 top-6 flex items-center justify-center gap-2 text-sm font-bold text-[var(--ink-muted)]">
               <Loader2 className="size-4 animate-spin" /> Loading article editor…
@@ -260,7 +324,15 @@ export const ContentEditor = forwardRef<ContentEditorRef, ContentEditorProps>(
           Select text for bold, italic, or link tools. Use the + button for headings, lists,
           quotes, dividers, and image upload. Image files are converted to WebP and require R2;
           image URLs work without R2.
+          {enableImagePreview ? " Click an image to enlarge it." : null}
         </p>
+        {enableImagePreview && previewImage ? (
+          <ImagePreviewDialog
+            src={previewImage.src}
+            alt={previewImage.alt}
+            onClose={() => setPreviewImage(null)}
+          />
+        ) : null}
       </div>
     );
   },

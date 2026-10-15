@@ -29,7 +29,7 @@ export default function HomePage() {
   return (
     <MetalMotion className={styles.page}>
       <section className={styles.hero} aria-labelledby="home-title">
-        <Image src="/images/metal/hero-sculpture.webp" alt="Geometric bronze and reflective metal sculpture in a dark architectural setting" fill preload sizes="100vw" className={styles.heroImage} />
+        <Image src="/images/metal/hero-sculpture.webp" alt="Geometric bronze and reflective metal sculpture in a dark architectural setting" fill preload sizes="(max-width: 800px) 1500px, 100vw" className={styles.heroImage} />
         <div className={styles.heroShade} />
         <span className={styles.heroConcept}>CONCEPT VISUAL</span>
         <div className={styles.heroContent}>

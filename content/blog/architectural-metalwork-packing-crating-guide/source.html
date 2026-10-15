@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>金属制品打包封箱全流程 · 深度详解 | 奢侈品门店 · 高端住宅 · 高端酒店</title>
+<style>
+  :root{
+    --bg:#08080a;
+    --panel:#101013;
+    --panel-2:#16161b;
+    --panel-3:#1d1d23;
+    --line:rgba(200,164,92,.22);
+    --line-2:rgba(255,255,255,.065);
+    --line-3:rgba(255,255,255,.035);
+    --gold:#c8a45c;
+    --gold-l:#e9d9ae;
+    --gold-m:#d4b571;
+    --gold-d:#8a6d33;
+    --gold-dd:#5c4820;
+    --wood:#a87d4a;
+    --wood-l:#d4a878;
+    --wood-d:#6a4a2a;
+    --foam:#c8d8e8;
+    --foam-l:#e0ecf5;
+    --foam-d:#5a7a8a;
+    --pe:#a8c8a8;
+    --pe-l:#c8e0c8;
+    --pe-d:#4a6a4a;
+    --steel:#8a9aa8;
+    --steel-l:#b8c8d8;
+    --red:#c85a5a;
+    --red-l:#e0a8a8;
+    --text:#eae6de;
+    --muted:#8b867c;
+    --muted-2:#6a655d;
+    --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",sans-serif;
+    --serif:"Noto Serif SC","Songti SC","Source Han Serif SC",Georgia,serif;
+    --mono:"SF Mono","JetBrains Mono","Consolas","Courier New",monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;scroll-padding-top:66px;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    font-size:14px;
+    line-height:1.78;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    background:
+      radial-gradient(1000px 600px at 10% -8%, rgba(200,164,92,.09), transparent 62%),
+      radial-gradient(800px 500px at 95% 10%, rgba(168,125,74,.05), transparent 58%),
+      radial-gradient(700px 500px at 50% 100%, rgba(168,200,168,.035), transparent 60%);
+    pointer-events:none;z-index:0;
+  }
+  .wrap{max-width:1300px;margin:0 auto;padding:0 26px;position:relative;z-index:1;}
+
+  /* ============ 导航 ============ */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    backdrop-filter:blur(16px) saturate(1.3);
+    -webkit-backdrop-filter:blur(16px) saturate(1.3);
+    background:rgba(8,8,10,.84);
+    border-bottom:1px solid var(--line-2);
+  }
+  .nav-in{
+    max-width:1300px;margin:0 auto;padding:0 26px;
+    height:56px;display:flex;align-items:center;justify-content:space-between;gap:18px;
+  }
+  .brand{
+    font-family:var(--serif);font-size:13.5px;letter-spacing:.15em;
+    color:var(--gold-l);white-space:nowrap;display:flex;align-items:baseline;gap:9px;
+  }
+  .brand em{font-style:normal;font-size:9px;letter-spacing:.2em;color:var(--muted-2);}
+  .nav-links{display:flex;gap:16px;font-size:11px;letter-spacing:.05em;}
+  .nav-links a{color:var(--muted);text-decoration:none;transition:.25s;padding:4px 0;position:relative;}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:.3s;}
+  .nav-links a:hover{color:var(--gold-l);}
+  .nav-links a:hover::after{width:100%;}
+  @media(max-width:1060px){.nav-links{display:none;}}
+
+  /* ============ Hero ============ */
+  header{
+    padding:144px 0 86px;
+    border-bottom:1px solid var(--line-2);
+    position:relative;overflow:hidden;
+  }
+  .hero-art{
+    position:absolute;top:0;right:-80px;width:660px;height:100%;
+    opacity:.55;pointer-events:none;
+  }
+  .eyebrow{
+    font-size:9.5px;letter-spacing:.35em;color:var(--gold);
+    text-transform:uppercase;margin-bottom:24px;
+    display:flex;align-items:center;gap:15px;
+  }
+  .eyebrow::after{content:"";height:1px;width:76px;background:linear-gradient(90deg,var(--gold),transparent);}
+  h1{
+    font-family:var(--serif);
+    font-size:clamp(27px,4.6vw,52px);
+    line-height:1.2;font-weight:600;letter-spacing:.005em;
+    margin-bottom:22px;max-width:960px;
+  }
+  h1 em{
+    font-style:normal;
+    background:linear-gradient(102deg,#8a6d33 0%,#e9d9ae 28%,#d4a878 55%,#c8e0c8 78%,#8a6d33 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .lede{font-size:14.5px;color:#b4afa4;max-width:780px;line-height:1.92;}
+  .lede strong{color:#d8d3c9;font-weight:500;}
+  .hero-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:32px;}
+  .tag{
+    font-size:10.5px;letter-spacing:.05em;color:var(--gold-l);
+    border:1px solid var(--line);border-radius:100px;
+    padding:6px 13px;background:rgba(200,164,92,.05);transition:.3s;
+  }
+  .tag:hover{background:rgba(200,164,92,.12);border-color:var(--gold);}
+  .hero-stats{
+    display:grid;grid-template-columns:repeat(6,1fr);gap:1px;
+    margin-top:60px;background:var(--line-2);
+    border:1px solid var(--line-2);
+  }
+  .hstat{background:var(--bg);padding:22px 16px;transition:.35s;}
+  .hstat:hover{background:var(--panel);}
+  .hstat b{
+    display:block;font-family:var(--serif);font-size:23px;
+    color:var(--gold-l);line-height:1;margin-bottom:7px;font-weight:500;
+  }
+  .hstat b i{font-style:normal;font-size:11px;color:var(--muted);margin-left:3px;}
+  .hstat span{font-size:10.5px;color:var(--muted);letter-spacing:.03em;line-height:1.5;display:block;}
+  @media(max-width:1000px){.hero-stats{grid-template-columns:repeat(3,1fr);}}
+  @media(max-width:600px){.hero-stats{grid-template-columns:repeat(2,1fr);}}
+
+  /* ============ 通用区块 ============ */
+  section{padding:86px 0;position:relative;}
+  section + section{border-top:1px solid var(--line-3);}
+  .sec-head{margin-bottom:48px;max-width:920px;}
+  .sec-num{
+    font-family:var(--mono);font-size:10px;letter-spacing:.22em;
+    color:var(--gold);display:block;margin-bottom:13px;
+  }
+  h2{
+    font-family:var(--serif);font-weight:600;
+    font-size:clamp(21px,3vw,31px);line-height:1.38;letter-spacing:.005em;
+    margin-bottom:15px;
+  }
+  .sec-sub{color:var(--muted);font-size:13px;max-width:780px;line-height:1.88;}
+  h3.sub-h{
+    font-family:var(--serif);font-size:17.5px;font-weight:600;
+    color:var(--gold-l);margin:56px 0 24px;padding-bottom:12px;
+    border-bottom:1px solid var(--line-2);letter-spacing:.02em;
+    display:flex;align-items:baseline;gap:13px;
+  }
+  h3.sub-h::before{
+    content:"";width:3px;height:14px;background:var(--gold);
+    display:inline-block;flex:0 0 auto;
+  }
+  h3.sub-h em{
+    font-style:normal;font-family:var(--mono);font-size:9.5px;
+    letter-spacing:.16em;color:var(--muted-2);font-weight:400;
+  }
+
+  /* ============ 场景卡片 ============ */
+  .scenes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  @media(max-width:980px){.scenes{grid-template-columns:1fr;}}
+  .scene{
+    background:linear-gradient(180deg,var(--panel),#0c0c0f);
+    border:1px solid var(--line-2);
+    border-radius:4px;overflow:hidden;
+    transition:.45s cubic-bezier(.22,.9,.3,1);
+    display:flex;flex-direction:column;
+  }
+  .scene:hover{border-color:var(--line);transform:translateY(-4px);box-shadow:0 20px 50px -20px rgba(0,0,0,.8);}
+  .scene .illus{width:100%;height:auto;display:block;border-bottom:1px solid var(--line-2);}
+  .scene-body{padding:24px 22px 28px;flex:1;display:flex;flex-direction:column;}
+  .scene-body h3{
+    font-family:var(--serif);font-size:18px;font-weight:600;
+    margin-bottom:4px;color:var(--gold-l);letter-spacing:.02em;
+  }
+  .scene-en{font-size:9.5px;letter-spacing:.2em;color:var(--muted-2);text-transform:uppercase;margin-bottom:16px;}
+  .scene-body > p{font-size:12.5px;color:#a29d93;line-height:1.85;margin-bottom:18px;}
+  .feat{list-style:none;font-size:11.8px;margin-top:auto;}
+  .feat li{
+    padding:8px 0;border-top:1px solid var(--line-3);
+    display:flex;gap:10px;color:#b0aba1;line-height:1.6;
+  }
+  .feat li::before{
+    content:"";width:4px;height:4px;border-radius:50%;
+    background:var(--gold);margin-top:8px;flex:0 0 auto;
+  }
+  .feat li strong{color:#d6d1c7;font-weight:500;}
+
+  /* ============ 材料体系 ============ */
+  .mat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-2);border:1px solid var(--line-2);}
+  @media(max-width:1000px){.mat-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.mat-grid{grid-template-columns:1fr;}}
+  .mat{background:var(--bg);padding:22px 18px;transition:.35s;}
+  .mat:hover{background:var(--panel);}
+  .mat-tag{
+    font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;
+    color:var(--gold);margin-bottom:11px;display:block;
+  }
+  .mat h5{font-size:14px;font-weight:600;margin-bottom:5px;color:#e8e4dc;}
+  .mat .en{font-size:9.5px;letter-spacing:.1em;color:var(--muted-2);margin-bottom:13px;text-transform:uppercase;}
+  .mat-dl{font-size:11.3px;}
+  .mat-dl div{
+    display:flex;justify-content:space-between;gap:10px;
+    padding:5px 0;border-top:1px solid var(--line-3);
+  }
+  .mat-dl span{color:var(--muted);}
+  .mat-dl b{font-weight:500;color:#c9c4ba;font-family:var(--mono);font-size:10.5px;}
+
+  /* ============ 工序流程 ============ */
+  .steps{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    gap:1px;background:var(--line-2);border:1px solid var(--line-2);border-radius:3px;overflow:hidden;
+  }
+  @media(max-width:1100px){.steps{grid-template-columns:repeat(3,1fr);}}
+  @media(max-width:820px){.steps{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.steps{grid-template-columns:1fr;}}
+  .step{
+    background:var(--bg);padding:24px 20px 26px;position:relative;
+    transition:.35s;display:flex;flex-direction:column;
+  }
+  .step:hover{background:var(--panel);}
+  .step::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:2px;
+    background:var(--gold);opacity:0;transition:.35s;
+  }
+  .step:hover::before{opacity:1;}
+  .step-head{display:flex;align-items:baseline;gap:10px;margin-bottom:12px;}
+  .step-n{
+    font-family:var(--serif);font-size:26px;line-height:1;
+    color:rgba(200,164,92,.20);font-weight:600;
+    transition:.35s;flex:0 0 auto;
+  }
+  .step:hover .step-n{color:rgba(200,164,92,.5);}
+  .step h4{font-size:13.5px;font-weight:600;letter-spacing:.02em;color:#eeeae2;line-height:1.4;}
+  .step > p{font-size:11.8px;color:var(--muted);line-height:1.82;margin-bottom:14px;}
+  .ckpt{
+    font-size:11px;color:var(--gold);letter-spacing:.01em;
+    border-left:2px solid rgba(200,164,92,.4);
+    padding:3px 0 3px 10px;line-height:1.65;margin-top:auto;
+  }
+  .ckpt b{color:var(--gold-l);font-weight:600;}
+  .step-extra{
+    margin-top:10px;padding-top:10px;border-top:1px dashed var(--line-2);
+    font-size:10.8px;color:var(--muted-2);line-height:1.65;
+  }
+  .step-extra b{color:#a29d93;font-weight:500;}
+
+  /* ============ 节点详图 ============ */
+  .details{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  @media(max-width:980px){.details{grid-template-columns:1fr;}}
+  .detail{
+    background:var(--panel);border:1px solid var(--line-2);
+    border-radius:3px;padding:15px;transition:.4s;
+  }
+  .detail:hover{border-color:var(--line);}
+  .detail svg{width:100%;height:auto;display:block;border-radius:2px;}
+  .detail-cap{margin-top:15px;padding-top:14px;border-top:1px solid var(--line-2);}
+  .detail-cap h4{
+    font-size:13px;font-weight:600;color:var(--gold-l);margin-bottom:7px;
+    display:flex;align-items:baseline;gap:8px;
+  }
+  .detail-cap h4 em{
+    font-style:normal;font-family:var(--mono);font-size:9.5px;
+    color:var(--muted-2);letter-spacing:.09em;
+  }
+  .detail-cap p{font-size:11.8px;color:var(--muted);line-height:1.8;}
+  .detail-spec{
+    margin-top:11px;display:grid;grid-template-columns:repeat(2,1fr);
+    gap:1px;background:var(--line-3);border:1px solid var(--line-3);
+  }
+  .detail-spec div{background:var(--panel);padding:7px 9px;font-size:10.5px;}
+  .detail-spec span{color:var(--muted-2);display:block;margin-bottom:2px;font-size:9.5px;letter-spacing:.05em;}
+  .detail-spec b{color:var(--gold-l);font-family:var(--mono);font-size:10.5px;font-weight:500;}
+
+  /* ============ 图表 ============ */
+  .charts-2{display:grid;grid-template-columns:1.5fr 1fr;gap:18px;align-items:start;}
+  .charts-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start;}
+  @media(max-width:980px){.charts-2,.charts-3{grid-template-columns:1fr;}}
+  .card{
+    background:var(--panel);border:1px solid var(--line-2);
+    border-radius:4px;padding:22px 20px 20px;
+  }
+  .card h4{
+    font-size:10.5px;letter-spacing:.14em;color:var(--gold);
+    text-transform:uppercase;margin-bottom:5px;font-weight:600;
+    font-family:var(--mono);
+  }
+  .card .cap{font-size:11px;color:var(--muted);margin-bottom:18px;line-height:1.65;}
+  .chart-svg{width:100%;height:auto;display:block;}
+
+  /* 条形图 */
+  .bars{margin-top:4px;}
+  .bar-row{margin-bottom:15px;}
+  .bar-top{display:flex;justify-content:space-between;align-items:baseline;font-size:11.3px;margin-bottom:6px;gap:10px;}
+  .bar-top b{font-weight:500;color:#dad5cb;}
+  .bar-top span{color:var(--gold);font-family:var(--mono);font-size:9.5px;white-space:nowrap;}
+  .bar-track{height:5px;background:rgba(255,255,255,.055);border-radius:100px;overflow:hidden;}
+  .bar-fill{
+    height:100%;border-radius:100px;width:0;
+    transition:width 1.4s cubic-bezier(.22,.9,.3,1);
+  }
+
+  /* ============ 表格 ============ */
+  .table-wrap{overflow-x:auto;border:1px solid var(--line-2);border-radius:4px;}
+  table{width:100%;border-collapse:collapse;font-size:12px;min-width:820px;}
+  thead th{
+    background:var(--panel-2);color:var(--gold-l);
+    font-weight:600;font-size:10.5px;letter-spacing:.06em;
+    text-align:left;padding:13px 15px;
+    border-bottom:1px solid var(--line);white-space:nowrap;
+  }
+  tbody td{
+    padding:11px 15px;border-bottom:1px solid var(--line-3);
+    color:#aca79d;vertical-align:top;line-height:1.68;
+  }
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover td{background:rgba(200,164,92,.035);}
+  tbody td:first-child{color:#d9d4ca;font-weight:500;white-space:nowrap;}
+  .hl{color:var(--gold-l);font-family:var(--mono);font-size:11px;}
+  .hl2{color:#e9d9ae;font-weight:500;}
+
+  /* ============ 缺陷卡 ============ */
+  .defects{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+  @media(max-width:1100px){.defects{grid-template-columns:repeat(3,1fr);}}
+  @media(max-width:820px){.defects{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.defects{grid-template-columns:1fr;}}
+  .defect{
+    background:var(--panel);border:1px solid var(--line-2);
+    border-radius:3px;padding:16px 16px 18px;
+    border-left:2px solid var(--accent,#7d4a2f);transition:.35s;
+  }
+  .defect:hover{background:var(--panel-2);}
+  .defect h5{
+    font-size:12px;font-weight:600;color:#e8d8c0;
+    margin-bottom:8px;display:flex;align-items:center;gap:7px;flex-wrap:wrap;
+  }
+  .defect h5 em{
+    font-style:normal;font-family:var(--mono);font-size:8.5px;
+    color:var(--muted-2);letter-spacing:.07em;
+  }
+  .defect .cause{font-size:10.8px;color:var(--muted);line-height:1.7;margin-bottom:8px;}
+  .defect .fix{
+    font-size:10.8px;color:#a8c8a8;line-height:1.7;
+    padding-top:8px;border-top:1px dashed var(--line-3);
+  }
+  .defect .fix b{color:#c8e0c8;font-weight:600;}
+
+  /* ============ 工具清单 ============ */
+  .tools{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));
+    gap:1px;background:var(--line-2);border:1px solid var(--line-2);border-radius:3px;overflow:hidden;
+  }
+  .tool{background:var(--bg);padding:17px 16px 18px;transition:.3s;}
+  .tool:hover{background:var(--panel);}
+  .tool .cat{
+    font-family:var(--mono);font-size:9px;letter-spacing:.14em;
+    color:var(--gold);text-transform:uppercase;display:block;margin-bottom:9px;
+  }
+  .tool h5{font-size:12px;font-weight:600;color:#e0dcd4;margin-bottom:9px;}
+  .tool ul{list-style:none;font-size:10.8px;color:var(--muted);line-height:1.85;}
+  .tool ul li{padding-left:11px;position:relative;}
+  .tool ul li::before{
+    content:"";position:absolute;left:0;top:8px;
+    width:3px;height:3px;background:var(--muted-2);border-radius:50%;
+  }
+
+  /* ============ 提示框 ============ */
+  .note-box{
+    margin-top:24px;padding:20px 24px;
+    border:1px solid var(--line);background:rgba(200,164,92,.035);
+    border-radius:3px;border-left:3px solid var(--gold);
+  }
+  .note-box p{font-size:12.5px;color:#b4afa4;line-height:1.92;}
+  .note-box p strong{color:var(--gold-l);font-weight:600;}
+  .note-box p em{color:#ddd8cf;font-style:normal;font-weight:500;}
+
+  /* ============ 图例 ============ */
+  .legend{margin-top:6px;}
+  .legend div{
+    display:flex;align-items:center;gap:9px;font-size:11.3px;
+    padding:5px 0;border-top:1px solid var(--line-3);
+  }
+  .legend i{width:9px;height:9px;border-radius:2px;flex:0 0 auto;display:block;}
+  .legend span{flex:1;color:#b0aba1;}
+  .legend b{color:var(--gold-l);font-family:var(--mono);font-size:10.5px;font-weight:500;}
+
+  /* ============ 页脚 ============ */
+  footer{
+    padding:60px 0 48px;border-top:1px solid var(--line-2);
+    text-align:center;
+  }
+  footer .fmark{
+    font-family:var(--serif);font-size:13.5px;color:var(--gold-l);
+    letter-spacing:.24em;margin-bottom:13px;
+  }
+  footer p{font-size:10.5px;color:var(--muted-2);letter-spacing:.06em;line-height:1.9;}
+
+  /* ============ 动效 ============ */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .85s cubic-bezier(.22,.9,.3,1),transform .85s cubic-bezier(.22,.9,.3,1);}
+  .reveal.in{opacity:1;transform:none;}
+  .steps .step:nth-child(4n+2){transition-delay:.05s;}
+  .steps .step:nth-child(4n+3){transition-delay:.10s;}
+  .steps .step:nth-child(4n+4){transition-delay:.15s;}
+  .scenes .scene:nth-child(2){transition-delay:.07s;}
+  .scenes .scene:nth-child(3){transition-delay:.14s;}
+  .defects .defect:nth-child(4n+2){transition-delay:.04s;}
+  .defects .defect:nth-child(4n+3){transition-delay:.08s;}
+  .defects .defect:nth-child(4n+4){transition-delay:.12s;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <div class="brand">金属打包封箱 <em>PACKING & CRATING</em></div>
+    <div class="nav-links">
+      <a href="#scenes">场景</a>
+      <a href="#materials">材料</a>
+      <a href="#flow">流程</a>
+      <a href="#details">节点</a>
+      <a href="#charts">数据</a>
+      <a href="#quality">标准</a>
+      <a href="#defects">缺陷</a>
+      <a href="#tools">工具</a>
+      <a href="#env">环境</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <svg class="hero-art" viewBox="0 0 660 780" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#c8a45c" stop-opacity=".45"/>
+        <stop offset="1" stop-color="#c8a45c" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="hg2" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#a87d4a" stop-opacity=".32"/>
+        <stop offset="1" stop-color="#a87d4a" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="hg3" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#a8c8a8" stop-opacity=".25"/>
+        <stop offset="1" stop-color="#a8c8a8" stop-opacity="0"/>
+      </linearGradient>
+      <pattern id="hgp" width="46" height="46" patternUnits="userSpaceOnUse">
+        <path d="M46 0 L0 0 L0 46" fill="none" stroke="#c8a45c" stroke-width=".5" opacity=".09"/>
+      </pattern>
+    </defs>
+    <rect width="660" height="780" fill="url(#hgp)"/>
+    <path d="M0 780 L660 220 L660 780 Z" fill="url(#hg1)" opacity=".15"/>
+    <path d="M0 780 L660 360 L660 780 Z" fill="url(#hg2)" opacity=".12"/>
+    <path d="M0 780 L660 480 L660 780 Z" fill="url(#hg3)" opacity=".10"/>
+    <line x1="0" y1="640" x2="660" y2="80" stroke="#c8a45c" stroke-width=".6" opacity=".18"/>
+    <line x1="0" y1="700" x2="660" y2="140" stroke="#c8a45c" stroke-width=".6" opacity=".11"/>
+    <g opacity=".10" stroke="#d4a878" stroke-width=".7">
+      <line x1="430" y1="70" x2="640" y2="70"/>
+      <line x1="450" y1="90" x2="640" y2="90"/>
+      <line x1="470" y1="110" x2="640" y2="110"/>
+      <line x1="490" y1="130" x2="640" y2="130"/>
+      <line x1="510" y1="150" x2="640" y2="150"/>
+    </g>
+    <path d="M410 210 L640 210 M410 250 L640 250" stroke="#a8c8a8" stroke-width="1.2" opacity=".14"/>
+    <g opacity=".08" fill="#e0ecf5">
+      <circle cx="480" cy="310" r="4"/>
+      <circle cx="510" cy="310" r="4"/>
+      <circle cx="540" cy="310" r="4"/>
+      <circle cx="570" cy="310" r="4"/>
+      <circle cx="495" cy="330" r="4"/>
+      <circle cx="525" cy="330" r="4"/>
+      <circle cx="555" cy="330" r="4"/>
+      <circle cx="585" cy="330" r="4"/>
+    </g>
+  </svg>
+
+  <div class="wrap">
+    <div class="eyebrow">Packing · Crating · Protection · Logistics</div>
+    <h1>金属制品<em>打包封箱</em><br>全流程 · 深度详解</h1>
+    <p class="lede">
+      奢侈品门店、高端住宅与高端酒店，金属制品价值高、表面娇贵、异形件多。
+      打包封箱不是"包起来"，而是<strong>表面保护、边角防护、结构固定、标识追溯</strong>四位一体的系统工程。
+      本文以 <strong>12 道主工序 · 36 个子工序 · 6 类节点详图 · 12 类缺陷防治</strong> 为轴，
+      逐层拆解从清洁贴膜到装车运输的完整链路。
+    </p>
+    <div class="hero-tags">
+      <span class="tag" style="border-color:rgba(168,200,168,.4);color:#c8e0c8;">PE 保护膜 / 无纺布 / 静电膜</span>
+      <span class="tag" style="border-color:rgba(200,216,232,.4);color:#e0ecf5;">珍珠棉 / EVA / 蜂窝纸板</span>
+      <span class="tag" style="border-color:rgba(212,168,120,.4);color:#d4a878;">木箱 / 铁架 / 纸箱</span>
+      <span class="tag" style="border-color:rgba(200,164,92,.4);color:#e9d9ae;">二维码全流程追溯</span>
+      <span class="tag" style="border-color:rgba(200,90,90,.35);color:#e0a8a8;">破损率 ≤0.5%</span>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hstat"><b>12<i>道</i></b><span>主工序节点</span></div>
+      <div class="hstat"><b>36<i>道</i></b><span>子工序拆解</span></div>
+      <div class="hstat"><b>6<i>类</i></b><span>节点详图</span></div>
+      <div class="hstat"><b>≤30<i>天</i></b><span>保护膜留存上限</span></div>
+      <div class="hstat"><b>≤800<i>kg</i></b><span>单箱重量上限</span></div>
+      <div class="hstat"><b>≤0.5<i>%</i></b><span>门店破损率目标</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 01 场景 ============ -->
+<section id="scenes">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">01 / SCENARIOS</span>
+      <h2>三大场景的打包封箱侧重</h2>
+      <p class="sec-sub">同一套打包逻辑，三种不同的防护等级。场景决定包装材料、固定方式与运输要求——奢侈品门店重"表面零瑕疵"，高端住宅重"轻量化易拆"，高端酒店重"批量一致性"。</p>
+    </div>
+
+    <div class="scenes">
+
+      <!-- 奢侈品门店 -->
+      <article class="scene reveal">
+        <svg viewBox="0 0 400 300" class="illus" role="img" aria-label="奢侈品门店金属制品木箱包装示意图">
+          <defs>
+            <linearGradient id="lgWood" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#8a5a3a"/>
+              <stop offset=".5" stop-color="#b88a5a"/>
+              <stop offset="1" stop-color="#8a5a3a"/>
+            </linearGradient>
+          </defs>
+
+          <rect width="400" height="300" fill="#0b0b0d"/>
+          <rect y="252" width="400" height="48" fill="#070709"/>
+
+          <!-- 木箱主体 -->
+          <rect x="40" y="50" width="320" height="202" fill="url(#lgWood)" opacity=".85"/>
+          <rect x="40" y="50" width="320" height="202" fill="none" stroke="#d4a878" stroke-width="1.2" opacity=".7"/>
+
+          <!-- 木箱板条 -->
+          <g stroke="#5a3a24" stroke-width=".8" opacity=".5">
+            <line x1="40" y1="82" x2="360" y2="82"/>
+            <line x1="40" y1="114" x2="360" y2="114"/>
+            <line x1="40" y1="146" x2="360" y2="146"/>
+            <line x1="40" y1="178" x2="360" y2="178"/>
+            <line x1="40" y1="210" x2="360" y2="210"/>
+          </g>
+
+          <!-- 打包带 -->
+          <rect x="120" y="46" width="10" height="210" fill="#c8e0c8" opacity=".85"/>
+          <rect x="270" y="46" width="10" height="210" fill="#c8e0c8" opacity=".85"/>
+          <rect x="120" y="46" width="10" height="210" fill="none" stroke="#a8c8a8" stroke-width=".6"/>
+          <rect x="270" y="46" width="10" height="210" fill="none" stroke="#a8c8a8" stroke-width=".6"/>
+
+          <!-- 内层保护示意 -->
+          <rect x="54" y="64" width="292" height="174" fill="none" stroke="#e0ecf5" stroke-width=".8" stroke-dasharray="4 3" opacity=".5"/>
+          <text x="200" y="108" text-anchor="middle" fill="#e0ecf5" font-size="9" font-family="sans-serif" opacity=".6">珍珠棉内衬 20mm</text>
+
+          <!-- 金属板示意 -->
+          <rect x="80" y="130" width="240" height="60" fill="#c8a45c" opacity=".55"/>
+          <rect x="80" y="130" width="240" height="60" fill="none" stroke="#e9d9ae" stroke-width=".7"/>
+          <text x="200" y="165" text-anchor="middle" fill="#3a2f14" font-size="10" font-family="sans-serif">金属饰面板</text>
+
+          <!-- 标签 -->
+          <rect x="260" y="58" width="86" height="34" fill="#0b0b0d" stroke="#e9d9ae" stroke-width=".7"/>
+          <text x="303" y="72" text-anchor="middle" fill="#e9d9ae" font-size="7" font-family="monospace">QR CODE</text>
+          <text x="303" y="84" text-anchor="middle" fill="#c8a45c" font-size="6.5" font-family="monospace">A-01-012</text>
+
+          <!-- 易碎标 -->
+          <path d="M72 62 l10 -14 l10 14 z" fill="none" stroke="#e8a878" stroke-width=".9"/>
+          <text x="82" y="58" text-anchor="middle" fill="#e8a878" font-size="7" font-family="sans-serif">!</text>
+          <text x="82" y="76" text-anchor="middle" fill="#e8a878" font-size="6" font-family="sans-serif">易碎</text>
+
+          <!-- 向上标 -->
+          <path d="M188 244 l12 -14 l12 14 z" fill="none" stroke="#e9d9ae" stroke-width=".9"/>
+          <line x1="200" y1="230" x2="200" y2="244" stroke="#e9d9ae" stroke-width=".9"/>
+
+          <text x="200" y="286" text-anchor="middle" fill="#8b867c" font-size="10" font-family="sans-serif">
+            立式木箱 · 珍珠棉内衬 · 打包带固定 · 二维码追溯
+          </text>
+        </svg>
+
+        <div class="scene-body">
+          <h3>奢侈品门店</h3>
+          <div class="scene-en">Luxury Retail Flagship</div>
+          <p>门店金属饰面价值高、表面娇贵（镜面、PVD 镀钛），任何划痕或凹坑都无法修补。打包以"表面零瑕疵"为核心，采用立式木箱 + 珍珠棉内衬 + 定制卡槽。</p>
+          <ul class="feat">
+            <li><strong>镜面 / PVD 面板</strong>：PE 膜 + 无纺布双层保护</li>
+            <li><strong>异形件</strong>：定制珍珠棉卡槽，一体成型</li>
+            <li><strong>木箱立式运输</strong>，严禁平叠</li>
+            <li><strong>二维码追溯</strong>，扫码可查加工参数与安装位置</li>
+            <li>现场开箱前不得撕除保护膜</li>
+            <li>单箱重量 ≤800kg，超重需拆分</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 高端住宅 -->
+      <article class="scene reveal">
+        <svg viewBox="0 0 400 300" class="illus" role="img" aria-label="高端住宅金属制品纸箱包装示意图">
+          <defs>
+            <linearGradient id="lgCard" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#c8a878"/>
+              <stop offset="1" stop-color="#a88858"/>
+            </linearGradient>
+          </defs>
+
+          <rect width="400" height="300" fill="#101014"/>
+          <rect y="252" width="400" height="48" fill="#0a0a0d"/>
+
+          <!-- 纸箱 -->
+          <rect x="60" y="80" width="280" height="160" fill="url(#lgCard)" opacity=".85"/>
+          <rect x="60" y="80" width="280" height="160" fill="none" stroke="#d4a878" stroke-width="1.1"/>
+
+          <!-- 封箱胶带 -->
+          <rect x="60" y="154" width="280" height="12" fill="#e8dcc8" opacity=".9"/>
+          <rect x="60" y="154" width="280" height="12" fill="none" stroke="#c8a878" stroke-width=".6"/>
+
+          <!-- 箱盖折线 -->
+          <line x1="60" y1="100" x2="340" y2="100" stroke="#8a6848" stroke-width=".7" opacity=".6"/>
+          <line x1="60" y1="220" x2="340" y2="220" stroke="#8a6848" stroke-width=".7" opacity=".6"/>
+
+          <!-- 内层保护 -->
+          <rect x="72" y="92" width="256" height="136" fill="none" stroke="#e0ecf5" stroke-width=".8" stroke-dasharray="4 3" opacity=".5"/>
+          <text x="200" y="118" text-anchor="middle" fill="#e0ecf5" font-size="9" font-family="sans-serif" opacity=".6">气泡膜 + 珍珠棉</text>
+
+          <!-- 金属踢脚线示意 -->
+          <rect x="100" y="140" width="200" height="20" fill="#c8a45c" opacity=".55"/>
+          <rect x="100" y="140" width="200" height="20" fill="none" stroke="#e9d9ae" stroke-width=".7"/>
+          <text x="200" y="154" text-anchor="middle" fill="#3a2f14" font-size="9" font-family="sans-serif">拉丝踢脚线</text>
+
+          <!-- 标签 -->
+          <rect x="264" y="88" width="66" height="26" fill="#101014" stroke="#e9d9ae" stroke-width=".7"/>
+          <text x="297" y="100" text-anchor="middle" fill="#e9d9ae" font-size="6.5" font-family="monospace">QR CODE</text>
+          <text x="297" y="110" text-anchor="middle" fill="#c8a45c" font-size="6" font-family="monospace">R-02-034</text>
+
+          <!-- 向上标 -->
+          <path d="M188 256 l12 -14 l12 14 z" fill="none" stroke="#e9d9ae" stroke-width=".9"/>
+          <line x1="200" y1="242" x2="200" y2="256" stroke="#e9d9ae" stroke-width=".9"/>
+
+          <!-- 防潮标 -->
+          <path d="M78 250 q10 -8 20 0 q-10 8 -20 0 z" fill="none" stroke="#a8c8e0" stroke-width=".8"/>
+          <text x="88" y="272" text-anchor="middle" fill="#a8c8e0" font-size="6.5" font-family="sans-serif">防潮</text>
+
+          <text x="200" y="286" text-anchor="middle" fill="#8b867c" font-size="10" font-family="sans-serif">
+            纸箱包装 · 气泡膜 + 珍珠棉 · 轻量化 · 便于现场拆箱
+          </text>
+        </svg>
+
+        <div class="scene-body">
+          <h3>高端住宅</h3>
+          <div class="scene-en">Premium Residence</div>
+          <p>住宅金属制品以踢脚线、门套、护墙嵌条为主，数量多、规格碎、现场空间小。打包以"轻量化易拆"为核心，采用纸箱 + 气泡膜 + 珍珠棉，避免过度包装。</p>
+          <ul class="feat">
+            <li><strong>长丝拉丝件</strong>：气泡膜 + 珍珠棉包裹</li>
+            <li><strong>纸箱分规格装箱</strong>，每箱附装箱清单</li>
+            <li><strong>轻量化包装</strong>，单人可搬运（≤25kg）</li>
+            <li>标签注明<strong>房间号与安装位置</strong></li>
+            <li>开箱后保护膜留存至安装前</li>
+            <li>纸箱可回收，减少现场垃圾</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 高端酒店 -->
+      <article class="scene reveal">
+        <svg viewBox="0 0 400 300" class="illus" role="img" aria-label="高端酒店金属制品铁架包装示意图">
+          <defs>
+            <linearGradient id="lgSteel" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#5a5a62"/>
+              <stop offset=".5" stop-color="#9a9aa8"/>
+              <stop offset="1" stop-color="#5a5a62"/>
+            </linearGradient>
+          </defs>
+
+          <rect width="400" height="300" fill="#0e0e12"/>
+          <rect y="252" width="400" height="48" fill="#08080b"/>
+
+          <!-- 铁架主体 -->
+          <rect x="40" y="46" width="320" height="206" fill="#15151a" stroke="url(#lgSteel)" stroke-width="1.4"/>
+          <!-- 铁架横梁 -->
+          <g stroke="#8a9aa8" stroke-width="1.4" opacity=".8">
+            <line x1="40" y1="46" x2="360" y2="46"/>
+            <line x1="40" y1="252" x2="360" y2="252"/>
+            <line x1="40" y1="120" x2="360" y2="120"/>
+            <line x1="40" y1="186" x2="360" y2="186"/>
+            <line x1="40" y1="46" x2="40" y2="252"/>
+            <line x1="360" y1="46" x2="360" y2="252"/>
+          </g>
+          <!-- 斜撑 -->
+          <line x1="40" y1="46" x2="120" y2="120" stroke="#8a9aa8" stroke-width="1" opacity=".5"/>
+          <line x1="360" y1="46" x2="280" y2="120" stroke="#8a9aa8" stroke-width="1" opacity=".5"/>
+
+          <!-- 内层保护 -->
+          <rect x="54" y="60" width="292" height="178" fill="none" stroke="#e0ecf5" stroke-width=".8" stroke-dasharray="4 3" opacity=".45"/>
+          <text x="200" y="100" text-anchor="middle" fill="#e0ecf5" font-size="9" font-family="sans-serif" opacity=".6">珍珠棉 + EVA 垫层</text>
+
+          <!-- 金属板示意 -->
+          <rect x="80" y="140" width="240" height="60" fill="#c8a45c" opacity=".5"/>
+          <rect x="80" y="140" width="240" height="60" fill="none" stroke="#e9d9ae" stroke-width=".7"/>
+          <text x="200" y="175" text-anchor="middle" fill="#3a2f14" font-size="10" font-family="sans-serif">蚀刻金属板</text>
+
+          <!-- 打包带 -->
+          <rect x="140" y="42" width="10" height="214" fill="#c8e0c8" opacity=".8"/>
+          <rect x="250" y="42" width="10" height="214" fill="#c8e0c8" opacity=".8"/>
+
+          <!-- 标签 -->
+          <rect x="272" y="54" width="74" height="30" fill="#0e0e12" stroke="#e9d9ae" stroke-width=".7"/>
+          <text x="309" y="67" text-anchor="middle" fill="#e9d9ae" font-size="6.5" font-family="monospace">QR CODE</text>
+          <text x="309" y="78" text-anchor="middle" fill="#c8a45c" font-size="6" font-family="monospace">H-03-108</text>
+
+          <!-- 重心标 -->
+          <circle cx="200" cy="220" r="12" fill="none" stroke="#e9d9ae" stroke-width=".8"/>
+          <line x1="200" y1="208" x2="200" y2="232" stroke="#e9d9ae" stroke-width=".8"/>
+          <line x1="188" y1="220" x2="212" y2="220" stroke="#e9d9ae" stroke-width=".8"/>
+          <text x="200" y="246" text-anchor="middle" fill="#c8a45c" font-size="6.5" font-family="sans-serif">重心</text>
+
+          <text x="200" y="286" text-anchor="middle" fill="#8b867c" font-size="10" font-family="sans-serif">
+            铁架包装 · 珍珠棉 + EVA · 批量运输 · 可堆叠（≤3 层）
+          </text>
+        </svg>
+
+        <div class="scene-body">
+          <h3>高端酒店</h3>
+          <div class="scene-en">Luxury Hospitality</div>
+          <p>酒店金属用量大、批次多、运输距离远。打包以"批量一致性 + 可堆叠"为核心，采用铁架 + 珍珠棉 + EVA 垫层，兼顾保护性与运输效率。</p>
+          <ul class="feat">
+            <li><strong>蚀刻 / 压花件</strong>：珍珠棉 + EVA 双层垫护</li>
+            <li><strong>铁架包装</strong>，可堆叠 ≤3 层</li>
+            <li><strong>批次管理</strong>，同区域同箱，便于现场分发</li>
+            <li>标签注明<strong>楼层 + 区域 + 安装位置</strong></li>
+            <li>运输途中严禁雨淋、严禁侧放</li>
+            <li>铁架可回收，降低长期包装成本</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 材料体系 ============ -->
+<section id="materials">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">02 / MATERIALS</span>
+      <h2>包装材料体系</h2>
+      <p class="sec-sub">包装材料分四层：表面保护层、缓冲层、结构层、外包装层。每一层的材料选择都直接影响防护效果与成本，须在封样阶段与业主确认。</p>
+    </div>
+
+    <h3 class="sub-h reveal">表面保护层 <em>SURFACE PROTECTION</em></h3>
+    <div class="mat-grid reveal">
+      <div class="mat">
+        <span class="mat-tag">A · PE 保护膜</span>
+        <h5>PE 保护膜</h5>
+        <div class="en">PE Protective Film</div>
+        <div class="mat-dl">
+          <div><span>厚度</span><b>50–80μm</b></div>
+          <div><span>粘度</span><b>低粘 / 中粘</b></div>
+          <div><span>留存</span><b>≤30 天</b></div>
+          <div><span>适用</span><b>镜面/拉丝</b></div>
+        </div>
+      </div>
+      <div class="mat">
+        <span class="mat-tag">B · 无纺布</span>
+        <h5>无纺布</h5>
+        <div class="en">Non-woven Fabric</div>
+        <div class="mat-dl">
+          <div><span>克重</span><b>30–60g/m²</b></div>
+          <div><span>厚度</span><b>0.1–0.2mm</b></div>
+          <div><span>特点</span><b>柔软·不掉屑</b></div>
+          <div><span>适用</span><b>PVD 镀钛</b></div>
+        </div>
+      </div>
+      <div class="mat">
+        <span class="mat-tag">C · 气泡膜</span>
+        <h5>气泡膜</h5>
+        <div class="en">Bubble Wrap</div>
+        <div class="mat-dl">
+          <div><span>厚度</span><b>0.5–1.0mm</b></div>
+          <div><span>气泡径</span><b>10–30mm</b></div>
+          <div><span>特点</span><b>缓冲·轻量</b></div>
+          <div><span>适用</span><b>住宅/小件</b></div>
+        </div>
+      </div>
+      <div class="mat">
+        <span class="mat-tag">D · 静电膜</span>
+        <h5>静电吸附膜</h5>
+        <div class="en">Electrostatic Film</div>
+        <div class="mat-dl">
+          <div><span>厚度</span><b>30–50μm</b></div>
+          <div><span>特点</span><b>无残胶</b></div>
+          <div><span>留存</span><b>≤60 天</b></div>
+          <div><span>适用</span><b>镜面件</b></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub-h reveal">缓冲层 <em>CUSHIONING</em></h3>
+    <div class="mat-grid reveal">
+      <div class="mat">
+        <span class="mat-tag">E · 珍珠棉 EPE</span>
+        <h5>珍珠棉 EPE</h5>
+        <div class="en">Expanded Polyethylene</div>
+        <div class="mat-dl">
+          <div><span>厚度</span><b>10–50mm</b></div>
+          <div><span>密度</span><b>20–30kg/m³</b></div>
+          <div><span>回弹</span><b>好</b></div>
+          <div><span>适用</span><b>全场景</b></div>
+        </div>
+      </div>
+      <div class="mat">
+        <span class="mat-tag">F · EVA 垫层</span>
+        <h5>EVA 垫层</h5>
+        <div class="en">Ethylene-Vinyl Acetate</div>
+        <div class="mat-dl">
+          <div><span>厚度</span><b>5–30mm</b></div>
+          <div><span>密度</span><b>40–60kg/m³</b></div>
+          <div><span>特点</span><b>高回弹·耐压</b></div>
+          <div><span>适用</span><b>异形/重件</b></div>
+        </div>
+      </div>
+      <div class="mat">
+        <span class="mat-tag">G · 蜂窝纸板</span>
+        <h5>蜂窝纸板</h5>
+        <div class="en">Honeycomb Paperboard</div>
+        <div class="mat-dl">
+          <div><span>厚度</span><b>10–30mm</b></div>
+          <div><span>抗压</span><b>高</b></div>
+          <div><span>环保</span><b>可回收</b></div>
+          <div><span>适用</span><b>大板/替代木箱</b></div>
+        </div>
+      </div>
+      <div class="mat">
+        <span class="mat-tag">H · 泡沫板</span>
+        <h5>EPS / XPS 泡沫板</h5>
+        <div class="en">Foam Board</div>
+        <div class="mat-dl">
+          <div><span>厚度</span><b>20–50mm</b></div>
+          <div><span>密度</span><b>15–35kg/m³</b></div>
+          <div><span>特点</span><b>轻·隔热</b></div>
+          <div><span>适用</span><b>填充/垫角</b></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub-h reveal">结构层与外包装 <em>STRUCTURE & OUTER</em></h3>
+    <div class="mat-grid reveal">
+      <div class="mat">
+        <span class="mat-tag">I · 木箱</span>
+        <h5>胶合板木箱</h5>
+        <div class="en">Plywood Crate</div>
+        <div class="mat-dl">
+          <div><span>板厚</span><b>12–18mm</b></div>
+          <div><span>承重</span><b>≤800kg</b></div>
+          <div><span>特点</span><b>高强度·可定制</b></div>
+          <div><span>适用</span><b>门店/大件</b></div>
+        </div>
+      </div>
+      <div class="mat">
+        <span class="mat-tag">J · 铁架</span>
+        <h5>铁架 / 钢架</h5>
+        <div class="en">Steel Frame</div>
+        <div class="mat-dl">
+          <div><span>规格</span><b>40×40 方钢</b></div>
+          <div><span>堆叠</span><b>≤3 层</b></div>
+          <div><span>特点</span><b>可回收·强度高</b></div>
+          <div><span>适用</span><b>酒店批量</b></div>
+        </div>
+      </div>
+      <div class="mat">
+        <span class="mat-tag">K · 纸箱</span>
+        <h5>瓦楞纸箱</h5>
+        <div class="en">Corrugated Carton</div>
+        <div class="mat-dl">
+          <div><span>楞型</span><b>AB / BC 楞</b></div>
+          <div><span>承重</span><b>≤25kg</b></div>
+          <div><span>特点</span><b>轻·易拆</b></div>
+          <div><span>适用</span><b>住宅/小件</b></div>
+        </div>
+      </div>
+      <div class="mat">
+        <span class="mat-tag">L · 打包带</span>
+        <h5>PP / PET 打包带</h5>
+        <div class="en">Strapping Band</div>
+        <div class="mat-dl">
+          <div><span>宽度</span><b>12–19mm</b></div>
+          <div><span>拉力</span><b>≥800kg</b></div>
+          <div><span>特点</span><b>不伤表面</b></div>
+          <div><span>适用</span><b>全场景</b></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub-h reveal">标识与辅助材料 <em>LABELING & AUXILIARY</em></h3>
+    <div class="mat-grid reveal">
+      <div class="mat">
+        <span class="mat-tag">M · 二维码标签</span>
+        <h5>二维码标签</h5>
+        <div class="en">QR Code Label</div>
+        <div class="mat-dl">
+          <div><span>材质</span><b>防水耐磨 PET</b></div>
+          <div><span>尺寸</span><b>60×40mm</b></div>
+          <div><span>信息</span><b>加工参数/安装位置</b></div>
+          <div><span>扫码率</span><b>100%</b></div>
+        </div>
+      </div>
+      <div class="mat">
+        <span class="mat-tag">N · 易碎标</span>
+        <h5>易碎 / 向上标</h5>
+        <div class="en">Fragile / This Way Up</div>
+        <div class="mat-dl">
+          <div><span>尺寸</span><b>100×100mm</b></div>
+          <div><span>颜色</span><b>红/黑</b></div>
+          <div><span>语言</span><b>中英双语</b></div>
+          <div><span>粘贴</span><b>箱体正面</b></div>
+        </div>
+      </div>
+      <div class="mat">
+        <span class="mat-tag">O · 防潮标</span>
+        <h5>防潮 / 重心标</h5>
+        <div class="en">Moisture / Center Gravity</div>
+        <div class="mat-dl">
+          <div><span>尺寸</span><b>80×80mm</b></div>
+          <div><span>颜色</span><b>蓝/黑</b></div>
+          <div><span>语言</span><b>中英双语</b></div>
+          <div><span>粘贴</span><b>箱体侧面</b></div>
+        </div>
+      </div>
+      <div class="mat">
+        <span class="mat-tag">P · 防潮袋</span>
+        <h5>防潮袋 / 干燥剂</h5>
+        <div class="en">Desiccant Bag</div>
+        <div class="mat-dl">
+          <div><span>规格</span><b>50–200g</b></div>
+          <div><span>吸湿率</span><b>≥30%</b></div>
+          <div><span>用量</span><b>1–2 袋/箱</b></div>
+          <div><span>适用</span><b>海运/长途</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 全流程 ============ -->
+<section id="flow">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">03 / PROCESS</span>
+      <h2>打包封箱 · 12 道主工序 · 36 个子工序</h2>
+      <p class="sec-sub">打包不是"包起来"，而是从清洁、贴膜、护角、缓冲、固定、标识到装车的完整链路。每一步都有明确的控制点，任何一步的疏漏都可能在运输途中放大为不可逆的损伤。</p>
+    </div>
+
+    <div class="steps">
+
+      <div class="step reveal">
+        <div class="step-head"><div class="step-n">01</div><h4>成品检验与清洁</h4></div>
+        <p>打包前必须对金属制品进行最终检验：表面无划痕、无指纹、无色差，拼缝尺寸符合加工单。用中性清洁剂擦拭表面，压缩空气除尘，确保无磨屑与粉尘残留。</p>
+        <div class="step-extra"><b>子工序：</b>表面检查 → 尺寸复核 → 清洁 → 干燥</div>
+        <div class="ckpt"><b>控制点 · </b>表面无可见缺陷；指纹与油污彻底清除；检验合格方可进入打包</div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-head"><div class="step-n">02</div><h4>表面贴膜</h4></div>
+        <p>镜面件、PVD 镀钛件先贴 PE 保护膜或静电吸附膜，再覆一层无纺布。拉丝件可只贴 PE 膜。贴膜时从一端向另一端缓慢推进，用刮板排出气泡，避免褶皱。</p>
+        <div class="step-extra"><b>子工序：</b>清洁表面 → 贴 PE 膜 → 排气刮平 → 覆无纺布 → 边缘修整</div>
+        <div class="ckpt"><b>控制点 · </b>贴膜无气泡、无褶皱；膜与板边齐平或略内收；留存 ≤30 天</div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-head"><div class="step-n">03</div><h4>边角防护</h4></div>
+        <p>四角加装塑料护角或珍珠棉护角，长边加 L 型护边。护角厚度 ≥10mm，用胶带固定。这一步是防止运输途中磕碰的关键，尤其对镜面件与异形件。</p>
+        <div class="step-extra"><b>子工序：</b>安装四角护角 → 安装 L 型护边 → 胶带固定 → 检查牢固度</div>
+        <div class="ckpt"><b>控制点 · </b>护角厚度 ≥10mm；四角全覆盖；胶带不直接粘在保护膜上</div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-head"><div class="step-n">04</div><h4>缓冲层包裹</h4></div>
+        <p>用珍珠棉或气泡膜整体包裹 2–3 层，接缝处重叠 ≥50mm，用胶带固定。异形件需用珍珠棉定制卡槽，一体成型，确保运输中不晃动。</p>
+        <div class="step-extra"><b>子工序：</b>底层包裹 → 中层包裹 → 面层包裹 → 接缝固定 → 异形卡槽</div>
+        <div class="ckpt"><b>控制点 · </b>包裹层数 ≥2 层；接缝重叠 ≥50mm；异形件无悬空</div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-head"><div class="step-n">05</div><h4>分层隔垫</h4></div>
+        <p>同一箱内装多块板时，板与板之间必须加隔垫：珍珠棉片或蜂窝纸板，厚度 ≥5mm。严禁金属板直接叠放，否则运输中的微振动会导致表面划伤。</p>
+        <div class="step-extra"><b>子工序：</b>测量板间距 → 裁剪隔垫 → 放置隔垫 → 检查覆盖</div>
+        <div class="ckpt"><b>控制点 · </b>板与板之间隔垫全覆盖；隔垫尺寸 ≥板面尺寸；不可省略</div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-head"><div class="step-n">06</div><h4>内包装入箱</h4></div>
+        <p>将包裹好的金属件放入木箱或纸箱，四周填充珍珠棉或泡沫板，确保箱内无空隙。板件应立式放置，与箱体之间留 20–30mm 缓冲层。</p>
+        <div class="step-extra"><b>子工序：</b>箱底垫层 → 放入板件 → 四周填充 → 顶部垫层 → 检查空隙</div>
+        <div class="ckpt"><b>控制点 · </b>箱内无空隙；板件立式放置；与箱体留 20–30mm 缓冲层</div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-head"><div class="step-n">07</div><h4>结构固定</h4></div>
+        <p>用木方或钢架在箱内做支撑固定，防止板件在运输中位移。木方与板件接触面需垫珍珠棉。对于超长件，需增加中部支撑点，防止弯曲变形。</p>
+        <div class="step-extra"><b>子工序：</b>安装木方支撑 → 固定角码 → 接触面垫棉 → 中部加撑</div>
+        <div class="ckpt"><b>控制点 · </b>板件无位移空间；超长件中部有支撑；接触面有缓冲垫</div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-head"><div class="step-n">08</div><h4>封箱与打包带</h4></div>
+        <p>木箱加盖后用自攻螺丝或钢钉固定，纸箱用封箱胶带封口。随后用 PP 或 PET 打包带在箱体纵向与横向各打 2–3 道，用打包扣锁紧，拉力均匀。</p>
+        <div class="step-extra"><b>子工序：</b>箱盖固定 → 纵向打包带 → 横向打包带 → 锁紧扣 → 检查拉力</div>
+        <div class="ckpt"><b>控制点 · </b>打包带拉力均匀；纵向横向各 2–3 道；不损伤箱体表面</div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-head"><div class="step-n">09</div><h4>标识与二维码</h4></div>
+        <p>在箱体正面张贴二维码标签，扫码可查加工参数、安装位置与批次信息。同时张贴向上、易碎、防潮、重心等标识，用中英文双语标注。</p>
+        <div class="step-extra"><b>子工序：</b>打印标签 → 贴二维码 → 贴易碎标 → 贴向上标 → 贴防潮标</div>
+        <div class="ckpt"><b>控制点 · </b>二维码信息完整可扫；标识朝向正确；标签防水耐磨</div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-head"><div class="step-n">10</div><h4>称重与记录</h4></div>
+        <p>对每一箱进行称重，记录毛重、净重与箱体尺寸，录入物流系统。单箱重量 ≤800kg，超过需拆分或改用铁架。同时拍照留存装箱状态，作为运输前的证据。</p>
+        <div class="step-extra"><b>子工序：</b>称重 → 记录尺寸 → 录入系统 → 拍照留档</div>
+        <div class="ckpt"><b>控制点 · </b>单箱 ≤800kg；尺寸记录完整；装箱照片留档</div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-head"><div class="step-n">11</div><h4>装车与固定</h4></div>
+        <p>装车时箱体立式放置，严禁倒置或侧放。箱与箱之间用木方或气垫袋填充，用打包带与车厢固定。装车顺序按"先卸后装"原则，即先卸的箱体装在车厢门口。</p>
+        <div class="step-extra"><b>子工序：</b>车厢清洁 → 箱体就位 → 箱间填充 → 车厢固定 → 防雨覆盖</div>
+        <div class="ckpt"><b>控制点 · </b>箱体立式放置；箱间无空隙；车厢固定牢固；防雨防潮</div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step-head"><div class="step-n">12</div><h4>运输跟踪与交付</h4></div>
+        <p>运输途中保持与司机的沟通，跟踪 GPS 定位。到达现场后，先检查外包装有无破损，拍照留证。卸货时轻拿轻放，按标识方向搬运，不得翻滚。</p>
+        <div class="step-extra"><b>子工序：</b>GPS 跟踪 → 到货检查 → 拍照留证 → 卸货 → 签收确认</div>
+        <div class="ckpt"><b>控制点 · </b>外包装无破损；卸货按标识方向；现场签收确认</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 节点详图 ============ -->
+<section id="details">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">04 / DETAILS</span>
+      <h2>六类关键节点剖面</h2>
+      <p class="sec-sub">以下为最常用的六种打包结构剖面，直接决定防护效果、运输效率与拆箱便利性。深化阶段必须逐一定型，并向打包班组交底。</p>
+    </div>
+
+    <div class="details">
+
+      <!-- 节点 1：木箱立式包装 -->
+      <div class="detail reveal">
+        <svg viewBox="0 0 400 280" role="img" aria-label="木箱立式包装节点剖面图">
+          <rect width="400" height="280" fill="#0f0f13"/>
+          <rect x="50" y="30" width="300" height="220" fill="#1c1c22" stroke="#d4a878" stroke-width="1.6"/>
+          <rect x="50" y="30" width="300" height="220" fill="none" stroke="#a87d4a" stroke-width=".6" stroke-dasharray="3 3"/>
+          <rect x="66" y="46" width="268" height="188" fill="#1a1a22" stroke="#e0ecf5" stroke-width="1" stroke-dasharray="4 3" opacity=".8"/>
+          <text x="200" y="70" text-anchor="middle" fill="#e0ecf5" font-size="10" font-family="sans-serif" opacity=".7">珍珠棉 20mm</text>
+          <rect x="130" y="86" width="140" height="120" fill="#c8a45c" opacity=".7" stroke="#e9d9ae" stroke-width="1"/>
+          <text x="200" y="152" text-anchor="middle" fill="#3a2f14" font-size="11" font-family="sans-serif">金属饰面板</text>
+          <text x="200" y="168" text-anchor="middle" fill="#3a2f14" font-size="9" font-family="monospace">立式放置</text>
+          <rect x="86" y="86" width="20" height="120" fill="#a87d4a" opacity=".8"/>
+          <rect x="294" y="86" width="20" height="120" fill="#a87d4a" opacity=".8"/>
+          <text x="96" y="222" text-anchor="middle" fill="#d4a878" font-size="8.5" font-family="sans-serif">木方支撑</text>
+          <rect x="106" y="26" width="8" height="228" fill="#c8e0c8" opacity=".85"/>
+          <rect x="286" y="26" width="8" height="228" fill="#c8e0c8" opacity=".85"/>
+          <rect x="66" y="212" width="268" height="14" fill="#c8d8e8" opacity=".5"/>
+          <text x="200" y="242" text-anchor="middle" fill="#a8c8e0" font-size="9" font-family="sans-serif">底部 EVA 垫层 20mm</text>
+          <path d="M50 260 L350 260" stroke="#6a655d" stroke-width=".6"/>
+          <path d="M50 256 L50 264 M350 256 L350 264" stroke="#6a655d" stroke-width=".6"/>
+          <text x="200" y="274" text-anchor="middle" fill="#8b867c" font-size="9.5" font-family="monospace">600 × 400 × 250 mm</text>
+        </svg>
+        <div class="detail-cap">
+          <h4>① 木箱立式包装 <em>CRATE · VERTICAL</em></h4>
+          <p>金属板立式放置，四周珍珠棉缓冲，木方支撑固定。适用于奢侈品门店镜面件、PVD 镀钛件与大尺寸异形件。</p>
+          <div class="detail-spec">
+            <div><span>木箱板厚</span><b>12–18mm</b></div>
+            <div><span>珍珠棉</span><b>20mm</b></div>
+            <div><span>底部垫层</span><b>EVA 20mm</b></div>
+            <div><span>单箱重量</span><b>≤800kg</b></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 节点 2：纸箱卧式包装 -->
+      <div class="detail reveal">
+        <svg viewBox="0 0 400 280" role="img" aria-label="纸箱卧式包装节点剖面图">
+          <rect width="400" height="280" fill="#0f0f13"/>
+          <rect x="50" y="60" width="300" height="160" fill="#1c1c22" stroke="#c8a878" stroke-width="1.4"/>
+          <rect x="50" y="60" width="300" height="160" fill="none" stroke="#a88858" stroke-width=".6" stroke-dasharray="3 3"/>
+          <rect x="66" y="76" width="268" height="128" fill="#1a1a22" stroke="#e0ecf5" stroke-width="1" stroke-dasharray="4 3" opacity=".8"/>
+          <text x="200" y="98" text-anchor="middle" fill="#e0ecf5" font-size="10" font-family="sans-serif" opacity=".7">气泡膜 + 珍珠棉</text>
+          <rect x="100" y="120" width="200" height="24" fill="#c8a45c" opacity=".7" stroke="#e9d9ae" stroke-width="1"/>
+          <text x="200" y="136" text-anchor="middle" fill="#3a2f14" font-size="10" font-family="sans-serif">拉丝踢脚线</text>
+          <rect x="100" y="156" width="200" height="24" fill="#c8a45c" opacity=".5" stroke="#e9d9ae" stroke-width=".8"/>
+          <text x="200" y="172" text-anchor="middle" fill="#3a2f14" font-size="9" font-family="sans-serif">拉丝踢脚线</text>
+          <rect x="100" y="146" width="200" height="8" fill="#c8d8e8" opacity=".6"/>
+          <text x="320" y="152" fill="#a8c8e0" font-size="8.5" font-family="sans-serif">隔垫</text>
+          <rect x="50" y="134" width="300" height="10" fill="#e8dcc8" opacity=".85"/>
+          <path d="M50 246 L350 246" stroke="#6a655d" stroke-width=".6"/>
+          <path d="M50 242 L50 250 M350 242 L350 250" stroke="#6a655d" stroke-width=".6"/>
+          <text x="200" y="262" text-anchor="middle" fill="#8b867c" font-size="9.5" font-family="monospace">1200 × 200 × 150 mm</text>
+          <text x="200" y="282" text-anchor="middle" fill="#6a655d" font-size="9" font-family="sans-serif">纸箱 AB 楞 · 单箱 ≤25kg · 单人可搬运</text>
+        </svg>
+        <div class="detail-cap">
+          <h4>② 纸箱卧式包装 <em>CARTON · HORIZONTAL</em></h4>
+          <p>金属长条件卧式放入纸箱，层间加隔垫，气泡膜 + 珍珠棉包裹。适用于高端住宅踢脚线、门套、护墙嵌条等小件。</p>
+          <div class="detail-spec">
+            <div><span>纸箱楞型</span><b>AB / BC 楞</b></div>
+            <div><span>缓冲层</span><b>气泡膜 + 珍珠棉</b></div>
+            <div><span>层间隔垫</span><b>≥5mm</b></div>
+            <div><span>单箱重量</span><b>≤25kg</b></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 节点 3：铁架包装 -->
+      <div class="detail reveal">
+        <svg viewBox="0 0 400 280" role="img" aria-label="铁架包装节点剖面图">
+          <rect width="400" height="280" fill="#0f0f13"/>
+          <rect x="40" y="30" width="320" height="220" fill="#15151a" stroke="#8a9aa8" stroke-width="1.6"/>
+          <g stroke="#8a9aa8" stroke-width="1.4" opacity=".8">
+            <line x1="40" y1="30" x2="360" y2="30"/>
+            <line x1="40" y1="250" x2="360" y2="250"/>
+            <line x1="40" y1="104" x2="360" y2="104"/>
+            <line x1="40" y1="176" x2="360" y2="176"/>
+          </g>
+          <rect x="56" y="46" width="288" height="188" fill="#1a1a22" stroke="#e0ecf5" stroke-width="1" stroke-dasharray="4 3" opacity=".8"/>
+          <text x="200" y="72" text-anchor="middle" fill="#e0ecf5" font-size="10" font-family="sans-serif" opacity=".7">珍珠棉 + EVA 垫层</text>
+          <rect x="100" y="100" width="200" height="100" fill="#c8a45c" opacity=".6" stroke="#e9d9ae" stroke-width="1"/>
+          <text x="200" y="145" text-anchor="middle" fill="#3a2f14" font-size="11" font-family="sans-serif">蚀刻金属板</text>
+          <text x="200" y="162" text-anchor="middle" fill="#3a2f14" font-size="9" font-family="monospace">批量装箱</text>
+          <rect x="120" y="26" width="8" height="228" fill="#c8e0c8" opacity=".85"/>
+          <rect x="270" y="26" width="8" height="228" fill="#c8e0c8" opacity=".85"/>
+          <path d="M60 260 L120 260" stroke="#e9d9ae" stroke-width=".8"/>
+          <path d="M60 256 L60 264 M120 256 L120 264" stroke="#e9d9ae" stroke-width=".8"/>
+          <text x="90" y="276" text-anchor="middle" fill="#e9d9ae" font-size="9" font-family="monospace">≤3 层</text>
+          <text x="260" y="276" text-anchor="middle" fill="#6a655d" font-size="9" font-family="sans-serif">铁架可回收 · 批量运输首选</text>
+        </svg>
+        <div class="detail-cap">
+          <h4>③ 铁架包装 <em>STEEL FRAME</em></h4>
+          <p>金属板放入定制铁架，珍珠棉 + EVA 双层垫护，打包带固定。可堆叠 ≤3 层，适合高端酒店批量运输，铁架可回收重复使用。</p>
+          <div class="detail-spec">
+            <div><span>铁架规格</span><b>40×40 方钢</b></div>
+            <div><span>缓冲层</span><b>珍珠棉 + EVA</b></div>
+            <div><span>堆叠层数</span><b>≤3 层</b></div>
+            <div><span>回收利用</span><b>可回收</b></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 节点 4：护角节点 -->
+      <div class="detail reveal">
+        <svg viewBox="0 0 400 280" role="img" aria-label="护角节点剖面图">
+          <rect width="400" height="280" fill="#0f0f13"/>
+          <rect x="80" y="80" width="220" height="140" fill="#1c1c22" stroke="#c8a45c" stroke-width="1"/>
+          <rect x="80" y="80" width="220" height="140" fill="#c8a45c" opacity=".12"/>
+          <rect x="100" y="100" width="180" height="100" fill="#c8a45c" opacity=".6" stroke="#e9d9ae" stroke-width="1"/>
+          <text x="190" y="155" text-anchor="middle" fill="#3a2f14" font-size="11" font-family="sans-serif">金属板</text>
+          <path d="M80 80 L80 60 L100 60 L100 80 Z" fill="#c8e0c8" opacity=".9"/>
+          <path d="M80 80 L60 80 L60 100 L80 100 Z" fill="#c8e0c8" opacity=".9"/>
+          <path d="M80 80 L80 50 L110 50 L110 80 Z" fill="#e0ecf5" opacity=".4"/>
+          <path d="M80 80 L50 80 L50 110 L80 110 Z" fill="#e0ecf5" opacity=".4"/>
+          <circle cx="80" cy="80" r="40" fill="none" stroke="#e9d9ae" stroke-width=".7" stroke-dasharray="3 3" opacity=".6"/>
+          <path d="M110 50 L180 30" stroke="#e9d9ae" stroke-width=".7" opacity=".6"/>
+          <text x="186" y="28" fill="#e9d9ae" font-size="10" font-family="sans-serif">塑料护角 ≥10mm</text>
+          <text x="186" y="44" fill="#6a655d" font-size="9" font-family="sans-serif">+ 珍珠棉护角</text>
+          <path d="M50 110 L20 140" stroke="#e9d9ae" stroke-width=".7" opacity=".6"/>
+          <text x="18" y="154" fill="#e9d9ae" font-size="10" font-family="sans-serif" text-anchor="start">四角全覆盖</text>
+          <rect x="70" y="96" width="20" height="6" fill="#e8dcc8" opacity=".7"/>
+          <rect x="96" y="70" width="6" height="20" fill="#e8dcc8" opacity=".7"/>
+          <text x="200" y="240" text-anchor="middle" fill="#8b867c" font-size="10" font-family="sans-serif">
+            护角是防磕碰的关键 · 胶带不直接粘保护膜
+          </text>
+        </svg>
+        <div class="detail-cap">
+          <h4>④ 护角节点 <em>CORNER PROTECTION</em></h4>
+          <p>四角加装塑料护角 + 珍珠棉护角，长边加 L 型护边。护角厚度 ≥10mm，用美纹纸胶带固定，胶带不直接粘在保护膜上。</p>
+          <div class="detail-spec">
+            <div><span>塑料护角</span><b>≥10mm</b></div>
+            <div><span>珍珠棉护角</span><b>20mm</b></div>
+            <div><span>L 型护边</span><b>长边通长</b></div>
+            <div><span>固定方式</span><b>美纹纸胶带</b></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 节点 5：分层隔垫 -->
+      <div class="detail reveal">
+        <svg viewBox="0 0 400 280" role="img" aria-label="分层隔垫节点剖面图">
+          <rect width="400" height="280" fill="#0f0f13"/>
+          <rect x="60" y="40" width="280" height="200" fill="#1c1c22" stroke="#c8a878" stroke-width="1.2"/>
+          <rect x="80" y="60" width="240" height="40" fill="#c8a45c" opacity=".6" stroke="#e9d9ae" stroke-width=".8"/>
+          <text x="200" y="85" text-anchor="middle" fill="#3a2f14" font-size="10" font-family="sans-serif">金属板 1</text>
+          <rect x="80" y="104" width="240" height="10" fill="#c8d8e8" opacity=".7"/>
+          <text x="332" y="112" fill="#a8c8e0" font-size="8.5" font-family="sans-serif">隔垫 1</text>
+          <rect x="80" y="118" width="240" height="40" fill="#c8a45c" opacity=".5" stroke="#e9d9ae" stroke-width=".8"/>
+          <text x="200" y="143" text-anchor="middle" fill="#3a2f14" font-size="10" font-family="sans-serif">金属板 2</text>
+          <rect x="80" y="162" width="240" height="10" fill="#c8d8e8" opacity=".7"/>
+          <text x="332" y="170" fill="#a8c8e0" font-size="8.5" font-family="sans-serif">隔垫 2</text>
+          <rect x="80" y="176" width="240" height="40" fill="#c8a45c" opacity=".4" stroke="#e9d9ae" stroke-width=".8"/>
+          <text x="200" y="201" text-anchor="middle" fill="#3a2f14" font-size="10" font-family="sans-serif">金属板 3</text>
+          <rect x="80" y="220" width="240" height="8" fill="#c8d8e8" opacity=".5"/>
+          <path d="M340 110 L360 110" stroke="#e9d9ae" stroke-width=".7"/>
+          <path d="M340 167 L360 167" stroke="#e9d9ae" stroke-width=".7"/>
+          <text x="366" y="114" fill="#e9d9ae" font-size="9" font-family="sans-serif">≥5mm</text>
+          <text x="366" y="171" fill="#e9d9ae" font-size="9" font-family="sans-serif">≥5mm</text>
+          <text x="200" y="266" text-anchor="middle" fill="#8b867c" font-size="10" font-family="sans-serif">
+            板与板之间必须加隔垫 · 严禁直接叠放
+          </text>
+        </svg>
+        <div class="detail-cap">
+          <h4>⑤ 分层隔垫 <em>LAYER SEPARATION</em></h4>
+          <p>同箱多块板时，板与板之间加珍珠棉片或蜂窝纸板，厚度 ≥5mm。严禁金属板直接叠放，运输中的微振动会导致表面划伤。</p>
+          <div class="detail-spec">
+            <div><span>隔垫材料</span><b>珍珠棉/蜂窝纸板</b></div>
+            <div><span>隔垫厚度</span><b>≥5mm</b></div>
+            <div><span>覆盖范围</span><b>≥板面尺寸</b></div>
+            <div><span>层数限制</span><b>≤5 层/箱</b></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 节点 6：标识系统 -->
+      <div class="detail reveal">
+        <svg viewBox="0 0 400 280" role="img" aria-label="标识系统节点示意图">
+          <rect width="400" height="280" fill="#0f0f13"/>
+          <rect x="70" y="40" width="260" height="200" fill="#1c1c22" stroke="#c8a878" stroke-width="1.2"/>
+          <rect x="90" y="60" width="80" height="80" fill="#0f0f13" stroke="#e9d9ae" stroke-width="1"/>
+          <g fill="#e9d9ae" opacity=".8">
+            <rect x="98" y="68" width="12" height="12"/>
+            <rect x="118" y="68" width="12" height="12"/>
+            <rect x="138" y="68" width="12" height="12"/>
+            <rect x="98" y="88" width="12" height="12"/>
+            <rect x="138" y="88" width="12" height="12"/>
+            <rect x="98" y="108" width="12" height="12"/>
+            <rect x="118" y="108" width="12" height="12"/>
+            <rect x="138" y="108" width="12" height="12"/>
+            <rect x="158" y="68" width="6" height="6"/>
+            <rect x="158" y="88" width="6" height="6"/>
+            <rect x="158" y="108" width="6" height="6"/>
+          </g>
+          <text x="130" y="158" text-anchor="middle" fill="#e9d9ae" font-size="9" font-family="monospace">QR CODE</text>
+          <text x="130" y="172" text-anchor="middle" fill="#c8a45c" font-size="8" font-family="monospace">A-01-012</text>
+          <path d="M210 70 l14 -18 l14 18 z" fill="none" stroke="#e8a878" stroke-width="1.1"/>
+          <text x="224" y="64" text-anchor="middle" fill="#e8a878" font-size="9" font-family="sans-serif">!</text>
+          <text x="224" y="86" text-anchor="middle" fill="#e8a878" font-size="8" font-family="sans-serif">易碎 FRAGILE</text>
+          <path d="M200 120 l12 -14 l12 14 z" fill="none" stroke="#e9d9ae" stroke-width="1"/>
+          <line x1="212" y1="106" x2="212" y2="120" stroke="#e9d9ae" stroke-width="1"/>
+          <text x="212" y="138" text-anchor="middle" fill="#e9d9ae" font-size="8" font-family="sans-serif">向上</text>
+          <path d="M210 160 q12 -10 24 0 q-12 10 -24 0 z" fill="none" stroke="#a8c8e0" stroke-width="1"/>
+          <text x="222" y="182" text-anchor="middle" fill="#a8c8e0" font-size="8" font-family="sans-serif">防潮</text>
+          <circle cx="140" cy="196" r="14" fill="none" stroke="#e9d9ae" stroke-width="1"/>
+          <line x1="140" y1="182" x2="140" y2="210" stroke="#e9d9ae" stroke-width="1"/>
+          <line x1="126" y1="196" x2="154" y2="196" stroke="#e9d9ae" stroke-width="1"/>
+          <text x="140" y="228" text-anchor="middle" fill="#c8a45c" font-size="8" font-family="sans-serif">重心</text>
+          <rect x="200" y="200" width="30" height="8" fill="none" stroke="#a8c8a8" stroke-width="1"/>
+          <rect x="205" y="190" width="20" height="8" fill="none" stroke="#a8c8a8" stroke-width="1"/>
+          <text x="215" y="228" text-anchor="middle" fill="#a8c8a8" font-size="8" font-family="sans-serif">≤3</text>
+          <text x="200" y="266" text-anchor="middle" fill="#8b867c" font-size="10" font-family="sans-serif">
+            二维码 + 易碎 + 向上 + 防潮 + 重心 + 堆叠
+          </text>
+        </svg>
+        <div class="detail-cap">
+          <h4>⑥ 标识系统 <em>LABELING SYSTEM</em></h4>
+          <p>箱体正面贴二维码标签，扫码可查加工参数、安装位置与批次。同时贴易碎、向上、防潮、重心、堆叠等标识，中英文双语标注。</p>
+          <div class="detail-spec">
+            <div><span>二维码</span><b>100% 覆盖</b></div>
+            <div><span>标识语言</span><b>中英双语</b></div>
+            <div><span>标签材质</span><b>防水耐磨</b></div>
+            <div><span>张贴位置</span><b>箱体正面左上</b></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 图表 ============ -->
+<section id="charts">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">05 / DATA</span>
+      <h2>包装数据与成本结构</h2>
+      <p class="sec-sub">包装成本在金属饰面工程总造价中占比约 5–8%，但因包装不当导致的运输破损，返工成本往往是包装成本的 5–10 倍。以下数据帮助理解包装投入的价值。</p>
+    </div>
+
+    <h3 class="sub-h reveal">包装成本结构 <em>COST STRUCTURE</em></h3>
+    <div class="charts-2">
+      <div class="card reveal">
+        <h4>Cost Breakdown · 包装成本构成</h4>
+        <p class="cap">以中高端金属饰面工程包装成本为 100% 基准。材料占比最高，人工次之。</p>
+        <div class="legend">
+          <div><i style="background:#d4a878"></i><span>外包装（木箱/铁架/纸箱）</span><b>38%</b></div>
+          <div><i style="background:#a8c8a8"></i><span>表面保护膜与无纺布</span><b>18%</b></div>
+          <div><i style="background:#c8d8e8"></i><span>缓冲材料（珍珠棉/EVA）</span><b>16%</b></div>
+          <div><i style="background:#c8a45c"></i><span>打包带与辅料</span><b>8%</b></div>
+          <div><i style="background:#8a9aa8"></i><span>打包人工</span><b>14%</b></div>
+          <div><i style="background:#5c4820"></i><span>标识与记录</span><b>6%</b></div>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <h4>Damage Rate · 破损率对比</h4>
+        <p class="cap">不同包装方式下的运输破损率对比（抽样数据）。规范包装可将破损率降低 80% 以上。</p>
+        <svg viewBox="0 0 260 230" class="chart-svg" role="img" aria-label="不同包装方式破损率对比图">
+          <line x1="80" y1="14" x2="80" y2="180" stroke="#2a2a32" stroke-width="1"/>
+          <line x1="80" y1="180" x2="250" y2="180" stroke="#2a2a32" stroke-width="1"/>
+
+          <text x="72" y="34" text-anchor="end" fill="#b0aba1" font-size="10.5" font-family="sans-serif">无包装</text>
+          <rect x="80" y="24" width="150" height="15" rx="3" fill="#c85a5a" opacity=".7"/>
+          <text x="236" y="35" fill="#e0a8a8" font-size="10" font-family="monospace">12.5%</text>
+
+          <text x="72" y="64" text-anchor="end" fill="#b0aba1" font-size="10.5" font-family="sans-serif">简易包裹</text>
+          <rect x="80" y="54" width="72" height="15" rx="3" fill="#c88a5a" opacity=".7"/>
+          <text x="158" y="65" fill="#e0c0a8" font-size="10" font-family="monospace">6.0%</text>
+
+          <text x="72" y="94" text-anchor="end" fill="#b0aba1" font-size="10.5" font-family="sans-serif">标准包装</text>
+          <rect x="80" y="84" width="24" height="15" rx="3" fill="#c8a45c" opacity=".8"/>
+          <text x="110" y="95" fill="#e9d9ae" font-size="10" font-family="monospace">2.0%</text>
+
+          <text x="72" y="124" text-anchor="end" fill="#b0aba1" font-size="10.5" font-family="sans-serif">规范包装</text>
+          <rect x="80" y="114" width="12" height="15" rx="3" fill="#a8c8a8" opacity=".8"/>
+          <text x="98" y="125" fill="#c8e0c8" font-size="10" font-family="monospace">1.0%</text>
+
+          <text x="72" y="154" text-anchor="end" fill="#b0aba1" font-size="10.5" font-family="sans-serif">过度包装</text>
+          <rect x="80" y="144" width="7" height="15" rx="3" fill="#8a9aa8" opacity=".8"/>
+          <text x="93" y="155" fill="#b8c8d8" font-size="10" font-family="monospace">0.6%</text>
+
+          <text x="165" y="206" text-anchor="middle" fill="#6a655d" font-size="9.5" font-family="sans-serif">
+            破损率 · 规范包装是关键
+          </text>
+        </svg>
+      </div>
+    </div>
+
+    <h3 class="sub-h reveal">材料性能对比 <em>MATERIAL COMPARISON</em></h3>
+    <div class="charts-3">
+      <div class="card reveal">
+        <h4>缓冲性能 · 材料对比</h4>
+        <p class="cap">以回弹率与抗压强度综合评分（0–100）。</p>
+        <div class="bars">
+          <div class="bar-row">
+            <div class="bar-top"><b>EVA 垫层</b><span>95</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="95" style="background:linear-gradient(90deg,#5a4a7a,#c8b0e8);"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-top"><b>珍珠棉 EPE</b><span>85</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="85" style="background:linear-gradient(90deg,#3a5a6a,#a8c8dd);"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-top"><b>蜂窝纸板</b><span>78</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="78" style="background:linear-gradient(90deg,#6a5a3a,#d4a878);"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-top"><b>气泡膜</b><span>62</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="62" style="background:linear-gradient(90deg,#4a5a4a,#a8c8a8);"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-top"><b>EPS 泡沫板</b><span>55</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="55" style="background:linear-gradient(90deg,#4a4a52,#8a8a95);"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <h4>防护等级 · 场景匹配</h4>
+        <p class="cap">不同场景的推荐防护等级（0–100）。</p>
+        <svg viewBox="0 0 260 210" class="chart-svg" role="img" aria-label="场景防护等级雷达图">
+          <g transform="translate(130,105)">
+            <circle r="60" fill="none" stroke="#2a2a32" stroke-width="1"/>
+            <circle r="45" fill="none" stroke="#2a2a32" stroke-width="1"/>
+            <circle r="30" fill="none" stroke="#2a2a32" stroke-width="1"/>
+            <circle r="15" fill="none" stroke="#2a2a32" stroke-width="1"/>
+            <line x1="0" y1="-60" x2="0" y2="60" stroke="#2a2a32" stroke-width="1"/>
+            <line x1="-60" y1="0" x2="60" y2="0" stroke="#2a2a32" stroke-width="1"/>
+            <line x1="-42" y1="-42" x2="42" y2="42" stroke="#2a2a32" stroke-width="1"/>
+            <line x1="42" y1="-42" x2="-42" y2="42" stroke="#2a2a32" stroke-width="1"/>
+            <polygon points="0,-56 52,0 0,56 -52,0" fill="rgba(200,164,92,.18)" stroke="#c8a45c" stroke-width="1.2"/>
+            <polygon points="0,-38 36,0 0,38 -36,0" fill="rgba(168,200,168,.15)" stroke="#a8c8a8" stroke-width="1.2"/>
+            <polygon points="0,-48 45,0 0,48 -45,0" fill="rgba(168,125,74,.15)" stroke="#a87d4a" stroke-width="1.2"/>
+            <text x="0" y="-66" text-anchor="middle" fill="#8b867c" font-size="9.5" font-family="sans-serif">表面</text>
+            <text x="66" y="4" text-anchor="middle" fill="#8b867c" font-size="9.5" font-family="sans-serif">边角</text>
+            <text x="0" y="74" text-anchor="middle" fill="#8b867c" font-size="9.5" font-family="sans-serif">缓冲</text>
+            <text x="-66" y="4" text-anchor="middle" fill="#8b867c" font-size="9.5" font-family="sans-serif">结构</text>
+          </g>
+          <g font-size="9.5" font-family="sans-serif">
+            <rect x="70" y="182" width="8" height="8" fill="#c8a45c"/>
+            <text x="84" y="190" fill="#b0aba1">门店</text>
+            <rect x="122" y="182" width="8" height="8" fill="#a8c8a8"/>
+            <text x="136" y="190" fill="#b0aba1">住宅</text>
+            <rect x="174" y="182" width="8" height="8" fill="#a87d4a"/>
+            <text x="188" y="190" fill="#b0aba1">酒店</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="card reveal">
+        <h4>时间成本 · 打包工时</h4>
+        <p class="cap">不同包装方式的单件打包工时（分钟）。</p>
+        <div class="bars">
+          <div class="bar-row">
+            <div class="bar-top"><b>木箱立式包装</b><span>45 min</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="90" style="background:linear-gradient(90deg,#6a4a2a,#d4a878);"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-top"><b>铁架包装</b><span>38 min</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="76" style="background:linear-gradient(90deg,#3a4a5a,#8a9aa8);"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-top"><b>纸箱卧式包装</b><span>18 min</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="36" style="background:linear-gradient(90deg,#5a4a3a,#c8a878);"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-top"><b>简易包裹</b><span>8 min</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="16" style="background:linear-gradient(90deg,#3a3a42,#8a8a95);"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 质量标准 ============ -->
+<section id="quality">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">06 / STANDARDS</span>
+      <h2>三大场景包装标准对照</h2>
+      <p class="sec-sub">同一指标在不同场景下的要求差异显著。奢侈品门店的包装标准通常是住宅的 2–3 倍严苛，但过度包装也会增加成本与拆箱难度。</p>
+    </div>
+
+    <div class="table-wrap reveal">
+      <table>
+        <thead>
+          <tr>
+            <th>控制维度</th>
+            <th>奢侈品门店</th>
+            <th>高端住宅</th>
+            <th>高端酒店</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>外包装类型</td>
+            <td class="hl">胶合板木箱（立式）</td>
+            <td class="hl">瓦楞纸箱（卧式）</td>
+            <td class="hl">铁架 / 木箱</td>
+          </tr>
+          <tr>
+            <td>表面保护</td>
+            <td>PE 膜 + 无纺布双层</td>
+            <td>PE 膜单层</td>
+            <td>PE 膜 + 无纺布</td>
+          </tr>
+          <tr>
+            <td>缓冲材料</td>
+            <td>珍珠棉 20mm + EVA</td>
+            <td>气泡膜 + 珍珠棉 10mm</td>
+            <td>珍珠棉 + EVA 双层</td>
+          </tr>
+          <tr>
+            <td>护角要求</td>
+            <td class="hl2">塑料护角 ≥10mm，四角全覆盖</td>
+            <td>珍珠棉护角，四角覆盖</td>
+            <td>塑料护角 ≥10mm</td>
+          </tr>
+          <tr>
+            <td>层间隔垫</td>
+            <td>珍珠棉 ≥5mm</td>
+            <td>珍珠棉 ≥5mm</td>
+            <td>EVA ≥8mm</td>
+          </tr>
+          <tr>
+            <td>单箱重量</td>
+            <td>≤ 800 kg</td>
+            <td>≤ 25 kg</td>
+            <td>≤ 800 kg</td>
+          </tr>
+          <tr>
+            <td>堆叠层数</td>
+            <td class="hl2">严禁堆叠（单层）</td>
+            <td>≤ 3 层</td>
+            <td>≤ 3 层</td>
+          </tr>
+          <tr>
+            <td>运输方式</td>
+            <td>立式运输 · 专用车辆</td>
+            <td>普通货车 · 防雨防潮</td>
+            <td>立式运输 · 可堆叠</td>
+          </tr>
+          <tr>
+            <td>标识要求</td>
+            <td>二维码 + 易碎 + 向上 + 重心</td>
+            <td>二维码 + 房间号 + 安装位置</td>
+            <td>二维码 + 楼层 + 区域 + 堆叠</td>
+          </tr>
+          <tr>
+            <td>保护膜留存</td>
+            <td>≤ 30 天（安装前撕除）</td>
+            <td>≤ 30 天</td>
+            <td>≤ 30 天</td>
+          </tr>
+          <tr>
+            <td>破损率目标</td>
+            <td class="hl2">≤ 0.5%</td>
+            <td class="hl2">≤ 1.0%</td>
+            <td class="hl2">≤ 0.8%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-h reveal">检验与验收 <em>INSPECTION</em></h3>
+    <div class="charts-3">
+      <div class="card reveal">
+        <h4>打包前检验</h4>
+        <p class="cap">打包前必须完成的检验项目。</p>
+        <ul class="tips" style="--accent:#c8a45c;">
+          <li><b>表面检查 · </b>无划痕、无指纹、无色差</li>
+          <li><b>尺寸复核 · </b>符合加工单，拼缝尺寸达标</li>
+          <li><b>清洁确认 · </b>无磨屑、无粉尘、无油污</li>
+          <li><b>保护膜 · </b>贴膜无气泡、无褶皱</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h4>打包中检验</h4>
+        <p class="cap">打包过程中需逐项确认的控制点。</p>
+        <ul class="tips" style="--accent:#a8c8a8;">
+          <li><b>护角 · </b>四角全覆盖，厚度达标</li>
+          <li><b>缓冲层 · </b>包裹 ≥2 层，接缝重叠 ≥50mm</li>
+          <li><b>隔垫 · </b>板间无直接接触</li>
+          <li><b>固定 · </b>箱内无位移空间</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h4>打包后检验</h4>
+        <p class="cap">封箱完成后需确认的最终项目。</p>
+        <ul class="tips" style="--accent:#a87d4a;">
+          <li><b>标识 · </b>二维码可扫，标识齐全</li>
+          <li><b>打包带 · </b>拉力均匀，无松动</li>
+          <li><b>称重 · </b>单箱重量达标，记录完整</li>
+          <li><b>拍照 · </b>装箱状态留档，作为运输前证据</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note-box reveal">
+      <p>
+        <strong>核心原则 · </strong>
+        打包封箱的最终目标，是<em>让金属制品以零损伤的状态到达现场</em>。
+        因此：<strong>表面保护是基础、边角防护是关键、结构固定是保障、标识追溯是闭环</strong>。
+        任何一步的省略或简化，都可能在运输途中放大为不可逆的损伤。
+        规范包装可将破损率从 12.5% 降至 1.0% 以下，投入产出比极高。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 缺陷防治 ============ -->
+<section id="defects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">07 / DEFECTS</span>
+      <h2>打包运输常见缺陷与防治</h2>
+      <p class="sec-sub">以下十二类问题占金属制品运输破损的九成以上。识别成因并在打包环节提前设防，比事后返工成本低一个数量级。</p>
+    </div>
+
+    <div class="defects">
+      <div class="defect reveal" style="--accent:#c85a5a;">
+        <h5>表面划伤 <em>SCRATCH</em></h5>
+        <p class="cause">板与板之间未加隔垫、保护膜破损、运输途中板件位移摩擦，导致镜面或拉丝表面划伤。</p>
+        <p class="fix"><b>防治 · </b>板间加隔垫 ≥5mm；保护膜完整无破损；箱内固定牢固无位移。</p>
+      </div>
+
+      <div class="defect reveal" style="--accent:#c88a5a;">
+        <h5>边角磕碰 <em>CORNER DAMAGE</em></h5>
+        <p class="cause">护角缺失或厚度不足、卸货时翻滚、装车时箱体碰撞，导致边角凹陷或变形。</p>
+        <p class="fix"><b>防治 · </b>四角加护角 ≥10mm；卸货按标识方向搬运；装车时箱间加填充物。</p>
+      </div>
+
+      <div class="defect reveal" style="--accent:#c8a45c;">
+        <h5>表面压痕 <em>DENT</em></h5>
+        <p class="cause">堆叠层数过多、重物压在箱体上、缓冲层厚度不足，导致金属板表面出现压痕。</p>
+        <p class="fix"><b>防治 · </b>严格控制堆叠层数；严禁重物压箱；缓冲层厚度达标（珍珠棉 ≥20mm）。</p>
+      </div>
+
+      <div class="defect reveal" style="--accent:#a8c8a8;">
+        <h5>弯曲变形 <em>DEFORMATION</em></h5>
+        <p class="cause">超长件中部无支撑、卧式放置、运输途中受力不均，导致板件弯曲变形。</p>
+        <p class="fix"><b>防治 · </b>超长件中部增加支撑点；立式放置；木方支撑固定。</p>
+      </div>
+
+      <div class="defect reveal" style="--accent:#a8c8e0;">
+        <h5>受潮锈蚀 <em>MOISTURE</em></h5>
+        <p class="cause">运输途中雨淋、箱体防潮措施不足、金属表面残留水汽，导致锈蚀或氧化。</p>
+        <p class="fix"><b>防治 · </b>箱内加防潮袋；箱体防水处理；运输车辆防雨；表面彻底干燥后打包。</p>
+      </div>
+
+      <div class="defect reveal" style="--accent:#c8b0e8;">
+        <h5>保护膜残胶 <em>RESIDUE</em></h5>
+        <p class="cause">保护膜留存超过 30 天、高温环境暴晒、使用劣质保护膜，导致撕膜后残留胶痕。</p>
+        <p class="fix"><b>防治 · </b>保护膜留存 ≤30 天；避免高温暴晒；选用低粘优质 PE 膜或静电膜。</p>
+      </div>
+
+      <div class="defect reveal" style="--accent:#d4a878;">
+        <h5>标识脱落 <em>LABEL LOSS</em></h5>
+        <p class="cause">标签材质不防水、粘贴不牢、运输途中摩擦，导致二维码或标识脱落，无法追溯。</p>
+        <p class="fix"><b>防治 · </b>选用防水耐磨标签；粘贴前清洁箱体表面；重要标识加贴透明胶带保护。</p>
+      </div>
+
+      <div class="defect reveal" style="--accent:#8a9aa8;">
+        <h5>拆箱损伤 <em>UNPACKING</em></h5>
+        <p class="cause">拆箱时使用美工刀划伤金属表面、暴力拆箱、保护膜撕除过快导致残胶。</p>
+        <p class="fix"><b>防治 · </b>拆箱使用专用工具；刀片角度控制，不划伤表面；保护膜缓慢撕除。</p>
+      </div>
+
+      <div class="defect reveal" style="--accent:#c85a5a;">
+        <h5>打包带勒痕 <em>STRAP MARK</em></h5>
+        <p class="cause">打包带拉力过大、打包带直接接触金属表面、未加护角垫片，导致表面出现勒痕。</p>
+        <p class="fix"><b>防治 · </b>打包带拉力适中；接触面加护角垫片；选用宽打包带分散压力。</p>
+      </div>
+
+      <div class="defect reveal" style="--accent:#c88a5a;">
+        <h5>箱体破损 <em>CRATE DAMAGE</em></h5>
+        <p class="cause">木箱板厚不足、打包带拉力过大、运输途中碰撞，导致箱体开裂或变形。</p>
+        <p class="fix"><b>防治 · </b>木箱板厚 ≥12mm；打包带拉力均匀；装车时箱间加填充物。</p>
+      </div>
+
+      <div class="defect reveal" style="--accent:#a8c8e0;">
+        <h5>膜下进水 <em>WATER TRAP</em></h5>
+        <p class="cause">保护膜边缘未密封、运输途中雨淋，水汽进入膜下导致金属表面氧化或锈蚀。</p>
+        <p class="fix"><b>防治 · </b>保护膜边缘压实；箱体防水处理；运输车辆防雨；到货后及时检查。</p>
+      </div>
+
+      <div class="defect reveal" style="--accent:#c8b0e8;">
+        <h5>二维码失效 <em>QR FAIL</em></h5>
+        <p class="cause">二维码打印质量差、标签磨损、扫码角度不当，导致无法读取信息。</p>
+        <p class="fix"><b>防治 · </b>选用高精度打印；标签防水耐磨；重要信息同步备份至装箱单。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 工具清单 ============ -->
+<section id="tools">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">08 / TOOLS</span>
+      <h2>工具与耗材清单</h2>
+      <p class="sec-sub">打包封箱涉及的设备与耗材，按功能分类整理。建议在项目开工前一次性备齐，避免因材料短缺影响工期。</p>
+    </div>
+
+    <div class="tools reveal">
+      <div class="tool">
+        <span class="cat">CLEANING</span>
+        <h5>清洁工具</h5>
+        <ul>
+          <li>中性清洁剂</li>
+          <li>超细纤维布</li>
+          <li>压缩空气枪</li>
+          <li>无尘纸</li>
+        </ul>
+      </div>
+      <div class="tool">
+        <span class="cat">FILMING</span>
+        <h5>贴膜工具</h5>
+        <ul>
+          <li>PE 保护膜 50–80μm</li>
+          <li>静电吸附膜 30–50μm</li>
+          <li>无纺布 30–60g/m²</li>
+          <li>刮板 / 压辊</li>
+        </ul>
+      </div>
+      <div class="tool">
+        <span class="cat">CUSHION</span>
+        <h5>缓冲材料</h5>
+        <ul>
+          <li>珍珠棉 10–50mm</li>
+          <li>EVA 垫层 5–30mm</li>
+          <li>气泡膜 0.5–1.0mm</li>
+          <li>泡沫板 / 蜂窝纸板</li>
+        </ul>
+      </div>
+      <div class="tool">
+        <span class="cat">CORNER</span>
+        <h5>护角护边</h5>
+        <ul>
+          <li>塑料护角 ≥10mm</li>
+          <li>珍珠棉护角 20mm</li>
+          <li>L 型护边</li>
+          <li>美纹纸胶带</li>
+        </ul>
+      </div>
+      <div class="tool">
+        <span class="cat">STRUCTURE</span>
+        <h5>结构材料</h5>
+        <ul>
+          <li>胶合板木箱 12–18mm</li>
+          <li>铁架 40×40 方钢</li>
+          <li>木方 40×40mm</li>
+          <li>瓦楞纸箱 AB 楞</li>
+        </ul>
+      </div>
+      <div class="tool">
+        <span class="cat">STRAPPING</span>
+        <h5>打包固定</h5>
+        <ul>
+          <li>PP / PET 打包带</li>
+          <li>打包扣 / 打包机</li>
+          <li>封箱胶带</li>
+          <li>气垫袋</li>
+        </ul>
+      </div>
+      <div class="tool">
+        <span class="cat">LABELING</span>
+        <h5>标识工具</h5>
+        <ul>
+          <li>二维码标签</li>
+          <li>易碎标 / 向上标</li>
+          <li>防潮标 / 重心标</li>
+          <li>标签打印机</li>
+        </ul>
+      </div>
+      <div class="tool">
+        <span class="cat">INSPECTION</span>
+        <h5>检验工具</h5>
+        <ul>
+          <li>色差仪</li>
+          <li>卷尺 / 游标卡尺</li>
+          <li>地磅 / 电子秤</li>
+          <li>相机 / 扫码枪</li>
+        </ul>
+      </div>
+      <div class="tool">
+        <span class="cat">MOISTURE</span>
+        <h5>防潮材料</h5>
+        <ul>
+          <li>防潮袋 50–200g</li>
+          <li>干燥剂</li>
+          <li>防水胶带</li>
+          <li>防水篷布</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 环境与安全 ============ -->
+<section id="env">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">09 / ENVIRONMENT & SAFETY</span>
+      <h2>包装环境与安全规范</h2>
+      <p class="sec-sub">打包封箱作业涉及切割、打包、搬运等环节，需关注作业环境与人员安全。同时，包装材料的环保处理也是项目交付的重要一环。</p>
+    </div>
+
+    <div class="charts-3">
+      <div class="card reveal">
+        <h4>Environment · 作业环境</h4>
+        <p class="cap">打包作业区的环境要求。</p>
+        <ul class="tips" style="--accent:#c8a45c;">
+          <li><b>温度 · </b>15–30℃</li>
+          <li><b>湿度 · </b>40–65%RH（防潮）</li>
+          <li><b>照明 · </b>≥300lux（检验用）</li>
+          <li><b>场地 · </b>平整、干燥、无尘</li>
+          <li><b>通道 · </b>宽度 ≥1.2m</li>
+          <li><b>消防 · </b>灭火器、禁烟标识</li>
+        </ul>
+      </div>
+
+      <div class="card reveal">
+        <h4>Safety · 人员安全</h4>
+        <p class="cap">作业人员必须配备的防护装备。</p>
+        <ul class="tips" style="--accent:#a8c8a8;">
+          <li><b>手套 · </b>防割手套（切割作业）</li>
+          <li><b>护目镜 · </b>防飞溅</li>
+          <li><b>安全鞋 · </b>防砸防穿刺</li>
+          <li><b>口罩 · </b>防尘（泡沫切割）</li>
+          <li><b>搬运 · </b>单人 ≤25kg，超重需两人或叉车</li>
+          <li><b>培训 · </b>打包设备操作培训</li>
+        </ul>
+      </div>
+
+      <div class="card reveal">
+        <h4>Recycling · 环保处理</h4>
+        <p class="cap">包装材料的回收与环保要求。</p>
+        <ul class="tips" style="--accent:#a87d4a;">
+          <li><b>纸箱 · </b>可回收，现场分类</li>
+          <li><b>木箱 · </b>可回收，重复利用</li>
+          <li><b>铁架 · </b>可回收，循环使用</li>
+          <li><b>珍珠棉 · </b>可回收，专业处理</li>
+          <li><b>保护膜 · </b>分类回收，不可随意丢弃</li>
+          <li><b>干燥剂 · </b>合规处置，不可填埋</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note-box reveal">
+      <p>
+        <strong>环保原则 · </strong>
+        包装材料应优先选择<em>可回收、可降解、可重复使用</em>的类型。
+        铁架、木箱等结构材料建议回收循环使用，既降低成本，又减少现场垃圾。
+        保护膜、珍珠棉等材料须分类回收，不可随意丢弃或焚烧。
+        所有包装废弃物的处理须符合当地环保法规，并留存处理记录。
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fmark">PACKING & CRATING</div>
+    <p>奢侈品门店 · 高端住宅 · 高端酒店 &nbsp;|&nbsp; 金属制品打包封箱全流程 · 深度详解</p>
+    <p style="margin-top:12px;opacity:.6;">12 道主工序 · 36 个子工序 · 6 类节点详图 · 12 类缺陷防治 · 9 类工具清单</p>
+    <p style="margin-top:10px;opacity:.45;">本文工艺参数为行业通用参考值，具体项目须以设计深化图、封样件与运输方案为准</p>
+  </div>
+</footer>
+
+<script>
+  /* 滚动显现 */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  /* 条形图动画 */
+  const barIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.bar-fill').forEach((bar, i) => {
+          setTimeout(() => {
+            bar.style.width = bar.dataset.w + '%';
+          }, i * 100);
+        });
+        barIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.bars').forEach(el => barIO.observe(el));
+</script>
+
+</body>
+</html>

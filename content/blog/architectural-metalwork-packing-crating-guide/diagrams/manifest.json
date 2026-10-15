@@ -1,0 +1,154 @@
+[
+  {
+    "name": "detail-vertical-crate",
+    "svg": "D:\\guoyao\\guoyao\\content\\blog\\architectural-metalwork-packing-crating-guide\\diagrams\\detail-vertical-crate.svg",
+    "webp": "D:\\guoyao\\guoyao\\public\\images\\blog\\architectural-metalwork-packing-crating-guide\\detail-vertical-crate.webp",
+    "format": "webp",
+    "width": 1440,
+    "height": 1080,
+    "space": "srgb",
+    "channels": 3,
+    "depth": "uchar",
+    "isProgressive": false,
+    "isPalette": false,
+    "hasProfile": false,
+    "hasAlpha": false,
+    "autoOrient": {
+      "width": 1440,
+      "height": 1080
+    }
+  },
+  {
+    "name": "detail-horizontal-carton",
+    "svg": "D:\\guoyao\\guoyao\\content\\blog\\architectural-metalwork-packing-crating-guide\\diagrams\\detail-horizontal-carton.svg",
+    "webp": "D:\\guoyao\\guoyao\\public\\images\\blog\\architectural-metalwork-packing-crating-guide\\detail-horizontal-carton.webp",
+    "format": "webp",
+    "width": 1440,
+    "height": 1080,
+    "space": "srgb",
+    "channels": 3,
+    "depth": "uchar",
+    "isProgressive": false,
+    "isPalette": false,
+    "hasProfile": false,
+    "hasAlpha": false,
+    "autoOrient": {
+      "width": 1440,
+      "height": 1080
+    }
+  },
+  {
+    "name": "detail-steel-rack",
+    "svg": "D:\\guoyao\\guoyao\\content\\blog\\architectural-metalwork-packing-crating-guide\\diagrams\\detail-steel-rack.svg",
+    "webp": "D:\\guoyao\\guoyao\\public\\images\\blog\\architectural-metalwork-packing-crating-guide\\detail-steel-rack.webp",
+    "format": "webp",
+    "width": 1440,
+    "height": 1080,
+    "space": "srgb",
+    "channels": 3,
+    "depth": "uchar",
+    "isProgressive": false,
+    "isPalette": false,
+    "hasProfile": false,
+    "hasAlpha": false,
+    "autoOrient": {
+      "width": 1440,
+      "height": 1080
+    }
+  },
+  {
+    "name": "detail-corner-protection",
+    "svg": "D:\\guoyao\\guoyao\\content\\blog\\architectural-metalwork-packing-crating-guide\\diagrams\\detail-corner-protection.svg",
+    "webp": "D:\\guoyao\\guoyao\\public\\images\\blog\\architectural-metalwork-packing-crating-guide\\detail-corner-protection.webp",
+    "format": "webp",
+    "width": 1440,
+    "height": 1080,
+    "space": "srgb",
+    "channels": 3,
+    "depth": "uchar",
+    "isProgressive": false,
+    "isPalette": false,
+    "hasProfile": false,
+    "hasAlpha": false,
+    "autoOrient": {
+      "width": 1440,
+      "height": 1080
+    }
+  },
+  {
+    "name": "detail-layer-separation",
+    "svg": "D:\\guoyao\\guoyao\\content\\blog\\architectural-metalwork-packing-crating-guide\\diagrams\\detail-layer-separation.svg",
+    "webp": "D:\\guoyao\\guoyao\\public\\images\\blog\\architectural-metalwork-packing-crating-guide\\detail-layer-separation.webp",
+    "format": "webp",
+    "width": 1440,
+    "height": 1080,
+    "space": "srgb",
+    "channels": 3,
+    "depth": "uchar",
+    "isProgressive": false,
+    "isPalette": false,
+    "hasProfile": false,
+    "hasAlpha": false,
+    "autoOrient": {
+      "width": 1440,
+      "height": 1080
+    }
+  },
+  {
+    "name": "detail-labeling",
+    "svg": "D:\\guoyao\\guoyao\\content\\blog\\architectural-metalwork-packing-crating-guide\\diagrams\\detail-labeling.svg",
+    "webp": "D:\\guoyao\\guoyao\\public\\images\\blog\\architectural-metalwork-packing-crating-guide\\detail-labeling.webp",
+    "format": "webp",
+    "width": 1440,
+    "height": 1080,
+    "space": "srgb",
+    "channels": 3,
+    "depth": "uchar",
+    "isProgressive": false,
+    "isPalette": false,
+    "hasProfile": false,
+    "hasAlpha": false,
+    "autoOrient": {
+      "width": 1440,
+      "height": 1080
+    }
+  },
+  {
+    "name": "risk-pathways",
+    "svg": "D:\\guoyao\\guoyao\\content\\blog\\architectural-metalwork-packing-crating-guide\\diagrams\\risk-pathways.svg",
+    "webp": "D:\\guoyao\\guoyao\\public\\images\\blog\\architectural-metalwork-packing-crating-guide\\risk-pathways.webp",
+    "format": "webp",
+    "width": 1440,
+    "height": 1080,
+    "space": "srgb",
+    "channels": 3,
+    "depth": "uchar",
+    "isProgressive": false,
+    "isPalette": false,
+    "hasProfile": false,
+    "hasAlpha": false,
+    "autoOrient": {
+      "width": 1440,
+      "height": 1080
+    }
+  },
+  {
+    "name": "protection-priorities",
+    "svg": "D:\\guoyao\\guoyao\\content\\blog\\architectural-metalwork-packing-crating-guide\\diagrams\\protection-priorities.svg",
+    "webp": "D:\\guoyao\\guoyao\\public\\images\\blog\\architectural-metalwork-packing-crating-guide\\protection-priorities.webp",
+    "format": "webp",
+    "width": 1440,
+    "height": 1080,
+    "space": "srgb",
+    "channels": 3,
+    "depth": "uchar",
+    "isProgressive": false,
+    "isPalette": false,
+    "hasProfile": false,
+    "hasAlpha": false,
+    "autoOrient": {
+      "width": 1440,
+      "height": 1080
+    }
+  }
+]

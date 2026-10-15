@@ -1,0 +1,201 @@
+{
+  "contentContainers": [
+    {
+      "children": 0,
+      "cls": "",
+      "tag": "SCRIPT"
+    },
+    {
+      "children": 5,
+      "cls": "metal-editorial-module__g3ZPha__container metal-editorial-module__g3ZPha__detailHeader",
+      "tag": "HEADER"
+    },
+    {
+      "children": 1,
+      "cls": "metal-editorial-module__g3ZPha__container",
+      "tag": "DIV"
+    },
+    {
+      "children": 2,
+      "cls": "metal-editorial-module__g3ZPha__container metal-editorial-module__g3ZPha__readingLayout",
+      "tag": "DIV"
+    },
+    {
+      "children": 1,
+      "cls": "metal-editorial-module__g3ZPha__readingEnd",
+      "tag": "FOOTER"
+    }
+  ],
+  "date": "2026-10-12T03:48:06.125Z",
+  "figures": [
+    {
+      "caption": "Illustrative vertical crate with protected architectural metal panels and internal separators.",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/retail-vertical-crate-44465d91e44146b8.webp"
+    },
+    {
+      "caption": "Illustrative carton containing wrapped metal trims with separators and a packing list.",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/residential-carton-699d397795f4b42a.webp"
+    },
+    {
+      "caption": "Illustrative steel transport rack holding individually protected metal panels.",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/hospitality-steel-rack-696c8387f730212a.webp"
+    },
+    {
+      "caption": "Illustrative vertical crate detail showing panels, separators, cushioning and internal support.",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/detail-vertical-crate-0535e20b2b6b8f8d.webp"
+    },
+    {
+      "caption": "Illustrative horizontal carton detail with wrapped trims and separating layers.",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/detail-horizontal-carton-2edf12eb2965d23d.webp"
+    },
+    {
+      "caption": "Illustrative steel frame detail with protected metal panels, support points and restraints.",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/detail-steel-rack-5327f51d1b2266c3.webp"
+    },
+    {
+      "caption": "Illustrative corner protection detail showing a metal corner, soft pad and protective guard.",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/detail-corner-protection-57ae5da84c7595da.webp"
+    },
+    {
+      "caption": "Illustrative panel separation detail with protective layers between individual metal sheets.",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/detail-layer-separation-478dcc6293ded54c.webp"
+    },
+    {
+      "caption": "Illustrative package label arrangement with a reference field and handling symbols.",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/detail-labeling-4f79dbb8ed893ddd.webp"
+    },
+    {
+      "caption": "Illustrative diagram linking movement, exposed edges and uneven support to surface damage, corner damage and deformation.",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/risk-pathways-47f6052a7a85e393.webp"
+    },
+    {
+      "caption": "Illustrative comparison of packing considerations for retail, residential and hospitality contexts.",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/protection-priorities-664698581d6f7ffa.webp"
+    }
+  ],
+  "h1": "Packing Architectural Metalwork: Protection, Crating and Site Delivery",
+  "h2": [
+    {
+      "id": "match-the-packing-to-the-setting",
+      "text": "Match the Packing to the Setting"
+    },
+    {
+      "id": "build-the-protection-layers",
+      "text": "Build the Protection Layers"
+    },
+    {
+      "id": "follow-the-12-step-checklist",
+      "text": "Follow the 12-Step Checklist"
+    },
+    {
+      "id": "resolve-six-packing-details",
+      "text": "Resolve Six Packing Details"
+    },
+    {
+      "id": "plan-cost-and-risk",
+      "text": "Plan Cost and Risk"
+    },
+    {
+      "id": "check-quality-at-each-handover",
+      "text": "Check Quality at Each Handover"
+    },
+    {
+      "id": "prevent-common-packing-damage",
+      "text": "Prevent Common Packing Damage"
+    },
+    {
+      "id": "prepare-the-tools",
+      "text": "Prepare the Tools"
+    },
+    {
+      "id": "control-the-working-environment",
+      "text": "Control the Working Environment"
+    }
+  ],
+  "images": [
+    {
+      "alt": "Illustrative architectural metalwork packing arrangement with protected components, cushioning and a crate.",
+      "complete": true,
+      "loading": null,
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/hero-db959d23f871847b.webp",
+      "width": 1672
+    },
+    {
+      "alt": "Illustrative vertical crate with protected architectural metal panels and internal separators.",
+      "complete": true,
+      "loading": "lazy",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/retail-vertical-crate-44465d91e44146b8.webp",
+      "width": 1672
+    },
+    {
+      "alt": "Illustrative carton containing wrapped metal trims with separators and a packing list.",
+      "complete": true,
+      "loading": "lazy",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/residential-carton-699d397795f4b42a.webp",
+      "width": 1672
+    },
+    {
+      "alt": "Illustrative steel transport rack holding individually protected metal panels.",
+      "complete": false,
+      "loading": "lazy",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/hospitality-steel-rack-696c8387f730212a.webp",
+      "width": 0
+    },
+    {
+      "alt": "Illustrative vertical crate detail showing panels, separators, cushioning and internal support.",
+      "complete": false,
+      "loading": "lazy",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/detail-vertical-crate-0535e20b2b6b8f8d.webp",
+      "width": 0
+    },
+    {
+      "alt": "Illustrative horizontal carton detail with wrapped trims and separating layers.",
+      "complete": false,
+      "loading": "lazy",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/detail-horizontal-carton-2edf12eb2965d23d.webp",
+      "width": 0
+    },
+    {
+      "alt": "Illustrative steel frame detail with protected metal panels, support points and restraints.",
+      "complete": false,
+      "loading": "lazy",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/detail-steel-rack-5327f51d1b2266c3.webp",
+      "width": 0
+    },
+    {
+      "alt": "Illustrative corner protection detail showing a metal corner, soft pad and protective guard.",
+      "complete": false,
+      "loading": "lazy",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/detail-corner-protection-57ae5da84c7595da.webp",
+      "width": 0
+    },
+    {
+      "alt": "Illustrative panel separation detail with protective layers between individual metal sheets.",
+      "complete": false,
+      "loading": "lazy",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/detail-layer-separation-478dcc6293ded54c.webp",
+      "width": 0
+    },
+    {
+      "alt": "Illustrative package label arrangement with a reference field and handling symbols.",
+      "complete": false,
+      "loading": "lazy",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/detail-labeling-4f79dbb8ed893ddd.webp",
+      "width": 0
+    },
+    {
+      "alt": "Illustrative diagram linking movement, exposed edges and uneven support to surface damage, corner damage and deformation.",
+      "complete": false,
+      "loading": "lazy",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/risk-pathways-47f6052a7a85e393.webp",
+      "width": 0
+    },
+    {
+      "alt": "Illustrative comparison of packing considerations for retail, residential and hospitality contexts.",
+      "complete": false,
+      "loading": "lazy",
+      "src": "https://media.guoyaometal.com/blog/architectural-metalwork-packing-crating-guide/protection-priorities-664698581d6f7ffa.webp",
+      "width": 0
+    }
+  ]
+}

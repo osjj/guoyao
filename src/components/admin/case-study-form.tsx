@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useActionState, useState, type ReactNode } from "react";
 import { saveCaseStudy, deleteCaseStudy } from "@/actions/case-studies";
+import { ImagePreviewButton } from "@/components/admin/image-preview";
 import type { AdminCaseStudy, CaseStudyContent, CaseFormState } from "@/lib/case-study-content";
 
 const input = "mt-2 w-full rounded-lg border border-[#ccd3ce] bg-white px-3 py-3 text-sm font-normal";
@@ -32,7 +33,7 @@ function ImageField({ value, onChange, slug, onBusy, showCaption = true }: { val
     finally { setBusy(false); onBusy(false); }
   }
   return <div className="space-y-4 rounded-xl border border-dashed border-[#ccd3ce] p-4">
-    {value?.url && <Image src={value.url} alt={value.alt} width={900} height={600} unoptimized className="max-h-64 w-full rounded-lg object-contain" />}
+    {value?.url && <ImagePreviewButton src={value.url} alt={value.alt || "Case study image"} className="rounded-lg"><Image src={value.url} alt={value.alt} width={900} height={600} unoptimized className="max-h-64 w-full rounded-lg object-contain" /></ImagePreviewButton>}
     <Field label="Image URL" value={value?.url ?? ""} required={false} onChange={url => onChange(url ? { url, alt: value?.alt ?? "", caption: value?.caption ?? "" } : undefined)} />
     {value && <><Field label="Image alt text" value={value.alt} onChange={alt => onChange({ ...value, alt })} />{showCaption && <Field label="Image caption" value={value.caption} required={false} onChange={caption => onChange({ ...value, caption })} />}</>}
     <label className="block text-sm font-bold">Upload image<input className="mt-2 block w-full text-sm" type="file" accept="image/*" disabled={busy} onChange={event => { void upload(event.target.files?.[0]); event.target.value = ""; }} /></label>

@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { createBlogPost, deleteBlogPost, updateBlogPost } from "@/actions/blog";
 import { ContentEditor, type ContentEditorRef } from "@/components/admin/content-editor";
+import { ImagePreviewButton } from "@/components/admin/image-preview";
 import { parseStoredArticleContent } from "@/lib/article-content";
 import type { AdminBlogPostInput, BlogPostFormState } from "@/types/admin-blog";
 
@@ -228,7 +229,9 @@ export function BlogForm({ post }: { post?: AdminBlogPostInput }) {
           <div className="grid gap-6 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
             <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-[#d7dcd8] bg-[#eef0ed]">
               {coverImage ? (
-                <Image src={coverImage} alt={coverImageAlt || title || "Article cover preview"} fill unoptimized sizes="(min-width: 1024px) 36vw, 100vw" className="object-cover" />
+                <ImagePreviewButton src={coverImage} alt={coverImageAlt || title || "Article cover preview"} className="h-full rounded-2xl">
+                  <Image src={coverImage} alt={coverImageAlt || title || "Article cover preview"} fill unoptimized sizes="(min-width: 1024px) 36vw, 100vw" className="object-cover" />
+                </ImagePreviewButton>
               ) : (
                 <div className="grid h-full place-items-center text-center text-sm text-[var(--ink-muted)]">
                   <div><ImageIcon className="mx-auto size-7" /><p className="mt-2 font-bold">No cover selected</p></div>
@@ -290,6 +293,7 @@ export function BlogForm({ post }: { post?: AdminBlogPostInput }) {
           icon={Settings2}
         >
           <ContentEditor
+            enableImagePreview
             ref={contentEditorRef}
             value={initialContent}
             slug={slug}

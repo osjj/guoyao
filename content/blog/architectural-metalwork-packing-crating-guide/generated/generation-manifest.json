@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "article_slug": "architectural-metalwork-packing-crating-guide",
+  "generated_date": "2026-10-12",
+  "timezone": "Asia/Shanghai",
+  "tool": "image_gen.imagegen",
+  "execution_mode": "built-in",
+  "model": "not returned by tool",
+  "purpose": "Generic educational packaging illustrations. These images are AI-generated and must not be presented as photographs of Guoyao facilities, customer shipments or independently tested products.",
+  "constraints": {
+    "landscape": true,
+    "no_brand": true,
+    "no_text": true,
+    "no_watermark": true,
+    "no_barcode": true,
+    "no_scannable_qr": true
+  },
+  "webp_export": {
+    "library": "sharp",
+    "quality": 90,
+    "effort": 6,
+    "resized": false,
+    "cropped": false
+  },
+  "assets": [
+    {
+      "key": "hero",
+      "files": [
+        {
+          "format": "png",
+          "path": "D:\\guoyao\\guoyao\\content\\blog\\architectural-metalwork-packing-crating-guide\\generated\\hero.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 2512725,
+          "sha256": "f6849cf9aeb049d3863a610405ef3ae9bca913affffedd255b505efe6af88cb1"
+        },
+        {
+          "format": "webp",
+          "path": "D:\\guoyao\\guoyao\\public\\images\\blog\\architectural-metalwork-packing-crating-guide\\hero.webp",
+          "width": 1672,
+          "height": 941,
+          "bytes": 259090,
+          "sha256": "db959d23f871847b73d2ba290d347647bfb3ac25942f8b5ab9b68b374c5a1a7c"
+        }
+      ],
+      "use_case": "product-mockup",
+      "transparent_background": false,
+      "prompt": "Use case: product-mockup.\nAsset type: independent landscape editorial illustration for an English architectural metalwork packaging blog.\nStyle/medium: exceptionally realistic, high-quality staged product photography, not a documentary factory photograph; this is a generic educational packaging illustration, with no identifiable real factory or manufacturer.\nLighting/mood: soft natural side light, calm and precise, warm neutral industrial setting.\nColor palette: warm off-white plywood and paper, graphite grey, silver metal and muted bronze/copper.\nMaterials/textures: physically accurate brushed stainless steel, reflective metal, fine plywood grain, corrugated cardboard, dense foam and protective film, realistic contact shadows.\nComposition: a wide horizontal image, approximately 16:9, clean coherent camera perspective, all important packaging mechanisms legible.\nConstraints: no people, no brand, no typography or letters or numbers, no dimensions, no stamps, no watermark, no labels, no barcodes, no scannable QR codes. No false factory identity. No unsupported claims. No composite layout, no inset diagrams; one single independent scene.\nPrimary request: A clean architectural metalwork packing workbench with a large open plywood shipping crate in the center. Inside the crate are several silver and bronze flat architectural finish panels safely stacked horizontally, each separated by thick full-area foam interleaves; visible soft white protection layers contact the finish, padded wooden supports carry the weight, all panel corners have fitted foam corner protectors. The top silver panel is mostly protected in transparent removable film, with enough surface visible to recognize the brushed finish. Beside the crate, arrange unbranded foam sheets, additional corner protectors, a roll of protective film, and neatly coiled dark packing straps. The crate is open for inspection with the lid resting flat on the workbench alongside it, visibly believable joinery and geometry. All panels sit securely supported within the crate, no direct metal-to-metal contact. A slightly elevated three-quarter angle shows the packing materials and layered protection clearly; packaging is the main subject.",
+      "generation_source": "C:\\Users\\osjj\\.codex\\generated_images\\01a12b8b-c035-7f82-8882-a40a492833fb\\exec-b811da6a-a454-4f8d-8920-69d4b0f61e88.png",
+      "tool_output_hint": "Generated images are saved to C:\\Users\\osjj\\.codex\\generated_images\\01a12b8b-c035-7f82-8882-a40a492833fb as C:\\Users\\osjj\\.codex\\generated_images\\01a12b8b-c035-7f82-8882-a40a492833fb\\exec-b811da6a-a454-4f8d-8920-69d4b0f61e88.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "visual_review": "Passed visual inspection: silver and bronze horizontal panels are separated by full-area foam, fitted corner guards and padded supports are visible, with film and packing straps beside the open plywood crate.",
+      "selected_revision": 1
+    },
+    {
+      "key": "retail-vertical-crate",
+      "files": [
+        {
+          "format": "png",
+          "path": "D:\\guoyao\\guoyao\\content\\blog\\architectural-metalwork-packing-crating-guide\\generated\\retail-vertical-crate.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 2067404,
+          "sha256": "d366e60a4aa3e18e83b04060cb147ff75899cbd0e4bfcd2a8fc1d981d626c546"
+        },
+        {
+          "format": "webp",
+          "path": "D:\\guoyao\\guoyao\\public\\images\\blog\\architectural-metalwork-packing-crating-guide\\retail-vertical-crate.webp",
+          "width": 1672,
+          "height": 941,
+          "bytes": 164702,
+          "sha256": "44465d91e44146b86f61844eac91bcbfa9c07481576fefd4f3814aaad8532aad"
+        }
+      ],
+      "use_case": "product-mockup",
+      "transparent_background": false,
+      "prompt": "Use case: product-mockup.\nAsset type: independent landscape editorial illustration for an English architectural metalwork packaging blog.\nStyle/medium: exceptionally realistic, high-quality staged product photography, not a documentary factory photograph; this is a generic educational packaging illustration, with no identifiable real factory or manufacturer.\nLighting/mood: soft natural side light, calm and precise, warm neutral industrial setting.\nColor palette: warm off-white plywood and paper, graphite grey, silver metal and muted bronze/copper.\nMaterials/textures: physically accurate brushed stainless steel, reflective metal, fine plywood grain, corrugated cardboard, dense foam and protective film, realistic contact shadows.\nComposition: a wide horizontal image, approximately 16:9, clean coherent camera perspective, all important packaging mechanisms legible.\nConstraints: no people, no brand, no typography or letters or numbers, no dimensions, no stamps, no watermark, no labels, no barcodes, no scannable QR codes. No false factory identity. No unsupported claims. No composite layout, no inset diagrams; one single independent scene.\nPrimary request: A sturdy open vertical plywood transport crate protects polished architectural metal finish panels intended for a premium retail interior. In this educational staged view, one long side of the crate has been removed so the packing system is visible. Six tall, flat silver and muted bronze mirror-finish panels stand upright individually in parallel full-height dense foam separator channels. Each panel has its own narrow slot with soft white contact lining along both sides and a padded bottom cradle, with additional padded top support. Each sheet is separated from its neighbors by visible full-height thick white foam partitions, with no direct metal-to-metal contact. The crate has a stable broad base and sturdy plywood perimeter frame, no floating sheets, no bent sheets, no unsupported polished faces. Polished finishes are visible only in carefully chosen small areas between protection layers. Frame the whole freestanding crate in a three-quarter angle, realistic reflections and shadows, with sufficient clear view to understand the full-height separated protection.",
+      "generation_source": "C:\\Users\\osjj\\.codex\\generated_images\\01a12b8b-c035-7f82-8882-a40a492833fb\\exec-35fed863-58f9-4d93-a7d1-e23f102ecbf7.png",
+      "tool_output_hint": "Generated images are saved to C:\\Users\\osjj\\.codex\\generated_images\\01a12b8b-c035-7f82-8882-a40a492833fb as C:\\Users\\osjj\\.codex\\generated_images\\01a12b8b-c035-7f82-8882-a40a492833fb\\exec-35fed863-58f9-4d93-a7d1-e23f102ecbf7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "visual_review": "Passed visual inspection: individual upright silver/bronze sheets are separated by full-height foam partitions and supported by padded bottom channels and top protection inside a stable plywood crate.",
+      "selected_revision": 1
+    },
+    {
+      "key": "residential-carton",
+      "files": [
+        {
+          "format": "png",
+          "path": "D:\\guoyao\\guoyao\\content\\blog\\architectural-metalwork-packing-crating-guide\\generated\\residential-carton.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 2321639,
+          "sha256": "22ffee6ee6b608a573ec8facb32456eaa4f7802d08c16019bf762772b242b5e0"
+        },
+        {
+          "format": "webp",
+          "path": "D:\\guoyao\\guoyao\\public\\images\\blog\\architectural-metalwork-packing-crating-guide\\residential-carton.webp",
+          "width": 1672,
+          "height": 941,
+          "bytes": 206162,
+          "sha256": "699d397795f4b42ac28cdd82a162b78e9efcfe1117d12ac9c6675a1c85663757"
+        }
+      ],
+      "use_case": "product-mockup",
+      "transparent_background": false,
+      "prompt": "Use case: product-mockup.\nAsset type: independent landscape editorial illustration for an English architectural metalwork packaging blog.\nStyle/medium: exceptionally realistic, high-quality staged product photography, not a documentary factory photograph; this is a generic educational packaging illustration, with no identifiable real factory or manufacturer.\nLighting/mood: soft natural side light, calm and precise, warm neutral industrial setting.\nColor palette: warm off-white plywood and paper, graphite grey, silver metal and muted bronze/copper.\nMaterials/textures: physically accurate brushed stainless steel, reflective metal, fine plywood grain, corrugated cardboard, dense foam and protective film, realistic contact shadows.\nComposition: a wide horizontal image, approximately 16:9, clean coherent camera perspective, all important packaging mechanisms legible.\nConstraints: no people, no brand, no typography or letters or numbers, no dimensions, no stamps, no watermark, no labels, no barcodes, no scannable QR codes. No false factory identity. No unsupported claims. No composite layout, no inset diagrams; one single independent scene.\nPrimary request: A long open heavy-duty corrugated cardboard shipping carton on a clean warm-grey workbench. Inside the carton, eight slim brushed silver metal skirting trims and narrow bronze door-frame sections are laid straight, parallel and neatly organized. Every piece has its own white soft foam sleeve with a small exposed central portion showing the brushed metal finish; distinct foam divider pads separate the sleeves. Dense foam corner and end guards protect both ends of every piece, fitting snugly inside the carton. The long profiles are fully supported by a flat cushioned base, no bare metal contact, no loose small parts, no unsupported overhang. The open carton flaps naturally rest at the sides. Elevated three-quarter camera angle, long carton follows the image horizontally; clear crisp view of the independent sleeves, dividers and end guards. This is a realistic generic residential architectural trim packing example.",
+      "generation_source": "C:\\Users\\osjj\\.codex\\generated_images\\01a12b8b-c035-7f82-8882-a40a492833fb\\exec-379e0ed3-7652-4f1f-8522-9e70d61e7acf.png",
+      "tool_output_hint": "Generated images are saved to C:\\Users\\osjj\\.codex\\generated_images\\01a12b8b-c035-7f82-8882-a40a492833fb as C:\\Users\\osjj\\.codex\\generated_images\\01a12b8b-c035-7f82-8882-a40a492833fb\\exec-379e0ed3-7652-4f1f-8522-9e70d61e7acf.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "visual_review": "Passed visual inspection: parallel long metal profiles have individual foam sleeves, separator pads and fitted end protection inside a long corrugated carton; no unsupported overhang.",
+      "selected_revision": 1
+    },
+    {
+      "key": "hospitality-steel-rack",
+      "files": [
+        {
+          "format": "png",
+          "path": "D:\\guoyao\\guoyao\\content\\blog\\architectural-metalwork-packing-crating-guide\\generated\\hospitality-steel-rack.png",
+          "width": 1672,
+          "height": 941,
+          "bytes": 2116978,
+          "sha256": "e66eee90bea8b1b75ed583fe4f79ca953d2620a85f02984c21d41f04a7cdeeae"
+        },
+        {
+          "format": "webp",
+          "path": "D:\\guoyao\\guoyao\\public\\images\\blog\\architectural-metalwork-packing-crating-guide\\hospitality-steel-rack.webp",
+          "width": 1672,
+          "height": 941,
+          "bytes": 197914,
+          "sha256": "696c8387f730212a3de6871c5ad1fa3796911e1d0fc2a770dc114b7213d27934"
+        }
+      ],
+      "use_case": "product-mockup",
+      "transparent_background": false,
+      "prompt": "Use case: product-mockup.\nAsset type: independent landscape editorial illustration for an English architectural metalwork packaging blog.\nStyle/medium: exceptionally realistic, high-quality staged product photography, not a documentary factory photograph; this is a generic educational packaging illustration, with no identifiable real factory or manufacturer.\nLighting/mood: soft natural side light, calm and precise, warm neutral industrial setting.\nColor palette: warm off-white plywood and paper, graphite grey, silver metal and muted bronze/copper.\nMaterials/textures: physically accurate brushed stainless steel, reflective metal, fine plywood grain, corrugated cardboard, dense foam and protective film, realistic contact shadows.\nComposition: a wide horizontal image, approximately 16:9, clean coherent camera perspective, all important packaging mechanisms legible.\nConstraints: no people, no brand, no typography or letters or numbers, no dimensions, no stamps, no watermark, no labels, no barcodes, no scannable QR codes. No false factory identity. No unsupported claims. No composite layout, no inset diagrams; one single independent scene.\nPrimary request: A freestanding, purpose-built graphite steel A-frame transport rack on a broad rectangular steel base safely carries several large flat silver and muted bronze architectural metal panels for a hotel fit-out shipment. A realistic educational staged scene, with the entire stable rack visible. The panels stand near-vertical, slightly tilted inward onto the steel frame. Every panel sits individually in a separate white dense-foam and black EVA padded bottom channel; full-height foam separators prevent any metal-to-metal contact. Two horizontal steel crossrails carry continuous black EVA pads and soft foam wherever they touch panels, with clear structural steel uprights beneath. Panels are restrained by two secure dark packing straps around the rack, with foam or EVA corner pads under every strap contact. No loose sheets, no randomly stacked panels, no unsupported panels, no levitation, no wall as substitute for the freestanding structural support. View the steel base, frame, padded support contact points and separated panel arrangement clearly from a clean three-quarter angle. Soft natural light and realistic material textures, no claim of an actual tested transport product.",
+      "generation_source": "C:\\Users\\osjj\\.codex\\generated_images\\01a12b8b-c035-7f82-8882-a40a492833fb\\exec-84b43772-923d-48f1-8580-ce865e9af503.png",
+      "tool_output_hint": "Generated images are saved to C:\\Users\\osjj\\.codex\\generated_images\\01a12b8b-c035-7f82-8882-a40a492833fb as C:\\Users\\osjj\\.codex\\generated_images\\01a12b8b-c035-7f82-8882-a40a492833fb\\exec-84b43772-923d-48f1-8580-ce865e9af503.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "visual_review": "Passed visual inspection after targeted revision: the freestanding A-frame has a broad stable steel base, padded EVA/foam bottom channels, full-height separation and continuous cushioning under both horizontal restraint straps.",
+      "selected_revision": 2,
+      "revision": {
+        "use_case": "precise-object-edit",
+        "prompt": "Use case: precise-object-edit.\nEdit target: the generated generic educational architectural metal transport rack photograph.\nChange only one thing: add a continuous protective soft white foam strip with a thin dark EVA contact lining directly underneath each of the two horizontal black packing straps everywhere those straps cross metal panel faces. The white protective strips should be wider than the straps and visibly protrude slightly above and below them across the full run, so every strap-to-panel contact is visibly cushioned. Keep the black straps, buckles and existing padded corners.\nPreserve all other geometry, the graphite A-frame steel rack, wide freestanding base, supporting rails, silver/bronze flat panels, vertical full-height separators, padded individual bottom channels, soft natural lighting, perspective, warm palette and realistic material texture exactly as they are. No new objects, no missing frame support. Keep a single landscape scene. No brands, no text, no labels, no numbers, no barcode, no QR code, no watermark.\nThis is an illustrative generic packing example, not an actual factory photograph or tested product.",
+        "referenced_image_paths": [
+          "C:\\Users\\osjj\\.codex\\generated_images\\01a12b8b-c035-7f82-8882-a40a492833fb\\exec-84b43772-923d-48f1-8580-ce865e9af503.png"
+        ],
+        "generation_source": "C:\\Users\\osjj\\.codex\\generated_images\\01a12b8b-c035-7f82-8882-a40a492833fb\\exec-fae9c373-f2ff-4744-b493-c0b758b68403.png",
+        "tool_output_hint": "Generated images are saved to C:\\Users\\osjj\\.codex\\generated_images\\01a12b8b-c035-7f82-8882-a40a492833fb as C:\\Users\\osjj\\.codex\\generated_images\\01a12b8b-c035-7f82-8882-a40a492833fb\\exec-fae9c373-f2ff-4744-b493-c0b758b68403.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      }
+    }
+  ]
+}
