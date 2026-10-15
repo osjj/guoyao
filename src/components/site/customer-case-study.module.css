@@ -27,6 +27,13 @@
 .sectionImage { margin-top: 28px; }
 .sectionImage img { width: 100%; height: auto; }
 .sectionImage figcaption { margin-top: 12px; color: #53585d; font-size: 13px; line-height: 1.7; }
+.videoFigure { min-width: 0; margin: 28px 0 0; }
+.videoPlayer { display: block; width: 100%; aspect-ratio: 16 / 9; max-height: 70vh; background: #071d32; object-fit: contain; }
+.videoPlayer:focus-visible { outline: 2px solid #90672c; outline-offset: 4px; }
+.videoFigure figcaption { margin-top: 12px; color: #53585d; font-size: 14px; line-height: 1.7; overflow-wrap: anywhere; }
+.videoFigure .videoError { margin-top: 12px; color: #8b3030; font-size: 14px; line-height: 1.7; }
+.videoFallback { display: inline-flex; align-items: center; min-height: 44px; margin-top: 4px; color: #795824; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
+.videoFallback:focus-visible { outline: 2px solid #90672c; outline-offset: 4px; }
 .links { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
 .links ul, .contents { margin-top: 16px; }
 .links li + li, .contents li + li { margin-top: 10px; }

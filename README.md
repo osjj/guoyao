@@ -80,6 +80,42 @@ npm run r2:smoke
 The smoke test uploads two versioned WebP files, verifies them through both the R2 API and the
 public media hostname, and prints only their public URLs. It does not update the database.
 
+## Case study image galleries
+
+Each of the existing 20 case chapters can now contain up to 100 images. The chapter editor
+supports selecting many files at once, shows upload progress, and retains successful uploads
+when another file fails. Retry only failed files without uploading successful ones again.
+Each image may be up to 12 MB and uses the existing R2 image conversion/upload endpoint.
+
+Images can be reordered, removed, enlarged, and given individual alt text and captions.
+Legacy `section.image` content remains readable; editing the gallery saves the combined ordered
+images in `section.images`. No database migration is required, and removing an image does not
+delete the stored R2 object. Uploads are separate requests; saving the case sends image URLs and
+text, not the image files themselves.
+
+The public case page and saved admin preview share the Guoyao article template. Image galleries
+show full images in two columns on desktop and one on mobile, with lazy loading and an enlarge
+preview. Existing single-image chapters stay full width.
+
+## Case study videos
+
+The case editor includes an optional **Project video** block above the chapters. Upload an MP4
+or WebM file (up to 50 MB), or enter a direct `.mp4` / `.webm` URL. Add a title, optional description,
+and optional poster image URL. Use MP4 with H.264 for broad browser compatibility; files are
+stored as supplied without transcoding. Video platform page URLs are not supported.
+
+Video metadata is saved in the existing `CaseStudy.content` JSON. Existing cases without video
+need no migration. Saved draft previews and public case pages use the same player with controls
+and inline mobile playback; videos do not autoplay. Removing a video detaches it from the case
+when saved and does not delete the uploaded object.
+
+Uploads use the configured `R2_*` bucket and public URL. The Guoyao Nginx example allows `55m`
+request bodies for the 50 MB file plus multipart overhead; apply an equivalent limit in the
+actual Guoyao reverse proxy when deploying. Changing the example does not update a running server.
+
+Run `npx tsx --test tests/case-study-content.test.ts tests/case-study-video-upload.test.ts`
+alongside the normal quality checks when changing this feature.
+
 ## Documentation
 
 - `docs/GLARIVO_MVP_BUILD_AND_DEPLOY_GUIDE.md`

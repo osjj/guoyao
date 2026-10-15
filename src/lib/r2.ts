@@ -5,6 +5,11 @@ import {
   S3Client,
 } from "@aws-sdk/client-s3";
 import sharp from "sharp";
+import {
+  hasCaseVideoSignature,
+  MAX_CASE_VIDEO_BYTES,
+  type CaseVideoFormat,
+} from "./case-study-video-upload";
 
 const MAX_SOURCE_IMAGE_BYTES = 25 * 1024 * 1024;
 const MAX_IMAGE_DIMENSION = 2400;
@@ -153,6 +158,45 @@ export async function uploadImageToR2(input: {
     width: output.info.width,
     height: output.info.height,
     size: output.info.size,
+    contentType,
+  };
+}
+
+export async function uploadVideoToR2(input: {
+  data: Buffer;
+  key: string;
+  format: CaseVideoFormat;
+}): Promise<{ key: string; url: string; size: number; contentType: "video/mp4" | "video/webm" }> {
+  if (input.data.byteLength === 0 || input.data.byteLength > MAX_CASE_VIDEO_BYTES) {
+    throw new Error("Video source must be between 1 byte and 50 MB");
+  }
+  if (!hasCaseVideoSignature(input.data, input.format)) {
+    throw new Error("Video source does not match the requested container format");
+  }
+  if (
+    !/^case-studies\/[a-z0-9]+(?:-[a-z0-9]+)*\/videos\/[a-zA-Z0-9-]+\.(mp4|webm)$/.test(input.key) ||
+    !input.key.endsWith(`.${input.format}`)
+  ) {
+    throw new Error("R2 video keys must use a safe case study path and match the video format");
+  }
+
+  const config = getR2Config();
+  const contentType = `video/${input.format}` as const;
+  await getR2Client().send(
+    new PutObjectCommand({
+      Bucket: config.bucketName,
+      Key: input.key,
+      Body: input.data,
+      ContentType: contentType,
+      ContentLength: input.data.byteLength,
+      CacheControl: "public, max-age=31536000, immutable",
+    }),
+  );
+
+  return {
+    key: input.key,
+    url: publicObjectUrl(config.publicUrl, input.key),
+    size: input.data.byteLength,
     contentType,
   };
 }

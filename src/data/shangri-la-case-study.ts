@@ -1,9 +1,12 @@
+import type { CaseStudyImage, CaseStudyVideo } from "@/lib/case-study-content";
+
 export type ProjectSection = {
   id: string;
   title: string;
   navLabel: string;
   paragraphs: string[];
-  image?: { url: string; alt: string; caption: string };
+  image?: CaseStudyImage;
+  images?: CaseStudyImage[];
   points?: Array<{ title: string; text: string }>;
   table?: { caption: string; headings: string[]; rows: string[][] };
 };
@@ -19,6 +22,7 @@ export type CustomerCaseStudy = {
   coverImage?: string;
   coverImageAlt?: string;
   stats: Array<{ value: string; label: string }>;
+  video?: CaseStudyVideo;
   sections: ProjectSection[];
   conclusion: string;
   relatedLinks: Array<{ href: string; label: string }>;

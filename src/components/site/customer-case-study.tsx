@@ -1,13 +1,16 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import type { CustomerCaseStudy as CustomerProject } from "@/data/shangri-la-case-study";
+import { getCaseSectionImages, getCaseVideoSectionId } from "@/lib/case-study-content";
+import { CaseStudyImageGallery } from "./case-study-image-gallery";
+import { CaseStudyVideoPlayer } from "./case-study-video";
 import { InquiryButton } from "./inquiry-contact";
 import theme from "./editorial-pages.module.css";
 import reading from "./reading-pages.module.css";
 import styles from "./customer-case-study.module.css";
 
 export function CustomerCaseStudy({ study }: { study: CustomerProject }) {
+  const videoSectionId = getCaseVideoSectionId(study.sections);
   return (
     <>
       <div className={`${theme.container} ${reading.intro}`}><aside aria-label="Project introduction">{study.introduction}</aside></div>
@@ -18,12 +21,17 @@ export function CustomerCaseStudy({ study }: { study: CustomerProject }) {
       </div>
       <div className={`${theme.container} ${reading.readingLayout}`}>
         <div className={reading.caseBody}>
+          {study.video && <section id={videoSectionId} className={styles.section} aria-label={study.video.title}>
+            <p className={styles.number}>Project video</p>
+            <h2>{study.video.title}</h2>
+            <CaseStudyVideoPlayer video={study.video} />
+          </section>}
           {study.sections.map((section, index) => (
             <section id={section.id} className={styles.section} key={section.id}>
               <p className={styles.number}>{String(index + 1).padStart(2, "0")} / {section.navLabel}</p>
               <h2>{section.title}</h2>
               {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-              {section.image && <figure className={styles.sectionImage}><Image src={section.image.url} alt={section.image.alt} width={1536} height={1024} sizes="(min-width: 1024px) 65vw, 100vw" />{section.image.caption && <figcaption>{section.image.caption}</figcaption>}</figure>}
+              <CaseStudyImageGallery images={getCaseSectionImages(section)} label={section.title} />
               {section.points && <ul className={styles.points}>{section.points.map((point) => <li key={point.title}><h3>{point.title}</h3><p>{point.text}</p></li>)}</ul>}
               {section.table && <div className={styles.tableWrap}>
                 <table><caption>{section.table.caption}</caption>
@@ -43,6 +51,7 @@ export function CustomerCaseStudy({ study }: { study: CustomerProject }) {
           <nav aria-label="On this page">
             <h2>In this customer case</h2>
             <ul className={styles.contents}>
+              {study.video && <li><a href={`#${videoSectionId}`}>Project video</a></li>}
               {study.sections.map((section) => <li key={section.id}><a href={`#${section.id}`}>{section.navLabel}</a></li>)}
               <li><a href="#your-project">Discuss your project</a></li>
             </ul>

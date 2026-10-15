@@ -5,7 +5,9 @@ import Link from "next/link";
 import { useActionState, useState, type ReactNode } from "react";
 import { saveCaseStudy, deleteCaseStudy } from "@/actions/case-studies";
 import { ImagePreviewButton } from "@/components/admin/image-preview";
-import type { AdminCaseStudy, CaseStudyContent, CaseFormState } from "@/lib/case-study-content";
+import { CaseStudyVideoField } from "@/components/admin/case-study-video-field";
+import { CaseStudyImageGalleryField } from "@/components/admin/case-study-image-gallery-field";
+import { getCaseSectionImages, type AdminCaseStudy, type CaseStudyContent, type CaseFormState, type CaseStudyImage } from "@/lib/case-study-content";
 
 const input = "mt-2 w-full rounded-lg border border-[#ccd3ce] bg-white px-3 py-3 text-sm font-normal";
 const small = "rounded-lg border border-[#ccd3ce] px-3 py-2 text-sm font-bold hover:bg-[#eef0ed] disabled:opacity-50";
@@ -45,6 +47,7 @@ function ImageField({ value, onChange, slug, onBusy, showCaption = true }: { val
 export function CaseStudyForm({ post }: { post?: AdminCaseStudy }) {
   const [state, action, pending] = useActionState<CaseFormState, FormData>(saveCaseStudy.bind(null, post?.id ?? null), {});
   const [body, setBody] = useState<CaseStudyContent>(post?.content ?? empty);
+  const [sectionKeys, setSectionKeys] = useState(() => (post?.content ?? empty).sections.map((_, index) => `chapter-${index}`));
   const [slug, setSlug] = useState(post?.slug ?? "");
   const [title, setTitle] = useState(post?.title ?? "");
   const [excerpt, setExcerpt] = useState(post?.excerpt ?? "");
@@ -55,9 +58,26 @@ export function CaseStudyForm({ post }: { post?: AdminCaseStudy }) {
   const [cover, setCover] = useState<{ url: string; alt: string; caption: string } | undefined>(post?.coverImage ? { url: post.coverImage, alt: post.coverImageAlt ?? "", caption: "" } : undefined);
   const busy = (value: boolean) => setUploads(count => Math.max(0, count + (value ? 1 : -1)));
   function section(index: number, patch: Partial<CaseStudyContent["sections"][number]>) { setBody(current => ({ ...current, sections: current.sections.map((item, n) => n === index ? { ...item, ...patch } : item) })); }
-  function moveSection(index: number, direction: number) { setBody(current => { const sections = [...current.sections]; const target = index + direction; [sections[index], sections[target]] = [sections[target], sections[index]]; return { ...current, sections }; }); }
+  function sectionImages(index: number, update: (images: CaseStudyImage[]) => CaseStudyImage[]) {
+    setBody(current => ({ ...current, sections: current.sections.map((item, n) => n === index
+      ? { ...item, image: undefined, images: update(getCaseSectionImages(item)) }
+      : item) }));
+  }
+  function moveSection(index: number, direction: number) {
+    setBody(current => { const sections = [...current.sections]; const target = index + direction; [sections[index], sections[target]] = [sections[target], sections[index]]; return { ...current, sections }; });
+    setSectionKeys(current => { const keys = [...current]; const target = index + direction; [keys[index], keys[target]] = [keys[target], keys[index]]; return keys; });
+  }
+  function removeSection(index: number) {
+    setBody(current => ({ ...current, sections: current.sections.filter((_, n) => n !== index) }));
+    setSectionKeys(current => current.filter((_, n) => n !== index));
+  }
+  function addSection() {
+    const key = crypto.randomUUID();
+    setBody(current => ({ ...current, sections: [...current.sections, { id: `section-${key}`, title: "", navLabel: "", paragraphs: [""] }] }));
+    setSectionKeys(current => [...current, key]);
+  }
   return <div className="mt-7 space-y-6">
-    <form action={action} className="space-y-6">
+    <form action={action} className="space-y-6" onSubmit={event => { if (uploads > 0) event.preventDefault(); }}>
       <input type="hidden" name="content" value={JSON.stringify(body)} />
       <input type="hidden" name="updatedAt" value={post?.updatedAt ?? ""} />
       <input type="hidden" name="coverImage" value={cover?.url ?? ""} />
@@ -72,23 +92,24 @@ export function CaseStudyForm({ post }: { post?: AdminCaseStudy }) {
         <label className="text-sm font-bold">Publication date (UTC)<input className={input} type="date" name="publishedDate" value={publishedDate} onChange={e => setPublishedDate(e.target.value)} /><span className="mt-1 block text-xs font-normal">Leave blank to use the date you publish.</span></label>
       </div></Card>
       <Card title="Cover image"><ImageField value={cover} onChange={setCover} slug={slug} onBusy={busy} showCaption={false} /></Card>
-      <Card title="Project introduction"><Field label="Introduction" multiline value={body.introduction} onChange={introduction => setBody({ ...body, introduction })} /></Card>
+      <Card title="Project introduction"><Field label="Introduction" multiline value={body.introduction} onChange={introduction => setBody(current => ({ ...current, introduction }))} /></Card>
+      <Card title="Project video"><CaseStudyVideoField value={body.video} onChange={video => setBody(current => ({ ...current, video }))} slug={slug} onBusy={busy} /></Card>
       <Card title="Project at a glance"><div className="space-y-4">
         {body.stats.map((stat, index) => <div className="grid items-end gap-3 sm:grid-cols-[1fr_2fr_auto]" key={index}>
-          <Field label={`Metric ${index + 1} value`} value={stat.value} onChange={value => setBody({ ...body, stats: body.stats.map((s, i) => i === index ? { ...s, value } : s) })} />
-          <Field label={`Metric ${index + 1} label`} value={stat.label} onChange={label => setBody({ ...body, stats: body.stats.map((s, i) => i === index ? { ...s, label } : s) })} />
-          <button type="button" className={small} onClick={() => setBody({ ...body, stats: body.stats.filter((_, i) => i !== index) })}>Remove metric</button>
+          <Field label={`Metric ${index + 1} value`} value={stat.value} onChange={value => setBody(current => ({ ...current, stats: current.stats.map((s, i) => i === index ? { ...s, value } : s) }))} />
+          <Field label={`Metric ${index + 1} label`} value={stat.label} onChange={label => setBody(current => ({ ...current, stats: current.stats.map((s, i) => i === index ? { ...s, label } : s) }))} />
+          <button type="button" className={small} onClick={() => setBody(current => ({ ...current, stats: current.stats.filter((_, i) => i !== index) }))}>Remove metric</button>
         </div>)}
-        <button type="button" className={small} disabled={body.stats.length >= 8} onClick={() => setBody({ ...body, stats: [...body.stats, { value: "", label: "" }] })}>Add metric</button>
+        <button type="button" className={small} disabled={body.stats.length >= 8} onClick={() => setBody(current => ({ ...current, stats: [...current.stats, { value: "", label: "" }] }))}>Add metric</button>
       </div></Card>
-      {body.sections.map((item, index) => <Card title={`Chapter ${index + 1}`} key={index}>
-        <div className="mb-5 flex flex-wrap gap-2"><button type="button" className={small} disabled={index === 0} onClick={() => moveSection(index, -1)}>Move up</button><button type="button" className={small} disabled={index === body.sections.length - 1} onClick={() => moveSection(index, 1)}>Move down</button><button type="button" className={small} disabled={body.sections.length === 1} onClick={() => setBody({ ...body, sections: body.sections.filter((_, i) => i !== index) })}>Remove chapter</button></div>
+      {body.sections.map((item, index) => <Card title={`Chapter ${index + 1}`} key={sectionKeys[index]}>
+        <div className="mb-5 flex flex-wrap gap-2"><button type="button" className={small} disabled={uploads > 0 || pending || index === 0} onClick={() => moveSection(index, -1)}>Move up</button><button type="button" className={small} disabled={uploads > 0 || pending || index === body.sections.length - 1} onClick={() => moveSection(index, 1)}>Move down</button><button type="button" className={small} disabled={uploads > 0 || pending || body.sections.length === 1} onClick={() => removeSection(index)}>Remove chapter</button></div>
         <div className="grid gap-5 sm:grid-cols-2">
           <div className="sm:col-span-2"><Field label="Chapter title" value={item.title} onChange={title => section(index, { title })} /></div>
           <Field label="Contents label" value={item.navLabel} onChange={navLabel => section(index, { navLabel })} />
           <Field label="Section anchor" value={item.id} onChange={id => section(index, { id })} />
           <div className="sm:col-span-2"><Field label="Paragraphs (separate with a blank line)" multiline value={item.paragraphs.join("\n\n")} onChange={text => section(index, { paragraphs: text.split(/\n\n/) })} /></div>
-          <div className="sm:col-span-2"><ImageField value={item.image} onChange={image => section(index, { image })} slug={slug} onBusy={busy} /></div>
+          <div className="sm:col-span-2"><CaseStudyImageGalleryField images={getCaseSectionImages(item)} onChange={update => sectionImages(index, update)} slug={slug} onBusy={busy} disabled={pending} /></div>
         </div>
         <div className="mt-6 space-y-4">
           {item.points?.map((point, pointIndex) => <div className="space-y-3 border-l-2 border-[#ccd3ce] pl-4" key={pointIndex}>
@@ -105,14 +126,14 @@ export function CaseStudyForm({ post }: { post?: AdminCaseStudy }) {
           <div className="flex flex-wrap gap-2"><button type="button" className={small} onClick={() => section(index, { table: { ...item.table!, rows: [...item.table!.rows, item.table!.headings.map(() => "")] } })}>Add row</button><button type="button" className={small} disabled={item.table.headings.length >= 8} onClick={() => section(index, { table: { ...item.table!, headings: [...item.table!.headings, ""], rows: item.table!.rows.map(row => [...row, ""]) } })}>Add column</button><button type="button" className={small} disabled={item.table.headings.length === 1} onClick={() => section(index, { table: { ...item.table!, headings: item.table!.headings.slice(0, -1), rows: item.table!.rows.map(row => row.slice(0, -1)) } })}>Remove last column</button><button type="button" className={small} onClick={() => section(index, { table: undefined })}>Remove table</button></div>
         </div> : <button type="button" className={`${small} mt-6`} onClick={() => section(index, { table: { caption: "", headings: ["Item", "Detail"], rows: [["", ""]] } })}>Add table</button>}
       </Card>)}
-      <button type="button" className={small} disabled={body.sections.length >= 20} onClick={() => setBody({ ...body, sections: [...body.sections, { id: `section-${Date.now()}`, title: "", navLabel: "", paragraphs: [""] }] })}>Add chapter</button>
+      <button type="button" className={small} disabled={uploads > 0 || pending || body.sections.length >= 20} onClick={addSection}>Add chapter</button>
       <Card title="Closing and related links"><div className="space-y-5">
-        <Field label="Closing paragraph" multiline value={body.conclusion} onChange={conclusion => setBody({ ...body, conclusion })} />
-        {body.relatedLinks.map((link, index) => <div className="grid items-end gap-3 sm:grid-cols-[1fr_1fr_auto]" key={index}><Field label="Link label" value={link.label} onChange={label => setBody({ ...body, relatedLinks: body.relatedLinks.map((l, i) => i === index ? { ...l, label } : l) })} /><Field label="Link URL" value={link.href} onChange={href => setBody({ ...body, relatedLinks: body.relatedLinks.map((l, i) => i === index ? { ...l, href } : l) })} /><button type="button" className={small} onClick={() => setBody({ ...body, relatedLinks: body.relatedLinks.filter((_, i) => i !== index) })}>Remove link</button></div>)}
-        <button type="button" className={small} onClick={() => setBody({ ...body, relatedLinks: [...body.relatedLinks, { label: "", href: "" }] })}>Add related link</button>
+        <Field label="Closing paragraph" multiline value={body.conclusion} onChange={conclusion => setBody(current => ({ ...current, conclusion }))} />
+        {body.relatedLinks.map((link, index) => <div className="grid items-end gap-3 sm:grid-cols-[1fr_1fr_auto]" key={index}><Field label="Link label" value={link.label} onChange={label => setBody(current => ({ ...current, relatedLinks: current.relatedLinks.map((l, i) => i === index ? { ...l, label } : l) }))} /><Field label="Link URL" value={link.href} onChange={href => setBody(current => ({ ...current, relatedLinks: current.relatedLinks.map((l, i) => i === index ? { ...l, href } : l) }))} /><button type="button" className={small} onClick={() => setBody(current => ({ ...current, relatedLinks: current.relatedLinks.filter((_, i) => i !== index) }))}>Remove link</button></div>)}
+        <button type="button" className={small} onClick={() => setBody(current => ({ ...current, relatedLinks: [...current.relatedLinks, { label: "", href: "" }] }))}>Add related link</button>
       </div></Card>
       <div className="sticky bottom-4 z-10 flex flex-wrap items-center justify-between gap-3 rounded-xl border bg-white/95 p-4 shadow-lg"><p className="text-xs">Drafts and archived cases are visible only to administrators.</p><div className="flex gap-3"><Link className={small} href="/admin/case-studies">Cancel</Link>{post && <Link className={small} href={`/admin/case-studies/${post.id}/preview`} target="_blank">Preview saved draft</Link>}<button className="button-primary" disabled={pending || uploads > 0}>{pending ? "Saving…" : post ? "Save changes" : "Create case study"}</button></div></div>
     </form>
-    {post && <form action={deleteCaseStudy.bind(null, post.id)} className="rounded-xl border border-red-200 bg-red-50 p-5" onSubmit={e => { if (!window.confirm(`Delete “${post.title}”? This cannot be undone.`)) e.preventDefault(); }}><input type="hidden" name="updatedAt" value={post.updatedAt} /><p className="mb-3 text-sm text-red-900">Permanently remove this case study.</p><button className="rounded-lg bg-red-800 px-4 py-2 text-sm font-bold text-white">Delete case study</button></form>}
+    {post && <form action={deleteCaseStudy.bind(null, post.id)} className="rounded-xl border border-red-200 bg-red-50 p-5" onSubmit={e => { if (uploads > 0 || pending || !window.confirm(`Delete “${post.title}”? This cannot be undone.`)) e.preventDefault(); }}><input type="hidden" name="updatedAt" value={post.updatedAt} /><p className="mb-3 text-sm text-red-900">Permanently remove this case study.</p><button disabled={uploads > 0 || pending} className="rounded-lg bg-red-800 px-4 py-2 text-sm font-bold text-white disabled:opacity-50">Delete case study</button></form>}
   </div>;
 }
