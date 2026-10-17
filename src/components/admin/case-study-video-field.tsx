@@ -8,11 +8,12 @@ import { CASE_VIDEO_ACCEPT, validateCaseVideoFile } from "@/lib/case-study-video
 const input = "mt-2 w-full rounded-lg border border-[#ccd3ce] bg-white px-3 py-3 text-sm font-normal";
 const button = "rounded-lg border border-[#ccd3ce] px-3 py-2 text-sm font-bold hover:bg-[#eef0ed] disabled:opacity-50";
 
-export function CaseStudyVideoField({ value, onChange, slug, onBusy }: {
+export function CaseStudyVideoField({ value, onChange, slug, onBusy, placement = "project" }: {
   value?: CaseStudyVideo;
   onChange: (video: CaseStudyVideo | undefined) => void;
   slug: string;
   onBusy: (busy: boolean) => void;
+  placement?: "project" | "chapter";
 }) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
@@ -56,7 +57,7 @@ export function CaseStudyVideoField({ value, onChange, slug, onBusy }: {
   const validPoster = !value?.poster || caseVideoPosterUrl.safeParse(value.poster).success;
 
   return <div className="space-y-4">
-    <p className="text-sm leading-6 text-[var(--ink-muted)]">Add an optional project video above the case chapters. Upload an MP4 or WebM file (up to 50 MB), or paste a direct video URL. MP4 with H.264 is recommended for browser compatibility.</p>
+    <p className="text-sm leading-6 text-[var(--ink-muted)]">{placement === "chapter" ? "Add an optional video in this chapter." : "Add an optional project video above the case chapters."} Upload an MP4 or WebM file (up to 50 MB), or paste a direct video URL. MP4 with H.264 is recommended for browser compatibility.</p>
     <fieldset disabled={busy} className="space-y-4 disabled:opacity-60">
       <label className="block text-sm font-bold">Upload video
         <input className="mt-2 block w-full text-sm font-normal" type="file" accept={CASE_VIDEO_ACCEPT} onChange={event => { void upload(event.target.files?.[0]); event.target.value = ""; }} />

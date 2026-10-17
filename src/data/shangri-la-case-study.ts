@@ -7,6 +7,8 @@ export type ProjectSection = {
   paragraphs: string[];
   image?: CaseStudyImage;
   images?: CaseStudyImage[];
+  gallery?: CaseStudyImage[];
+  video?: CaseStudyVideo;
   points?: Array<{ title: string; text: string }>;
   table?: { caption: string; headings: string[]; rows: string[][] };
 };

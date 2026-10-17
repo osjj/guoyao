@@ -70,6 +70,7 @@ export function MetalCaseStudyArticle({ study, preview = false }: { study: Custo
           <p className={styles.eyebrow}>{String(index + 1).padStart(2, "0")} / {section.navLabel}</p><h2>{section.title}</h2>
           {section.paragraphs.map((paragraph, paragraphIndex) => <p key={paragraphIndex}>{paragraph}</p>)}
           <CaseStudyImageGallery images={getCaseSectionImages(section)} label={section.title} />
+          {section.video && <CaseStudyVideoPlayer video={section.video} />}
           {section.points && <ul className={styles.points}>{section.points.map((point, pointIndex) => <li key={pointIndex}><h3>{point.title}</h3><p>{point.text}</p></li>)}</ul>}
           {section.table && <div className={styles.tableWrap}><table><caption>{section.table.caption}</caption><thead><tr>{section.table.headings.map((heading, headingIndex) => <th scope="col" key={headingIndex}>{heading}</th>)}</tr></thead><tbody>{section.table.rows.map((row, rowIndex) => <tr key={rowIndex}>{row.map((cell, cellIndex) => cellIndex === 0 ? <th scope="row" key={cellIndex}>{cell}</th> : <td key={cellIndex}>{cell}</td>)}</tr>)}</tbody></table></div>}
         </section>)}

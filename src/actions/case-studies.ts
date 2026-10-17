@@ -6,7 +6,7 @@ import { z } from "zod";
 import { requireAdmin } from "@/lib/admin-auth";
 import { prisma } from "@/lib/prisma";
 import { caseStudies, retiredCaseStudySlugs } from "@/data/case-studies";
-import { caseStudyContentSchema, caseImageUrl, type AdminCaseStudy, type CaseFormState } from "@/lib/case-study-content";
+import { CASE_STUDY_EDITOR_VERSION, caseStudyContentSchema, caseImageUrl, type AdminCaseStudy, type CaseFormState } from "@/lib/case-study-content";
 
 const schema = z.object({
   title: z.string().trim().min(1).max(180),
@@ -25,6 +25,10 @@ function invalidate(slugs: string[] = []) {
 
 export async function saveCaseStudy(id: string | null, _state: CaseFormState, form: FormData): Promise<CaseFormState> {
   await requireAdmin();
+  // Old tabs may already have dropped gallery/chapter-video fields while loading.
+  if (form.get("contentVersion") !== CASE_STUDY_EDITOR_VERSION) {
+    return { error: "This editor has been updated to preserve all case images and chapter videos. Copy any unsaved text, then reload this page before saving. Nothing was saved." };
+  }
   let raw: unknown;
   try { raw = JSON.parse(String(form.get("content") ?? "")); } catch { return { error: "The case content could not be read." }; }
   const parsed = schema.safeParse({ ...Object.fromEntries(form), content: raw });

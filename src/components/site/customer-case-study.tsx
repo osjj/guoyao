@@ -32,6 +32,7 @@ export function CustomerCaseStudy({ study }: { study: CustomerProject }) {
               <h2>{section.title}</h2>
               {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
               <CaseStudyImageGallery images={getCaseSectionImages(section)} label={section.title} />
+              {section.video && <CaseStudyVideoPlayer video={section.video} />}
               {section.points && <ul className={styles.points}>{section.points.map((point) => <li key={point.title}><h3>{point.title}</h3><p>{point.text}</p></li>)}</ul>}
               {section.table && <div className={styles.tableWrap}>
                 <table><caption>{section.table.caption}</caption>

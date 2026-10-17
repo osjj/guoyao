@@ -88,8 +88,10 @@ when another file fails. Retry only failed files without uploading successful on
 Each image may be up to 12 MB and uses the existing R2 image conversion/upload endpoint.
 
 Images can be reordered, removed, enlarged, and given individual alt text and captions.
-Legacy `section.image` content remains readable; editing the gallery saves the combined ordered
-images in `section.images`. No database migration is required, and removing an image does not
+Legacy `section.image` and imported `section.gallery` content remain readable; the editor and
+article combine `image`, `images`, and `gallery` in that order without dropping any entries.
+Editing the gallery saves the combined ordered images in `section.images` and clears the aliases.
+The 100-image limit applies to the combined chapter total. No database migration is required, and removing an image does not
 delete the stored R2 object. Uploads are separate requests; saving the case sends image URLs and
 text, not the image files themselves.
 
@@ -99,7 +101,9 @@ preview. Existing single-image chapters stay full width.
 
 ## Case study videos
 
-The case editor includes an optional **Project video** block above the chapters. Upload an MP4
+The case editor includes an optional **Project video** block above the chapters and an optional
+**Chapter video** in each chapter. Imported `section.video` stays in its chapter; if its title is
+missing, the chapter title is used. Upload an MP4
 or WebM file (up to 50 MB), or enter a direct `.mp4` / `.webm` URL. Add a title, optional description,
 and optional poster image URL. Use MP4 with H.264 for broad browser compatibility; files are
 stored as supplied without transcoding. Video platform page URLs are not supported.
@@ -108,6 +112,10 @@ Video metadata is saved in the existing `CaseStudy.content` JSON. Existing cases
 need no migration. Saved draft previews and public case pages use the same player with controls
 and inline mobile playback; videos do not autoplay. Removing a video detaches it from the case
 when saved and does not delete the uploaded object.
+
+Unsupported content fields are rejected instead of silently removed. After upgrading the editor,
+already-open older forms must be reloaded before saving, so they cannot overwrite stored galleries
+or chapter videos that the older editor did not recognize.
 
 Uploads use the configured `R2_*` bucket and public URL. The Guoyao Nginx example allows `55m`
 request bodies for the 50 MB file plus multipart overhead; apply an equivalent limit in the

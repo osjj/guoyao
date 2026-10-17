@@ -1,5 +1,7 @@
 import { z } from "zod";
 
+export const CASE_STUDY_EDITOR_VERSION = "2";
+
 const text = (max: number) => z.string().trim().min(1).max(max);
 export const caseImageUrl = z.string().trim().max(2000).refine(value =>
   /^https?:\/\//i.test(value) || (value.startsWith("/") && !value.startsWith("//")), "Use an http(s) URL or a site path.");
@@ -29,7 +31,8 @@ const video = z.object({
   title: text(240),
   caption: z.string().trim().max(1000),
   poster: caseVideoPosterUrl.optional(),
-});
+}).strict();
+const chapterVideo = video.extend({ title: text(240).optional() });
 export type CaseStudyVideo = z.infer<typeof video>;
 
 export function getCaseVideoSectionId(sections: ReadonlyArray<{ id: string }>): string {
@@ -41,12 +44,12 @@ export function getCaseVideoSectionId(sections: ReadonlyArray<{ id: string }>): 
 }
 
 export const MAX_CASE_SECTION_IMAGES = 100;
-const image = z.object({ url: caseImageUrl, alt: text(200), caption: z.string().trim().max(500) });
+const image = z.object({ url: caseImageUrl, alt: text(200), caption: z.string().trim().max(500) }).strict();
 export type CaseStudyImage = z.infer<typeof image>;
 
-// Keep the legacy image first when both representations occur in imported content.
-export function getCaseSectionImages(section: { image?: CaseStudyImage; images?: CaseStudyImage[] }): CaseStudyImage[] {
-  return [...(section.image ? [section.image] : []), ...(section.images ?? [])];
+// Imported cases use gallery; keep every supported representation in its original order.
+export function getCaseSectionImages(section: { image?: CaseStudyImage; images?: CaseStudyImage[]; gallery?: CaseStudyImage[] }): CaseStudyImage[] {
+  return [...(section.image ? [section.image] : []), ...(section.images ?? []), ...(section.gallery ?? [])];
 }
 export const caseStudyContentSchema = z.object({
   introduction: text(3000),
@@ -58,14 +61,20 @@ export const caseStudyContentSchema = z.object({
     paragraphs: z.array(text(12000)).min(1).max(30),
     image: image.optional(),
     images: z.array(image).max(MAX_CASE_SECTION_IMAGES).optional(),
+    gallery: z.array(image).max(MAX_CASE_SECTION_IMAGES).optional(),
+    video: chapterVideo.optional(),
     points: z.array(z.object({ title: text(240), text: text(5000) })).max(30).optional(),
     table: z.object({ caption: text(300), headings: z.array(text(200)).min(1).max(8), rows: z.array(z.array(z.string().max(2000)).min(1).max(8)).min(1).max(50) })
       .refine(table => table.rows.every(row => row.length === table.headings.length), "All table rows must match the heading count.").optional(),
-  }).refine(section => getCaseSectionImages(section).length <= MAX_CASE_SECTION_IMAGES,
-    `A chapter can contain up to ${MAX_CASE_SECTION_IMAGES} images.`)).min(1).max(20),
+  }).strict().refine(section => getCaseSectionImages(section).length <= MAX_CASE_SECTION_IMAGES,
+    `A chapter can contain up to ${MAX_CASE_SECTION_IMAGES} images.`)
+    .transform(({ video: sectionVideo, ...section }) => ({
+      ...section,
+      ...(sectionVideo ? { video: { ...sectionVideo, title: sectionVideo.title ?? section.title } } : {}),
+    }))).min(1).max(20),
   conclusion: text(5000),
   relatedLinks: z.array(z.object({ href: caseImageUrl, label: text(150) })).max(12),
-}).refine(value => new Set(value.sections.map(section => section.id)).size === value.sections.length, "Section IDs must be unique.");
+}).strict().refine(value => new Set(value.sections.map(section => section.id)).size === value.sections.length, "Section IDs must be unique.");
 
 export type CaseStudyContent = z.infer<typeof caseStudyContentSchema>;
 export type CaseFormState = { error?: string };

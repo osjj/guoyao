@@ -7,7 +7,7 @@ import { saveCaseStudy, deleteCaseStudy } from "@/actions/case-studies";
 import { ImagePreviewButton } from "@/components/admin/image-preview";
 import { CaseStudyVideoField } from "@/components/admin/case-study-video-field";
 import { CaseStudyImageGalleryField } from "@/components/admin/case-study-image-gallery-field";
-import { getCaseSectionImages, type AdminCaseStudy, type CaseStudyContent, type CaseFormState, type CaseStudyImage } from "@/lib/case-study-content";
+import { CASE_STUDY_EDITOR_VERSION, getCaseSectionImages, type AdminCaseStudy, type CaseStudyContent, type CaseFormState, type CaseStudyImage } from "@/lib/case-study-content";
 
 const input = "mt-2 w-full rounded-lg border border-[#ccd3ce] bg-white px-3 py-3 text-sm font-normal";
 const small = "rounded-lg border border-[#ccd3ce] px-3 py-2 text-sm font-bold hover:bg-[#eef0ed] disabled:opacity-50";
@@ -60,7 +60,7 @@ export function CaseStudyForm({ post }: { post?: AdminCaseStudy }) {
   function section(index: number, patch: Partial<CaseStudyContent["sections"][number]>) { setBody(current => ({ ...current, sections: current.sections.map((item, n) => n === index ? { ...item, ...patch } : item) })); }
   function sectionImages(index: number, update: (images: CaseStudyImage[]) => CaseStudyImage[]) {
     setBody(current => ({ ...current, sections: current.sections.map((item, n) => n === index
-      ? { ...item, image: undefined, images: update(getCaseSectionImages(item)) }
+      ? { ...item, image: undefined, gallery: undefined, images: update(getCaseSectionImages(item)) }
       : item) }));
   }
   function moveSection(index: number, direction: number) {
@@ -78,6 +78,7 @@ export function CaseStudyForm({ post }: { post?: AdminCaseStudy }) {
   }
   return <div className="mt-7 space-y-6">
     <form action={action} className="space-y-6" onSubmit={event => { if (uploads > 0) event.preventDefault(); }}>
+      <input type="hidden" name="contentVersion" value={CASE_STUDY_EDITOR_VERSION} />
       <input type="hidden" name="content" value={JSON.stringify(body)} />
       <input type="hidden" name="updatedAt" value={post?.updatedAt ?? ""} />
       <input type="hidden" name="coverImage" value={cover?.url ?? ""} />
@@ -93,7 +94,7 @@ export function CaseStudyForm({ post }: { post?: AdminCaseStudy }) {
       </div></Card>
       <Card title="Cover image"><ImageField value={cover} onChange={setCover} slug={slug} onBusy={busy} showCaption={false} /></Card>
       <Card title="Project introduction"><Field label="Introduction" multiline value={body.introduction} onChange={introduction => setBody(current => ({ ...current, introduction }))} /></Card>
-      <Card title="Project video"><CaseStudyVideoField value={body.video} onChange={video => setBody(current => ({ ...current, video }))} slug={slug} onBusy={busy} /></Card>
+      <Card title="Project video"><fieldset disabled={pending}><CaseStudyVideoField value={body.video} onChange={video => setBody(current => ({ ...current, video }))} slug={slug} onBusy={busy} /></fieldset></Card>
       <Card title="Project at a glance"><div className="space-y-4">
         {body.stats.map((stat, index) => <div className="grid items-end gap-3 sm:grid-cols-[1fr_2fr_auto]" key={index}>
           <Field label={`Metric ${index + 1} value`} value={stat.value} onChange={value => setBody(current => ({ ...current, stats: current.stats.map((s, i) => i === index ? { ...s, value } : s) }))} />
@@ -110,6 +111,10 @@ export function CaseStudyForm({ post }: { post?: AdminCaseStudy }) {
           <Field label="Section anchor" value={item.id} onChange={id => section(index, { id })} />
           <div className="sm:col-span-2"><Field label="Paragraphs (separate with a blank line)" multiline value={item.paragraphs.join("\n\n")} onChange={text => section(index, { paragraphs: text.split(/\n\n/) })} /></div>
           <div className="sm:col-span-2"><CaseStudyImageGalleryField images={getCaseSectionImages(item)} onChange={update => sectionImages(index, update)} slug={slug} onBusy={busy} disabled={pending} /></div>
+          <fieldset disabled={pending} className="space-y-4 rounded-xl border border-[#ccd3ce] p-4 sm:col-span-2">
+            <legend className="px-2 text-sm font-bold">Chapter video</legend>
+            <CaseStudyVideoField value={item.video} onChange={video => section(index, { video })} slug={slug} onBusy={busy} placement="chapter" />
+          </fieldset>
         </div>
         <div className="mt-6 space-y-4">
           {item.points?.map((point, pointIndex) => <div className="space-y-3 border-l-2 border-[#ccd3ce] pl-4" key={pointIndex}>
