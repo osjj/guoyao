@@ -13,6 +13,8 @@ import { ImagePlus, Link2, Loader2 } from "lucide-react";
 import type EditorJS from "@editorjs/editorjs";
 import type { ArticleEditorData } from "@/lib/article-content";
 import { ImagePreviewDialog } from "@/components/admin/image-preview";
+import { AiImageEditorModal } from "@/components/admin/ai-image-editor-modal";
+import type { AdminProductImageInput } from "@/types/admin-product";
 
 export type ContentEditorRef = {
   save: () => Promise<ArticleEditorData | null>;
@@ -26,6 +28,9 @@ type ContentEditorProps = {
   uploadEndpoint?: "/api/admin/blog-images" | "/api/admin/product-images";
   contentLabel?: string;
   enableImagePreview?: boolean;
+  enableAiImageEditing?: boolean;
+  onAiEditingChange?: (editing: boolean) => void;
+  disabled?: boolean;
 };
 
 function validImageUrl(value: string) {
@@ -42,6 +47,9 @@ export const ContentEditor = forwardRef<ContentEditorRef, ContentEditorProps>(
       uploadEndpoint = "/api/admin/blog-images",
       contentLabel = "article",
       enableImagePreview = false,
+      enableAiImageEditing = false,
+      onAiEditingChange,
+      disabled = false,
     },
     ref,
   ) {
@@ -53,6 +61,37 @@ export const ContentEditor = forwardRef<ContentEditorRef, ContentEditorProps>(
     const [imageUrl, setImageUrl] = useState("");
     const [imageError, setImageError] = useState<string | null>(null);
     const [previewImage, setPreviewImage] = useState<{ src: string; alt: string } | null>(null);
+    const [aiTarget, setAiTarget] = useState<{ blockId: string; image: AdminProductImageInput } | null>(null);
+    const aiTargetRef = useRef<typeof aiTarget>(null);
+    const aiOpeningRef = useRef(false);
+    const aiContextRef = useRef({ disabled, onAiEditingChange });
+
+    useEffect(() => {
+      aiContextRef.current = { disabled, onAiEditingChange };
+    }, [disabled, onAiEditingChange]);
+
+    const closeAiEditor = useCallback(() => {
+      aiOpeningRef.current = false;
+      aiTargetRef.current = null;
+      setAiTarget(null);
+      aiContextRef.current.onAiEditingChange?.(false);
+    }, []);
+
+    async function finishAiImageEdit(replacement: AdminProductImageInput) {
+      const editor = editorRef.current;
+      if (!editor || !aiTarget || aiTargetRef.current !== aiTarget) throw new Error("The selected image is no longer available.");
+      const block = editor.blocks.getById(aiTarget.blockId);
+      const saved = await block?.save();
+      if (aiTargetRef.current !== aiTarget || editorRef.current !== editor) return;
+      if (!saved || saved.data.file?.url !== aiTarget.image.url) {
+        throw new Error("This image changed while the AI editor was open. Close and select it again.");
+      }
+      await editor.blocks.update(aiTarget.blockId, {
+        ...saved.data,
+        file: { ...saved.data.file, ...replacement },
+      });
+      if (aiTargetRef.current === aiTarget) closeAiEditor();
+    }
 
     useEffect(() => {
       uploadContextRef.current = { slug, imageAlt };
@@ -249,6 +288,81 @@ export const ContentEditor = forwardRef<ContentEditorRef, ContentEditorProps>(
       };
     }, [enableImagePreview, holderId, imageAlt, ready]);
 
+    useEffect(() => {
+      if (!enableAiImageEditing || !ready) return;
+      const holder = document.getElementById(holderId);
+      if (!holder) return;
+      let cancelled = false;
+      const buttons = new Set<HTMLButtonElement>();
+      const prepareImages = () => {
+        holder.querySelectorAll<HTMLElement>(".image-tool").forEach((tool) => {
+          if (!tool.querySelector("img.image-tool__image-picture") || tool.querySelector("[data-ai-image-edit]")) return;
+          const button = document.createElement("button");
+          button.type = "button";
+          button.dataset.aiImageEdit = "true";
+          button.textContent = "AI 编辑";
+          button.setAttribute("aria-haspopup", "dialog");
+          button.className = "button-secondary my-3";
+          button.disabled = aiContextRef.current.disabled;
+          tool.append(button);
+          buttons.add(button);
+        });
+      };
+      const openAiEditor = async (event: Event) => {
+        const target = event.target;
+        if (!(target instanceof Element)) return;
+        const button = target.closest<HTMLButtonElement>("[data-ai-image-edit]");
+        if (!button || !holder.contains(button)) return;
+        if (event instanceof KeyboardEvent && event.key !== "Enter" && event.key !== " ") return;
+        event.preventDefault();
+        event.stopPropagation();
+        if (aiContextRef.current.disabled || aiOpeningRef.current) return;
+        const block = editorRef.current?.blocks.getBlockByElement(button);
+        if (!block || block.name !== "image") return;
+        button.focus({ preventScroll: true });
+        aiOpeningRef.current = true;
+        aiContextRef.current.onAiEditingChange?.(true);
+        try {
+          const saved = await block.save();
+          if (cancelled) return;
+          const url = saved?.data.file?.url;
+          if (typeof url !== "string" || !url) throw new Error("Select an image before using AI editing.");
+          const caption = button.closest(".image-tool")?.querySelector(".image-tool__caption")?.textContent;
+          const target = { blockId: block.id, image: { url, alt: saved?.data.file?.alt || caption?.trim() || uploadContextRef.current.imageAlt || "Article image" } };
+          aiTargetRef.current = target;
+          setAiTarget(target);
+          setImageError(null);
+        } catch (error) {
+          if (cancelled) return;
+          closeAiEditor();
+          setImageError(error instanceof Error ? error.message : "The image could not be opened.");
+        }
+      };
+      prepareImages();
+      const observer = new MutationObserver(prepareImages);
+      observer.observe(holder, { childList: true, subtree: true });
+      holder.addEventListener("click", openAiEditor, true);
+      window.addEventListener("keydown", openAiEditor, true);
+      return () => {
+        cancelled = true;
+        observer.disconnect();
+        holder.removeEventListener("click", openAiEditor, true);
+        window.removeEventListener("keydown", openAiEditor, true);
+        buttons.forEach(button => button.remove());
+        if (aiOpeningRef.current) {
+          aiOpeningRef.current = false;
+          aiTargetRef.current = null;
+          aiContextRef.current.onAiEditingChange?.(false);
+        }
+      };
+    }, [closeAiEditor, enableAiImageEditing, holderId, ready]);
+
+    useEffect(() => {
+      document.getElementById(holderId)?.querySelectorAll<HTMLButtonElement>("[data-ai-image-edit]").forEach(button => {
+        button.disabled = disabled;
+      });
+    }, [disabled, holderId]);
+
     const insertImageUrl = useCallback(() => {
       const trimmed = imageUrl.trim();
       if (!validImageUrl(trimmed)) {
@@ -331,6 +445,16 @@ export const ContentEditor = forwardRef<ContentEditorRef, ContentEditorProps>(
             src={previewImage.src}
             alt={previewImage.alt}
             onClose={() => setPreviewImage(null)}
+          />
+        ) : null}
+        {aiTarget ? (
+          <AiImageEditorModal
+            open
+            usage="blog"
+            sourceImage={aiTarget.image}
+            slug={slug}
+            onClose={closeAiEditor}
+            onFinish={finishAiImageEdit}
           />
         ) : null}
       </div>

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useId, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import {
   ImageIcon,
   Loader2,
@@ -49,6 +50,7 @@ type PromptTemplate = {
   label: string;
   prompt: string;
   referenceImage: ReferenceImage;
+  useSourceImage?: boolean;
 };
 
 type GeneratedImage = {
@@ -63,8 +65,9 @@ type AiImageEditorModalProps = {
   open: boolean;
   sourceImage: AdminProductImageInput | null;
   slug: string;
+  usage?: "product" | "blog" | "case-study";
   onClose: () => void;
-  onFinish: (image: AdminProductImageInput) => void;
+  onFinish: (image: AdminProductImageInput) => void | Promise<void>;
 };
 
 const REMOVE_ICON_PROMPT =
@@ -86,6 +89,36 @@ const DEFAULT_PROMPT_TEMPLATES: PromptTemplate[] = [
     referenceImage: "glarivo-blue-logo",
   },
 ];
+const EDITORIAL_TEMPLATES_STORAGE_KEY = "guoyao:ai-image-editor:editorial-templates:v1";
+const EDITORIAL_PROMPT_TEMPLATES: PromptTemplate[] = [
+  {
+    id: "editorial-enhance",
+    label: "优化图片",
+    prompt: "优化这张图片的清晰度、光线和色彩，保持原有主体、场景、物品数量及真实细节不变，不添加文字、品牌标识或不存在的事实。",
+    referenceImage: "none",
+    useSourceImage: true,
+  },
+  {
+    id: "editorial-clean",
+    label: "清理文字与水印",
+    prompt: "去除图片中的文字水印和品牌标识，自然修复被遮挡区域。保持主体、材质、颜色、背景和构图不变。",
+    referenceImage: "none",
+    useSourceImage: true,
+  },
+  {
+    id: "editorial-new",
+    label: "生成文章配图",
+    prompt: "为以下主题创作一张简洁、专业的文章配图，构图清晰，突出主题，不添加文字、Logo 或认证标识。主题：",
+    referenceImage: "none",
+    useSourceImage: false,
+  },
+];
+
+const UPLOAD_ENDPOINTS = {
+  product: "/api/admin/product-images",
+  blog: "/api/admin/blog-images",
+  "case-study": "/api/admin/case-study-images",
+};
 
 function isReferenceImage(value: unknown): value is ReferenceImage {
   return value === "none" || value === "glarivo-blue-logo";
@@ -103,7 +136,9 @@ function parsePromptTemplates(value: string | null): PromptTemplate[] | null {
         typeof (template as PromptTemplate).id === "string" &&
         typeof (template as PromptTemplate).label === "string" &&
         typeof (template as PromptTemplate).prompt === "string" &&
-        isReferenceImage((template as PromptTemplate).referenceImage),
+        isReferenceImage((template as PromptTemplate).referenceImage) &&
+        ((template as PromptTemplate).useSourceImage === undefined ||
+          typeof (template as PromptTemplate).useSourceImage === "boolean"),
     );
     const uniqueIds = new Set(templates.map((template) => template.id));
     return templates.length === parsed.length && uniqueIds.size === templates.length
@@ -140,25 +175,75 @@ function base64ToFile(image: GeneratedImage) {
   });
 }
 
-export function AiImageEditorModal({
-  open,
+function isolateDialogKey(event: KeyboardEvent, dialog: HTMLElement | null, close: () => void) {
+  // EditorJS has document capture listeners. Stop them at window while retaining
+  // native text input, selection, copy/paste shortcuts and checkbox activation.
+  event.stopPropagation();
+  if (event.key === "Escape") {
+    event.preventDefault();
+    close();
+    return;
+  }
+  if (event.key !== "Tab" || !dialog) return;
+  const focusable = Array.from(dialog.querySelectorAll<HTMLElement>(
+    'button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [href], [tabindex]:not([tabindex="-1"])',
+  )).filter((element) => element.getClientRects().length > 0);
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (!first || !last) {
+    event.preventDefault();
+    dialog.focus();
+  } else if (event.shiftKey && (document.activeElement === first || document.activeElement === dialog)) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+}
+
+export function AiImageEditorModal(props: AiImageEditorModalProps) {
+  if (!props.open) return null;
+  return (
+    <AiImageEditorSession
+      key={`${props.usage ?? "product"}:${props.sourceImage?.url ?? "new"}`}
+      {...props}
+    />
+  );
+}
+
+function AiImageEditorSession({
   sourceImage,
   slug,
+  usage = "product",
   onClose,
   onFinish,
 }: AiImageEditorModalProps) {
+  const isProduct = usage === "product";
+  const contentLabel = isProduct ? "product" : usage === "blog" ? "article" : "case study";
+  const defaultTemplates = isProduct ? DEFAULT_PROMPT_TEMPLATES : EDITORIAL_PROMPT_TEMPLATES;
+  const storageKey = isProduct ? PROMPT_TEMPLATES_STORAGE_KEY : EDITORIAL_TEMPLATES_STORAGE_KEY;
   const titleId = useId();
   const dialogRef = useRef<HTMLElement>(null);
+  // Capture before the opening render disables the caller's form controls.
+  const returnFocusRef = useRef<HTMLElement | null>(
+    typeof document !== "undefined" && document.activeElement instanceof HTMLElement
+      ? document.activeElement
+      : null,
+  );
   const promptRef = useRef<HTMLTextAreaElement>(null);
   const operationAbortRef = useRef<AbortController | null>(null);
+  const callbacksRef = useRef({ onClose, onFinish });
+  const [mounted, setMounted] = useState(false);
   const [prompt, setPrompt] = useState("");
   const [size, setSize] = useState<ImageSize>("auto");
   const [quality, setQuality] = useState<ImageQuality>("auto");
   const [outputFormat, setOutputFormat] = useState<OutputFormat>("webp");
   const [referenceImage, setReferenceImage] = useState<ReferenceImage>("none");
+  const [useSourceImage, setUseSourceImage] = useState(Boolean(sourceImage?.url));
   const [background, setBackground] = useState<string>("original");
   const [promptTemplates, setPromptTemplates] = useState<PromptTemplate[]>(
-    DEFAULT_PROMPT_TEMPLATES,
+    defaultTemplates,
   );
   const [selectedTemplateId, setSelectedTemplateId] = useState<string | null>(null);
   const [configuringTemplates, setConfiguringTemplates] = useState(false);
@@ -170,66 +255,94 @@ export function AiImageEditorModal({
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    callbacksRef.current = { onClose, onFinish };
+  }, [onClose, onFinish]);
+
+  useEffect(() => {
     const frame = window.requestAnimationFrame(() => {
+      setMounted(true);
       try {
         const storedTemplates = parsePromptTemplates(
-          window.localStorage.getItem(PROMPT_TEMPLATES_STORAGE_KEY),
+          window.localStorage.getItem(storageKey),
         );
-        if (storedTemplates) setPromptTemplates(storedTemplates);
+        if (storedTemplates) {
+          setPromptTemplates(storedTemplates.map((template) => ({
+            ...template,
+            referenceImage: isProduct ? template.referenceImage : "none",
+          })));
+        }
       } catch {
         // Keep the defaults when browser storage is unavailable.
       }
     });
     return () => window.cancelAnimationFrame(frame);
-  }, []);
+  }, [storageKey, isProduct]);
 
   useEffect(() => {
-    if (!open) return;
+    if (!mounted) return;
     const frame = window.requestAnimationFrame(() => promptRef.current?.focus());
     return () => window.cancelAnimationFrame(frame);
-  }, [open, sourceImage?.url]);
+  }, [mounted]);
 
   useEffect(() => {
-    if (!open) return;
+    if (!mounted) return;
+    const portal = dialogRef.current?.parentElement;
+    const siblings = Array.from(document.body.children)
+      .filter((element): element is HTMLElement => element instanceof HTMLElement && element !== portal)
+      .map((element) => ({ element, inert: element.inert }));
+    siblings.forEach(({ element }) => { element.inert = true; });
+    const handleKeyDown = (event: KeyboardEvent) => isolateDialogKey(event, dialogRef.current, () => {
+      operationAbortRef.current?.abort();
+      operationAbortRef.current = null;
+      callbacksRef.current.onClose();
+    });
+    const stopPropagation = (event: Event) => event.stopPropagation();
+    const preventTransfer = (event: Event) => {
+      event.preventDefault();
+      event.stopPropagation();
+    };
+    window.addEventListener("keydown", handleKeyDown, true);
+    window.addEventListener("keyup", stopPropagation, true);
+    window.addEventListener("paste", stopPropagation, true);
+    window.addEventListener("cut", stopPropagation, true);
+    window.addEventListener("drop", preventTransfer, true);
+    window.addEventListener("dragover", preventTransfer, true);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown, true);
+      window.removeEventListener("keyup", stopPropagation, true);
+      window.removeEventListener("paste", stopPropagation, true);
+      window.removeEventListener("cut", stopPropagation, true);
+      window.removeEventListener("drop", preventTransfer, true);
+      window.removeEventListener("dragover", preventTransfer, true);
+      siblings.forEach(({ element, inert }) => { element.inert = inert; });
+    };
+  }, [mounted]);
+
+  useEffect(() => {
+    if (!generating && !finishing) return;
+    const active = document.activeElement;
+    if (!dialogRef.current?.contains(active) || active?.matches(":disabled")) {
+      dialogRef.current?.querySelector<HTMLButtonElement>("button:not([disabled])")?.focus();
+    }
+  }, [generating, finishing]);
+
+  useEffect(() => {
+    const previousFocus = returnFocusRef.current;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
-    function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        operationAbortRef.current?.abort();
-        onClose();
-        return;
-      }
-      if (event.key !== "Tab" || !dialogRef.current) return;
-
-      const focusable = Array.from(
-        dialogRef.current.querySelectorAll<HTMLElement>(
-          'button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [href], [tabindex]:not([tabindex="-1"])',
-        ),
-      );
-      if (!focusable.length) return;
-      const first = focusable[0];
-      const last = focusable[focusable.length - 1];
-      if (event.shiftKey && document.activeElement === first) {
-        event.preventDefault();
-        last.focus();
-      } else if (!event.shiftKey && document.activeElement === last) {
-        event.preventDefault();
-        first.focus();
-      }
-    }
-
-    document.addEventListener("keydown", handleKeyDown);
     return () => {
       operationAbortRef.current?.abort();
-      document.removeEventListener("keydown", handleKeyDown);
+      operationAbortRef.current = null;
       document.body.style.overflow = previousOverflow;
+      if (previousFocus?.isConnected) previousFocus.focus();
     };
-  }, [onClose, open]);
+  }, []);
 
   function dismiss() {
     operationAbortRef.current?.abort();
-    onClose();
+    operationAbortRef.current = null;
+    callbacksRef.current.onClose();
   }
 
   function openTemplateConfiguration() {
@@ -261,7 +374,7 @@ export function AiImageEditorModal({
     setSelectedTemplateId(null);
     try {
       window.localStorage.setItem(
-        PROMPT_TEMPLATES_STORAGE_KEY,
+        storageKey,
         JSON.stringify(normalizedTemplates),
       );
       setConfiguringTemplates(false);
@@ -275,7 +388,8 @@ export function AiImageEditorModal({
 
   function applyPromptTemplate(template: PromptTemplate) {
     setPrompt(template.prompt);
-    setReferenceImage(template.referenceImage);
+    setReferenceImage(isProduct ? template.referenceImage : "none");
+    setUseSourceImage(Boolean(sourceImage?.url) && template.useSourceImage !== false);
     setSelectedTemplateId(template.id);
     setGeneratedImage(null);
     setError(null);
@@ -284,11 +398,11 @@ export function AiImageEditorModal({
 
   async function generateImage() {
     const selectedBackground = BACKGROUND_OPTIONS.find((option) => option.value === background);
-    const backgroundPrompt = selectedBackground?.prompt
+    const backgroundPrompt = isProduct && selectedBackground?.prompt
       ? `背景要求（优先于上述保持背景或构图不变的要求）：将产品置于${selectedBackground.prompt}。保持产品数量、外形、比例、材质、颜色和细节，玻璃透明度、折射、反射及接触阴影应与新场景自然一致。产品作为清晰主体，不添加文字、图标或额外品牌标识。`
       : "";
     const finalPrompt = [prompt.trim(), backgroundPrompt].filter(Boolean).join("\n\n");
-    if (!sourceImage || !finalPrompt) return;
+    if (!finalPrompt) return;
     if (finalPrompt.length > 4000) {
       setError("提示词与背景要求合计不能超过 4000 字，请缩短提示词。");
       return;
@@ -305,12 +419,12 @@ export function AiImageEditorModal({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          sourceUrl: sourceImage.url,
+          ...(useSourceImage && sourceImage?.url ? { sourceUrl: sourceImage.url } : {}),
           prompt: finalPrompt,
           size,
           quality,
           outputFormat,
-          referenceImage,
+          referenceImage: isProduct ? referenceImage : "none",
         }),
         signal: controller.signal,
       });
@@ -336,12 +450,16 @@ export function AiImageEditorModal({
         !payload.image.b64Json ||
         typeof payload.image.mimeType !== "string" ||
         !isOutputFormat(payload.image.format) ||
+        payload.image.mimeType !== `image/${payload.image.format}` ||
         typeof payload.image.width !== "number" ||
-        typeof payload.image.height !== "number"
+        !Number.isFinite(payload.image.width) || payload.image.width <= 0 ||
+        typeof payload.image.height !== "number" ||
+        !Number.isFinite(payload.image.height) || payload.image.height <= 0
       ) {
         throw new Error("The image service returned an incomplete result.");
       }
 
+      if (controller.signal.aborted || operationAbortRef.current !== controller) return;
       setGeneratedImage({
         b64Json: normalizeBase64(payload.image.b64Json),
         mimeType: payload.image.mimeType,
@@ -350,12 +468,13 @@ export function AiImageEditorModal({
         height: payload.image.height,
       });
     } catch (caughtError) {
+      if (controller.signal.aborted || operationAbortRef.current !== controller) return;
       if (caughtError instanceof DOMException && caughtError.name === "AbortError") return;
       setError(
         caughtError instanceof Error ? caughtError.message : "The image could not be generated.",
       );
     } finally {
-      if (operationAbortRef.current === controller) {
+      if (!controller.signal.aborted && operationAbortRef.current === controller) {
         operationAbortRef.current = null;
         setGenerating(false);
       }
@@ -363,7 +482,7 @@ export function AiImageEditorModal({
   }
 
   async function finishEditing() {
-    if (!sourceImage || !generatedImage) return;
+    if (!generatedImage) return;
     operationAbortRef.current?.abort();
     const controller = new AbortController();
     operationAbortRef.current = controller;
@@ -374,11 +493,11 @@ export function AiImageEditorModal({
       const uploadData = new FormData();
       uploadData.set("image", base64ToFile(generatedImage));
       uploadData.set("slug", slug);
-      uploadData.set("alt", sourceImage.alt || "Product image");
+      uploadData.set("alt", sourceImage?.alt || `${contentLabel} image`);
       uploadData.set("aiGenerated", "true");
       uploadData.set("outputFormat", generatedImage.format);
 
-      const response = await fetch("/api/admin/product-images", {
+      const response = await fetch(UPLOAD_ENDPOINTS[usage], {
         method: "POST",
         body: uploadData,
         signal: controller.signal,
@@ -386,7 +505,13 @@ export function AiImageEditorModal({
       const payload = (await response.json().catch(() => null)) as
         | { image?: AdminProductImageInput; error?: unknown }
         | null;
-      if (!response.ok || !payload?.image) {
+      if (
+        !response.ok ||
+        !payload?.image ||
+        typeof payload.image.url !== "string" ||
+        !/^https?:\/\//i.test(payload.image.url) ||
+        (payload.image.alt !== undefined && typeof payload.image.alt !== "string")
+      ) {
         throw new Error(
           typeof payload?.error === "string"
             ? payload.error
@@ -394,11 +519,13 @@ export function AiImageEditorModal({
         );
       }
 
-      onFinish({
+      if (controller.signal.aborted || operationAbortRef.current !== controller) return;
+      await callbacksRef.current.onFinish({
         ...payload.image,
-        alt: payload.image.alt || sourceImage.alt,
+        alt: sourceImage?.alt || payload.image.alt || `${contentLabel} image`,
       });
     } catch (caughtError) {
+      if (controller.signal.aborted || operationAbortRef.current !== controller) return;
       if (caughtError instanceof DOMException && caughtError.name === "AbortError") return;
       setError(
         caughtError instanceof Error
@@ -406,26 +533,33 @@ export function AiImageEditorModal({
           : "The generated image could not be saved.",
       );
     } finally {
-      if (operationAbortRef.current === controller) {
+      if (!controller.signal.aborted && operationAbortRef.current === controller) {
         operationAbortRef.current = null;
         setFinishing(false);
       }
     }
   }
 
-  if (!open || !sourceImage) return null;
+  if (!mounted) return null;
 
   const generatedPreview = generatedImage
     ? "data:" + generatedImage.mimeType + ";base64," + generatedImage.b64Json
     : null;
   const busy = generating || finishing;
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center bg-[#071427]/70 p-3 backdrop-blur-sm sm:p-6"
       onMouseDown={(event) => {
+        event.stopPropagation();
         if (event.target === event.currentTarget) dismiss();
       }}
+      onClick={(event) => event.stopPropagation()}
+      onKeyDown={(event) => event.stopPropagation()}
+      onKeyUp={(event) => event.stopPropagation()}
+      onPaste={(event) => event.stopPropagation()}
+      onDrop={(event) => { event.preventDefault(); event.stopPropagation(); }}
+      onDragOver={(event) => { event.preventDefault(); event.stopPropagation(); }}
     >
       <section
         ref={dialogRef}
@@ -433,6 +567,7 @@ export function AiImageEditorModal({
         aria-modal="true"
         aria-labelledby={titleId}
         aria-busy={busy}
+        tabIndex={-1}
         className="flex max-h-[calc(100vh-1.5rem)] w-full max-w-5xl flex-col overflow-hidden rounded-3xl border border-white/20 bg-white shadow-[0_30px_100px_rgba(0,0,0,0.35)] sm:max-h-[calc(100vh-3rem)]"
         onMouseDown={(event) => event.stopPropagation()}
       >
@@ -446,7 +581,7 @@ export function AiImageEditorModal({
                 AI image editor
               </h2>
               <p className="mt-1 text-sm leading-5 text-[var(--ink-muted)]">
-                Edit this product image with gpt-image-2, then finish to replace it in the form.
+                {`Edit or generate an image for this ${contentLabel}, review the preview, then use it in the form.`}
               </p>
             </div>
           </div>
@@ -464,7 +599,13 @@ export function AiImageEditorModal({
           <div className="grid gap-5 lg:grid-cols-2">
             <figure>
               <figcaption className="mb-2 text-sm font-black">Original image</figcaption>
-              <MagnifiableImage key={sourceImage.url} src={sourceImage.url} alt={sourceImage.alt || "Original product image"} />
+              {sourceImage?.url ? (
+                <MagnifiableImage key={sourceImage.url} src={sourceImage.url} alt={sourceImage.alt || `Original ${contentLabel} image`} />
+              ) : (
+                <div className="grid aspect-square place-items-center rounded-2xl border border-[#d7dcd8] bg-[#eef0ed] p-6 text-center text-sm text-[var(--ink-muted)]">
+                  No reference image. Describe the image you want to generate.
+                </div>
+              )}
             </figure>
 
             <figure>
@@ -480,7 +621,7 @@ export function AiImageEditorModal({
                   <MagnifiableImage
                     key={generatedPreview}
                     src={generatedPreview}
-                    alt="AI-generated product image preview"
+                    alt={`AI-generated ${contentLabel} image preview`}
                   />
                 ) : (
                   <div className="grid aspect-square place-items-center rounded-2xl border border-[#d7dcd8] bg-[#eef0ed] p-6 text-center text-sm text-[var(--ink-muted)]">
@@ -498,6 +639,27 @@ export function AiImageEditorModal({
                 )}
             </figure>
           </div>
+
+          <label className="mt-5 flex items-start gap-3 rounded-xl border border-[#d7dcd8] bg-[#f8f9f7] p-4 text-sm">
+            <input
+              type="checkbox"
+              className="mt-0.5 size-4 accent-[var(--accent-dark)]"
+              checked={useSourceImage}
+              disabled={busy || !sourceImage?.url}
+              onChange={(event) => {
+                setUseSourceImage(event.target.checked);
+                setSelectedTemplateId(null);
+                setGeneratedImage(null);
+                setError(null);
+              }}
+            />
+            <span>
+              <span className="block font-black">引用当前图片作为参考</span>
+              <span className="mt-1 block text-xs leading-5 text-[var(--ink-muted)]">
+                {useSourceImage ? "会将当前图片发送给 AI 作为上下文。" : "不会发送当前图片；AI 将根据提示词生成新图片。"}
+              </span>
+            </span>
+          </label>
 
           <label className="mt-6 block text-sm font-black">
             Editing instructions
@@ -576,7 +738,9 @@ export function AiImageEditorModal({
                   <div>
                     <h3 className="text-sm font-black">Configure prompt templates</h3>
                     <p className="mt-1 text-xs leading-5 text-[var(--ink-muted)]">
-                      Changes are saved in this browser and reused for every product image.
+                      {isProduct
+                        ? "Changes are saved in this browser and reused for every product image."
+                        : "模板保存在当前浏览器中，博客和案例图片共用。"}
                     </p>
                   </div>
                   <button
@@ -584,7 +748,7 @@ export function AiImageEditorModal({
                     className="inline-flex min-h-9 items-center gap-2 rounded-lg px-2.5 text-xs font-black text-[var(--ink-muted)] transition hover:bg-white hover:text-[var(--ink)]"
                     onClick={() => {
                       setTemplateDrafts(
-                        DEFAULT_PROMPT_TEMPLATES.map((template) => ({ ...template })),
+                        defaultTemplates.map((template) => ({ ...template })),
                       );
                       setTemplateConfigError(null);
                     }}
@@ -619,7 +783,7 @@ export function AiImageEditorModal({
                               maxLength={40}
                             />
                           </label>
-                          <label className="text-xs font-black">
+                          {isProduct ? <label className="text-xs font-black">
                             Reference image
                             <select
                               className="mt-1.5 h-10 w-full rounded-lg border border-[#ccd3ce] bg-white px-3 text-sm font-normal focus:border-[var(--accent)]"
@@ -640,6 +804,19 @@ export function AiImageEditorModal({
                               <option value="none">None</option>
                               <option value="glarivo-blue-logo">Blue GLARIVO logo</option>
                             </select>
+                          </label> : null}
+                          <label className="flex items-center gap-2 text-xs font-black">
+                            <input
+                              type="checkbox"
+                              className="size-4 accent-[var(--accent-dark)]"
+                              checked={template.useSourceImage !== false}
+                              onChange={(event) => setTemplateDrafts((current) =>
+                                current.map((item, itemIndex) => itemIndex === index
+                                  ? { ...item, useSourceImage: event.target.checked }
+                                  : item),
+                              )}
+                            />
+                            引用当前图片作为参考
                           </label>
                         </div>
                         <button
@@ -688,6 +865,7 @@ export function AiImageEditorModal({
                           label: "New template",
                           prompt: "",
                           referenceImage: "none",
+                          useSourceImage,
                         },
                       ]);
                       setTemplateConfigError(null);
@@ -724,7 +902,7 @@ export function AiImageEditorModal({
                 ) : null}
               </div>
             ) : null}
-            {referenceImage === "glarivo-blue-logo" ? (
+            {isProduct && referenceImage === "glarivo-blue-logo" ? (
               <div className="mt-3 flex items-center gap-3 rounded-xl border border-[#d8e5f7] bg-[#f7faff] p-3">
                 <span className="relative h-10 w-20 shrink-0 overflow-hidden rounded-lg bg-white">
                   <Image
@@ -737,13 +915,13 @@ export function AiImageEditorModal({
                   />
                 </span>
                 <p className="text-xs font-bold leading-5 text-[var(--ink-muted)]">
-                  This blue GLARIVO logo is attached as the second reference image.
+                  This blue GLARIVO logo is attached as an additional reference image.
                 </p>
               </div>
             ) : null}
           </div>
 
-          <label className="mt-5 block text-sm font-black">
+          {isProduct ? <label className="mt-5 block text-sm font-black">
             背景选择
             <select
               className="mt-2 h-11 w-full rounded-xl border border-[#ccd3ce] bg-white px-3 text-sm font-normal shadow-sm focus:border-[var(--accent)]"
@@ -758,7 +936,7 @@ export function AiImageEditorModal({
               {BACKGROUND_OPTIONS.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}
             </select>
             <span className="mt-2 block text-xs font-normal text-[var(--ink-muted)]">可单独更换背景，也可搭配去除图标或替换图标。鼠标移入预览图片可放大查看细节。</span>
-          </label>
+          </label> : null}
 
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             <label className="text-sm font-black">
@@ -823,8 +1001,8 @@ export function AiImageEditorModal({
 
         <footer className="flex flex-col-reverse gap-3 border-t border-[#e4e7e3] bg-white px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-7">
           <p className="text-xs leading-5 text-[var(--ink-muted)]">
-            The selected format controls the AI preview. Finish uploads an optimized WebP to R2
-            and replaces only this image in the form. Save the product to persist the change.
+            Choose Use image to upload the result and {sourceImage ? "replace this image" : "add it"} in the form.
+            {` Save the ${contentLabel} to persist the change.`}
           </p>
           <div className="flex shrink-0 flex-wrap justify-end gap-3">
             <button type="button" className="button-secondary" onClick={dismiss}>
@@ -834,7 +1012,7 @@ export function AiImageEditorModal({
               type="button"
               className="button-secondary"
               onClick={generateImage}
-              disabled={(!prompt.trim() && background === "original") || busy}
+              disabled={(!prompt.trim() && (!isProduct || background === "original")) || busy}
             >
               {generating ? (
                 <Loader2 className="size-4 animate-spin" aria-hidden="true" />
@@ -850,11 +1028,12 @@ export function AiImageEditorModal({
               disabled={!generatedImage || busy}
             >
               {finishing ? <Loader2 className="size-4 animate-spin" aria-hidden="true" /> : null}
-              {finishing ? "Saving…" : "Finish"}
+              {finishing ? "Saving…" : "Use image"}
             </button>
           </div>
         </footer>
       </section>
-    </div>
+    </div>,
+    document.body,
   );
 }

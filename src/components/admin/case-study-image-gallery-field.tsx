@@ -46,9 +46,10 @@ async function uploadImage(file: File, slug: string, signal: AbortSignal): Promi
   return { url: url.data, alt, caption: "" };
 }
 
-export function CaseStudyImageGalleryField({ images, onChange, slug, onBusy, disabled = false }: {
+export function CaseStudyImageGalleryField({ images, onChange, onAiEdit, slug, onBusy, disabled = false }: {
   images: CaseStudyImage[];
   onChange: (update: (current: CaseStudyImage[]) => CaseStudyImage[]) => void;
+  onAiEdit: (index: number) => void;
   slug: string;
   onBusy: (busy: boolean) => void;
   disabled?: boolean;
@@ -162,6 +163,7 @@ export function CaseStudyImageGalleryField({ images, onChange, slug, onBusy, dis
           <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
             <p className="text-sm font-bold">Image {index + 1}</p>
             <div className="flex flex-wrap gap-1">
+              <button type="button" className={button} aria-label={`AI edit chapter image ${index + 1}`} onClick={() => onAiEdit(index)}>AI 编辑</button>
               <button type="button" className={button} aria-label={`Move image ${index + 1} up`} disabled={index === 0} onClick={() => moveImage(index, -1)}>↑</button>
               <button type="button" className={button} aria-label={`Move image ${index + 1} down`} disabled={index === images.length - 1} onClick={() => moveImage(index, 1)}>↓</button>
               <button type="button" className={button} aria-label={`Remove image ${index + 1}`} onClick={() => onChange(current => current.filter((_, position) => position !== index))}>Remove</button>

@@ -2,13 +2,39 @@
 
 import Image from "next/image";
 import { ZoomIn } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 /** The zoom layer uses the same contain-fit box as the preview, including letterboxing. */
 export function MagnifiableImage({ src, alt }: { src: string; alt: string }) {
   const containerRef = useRef<HTMLButtonElement>(null);
   const [point, setPoint] = useState<{ x: number; y: number; width: number; height: number } | null>(null);
   const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    function moveMagnifier(event: KeyboardEvent) {
+      const button = containerRef.current;
+      if (!button || document.activeElement !== button) return;
+      const directions: Record<string, [number, number]> = {
+        ArrowLeft: [-20, 0], ArrowRight: [20, 0], ArrowUp: [0, -20], ArrowDown: [0, 20],
+      };
+      const delta = directions[event.key];
+      if (!delta) return;
+      event.preventDefault();
+      event.stopPropagation();
+      const bounds = button.getBoundingClientRect();
+      setPoint((current) => current
+        ? {
+            ...current,
+            x: Math.max(0, Math.min(current.width, current.x + delta[0])),
+            y: Math.max(0, Math.min(current.height, current.y + delta[1])),
+          }
+        : { x: bounds.width / 2, y: bounds.height / 2, width: bounds.width, height: bounds.height });
+    }
+    // Run beside the AI modal's window capture isolation, before EditorJS shortcuts.
+    // The active-button guard keeps every other preview and text field unaffected.
+    window.addEventListener("keydown", moveMagnifier, true);
+    return () => window.removeEventListener("keydown", moveMagnifier, true);
+  }, []);
 
   function showCenter() {
     const bounds = containerRef.current?.getBoundingClientRect();
@@ -34,14 +60,6 @@ export function MagnifiableImage({ src, alt }: { src: string; alt: string }) {
       onFocus={showCenter}
       onBlur={() => setPoint(null)}
       onClick={() => point ? setPoint(null) : showCenter()}
-      onKeyDown={(event) => {
-        const directions: Record<string, [number, number]> = { ArrowLeft: [-20, 0], ArrowRight: [20, 0], ArrowUp: [0, -20], ArrowDown: [0, 20] };
-        const delta = directions[event.key];
-        if (!delta) return;
-        event.preventDefault();
-        if (!point) return showCenter();
-        setPoint({ ...point, x: Math.max(0, Math.min(point.width, point.x + delta[0])), y: Math.max(0, Math.min(point.height, point.y + delta[1])) });
-      }}
     >
       <Image src={src} alt={alt} fill unoptimized sizes="(min-width: 1024px) 40vw, 90vw" className="object-contain" onLoad={() => setLoaded(true)} onError={() => { setLoaded(false); setPoint(null); }} />
       <span className="pointer-events-none absolute bottom-3 right-3 flex items-center gap-1 rounded-full bg-white/90 px-2 py-1 text-xs font-bold shadow-sm" aria-hidden="true">

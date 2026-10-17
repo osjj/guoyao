@@ -2,16 +2,33 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useActionState, useState, type ReactNode } from "react";
+import { useActionState, useCallback, useRef, useState, type ReactNode } from "react";
 import { saveCaseStudy, deleteCaseStudy } from "@/actions/case-studies";
 import { ImagePreviewButton } from "@/components/admin/image-preview";
 import { CaseStudyVideoField } from "@/components/admin/case-study-video-field";
 import { CaseStudyImageGalleryField } from "@/components/admin/case-study-image-gallery-field";
+import { AiImageEditorModal } from "@/components/admin/ai-image-editor-modal";
 import { CASE_STUDY_EDITOR_VERSION, getCaseSectionImages, type AdminCaseStudy, type CaseStudyContent, type CaseFormState, type CaseStudyImage } from "@/lib/case-study-content";
+import type { AdminProductImageInput } from "@/types/admin-product";
 
 const input = "mt-2 w-full rounded-lg border border-[#ccd3ce] bg-white px-3 py-3 text-sm font-normal";
 const small = "rounded-lg border border-[#ccd3ce] px-3 py-2 text-sm font-bold hover:bg-[#eef0ed] disabled:opacity-50";
 const empty: CaseStudyContent = { introduction: "", stats: [], sections: [{ id: "project-brief", title: "", navLabel: "Project brief", paragraphs: [""] }], conclusion: "", relatedLinks: [] };
+type AiImageTarget =
+  | { kind: "cover"; sourceImage: CaseStudyImage | undefined }
+  | { kind: "chapter"; sectionKey: string; imageIndex: number; sourceImage: CaseStudyImage };
+
+function replaceSectionImage(section: CaseStudyContent["sections"][number], index: number, sourceUrl: string, replacementUrl: string) {
+  let position = 0;
+  const replace = (image: CaseStudyImage) => position++ === index && image.url === sourceUrl ? { ...image, url: replacementUrl } : image;
+  // Keep legacy slots, captions, alt text, videos and other section data intact.
+  return {
+    ...section,
+    ...(section.image ? { image: replace(section.image) } : {}),
+    ...(section.images ? { images: section.images.map(replace) } : {}),
+    ...(section.gallery ? { gallery: section.gallery.map(replace) } : {}),
+  };
+}
 
 function Card({ title, children }: { title: string; children: ReactNode }) {
   return <section className="rounded-2xl border border-[#d7dcd8] bg-white p-5 sm:p-7"><h2 className="mb-5 text-xl font-bold">{title}</h2>{children}</section>;
@@ -19,7 +36,7 @@ function Card({ title, children }: { title: string; children: ReactNode }) {
 function Field({ label, value, onChange, multiline = false, required = true }: { label: string; value: string; onChange: (value: string) => void; multiline?: boolean; required?: boolean }) {
   return <label className="block text-sm font-bold">{label}{multiline ? <textarea className={input} rows={5} value={value} onChange={e => onChange(e.target.value)} required={required} /> : <input className={input} value={value} onChange={e => onChange(e.target.value)} required={required} />}</label>;
 }
-function ImageField({ value, onChange, slug, onBusy, showCaption = true }: { value?: { url: string; alt: string; caption: string }; onChange: (image: { url: string; alt: string; caption: string } | undefined) => void; slug: string; onBusy: (busy: boolean) => void; showCaption?: boolean }) {
+function ImageField({ value, onChange, onAiEdit, slug, onBusy, showCaption = true }: { value?: { url: string; alt: string; caption: string }; onChange: (image: { url: string; alt: string; caption: string } | undefined) => void; onAiEdit: () => void; slug: string; onBusy: (busy: boolean) => void; showCaption?: boolean }) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   async function upload(file?: File) {
@@ -39,7 +56,7 @@ function ImageField({ value, onChange, slug, onBusy, showCaption = true }: { val
     <Field label="Image URL" value={value?.url ?? ""} required={false} onChange={url => onChange(url ? { url, alt: value?.alt ?? "", caption: value?.caption ?? "" } : undefined)} />
     {value && <><Field label="Image alt text" value={value.alt} onChange={alt => onChange({ ...value, alt })} />{showCaption && <Field label="Image caption" value={value.caption} required={false} onChange={caption => onChange({ ...value, caption })} />}</>}
     <label className="block text-sm font-bold">Upload image<input className="mt-2 block w-full text-sm" type="file" accept="image/*" disabled={busy} onChange={event => { void upload(event.target.files?.[0]); event.target.value = ""; }} /></label>
-    {value && <button type="button" className={small} onClick={() => onChange(undefined)}>Remove image</button>}
+    <div className="flex flex-wrap gap-2"><button type="button" className={small} disabled={busy} aria-label="AI edit cover image" onClick={onAiEdit}>{value?.url ? "AI 编辑" : "AI 生成图片"}</button>{value && <button type="button" className={small} onClick={() => onChange(undefined)}>Remove image</button>}</div>
     {busy && <p role="status">Uploading image…</p>}{error && <p role="alert" className="text-red-800">{error}</p>}
   </div>;
 }
@@ -56,7 +73,35 @@ export function CaseStudyForm({ post }: { post?: AdminCaseStudy }) {
   const [publishedDate, setPublishedDate] = useState(post?.publishedDate ?? "");
   const [uploads, setUploads] = useState(0);
   const [cover, setCover] = useState<{ url: string; alt: string; caption: string } | undefined>(post?.coverImage ? { url: post.coverImage, alt: post.coverImageAlt ?? "", caption: "" } : undefined);
-  const busy = (value: boolean) => setUploads(count => Math.max(0, count + (value ? 1 : -1)));
+  const [aiImageTarget, setAiImageTarget] = useState<AiImageTarget | null>(null);
+  const aiImageTargetRef = useRef<AiImageTarget | null>(null);
+  const busy = useCallback((value: boolean) => setUploads(count => Math.max(0, count + (value ? 1 : -1))), []);
+  const closeAiImageEditor = useCallback(() => {
+    if (!aiImageTargetRef.current) return;
+    aiImageTargetRef.current = null;
+    setAiImageTarget(null);
+    busy(false);
+  }, [busy]);
+  function openAiImageEditor(target: AiImageTarget) {
+    if (pending || uploads > 0 || aiImageTargetRef.current) return;
+    aiImageTargetRef.current = target;
+    setAiImageTarget(target);
+    busy(true);
+  }
+  function finishAiImageEdit(target: AiImageTarget, replacement: AdminProductImageInput) {
+    if (aiImageTargetRef.current !== target) return;
+    if (target.kind === "cover") {
+      setCover(current => current?.url === target.sourceImage?.url
+        ? current ? { ...current, url: replacement.url } : { url: replacement.url, alt: replacement.alt, caption: "" }
+        : current);
+    } else {
+      const sectionIndex = sectionKeys.indexOf(target.sectionKey);
+      setBody(current => ({ ...current, sections: current.sections.map((item, index) => index === sectionIndex
+        ? replaceSectionImage(item, target.imageIndex, target.sourceImage.url, replacement.url)
+        : item) }));
+    }
+    closeAiImageEditor();
+  }
   function section(index: number, patch: Partial<CaseStudyContent["sections"][number]>) { setBody(current => ({ ...current, sections: current.sections.map((item, n) => n === index ? { ...item, ...patch } : item) })); }
   function sectionImages(index: number, update: (images: CaseStudyImage[]) => CaseStudyImage[]) {
     setBody(current => ({ ...current, sections: current.sections.map((item, n) => n === index
@@ -84,6 +129,7 @@ export function CaseStudyForm({ post }: { post?: AdminCaseStudy }) {
       <input type="hidden" name="coverImage" value={cover?.url ?? ""} />
       <input type="hidden" name="coverImageAlt" value={cover?.alt ?? ""} />
       {state.error && <p role="alert" className="whitespace-pre-line rounded-xl bg-red-50 p-5 text-sm text-red-900">{state.error}</p>}
+      <fieldset disabled={pending || uploads > 0} className="min-w-0 space-y-6">
       <Card title="Case information"><div className="grid gap-5 sm:grid-cols-2">
         <label className="text-sm font-bold sm:col-span-2">Case title<input className={input} name="title" value={title} onChange={e => setTitle(e.target.value)} maxLength={180} required /></label>
         <label className="text-sm font-bold">URL slug<input className={input} name="slug" value={slug} onChange={e => setSlug(e.target.value.toLowerCase())} pattern="[a-z0-9]+(?:-[a-z0-9]+)*" required maxLength={180} /><span className="mt-1 block text-xs font-normal text-[var(--ink-muted)]">/case-studies/{slug || "your-case-title"}</span></label>
@@ -92,7 +138,7 @@ export function CaseStudyForm({ post }: { post?: AdminCaseStudy }) {
         <label className="text-sm font-bold">Status<select className={input} name="status" value={status} onChange={e => setStatus(e.target.value as typeof status)}><option value="DRAFT">Draft</option><option value="PUBLISHED">Published</option><option value="ARCHIVED">Archived</option></select></label>
         <label className="text-sm font-bold">Publication date (UTC)<input className={input} type="date" name="publishedDate" value={publishedDate} onChange={e => setPublishedDate(e.target.value)} /><span className="mt-1 block text-xs font-normal">Leave blank to use the date you publish.</span></label>
       </div></Card>
-      <Card title="Cover image"><ImageField value={cover} onChange={setCover} slug={slug} onBusy={busy} showCaption={false} /></Card>
+      <Card title="Cover image"><ImageField value={cover} onChange={setCover} onAiEdit={() => openAiImageEditor({ kind: "cover", sourceImage: cover })} slug={slug} onBusy={busy} showCaption={false} /></Card>
       <Card title="Project introduction"><Field label="Introduction" multiline value={body.introduction} onChange={introduction => setBody(current => ({ ...current, introduction }))} /></Card>
       <Card title="Project video"><fieldset disabled={pending}><CaseStudyVideoField value={body.video} onChange={video => setBody(current => ({ ...current, video }))} slug={slug} onBusy={busy} /></fieldset></Card>
       <Card title="Project at a glance"><div className="space-y-4">
@@ -110,7 +156,7 @@ export function CaseStudyForm({ post }: { post?: AdminCaseStudy }) {
           <Field label="Contents label" value={item.navLabel} onChange={navLabel => section(index, { navLabel })} />
           <Field label="Section anchor" value={item.id} onChange={id => section(index, { id })} />
           <div className="sm:col-span-2"><Field label="Paragraphs (separate with a blank line)" multiline value={item.paragraphs.join("\n\n")} onChange={text => section(index, { paragraphs: text.split(/\n\n/) })} /></div>
-          <div className="sm:col-span-2"><CaseStudyImageGalleryField images={getCaseSectionImages(item)} onChange={update => sectionImages(index, update)} slug={slug} onBusy={busy} disabled={pending} /></div>
+          <div className="sm:col-span-2"><CaseStudyImageGalleryField images={getCaseSectionImages(item)} onChange={update => sectionImages(index, update)} onAiEdit={imageIndex => openAiImageEditor({ kind: "chapter", sectionKey: sectionKeys[index], imageIndex, sourceImage: getCaseSectionImages(item)[imageIndex] })} slug={slug} onBusy={busy} disabled={pending || uploads > 0} /></div>
           <fieldset disabled={pending} className="space-y-4 rounded-xl border border-[#ccd3ce] p-4 sm:col-span-2">
             <legend className="px-2 text-sm font-bold">Chapter video</legend>
             <CaseStudyVideoField value={item.video} onChange={video => section(index, { video })} slug={slug} onBusy={busy} placement="chapter" />
@@ -138,7 +184,9 @@ export function CaseStudyForm({ post }: { post?: AdminCaseStudy }) {
         <button type="button" className={small} onClick={() => setBody(current => ({ ...current, relatedLinks: [...current.relatedLinks, { label: "", href: "" }] }))}>Add related link</button>
       </div></Card>
       <div className="sticky bottom-4 z-10 flex flex-wrap items-center justify-between gap-3 rounded-xl border bg-white/95 p-4 shadow-lg"><p className="text-xs">Drafts and archived cases are visible only to administrators.</p><div className="flex gap-3"><Link className={small} href="/admin/case-studies">Cancel</Link>{post && <Link className={small} href={`/admin/case-studies/${post.id}/preview`} target="_blank">Preview saved draft</Link>}<button className="button-primary" disabled={pending || uploads > 0}>{pending ? "Saving…" : post ? "Save changes" : "Create case study"}</button></div></div>
+      </fieldset>
     </form>
     {post && <form action={deleteCaseStudy.bind(null, post.id)} className="rounded-xl border border-red-200 bg-red-50 p-5" onSubmit={e => { if (uploads > 0 || pending || !window.confirm(`Delete “${post.title}”? This cannot be undone.`)) e.preventDefault(); }}><input type="hidden" name="updatedAt" value={post.updatedAt} /><p className="mb-3 text-sm text-red-900">Permanently remove this case study.</p><button disabled={uploads > 0 || pending} className="rounded-lg bg-red-800 px-4 py-2 text-sm font-bold text-white disabled:opacity-50">Delete case study</button></form>}
+    {aiImageTarget && <AiImageEditorModal open usage="case-study" sourceImage={aiImageTarget.sourceImage?.url ? aiImageTarget.sourceImage : null} slug={slug} onClose={closeAiImageEditor} onFinish={replacement => finishAiImageEdit(aiImageTarget, replacement)} />}
   </div>;
 }
