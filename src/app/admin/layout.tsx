@@ -30,11 +30,11 @@ export default async function AdminLayout({ children }: { children: React.ReactN
 
   return (
     <div className="min-h-screen bg-[#eef0ed] text-[var(--ink)] lg:grid lg:grid-cols-[17rem_1fr]">
-      <aside className="border-b border-[var(--line)] bg-[var(--ink)] p-5 text-white lg:sticky lg:top-0 lg:h-screen lg:border-b-0 lg:border-r lg:border-white/10 lg:p-6">
-        <div className="rounded-2xl bg-[var(--paper)] px-4 py-3">
+      <aside className="border-b border-[var(--line)] bg-[var(--ink)] p-5 text-white lg:sticky lg:top-0 lg:flex lg:h-dvh lg:flex-col lg:border-b-0 lg:border-r lg:border-white/10 lg:p-6">
+        <div className="rounded-2xl bg-[var(--paper)] px-4 py-3 lg:shrink-0">
           <Logo />
         </div>
-        <div className="mt-6 flex gap-2 overflow-x-auto lg:flex-col">
+        <div className="mt-6 flex gap-2 overflow-x-auto lg:min-h-0 lg:flex-1 lg:flex-col lg:overflow-x-hidden lg:overflow-y-auto lg:overscroll-contain">
           {adminNavigation.map(({ href, label, icon: Icon }) => (
             <Link
               key={href}
@@ -46,7 +46,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
             </Link>
           ))}
         </div>
-        <div className="mt-6 space-y-3 border-t border-white/15 pt-6 lg:absolute lg:bottom-6 lg:left-6 lg:right-6">
+        <div className="mt-6 space-y-3 border-t border-white/15 pt-6 lg:shrink-0">
           <div className="flex items-center gap-3 rounded-2xl bg-white/10 px-4 py-3">
             <ShieldCheck className="size-4 shrink-0 text-[var(--acid)]" aria-hidden="true" />
             <div className="min-w-0">
