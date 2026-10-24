@@ -1,0 +1,93 @@
+{
+  "wordCount": 3978,
+  "blocks": 224,
+  "blockTypes": {
+    "paragraph": 81,
+    "list": 47,
+    "header": 85,
+    "image": 9,
+    "quote": 2
+  },
+  "bodyImages": 9,
+  "sourceSha256": "595c02b45e1bd0cb649c85db26deaa626034c995e08c4571ce7a6a592200be78",
+  "contentSha256": "2c6009154748b87e6239fe8ba6006df9b92279a884f5c12906534bcc634771f8",
+  "readbackSha256": "2c6009154748b87e6239fe8ba6006df9b92279a884f5c12906534bcc634771f8",
+  "contentMatches": true,
+  "localValidation": true,
+  "assets": [
+    {
+      "key": "blog/metalwork-packing-crating-process-and-defect-control/hero-a9a7200a16a3dd81.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-packing-crating-process-and-defect-control/hero-a9a7200a16a3dd81.webp",
+      "sha256": "a9a7200a16a3dd81a08d2ff3bc07442403d8e6c7894b04d8d46885aab7b55d04",
+      "bytes": 200028
+    },
+    {
+      "key": "blog/metalwork-packing-crating-process-and-defect-control/01-scene-luxury-crate.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-packing-crating-process-and-defect-control/01-scene-luxury-crate.webp",
+      "sha256": "a9a7200a16a3dd81a08d2ff3bc07442403d8e6c7894b04d8d46885aab7b55d04",
+      "bytes": 200028
+    },
+    {
+      "key": "blog/metalwork-packing-crating-process-and-defect-control/02-scene-residence-carton.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-packing-crating-process-and-defect-control/02-scene-residence-carton.webp",
+      "sha256": "81abf79e31d4ececc117bd82cc206853fd9d7e3d1e70aed90d70c1d8f1f2f4bb",
+      "bytes": 188732
+    },
+    {
+      "key": "blog/metalwork-packing-crating-process-and-defect-control/03-scene-hotel-steelframe.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-packing-crating-process-and-defect-control/03-scene-hotel-steelframe.webp",
+      "sha256": "85e8cbcb5db9e892c88e65cc6a131189f46fba4085a9674019a2df0f2f00dd19",
+      "bytes": 219728
+    },
+    {
+      "key": "blog/metalwork-packing-crating-process-and-defect-control/04-detail-crate-vertical.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-packing-crating-process-and-defect-control/04-detail-crate-vertical.webp",
+      "sha256": "b91ff4fe6107b3267259fc9fd0e6ab8b20409c32643e2d99425d998d54ec1a7d",
+      "bytes": 162544
+    },
+    {
+      "key": "blog/metalwork-packing-crating-process-and-defect-control/05-detail-carton-horizontal.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-packing-crating-process-and-defect-control/05-detail-carton-horizontal.webp",
+      "sha256": "5e2bdf7b2c9ef93351ef1daf8a1f209f1e414e9c372847bea989ab0dfdcb73d9",
+      "bytes": 217470
+    },
+    {
+      "key": "blog/metalwork-packing-crating-process-and-defect-control/06-detail-steel-frame.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-packing-crating-process-and-defect-control/06-detail-steel-frame.webp",
+      "sha256": "63326b7645d787d42438396dfea1f88690bf25232b7818fa00a983fae86b5059",
+      "bytes": 177206
+    },
+    {
+      "key": "blog/metalwork-packing-crating-process-and-defect-control/07-detail-corner-protection.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-packing-crating-process-and-defect-control/07-detail-corner-protection.webp",
+      "sha256": "b8794fb9fcbed050af3c6b950e36046e65cf476336b7f914a90800c8f3ff51d7",
+      "bytes": 118788
+    },
+    {
+      "key": "blog/metalwork-packing-crating-process-and-defect-control/08-detail-layer-separation.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-packing-crating-process-and-defect-control/08-detail-layer-separation.webp",
+      "sha256": "b2f4da3a7dc4595cecb97fe3eec681c34085d1363ffd4ab6cf4f464548f6c5c1",
+      "bytes": 203412
+    },
+    {
+      "key": "blog/metalwork-packing-crating-process-and-defect-control/09-detail-labeling-system.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-packing-crating-process-and-defect-control/09-detail-labeling-system.webp",
+      "sha256": "898d1341907944e692aab19a584dfe66ab20da537042e1d4d60dd66c06c888ef",
+      "bytes": 196516
+    }
+  ],
+  "createdAt": "2026-10-14T09:59:10.309Z",
+  "databaseReadback": {
+    "id": "cmv7xtw7a0000v8ghlazii6o5",
+    "title": "Metalwork Packing and Crating: Process, Details and Defect Control",
+    "slug": "metalwork-packing-crating-process-and-defect-control",
+    "status": "DRAFT",
+    "featured": false,
+    "publishedAt": null,
+    "readTimeMinutes": 20,
+    "bodyImages": 9,
+    "coverImage": "https://media.guoyaometal.com/blog/metalwork-packing-crating-process-and-defect-control/hero-a9a7200a16a3dd81.webp",
+    "contentMatches": true,
+    "updatedAt": "2026-10-14T09:59:07.846Z"
+  }
+}

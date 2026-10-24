@@ -1,0 +1,643 @@
+{
+  "introduction": "Case Study · Guoyao Metalwork. A sculptural double-curved column cladding for a prime address on Murray Road, Central — documented end to end. Sixteen stages, from the first phone call and the first site visit to the final signed acceptance on site, each one backed by its own factory or construction photographs: 42 project photographs and one factory walkthrough video, exactly as the work happened. Location · Murray Road, Central, Hong Kong, China. Scope · Sculptural column cladding. Material · Curved stainless steel segments. Delivery · Factory mock-up → export crate → site.",
+  "stats": [
+    {
+      "value": "16",
+      "label": "Project stages"
+    },
+    {
+      "value": "42",
+      "label": "Project photographs"
+    },
+    {
+      "value": "1",
+      "label": "Factory video"
+    },
+    {
+      "value": "100%",
+      "label": "Factory mock-up before shipment"
+    },
+    {
+      "value": "0",
+      "label": "Site-cut segments"
+    },
+    {
+      "value": "1",
+      "label": "Signed acceptance"
+    }
+  ],
+  "sections": [
+    {
+      "id": "stage-01-commercial",
+      "title": "The Inquiry: A Column That Cannot Look Ordinary",
+      "navLabel": "Stage 01 · Commercial",
+      "paragraphs": [
+        "The project began the way most good ones do — with a question that could not be answered from a catalogue. The client's design team was fitting out a premium address on Murray Road, Central, Hong Kong, China, and the lobby's structural columns were the first thing every visitor would see. Off-the-shelf circular cladding would not carry the design language; the drawn concept called for a sculptural, double-curved lobed form that tapered as it rose.",
+        "The inquiry arrived with three things that shaped everything after it: reference renders of the intended form, the building's column positions, and a hard constraint — the work had to be fabricated off site and installed with minimal hot work on a busy CBD street. Before quoting, we asked for one more item: a site visit. For double-curved cladding, a dimension taken from a drawing is a hypothesis, not a measurement."
+      ],
+      "image": {
+        "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/01-inquiry-and-design-briefing.webp",
+        "alt": "Design briefing meeting: curved metal samples and a 3D column model on the table",
+        "caption": "Inquiry and briefing. Curved sample pieces and a 3D model of the column on the table — the first conversation is about what the surface must do, not what it costs."
+      },
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "A quotation is only as good as the questions behind it. Form, finish, sightlines and site access were fixed before any number was discussed."
+        }
+      ]
+    },
+    {
+      "id": "stage-02-site",
+      "title": "Site Survey and Measurement",
+      "navLabel": "Stage 02 · Site",
+      "paragraphs": [
+        "Our survey team travelled to the site with a laser distance meter, a digital angle finder and a checklist routine that has survived every project since. Each column was measured for diameter at multiple heights, verticality, out-of-round, slab edges, service penetrations and the scaffold envelope the installer would need.",
+        "On a CBD site like Murray Road the survey is not only about the column. It is about everything the column will meet: hoarding positions, lift sizes, protected working hours, and the route a 3-metre segment must travel from the goods lift to its final position. All of it went into the survey record that later became the packing and installation plan."
+      ],
+      "image": {
+        "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/02-site-survey-laser-measurement.webp",
+        "alt": "Site survey: laser measurement of a structural column in a CBD lobby under fit-out",
+        "caption": "Site survey. Diameter, verticality and out-of-round checked at multiple heights; scaffold and access routes recorded for the installation plan."
+      },
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "On double-curved work, the site survey decides the segment boundaries. Measure the building, not the drawing."
+        }
+      ]
+    },
+    {
+      "id": "stage-03-engineering",
+      "title": "Design Development and Shop Drawings",
+      "navLabel": "Stage 03 · Engineering",
+      "paragraphs": [
+        "Back in the workshop office, the survey data and the client's renders were rebuilt as a manufacturable solid model. The sculptural lobed form was split into segments whose boundaries followed the natural flow of the surface — placed where seams would read as design lines, never where they would fight the curvature.",
+        "Every segment was then unfolded into a flat pattern, compensating for bending spring-back and weld shrinkage. The shop drawings carried each segment's number, its position on the column, its neighbours and its joint type, so that any panel on the shop floor knew exactly where it belonged — and so the same set of numbers could be checked again at trial assembly."
+      ],
+      "image": {
+        "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/03-shop-drawings-flat-patterns.webp",
+        "alt": "Engineer developing flat patterns and the 3D elevation of the column cladding",
+        "caption": "Shop drawings. The lobed surface split into numbered segments, each unfolded to a flat pattern with spring-back and shrinkage compensation."
+      },
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Segments are engineered where the eye expects a line. Drawing decisions made here cost nothing; the same decisions made on site cost a segment."
+        }
+      ]
+    },
+    {
+      "id": "stage-04-quality-gate-1",
+      "title": "Sampling and Approval",
+      "navLabel": "Stage 04 · Quality Gate 1",
+      "paragraphs": [
+        "Before a single production segment was cut, the finish was locked down with sealed samples: curved pieces taken through the full rolling, welding, grinding and finishing sequence, so the client approved the exact surface they would receive — not a flat coupon that behaves differently once it is curved.",
+        "The samples were checked under raking light for grain consistency, seam flushness and edge treatment, then signed and retained as the acceptance reference. From this point the argument moved from opinion to comparison: any production question was settled by holding the piece against the sealed sample."
+      ],
+      "image": {
+        "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/04-sealed-curved-sample-approval.webp",
+        "alt": "Sample approval: curved samples of different finishing stages compared under raking light",
+        "caption": "Sealed samples. Curved, fully finished pieces approved under raking light and retained as the acceptance reference."
+      },
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "A sealed sample converts taste into a standard. Approve the curve, not the coupon."
+        }
+      ]
+    },
+    {
+      "id": "stage-05-material",
+      "title": "Material Procurement and Inbound Inspection",
+      "navLabel": "Stage 05 · Material",
+      "paragraphs": [
+        "The cladding was specified in stainless steel sheet suited to exterior-adjacent lobby use, with the coil-to-coil consistency that a large sculptural form demands — a colour or texture drift between the first batch and the last would show as a vertical band down the finished column.",
+        "Every incoming sheet was checked at goods-in for grade verification, thickness, flatness and surface condition, and sheets were booked to segment numbers so that adjacent panels came from the same mother coil wherever the layout allowed."
+      ],
+      "image": {
+        "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/05-inbound-stainless-sheet-inspection.webp",
+        "alt": "Material inbound inspection: stainless sheets offloaded and checked at goods-in",
+        "caption": "Inbound inspection. Grade, thickness and surface verified at goods-in; sheets booked to segment numbers so adjacent panels share one mother coil."
+      },
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "On a sculptural column the material is the design. Traceability from mother coil to finished segment is what keeps the surface one colour, top to bottom."
+        }
+      ]
+    },
+    {
+      "id": "stage-06-fabrication",
+      "title": "Cutting and Curve Forming",
+      "navLabel": "Stage 06 · Fabrication",
+      "paragraphs": [
+        "Flat patterns were cut, then the forming began. The narrow curved strips and the large panel segments were rolled to their developed radii — the lobed profile needs several different radii within one column, so each segment was rolled to its own radius template, checked against the template on the shop floor, and stacked by number.",
+        "Where two curvatures meet, the segment becomes a transition piece with a compound edge. These are the parts that separate a cladding fabricator from a panel shop: they are rolled, checked, adjusted and re-checked until the flat pattern and the formed shell agree."
+      ],
+      "image": {
+        "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/06-rolled-curved-strips-laid-out.webp",
+        "alt": "Rolled curved strips laid out on the workshop floor",
+        "caption": "Rolled to template. Curved strips rolled to their developed radii and laid out by segment number."
+      },
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/07-large-curved-panel-segments.webp",
+          "alt": "Large curved panel segments standing in the fabrication bay",
+          "caption": "Panel segments. Large rolled segments stood on edge after radius checking."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/08-formed-segments-stacked-by-number.webp",
+          "alt": "Formed segments stacked in the fabrication bay",
+          "caption": "Stacked by number. Formed segments queued for trial fit, each carrying its position number."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/09-segments-grouped-by-radius.webp",
+          "alt": "Curved segments resting against the fabrication racks",
+          "caption": "Radius families. Segments grouped by radius; the lobed form needs several radii in one column."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Forming is checked against templates, never against eyesight. Every radius signed off on the floor is a joint that will close itself at assembly."
+        }
+      ]
+    },
+    {
+      "id": "stage-07-fabrication",
+      "title": "Segment Fabrication and Trial Fit",
+      "navLabel": "Stage 07 · Fabrication",
+      "paragraphs": [
+        "Formed segments were tacked, fitted and adjusted in pairs before anything touched a column. Transition pieces with compound edges were trial-fit against their flat patterns; edge returns were checked for the shadow gap the design called for.",
+        "This is deliberately unglamorous work: fit, mark, adjust, re-fit. But it is where a double-curved column is actually won — by the time the segments left this bay, their joints already knew where they were going."
+      ],
+      "image": {
+        "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/10-segments-staged-for-fit-up.webp",
+        "alt": "Curved segments staged against the workshop racks",
+        "caption": "Staged for fit-up. Segments grouped by column position in the fabrication bay."
+      },
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/11-trial-fit-to-flat-pattern.webp",
+          "alt": "Flat pattern with tack-welded transition piece and setting-out marks",
+          "caption": "Trial fit to pattern. A compound-edge transition piece tacked and checked against its own flat pattern."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/12-edge-returns-prepared.webp",
+          "alt": "Formed segments leaning ready for joint fitting",
+          "caption": "Edge returns. Segments prepared for joint fitting and shadow-gap check."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/13-curved-strips-handled-on-edge.webp",
+          "alt": "Curved strip segments stood upright for handling",
+          "caption": "Handling discipline. Long curved strips carried and stored on edge to protect the formed radius."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/14-fit-up-queue.webp",
+          "alt": "Group of formed segments in the fabrication bay",
+          "caption": "Fit-up queue. Segments awaiting pair-wise trial fit."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/15-compound-edge-transition-piece.webp",
+          "alt": "Formed transition segment on the workshop floor",
+          "caption": "Transition piece. A segment where two curvatures meet — rolled, checked and re-checked before assembly."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Double-curved work is won in the fit-up bay, not at the column. Tack, check, adjust — then and only then weld."
+        }
+      ]
+    },
+    {
+      "id": "stage-08-quality-gate-2",
+      "title": "Full-Scale Trial Assembly in the Factory",
+      "navLabel": "Stage 08 · Quality Gate 2",
+      "paragraphs": [
+        "Instead of shipping segments and discovering geometry problems on a CBD site, the entire column was assembled at full scale inside the factory, on a temporary internal frame, under the same scaffold the installers would later use on site.",
+        "Standing the real column changes the conversation. Joint lines were read under work lights from every direction, taper checked against the survey data, and every adjustment was made while the segment was still on the bench — not while it was on a scaffold above a Hong Kong pavement."
+      ],
+      "image": {
+        "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/16-vertical-build-on-temporary-frame.webp",
+        "alt": "The column shell under assembly inside the factory",
+        "caption": "Vertical build. The lobed shell growing segment by segment on its temporary frame."
+      },
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/17-full-height-shell.webp",
+          "alt": "The assembled column shell in the factory bay",
+          "caption": "Full height. The complete shell standing at full scale before seam work."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/18-sightline-check-from-below.webp",
+          "alt": "The shell seen from below under the factory lights",
+          "caption": "Sightline check. Joint lines read from below, the way the lobby will see them."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/19-paired-lobes-checked.webp",
+          "alt": "Two shell sections side by side",
+          "caption": "Paired lobes. Neighbouring shell sections checked against each other."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/20-taper-check-at-full-height.webp",
+          "alt": "The column shell from a low angle",
+          "caption": "Taper check. The taper verified against survey data at full height."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/21-working-scaffold-in-factory.webp",
+          "alt": "A segment stood against the scaffold during assembly",
+          "caption": "Working scaffold. The same access layout the site crew will use."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/22-crown-geometry.webp",
+          "alt": "The top of the assembled shell",
+          "caption": "Crown geometry. The upper segments closed and checked at the head of the column."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/23-complete-lobed-column-in-workshop.webp",
+          "alt": "The complete column cladding in the factory",
+          "caption": "The whole form. The sculptural lobed column standing complete in the workshop."
+        }
+      ],
+      "video": {
+        "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/factory-trial-assembly.mp4",
+        "caption": "Factory walkthrough — the full-scale column cladding under trial assembly, filmed in the workshop.",
+        "poster": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/16-vertical-build-on-temporary-frame.webp"
+      },
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "A full-scale factory mock-up is the cheapest insurance in custom metalwork: every geometric surprise is found at bench height, not scaffold height."
+        }
+      ]
+    },
+    {
+      "id": "stage-09-structure",
+      "title": "Internal Substructure and Fixing System",
+      "navLabel": "Stage 09 · Structure",
+      "paragraphs": [
+        "The skin is only half the engineering. Inside the shell sits a ring-frame substructure — vertical ribs and horizontal rings engineered to carry the cladding back to the building's structure through a bolted, adjustable connection.",
+        "The adjustment matters as much as the strength. Every fixing point allows three-dimensional correction, so the skin can be set perfectly true on site even if the building's column is not. The substructure was assembled and aligned inside the shell during the trial build, then marked, numbered and partially disassembled for packing."
+      ],
+      "image": {
+        "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/24-internal-ring-frame-substructure.webp",
+        "alt": "The internal ring-frame substructure inside the scaffold tower",
+        "caption": "Ring frames. Vertical ribs and horizontal rings inside the scaffold, before the skin goes on."
+      },
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/25-skin-and-frame-alignment.webp",
+          "alt": "The shell with its internal steel frame behind",
+          "caption": "Skin and frame. The cladding shell aligned to its substructure during the trial build."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/26-numbered-for-reassembly.webp",
+          "alt": "Shell sections stacked with the substructure visible behind",
+          "caption": "Numbered for re-assembly. Frames and shells marked, numbered and prepared for packing."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/27-adjustable-fixing-connections.webp",
+          "alt": "The shell from the rear showing the internal frame",
+          "caption": "Fixing zone. Adjustable bolted connections between skin and frame."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/28-joint-backing-detail.webp",
+          "alt": "Joint detail with the internal frame behind",
+          "caption": "Joint backing. The substructure aligned to receive the segment joints."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/29-ribs-and-rings-inside-shell.webp",
+          "alt": "Internal frame ribs and rings from inside the shell",
+          "caption": "Inside the shell. Ribs and rings set to the corrected geometry from the trial build."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/30-corner-condition-at-lobe-junction.webp",
+          "alt": "Shell corner meeting the internal frame",
+          "caption": "Corner condition. Frame and skin aligned at a lobe junction."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/31-load-path-through-brackets.webp",
+          "alt": "Shell seated on the frame corner",
+          "caption": "Load path. Cladding loads pass through adjustable brackets into the ring frame."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/32-sections-staged-for-packing.webp",
+          "alt": "Two shell sections stacked after the trial build",
+          "caption": "Staged for packing. Sections laid out in reverse installation order."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "A cladding is judged by its surface but carried by its frame. Adjustable fixings turn a building's tolerance into the skin's precision."
+        }
+      ]
+    },
+    {
+      "id": "stage-10-craft",
+      "title": "Seam and Weld Treatment",
+      "navLabel": "Stage 10 · Craft",
+      "paragraphs": [
+        "With the geometry proven, the seams were welded and finished. Joints were welded continuously, ground back, and dressed until the weld line became a deliberate design line — crisp, straight and consistent in width, running the full height of the column.",
+        "Where lobes meet, the seam runs through a tapering junction that narrows to a point. Keeping that line honest over several metres of double curvature is slow, patient work: weld, grind, check under raking light, repeat — until the line reads the same at the base as it does at the crown."
+      ],
+      "image": {
+        "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/33-tig-welding-longitudinal-joint.webp",
+        "alt": "TIG welding the longitudinal joint between two curved panels on a fixture",
+        "caption": "Continuous welds. Joints welded on fixtures, then ground and dressed to a consistent line."
+      },
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/34-full-height-seam-lines.webp",
+          "alt": "Seam line alongside the working scaffold",
+          "caption": "Full-height lines. Seam lines read against the scaffold for straightness."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/35-horizontal-joint-lines.webp",
+          "alt": "Horizontal joint line across two shell sections",
+          "caption": "Horizontal rings. Horizontal joints dressed to match the vertical lines."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/36-vertical-seam-even-width.webp",
+          "alt": "Vertical seam detail on the shell surface",
+          "caption": "Consistent width. Vertical seam checked for even width along its length."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/37-diagonal-seam-junction.webp",
+          "alt": "Diagonal seam junction on the shell",
+          "caption": "Directional changes. Seam junctions where two lines meet, kept crisp."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/38-tapering-lobe-junction.webp",
+          "alt": "Two lobes meeting at a tapering vertical junction, seen from below",
+          "caption": "Lobe junction. The tapering seam between lobes, read from below under work lights."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/39-seam-narrowing-to-point.webp",
+          "alt": "Seam junction detail at the narrowing point",
+          "caption": "Junction detail. The seam narrowing to a point without losing its line."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/40-weld-ground-flush.webp",
+          "alt": "Horizontal seam line close up",
+          "caption": "Flush finish. Welds ground flush and finished to the surrounding surface."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/41-raking-light-seam-check.webp",
+          "alt": "Seam line running across the curved surface",
+          "caption": "Raking-light check. Every seam inspected under raking light before finishing."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/42-seam-straightness-vs-scaffold.webp",
+          "alt": "Seam line against the scaffold bracing",
+          "caption": "Straightness. Long seam lines verified against the scaffold grid."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "On double-curved work the seam is the signature. Weld it straight, grind it honest, and check it under the same light the lobby will use."
+        }
+      ]
+    },
+    {
+      "id": "stage-11-quality-gate-3",
+      "title": "Surface Finishing and Factory Inspection",
+      "navLabel": "Stage 11 · Quality Gate 3",
+      "paragraphs": [
+        "The finished surface was worked to the sealed samples — grain direction following the form, sheen level matched sample to segment — and then inspected the way the client would one day see it: under raking light, from every angle the lobby offers.",
+        "The inspection recorded each segment against the numbered drawings: surface, seam, edge and fixing zone. Anything short of the sample was reworked before the column came apart for packing — because after packing, every extra touch costs a scaffold move."
+      ],
+      "image": {
+        "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/43-finished-surface-raking-light.webp",
+        "alt": "The finished surface checked under raking light against the scaffold",
+        "caption": "Raking light. Surface and seams inspected under the same light the lobby will use."
+      },
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/44-final-surface-sheen.webp",
+          "alt": "Seam and surface under work lights",
+          "caption": "Final surface. Grain and sheen matched to the sealed samples."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/45-sheen-consistency-segment-to-segment.webp",
+          "alt": "Surface and seam in warm workshop light",
+          "caption": "Sheen consistency. Finish level matched segment to segment."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/46-seam-after-final-finishing.webp",
+          "alt": "Horizontal seam after final finishing",
+          "caption": "Seam after finishing. Weld line dressed to the surrounding sheen."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/47-top-of-column-inspection.webp",
+          "alt": "Surface and scaffold at the top of the column",
+          "caption": "Top-of-column check. Crown surface inspected at full height."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/48-segment-signed-off-by-number.webp",
+          "alt": "Vertical seam under bright inspection light",
+          "caption": "Recorded against drawings. Each segment signed off by its number before disassembly."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Inspect the column before it comes apart, not after it goes up. Factory rework costs a bench; site rework costs a scaffold."
+        }
+      ]
+    },
+    {
+      "id": "stage-12-logistics",
+      "title": "Packing for Export",
+      "navLabel": "Stage 12 · Logistics",
+      "paragraphs": [
+        "Double-curved shells are fragile in ways flat panels are not: their stiffness is directional and their surfaces are sacred. Each shell section was wrapped in protective film, foam-cushioned and seated into a custom plywood crate with fitted slots, so the segments travelled exactly as they had been trial-assembled — in order, in position, protected on every face.",
+        "The packing plan was written backwards from the site: the first section the installer needs is the last one packed, so the crate opens into the installation sequence."
+      ],
+      "image": {
+        "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/49-export-packing-fitted-crate.webp",
+        "alt": "Curved shell segment packed in a plywood crate with fitted foam slots",
+        "caption": "Export packing. Shell sections filmed, cushioned and seated in fitted crates, packed in reverse installation order."
+      },
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Pack the column the way it will be unpacked. A crate that opens into the installation sequence turns site logistics into a checklist."
+        }
+      ]
+    },
+    {
+      "id": "stage-13-logistics",
+      "title": "Container Loading and Shipping to Hong Kong",
+      "navLabel": "Stage 13 · Logistics",
+      "paragraphs": [
+        "Crates were braced inside the container with timber and inflatable dunnage bags, load-planned so that nothing could shift against a curved surface, and shipped to Hong Kong, China under tracking — with the packing list, the numbered drawings and the sealed-sample reference travelling with the goods.",
+        "Clearing a CBD site like Murray Road means the delivery is a scheduled event: crate sizes were chosen to match the goods lift and the hoarding gate weeks earlier, during the site survey."
+      ],
+      "image": {
+        "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/50-container-loading-40ft.webp",
+        "alt": "Export crate braced and secured inside a 40ft container",
+        "caption": "Container loading. Crates braced with timber and dunnage bags, sized weeks earlier to fit the site's goods lift."
+      },
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "The crate dimensions were decided during the site survey, not at the loading dock. Logistics is part of the drawing."
+        }
+      ]
+    },
+    {
+      "id": "stage-14-site",
+      "title": "Site Installation",
+      "navLabel": "Stage 14 · Site",
+      "paragraphs": [
+        "On site, the substructure went up first, plumbed and fixed back to the building's structure. Then the skin: shell sections lifted, seated onto the adjustable fixings, and joined in the same numbered sequence proven in the factory.",
+        "Because every joint had been closed once before — at full scale, in the factory — site installation became alignment rather than fabrication: set the frame true, hang the segments, verify each seam against the line, and adjust at the brackets, not the metal."
+      ],
+      "image": {
+        "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/51-site-installation-lift-and-seat.webp",
+        "alt": "Installers guiding a curved panel onto a column on a CBD scaffold",
+        "caption": "Lift and seat. Shell sections guided onto the substructure from a scaffold platform."
+      },
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/52-site-seam-alignment.webp",
+          "alt": "Aligning a vertical joint on site with feeler gauge and mallet",
+          "caption": "Seam alignment. Joints set with shims and adjusted at the brackets — never reworked on the metal."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Site installation is the rehearsal you already did. When the mock-up is honest, the site is quiet."
+        }
+      ]
+    },
+    {
+      "id": "stage-15-quality-gate-4",
+      "title": "Client Acceptance and Handover",
+      "navLabel": "Stage 15 · Quality Gate 4",
+      "paragraphs": [
+        "Acceptance was a walk, a lamp and a checklist: seams read under raking light, surfaces compared against the sealed samples, fixings verified, protective film stripped in sequence, and every point recorded and signed. The column the client accepted was the column that had left the factory — not a reinterpretation of it.",
+        "Handover closed with the as-built set: numbered drawings, the installation record, the packing sequence, and the care instructions for the finish."
+      ],
+      "image": {
+        "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/53-client-acceptance-inspection.webp",
+        "alt": "Client and QC engineer inspecting a finished column seam in the completed lobby",
+        "caption": "Acceptance. Seams and surfaces checked under raking light against the sealed samples, then recorded and signed."
+      },
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Acceptance is not an event at the end; it is the sealed sample meeting its original, in the light the lobby actually uses."
+        }
+      ]
+    },
+    {
+      "id": "stage-16-aftercare",
+      "title": "Aftercare and Maintenance",
+      "navLabel": "Stage 16 · Aftercare",
+      "paragraphs": [
+        "The work did not end at signature. The finish was handed over with a simple care routine: clean along the grain with neutral agents, no abrasives, no chloride-bearing cleaners, and periodic inspection of the few seams that the building's cleaning cycle will touch.",
+        "A metal surface on a prime address is a living asset. Looked after on the grain, it keeps the exact sheen that was sealed in the sample four stages before the first segment was ever rolled."
+      ],
+      "image": {
+        "url": "https://media.guoyaometal.com/case-studies/murray-road-column-cladding/54-aftercare-along-the-grain.webp",
+        "alt": "Maintenance of the finished column along the grain in the completed lobby",
+        "caption": "Aftercare. Cleaning along the grain with neutral agents keeps the sealed sheen intact."
+      },
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "The finish was sealed at stage 04. The maintenance routine exists to keep that approval true for the life of the building."
+        }
+      ]
+    },
+    {
+      "id": "stage-map",
+      "title": "The Whole Journey at a Glance",
+      "navLabel": "Stage map",
+      "paragraphs": [
+        "The sixteen stages in the order the project actually ran, from the first inquiry to the aftercare routine — the checklist the work was planned, packed and installed against."
+      ],
+      "table": {
+        "caption": "The whole journey at a glance",
+        "headings": [
+          "Stage",
+          "Focus"
+        ],
+        "rows": [
+          [
+            "01 · Inquiry",
+            "Brief, renders and site constraints"
+          ],
+          [
+            "02 · Survey",
+            "Diameter, verticality, access"
+          ],
+          [
+            "03 · Drawings",
+            "Segmentation and flat patterns"
+          ],
+          [
+            "04 · Samples",
+            "Sealed curved finish samples"
+          ],
+          [
+            "05 · Material",
+            "Inbound inspection and traceability"
+          ],
+          [
+            "06 · Forming",
+            "Rolling to radius templates"
+          ],
+          [
+            "07 · Fit-up",
+            "Pair-wise trial fit and tacking"
+          ],
+          [
+            "08 · Mock-up",
+            "Full-scale factory assembly + video"
+          ],
+          [
+            "09 · Substructure",
+            "Ring frame, adjustable fixings"
+          ],
+          [
+            "10 · Seams",
+            "Weld, grind and dress to line"
+          ],
+          [
+            "11 · Finish & QC",
+            "Sealed-sample comparison"
+          ],
+          [
+            "12 · Packing",
+            "Fitted crates, reverse order"
+          ],
+          [
+            "13 · Shipping",
+            "Container to Hong Kong, China"
+          ],
+          [
+            "14 · Installation",
+            "Frame first, skin in sequence"
+          ],
+          [
+            "15 · Acceptance",
+            "Raking-light walk and sign-off"
+          ],
+          [
+            "16 · Aftercare",
+            "Care routine and inspection"
+          ]
+        ]
+      }
+    }
+  ],
+  "conclusion": "Guoyao Metalwork · Murray Road Column Cladding, Hong Kong, China — inquiry, design development, fabrication, mock-up, export packing, site installation and acceptance, documented stage by stage. Process descriptions are project case notes; every project is governed by its approved drawings and sealed samples.",
+  "relatedLinks": []
+}

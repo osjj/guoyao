@@ -1,0 +1,26 @@
+{
+  "slug": "metalwork-packing-crating-process-and-defect-control",
+  "title": "Metalwork Packing and Crating: Process, Details and Defect Control",
+  "excerpt": "A process-level guide to packing and crating architectural metalwork for luxury retail, premium residences and hospitality projects: twelve main operations, six structural details, material layers, cost and damage data, and twelve defect controls.",
+  "category": "Packing & Logistics",
+  "status": "DRAFT",
+  "featured": false,
+  "coverImageAlt": "Illustrative packing scene: a vertical plywood crate lined with cushioning, holding protected architectural metalwork panels in a workshop.",
+  "sourceDir": "C:/Users/76758/WorkBuddy/2026-10-14-13-46-17/packing-images",
+  "keyPrefix": "blog/metalwork-packing-crating-process-and-defect-control",
+  "cover": {
+    "file": "01-scene-luxury-crate.png",
+    "keyTemplate": "blog/metalwork-packing-crating-process-and-defect-control/hero-{sha16}.webp"
+  },
+  "images": [
+    { "placeholder": "01", "file": "01-scene-luxury-crate.png", "key": "blog/metalwork-packing-crating-process-and-defect-control/01-scene-luxury-crate.webp" },
+    { "placeholder": "02", "file": "02-scene-residence-carton.png", "key": "blog/metalwork-packing-crating-process-and-defect-control/02-scene-residence-carton.webp" },
+    { "placeholder": "03", "file": "03-scene-hotel-steelframe.png", "key": "blog/metalwork-packing-crating-process-and-defect-control/03-scene-hotel-steelframe.webp" },
+    { "placeholder": "04", "file": "04-detail-crate-vertical.png", "key": "blog/metalwork-packing-crating-process-and-defect-control/04-detail-crate-vertical.webp" },
+    { "placeholder": "05", "file": "05-detail-carton-horizontal.png", "key": "blog/metalwork-packing-crating-process-and-defect-control/05-detail-carton-horizontal.webp" },
+    { "placeholder": "06", "file": "06-detail-steel-frame.png", "key": "blog/metalwork-packing-crating-process-and-defect-control/06-detail-steel-frame.webp" },
+    { "placeholder": "07", "file": "07-detail-corner-protection.png", "key": "blog/metalwork-packing-crating-process-and-defect-control/07-detail-corner-protection.webp" },
+    { "placeholder": "08", "file": "08-detail-layer-separation.png", "key": "blog/metalwork-packing-crating-process-and-defect-control/08-detail-layer-separation.webp" },
+    { "placeholder": "09", "file": "09-detail-labeling-system.png", "key": "blog/metalwork-packing-crating-process-and-defect-control/09-detail-labeling-system.webp" }
+  ]
+}

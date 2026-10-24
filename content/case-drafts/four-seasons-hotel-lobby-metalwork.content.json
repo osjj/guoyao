@@ -1,0 +1,593 @@
+{
+  "introduction": "Case Study · Guoyao Metalwork. From Inquiry to Acceptance: the Full Delivery Story. Illuminated brass display vitrines, hammered brass consoles, marble-top service stations, a dark green lacquered back-bar wall and loose furniture for a Five-Star luxury hotel lobby, delivered end to end by one factory. Eighteen documented stages — from the first FF&E inquiry and the millimetre site survey through fabrication, backlight tuning, export packing and lobby installation to final acceptance and aftercare — each stage backed by its own factory or site photographs, exactly as the work happened. Client · International five-star hotel operator | Scope · Lobby FF&E metalwork + display joinery | Surfaces · Hammered brass, green lacquer, marble, glass | Delivery · Factory trial build → export crates → lobby installation",
+  "stats": [
+    {
+      "value": "18",
+      "label": "stages documented end to end"
+    },
+    {
+      "value": "33",
+      "label": "project & factory photographs"
+    },
+    {
+      "value": "6",
+      "label": "furniture families fabricated & delivered"
+    },
+    {
+      "value": "100%",
+      "label": "units trial-assembled before packing"
+    },
+    {
+      "value": "1",
+      "label": "sealed finish reference for the whole package"
+    },
+    {
+      "value": "0",
+      "label": "factory rework after handover"
+    }
+  ],
+  "sections": [
+    {
+      "id": "stage-01-inquiry",
+      "title": "The Inquiry: A Lobby That Cannot Look Ordinary",
+      "navLabel": "Stage 01 · Inquiry",
+      "paragraphs": [
+        "The email arrived from the hotel's regional FF&E procurement team with the directness of a group that opens hotels on fixed dates. A new lobby fit-out for a Five-Star property operating to Four Seasons-level standards needed a bespoke metalwork and display-furniture package: illuminated brass display vitrines for the lobby retail alcove, hammered brass console tables, marble-top service stations, a dark green lacquered back-bar display wall, and a set of loose tables and a fluted-glass screen — all fabricated by one factory, all finish-matched, all delivered against a non-negotiable installation window. Reference images showed the register they were after: warm glowing brass against deep green lacquer, the quiet luxury register of the world's best hotel lobbies.",
+        "We answered within twenty-four hours with the three commitments that win projects like this: yes, vitrines, consoles, back-bar joinery and loose furniture can come from one factory with one finish standard, so no interface between brass, lacquer, glass and stone is anyone else's problem; yes, every unit would be trial-assembled and lit in our workshop before a single crate was packed; and yes, we would hold the installation window as the fixed point around which everything else was planned. A kickoff call with the interior designer's FF&E consultant followed, and the package began the way it would run — with samples, drawings and the schedule on one table."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/01-gy-kickoff.webp",
+          "alt": "The kickoff meeting.",
+          "caption": "The kickoff meeting. The hotel's FF&E representative and our engineers over the lobby elevation, with hammered brass and dark green lacquer samples and a backlit sample box on the table — the conversation where scope, finishes and the fixed installation window were agreed together."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Inquiry answered in 24 hours: one-factory scope covering vitrines, consoles, back-bar joinery and loose furniture, with a fixed installation window."
+        }
+      ]
+    },
+    {
+      "id": "stage-02-measurement",
+      "title": "Site Survey and the Dimensional Baseline",
+      "navLabel": "Stage 02 · Measurement",
+      "paragraphs": [
+        "In a live five-star lobby, nothing forgives a wrong dimension, so before any brass was cut we surveyed the space on site. The team recorded more than widths and lengths: floor level variations along every furniture position, the exact alcove reveals where the display vitrines would sit, power supply points for the backlit cases and the back-bar lighting, service corridor widths and lift depths — the dimensions that would later decide how large a crate could be and how a two-metre console would turn the last corner.",
+        "Every measurement was taken twice, by two people, and the marked-up set went straight into the survey report. Where the screed showed deviations — and it did, as every real building does — we measured them rather than averaging them away, because each console meets the stone at its own point, not on average. The signed report became the dimensional baseline for every shop drawing; when a question about 'whose dimension' came up later, the answer was always the same document."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/02-gy-survey.webp",
+          "alt": "Site survey inside the lobby under fit-out.",
+          "caption": "Site survey inside the lobby under fit-out. Laser meter, tape checks and a marked-up drawing — recording alcove reveals, floor levels and power points rather than three overall dimensions."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Furniture positions surveyed to the millimetre; signed survey report issued as the single dimensional baseline for all shop drawings."
+        }
+      ]
+    },
+    {
+      "id": "stage-03-design",
+      "title": "Design Development and Shop Drawings",
+      "navLabel": "Stage 03 · Design",
+      "paragraphs": [
+        "The designer's intent showed the effect; our shop drawings had to make it buildable. The engineering team turned the survey into a complete fabrication package: the vitrine family with its brass frame sections, glass sizes and LED layouts; the hammered brass consoles with their base details and stone substrate build-ups; the back-bar wall broken into numbered modules that could pass through the service lift; the service stations with their marble tops, brass lettering and twin cupboard doors; and the loose tables with the turned, colour-lacquered legs the designer had sketched. Every part carried a reference that would stay engraved or labelled on the component for life.",
+        "The package went to the designer and the hotel's projects team as a review set, came back with comments on reveal depths, glass edges and the back-bar shelf spacing, and went through two structured revision cycles — each resolved line by line and recorded on the sheet itself. The final drawings were issued for construction with revision numbers on every page, and the workshop floor never worked from anything else. This is the quiet stage of an FF&E package, and it decides whether installation later feels routine or improvised."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/03-gy-cad.webp",
+          "alt": "Design development.",
+          "caption": "Design development. Shop drawings for the vitrines, consoles and green back-bar wall under revision on the CAD station, printed elevations pinned behind — every module numbered before the first length of brass was cut."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "IFC drawing package issued: vitrines, consoles, service stations, back-bar modules and loose furniture, all tied to the survey baseline."
+        }
+      ]
+    },
+    {
+      "id": "stage-04-approval",
+      "title": "Samples and Finish Approval",
+      "navLabel": "Stage 04 · Approval",
+      "paragraphs": [
+        "A lobby reads at a glance, so samples were built the way the furniture would be built. We produced hammered brass samples at the specified gold tone, dark green lacquer panels at the specified sheen, fluted and clear glass pieces, a marble-edge sample matched to the stone supplier, and a backlit sample box showing the LED glow through the vitrine glass at the real viewing distance. Each sample was labelled, referenced to its drawing, and mounted in the sealed sample box that travelled to the designer and the hotel's projects team.",
+        "The review focused on four things: the tone of the brass under both lit and unlit conditions, the depth and rhythm of the hammer marks, the depth of the green without blackening in shadow, and the softness of the glow — warm enough to feel like candlelight, diffused enough that no LED point ever shows. One adjustment round on the lacquer sheen later, the samples were signed and sealed. The sealed box became the contractual finish reference: every production unit was inspected against it, not against a photograph."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/04-gy-sample.webp",
+          "alt": "The sealed sample set: hammered brass plates, the approved green lacquer panel, fluted glass and the backlit sample box glowing at true density — the contractual finish reference for every unit in…",
+          "caption": "The sealed sample set: hammered brass plates, the approved green lacquer panel, fluted glass and the backlit sample box glowing at true density — the contractual finish reference for every unit in the package."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Brass tone, lacquer sheen and backlight effect approved on sealed samples; production QC now checks every unit against the seal."
+        }
+      ]
+    },
+    {
+      "id": "stage-05-fabrication",
+      "title": "Brass Display Vitrines with Integrated Lighting",
+      "navLabel": "Stage 05 · Fabrication",
+      "paragraphs": [
+        "The display vitrines are the package's signature pieces — brass-framed cases with clear glass tops and sides, a warm LED cove washing the display deck, and the hammered texture catching light along every edge. Their fabrication is a brassworker's sequence: frame sections cut, hammered sheet wrapped and fastened, corners closed by hand so the texture flows around the joint, glass channels set dead straight, and the LED strip and driver concealed in the base plinth with a serviceable access panel.",
+        "Each vitrine was powered up on the bench before it ever met a crate: glow evenness checked from the customer distance, edges inspected for light leakage, switches and wiring strain-relieved. The photographs show the family in order — the tall cabinet case glowing warmly, the wide console-height vitrine with its glass top set, and a pair of cases staged together for a matched-brightness check. Consistency across the family mattered more than any single unit; a lobby reads them side by side, not one at a time."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/05-vitrine-backlit-tall.webp",
+          "alt": "A finished brass vitrine powered up in the workshop — the warm cove washing the display deck evenly, no LED points, no edge leakage.",
+          "caption": "A finished brass vitrine powered up in the workshop — the warm cove washing the display deck evenly, no LED points, no edge leakage."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/05-vitrine-backlit-wide.webp",
+          "alt": "Console-height vitrine with its clear glass top set into the brass frame; the hammered texture catches the glow along every edge.",
+          "caption": "Console-height vitrine with its clear glass top set into the brass frame; the hammered texture catches the glow along every edge."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/05-vitrine-backlit-pair.webp",
+          "alt": "Two vitrines staged together for a matched-brightness check — the lobby will read them side by side, so the workshop balances them side by side.",
+          "caption": "Two vitrines staged together for a matched-brightness check — the lobby will read them side by side, so the workshop balances them side by side."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Vitrine family fabricated and lit: glow balanced across all units against the sealed sample, wiring serviceable and labelled."
+        }
+      ]
+    },
+    {
+      "id": "stage-06-fabrication",
+      "title": "Hammered Brass Console Tables",
+      "navLabel": "Stage 06 · Fabrication",
+      "paragraphs": [
+        "The hammered brass consoles carry the lobby's silhouette — slim rectangular frames on splayed legs, the whole surface worked by hand. Their fabrication starts from flat brass sheet and square tube: frames cut and mitred, hammer texture applied with the specified peen, edges rolled and softened, joints closed and dressed until the seam disappears into the texture. The photographs follow one console through the sequence — the corner where two hammered faces meet, the frame tacked square on the bench, the leg set offered up, and the glass shelf sliding into its channel.",
+        "Consistency is the test on hammered work. Every face was checked against the sealed sample for tone and peen density, and the frames were squared to tolerance before welding so the finished consoles stand true without shimming. Each unit carries its engraved reference matching the drawing and the packing list — so a console uncrated in the lobby weeks later is exactly the unit the drawings described."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/06-console-hammered-corner.webp",
+          "alt": "The corner of a hammered brass console: two hand-worked faces meeting in one continuous texture — the detail the designer examined longest at sample stage.",
+          "caption": "The corner of a hammered brass console: two hand-worked faces meeting in one continuous texture — the detail the designer examined longest at sample stage."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/06-console-frame-assembly.webp",
+          "alt": "Console frame tacked square on the bench.",
+          "caption": "Console frame tacked square on the bench. Squareness here decides whether the finished table stands true on the stone without shims."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/06-console-under-assembly.webp",
+          "alt": "Legs and rails coming together — hammered faces already finished, protected during assembly so the texture arrives in the lobby as it left the bench.",
+          "caption": "Legs and rails coming together — hammered faces already finished, protected during assembly so the texture arrives in the lobby as it left the bench."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/06-console-glass-shelf.webp",
+          "alt": "The glass shelf sliding into its channel: clear glass, straight setting, edges dressed so nothing scratches the brass it sits in.",
+          "caption": "The glass shelf sliding into its channel: clear glass, straight setting, edges dressed so nothing scratches the brass it sits in."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/06-console-glass-top.webp",
+          "alt": "A finished console with its glass top set — the silhouette the lobby will read: slim brass frame, hammered faces, one clean plane of glass.",
+          "caption": "A finished console with its glass top set — the silhouette the lobby will read: slim brass frame, hammered faces, one clean plane of glass."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Console family fabricated: hammered texture matched to the seal, frames square, glass set, every unit engraved and referenced."
+        }
+      ]
+    },
+    {
+      "id": "stage-07-fabrication",
+      "title": "Marble-Top Consoles and Service Stations",
+      "navLabel": "Stage 07 · Fabrication",
+      "paragraphs": [
+        "Not everything in the lobby is on display; much of it works. The package included a long marble-top console for the lobby's service run, a matching counter with a woven brass mesh shelf below, and the housekeeping service stations — brass-framed cabinets with white marble tops, dark green lacquered twin doors lettered in brass for RECYCLING and RUBBISH, and a woven panel that lets the furniture disappear into the architecture while staying instantly usable.",
+        "The stone and the metal had to meet perfectly, so the marble tops were templated against the actual brass frames rather than nominal dimensions, and every top was dry-fit before polishing. Door gaps were set to the same reveal across all stations, brass lettering aligned to the door axes, and the woven panels tensioned flat. These are the pieces guests never photograph and always use — which is exactly why their tolerances were treated as display-grade."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/07-marble-console-long.webp",
+          "alt": "The long marble-top console dry-fitted in the workshop: stone templated against the actual brass frame, not a nominal dimension.",
+          "caption": "The long marble-top console dry-fitted in the workshop: stone templated against the actual brass frame, not a nominal dimension."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/07-long-bar-counter-marble.webp",
+          "alt": "Counter with its woven brass mesh shelf below — service function dressed as joinery, standing on protective blocks awaiting top polishing.",
+          "caption": "Counter with its woven brass mesh shelf below — service function dressed as joinery, standing on protective blocks awaiting top polishing."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/07-service-station-marble.webp",
+          "alt": "The housekeeping service station: brass frame, marble top, green lacquered doors with brass RECYCLING and RUBBISH lettering, woven panel flat and true.",
+          "caption": "The housekeeping service station: brass frame, marble top, green lacquered doors with brass RECYCLING and RUBBISH lettering, woven panel flat and true."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Marble-top consoles and service stations built: stone dry-fit to actual frames, door reveals matched, brass lettering aligned."
+        }
+      ]
+    },
+    {
+      "id": "stage-08-joinery",
+      "title": "The Green Lacquer Back-Bar Display Wall",
+      "navLabel": "Stage 08 · Joinery",
+      "paragraphs": [
+        "The back-bar display wall is the package's largest single element: a full-height composition of dark green lacquered shelving, brass trims and a central brass-faced counter beam, built as numbered modules so it could be trial-assembled in the workshop and pass through the building's service lift in pieces. The photographs show its build in order — individual shelf units in the spray booth sequence, brass trims fitted to module edges, the full wall stood and squared against a level line, the counter module set, and the low cabinet runs completing the composition.",
+        "Lacquer is where joinery honesty shows. Every module was sanded between coats, colour-checked under both daylight and warm light against the sealed panel, and inspected for orange peel or shadow lines at the brass interfaces. Module-to-module joints were numbered and matched so the wall would reassemble in the lobby with continuous shelf lines — the workshop's trial assembly is the reason the site install took hours instead of days."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/08-backbar-unit-shelves.webp",
+          "alt": "A back-bar module fresh through its lacquer sequence — deep green, edges trimmed in brass, shelves set square before hardware goes on.",
+          "caption": "A back-bar module fresh through its lacquer sequence — deep green, edges trimmed in brass, shelves set square before hardware goes on."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/08-backbar-unit-detail.webp",
+          "alt": "Brass trim detail at a module edge: the two materials meeting with a hairline reveal, checked against the sealed sample under raking light.",
+          "caption": "Brass trim detail at a module edge: the two materials meeting with a hairline reveal, checked against the sealed sample under raking light."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/08-backbar-wall-assembly.webp",
+          "alt": "The full back-bar wall stood and squared in the workshop — numbered modules trial-assembled so the lobby install is a repeat, not a rehearsal.",
+          "caption": "The full back-bar wall stood and squared in the workshop — numbered modules trial-assembled so the lobby install is a repeat, not a rehearsal."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/08-backbar-counter.webp",
+          "alt": "The central counter beam set into the wall composition, brass face to the room, lacquer reveals even across the junction.",
+          "caption": "The central counter beam set into the wall composition, brass face to the room, lacquer reveals even across the junction."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/08-backbar-cabinets.webp",
+          "alt": "The low cabinet run completing the wall — doors aligned to the same reveal standard as the service stations.",
+          "caption": "The low cabinet run completing the wall — doors aligned to the same reveal standard as the service stations."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Back-bar wall trial-assembled in modules: lacquer and brass matched to the seal, module joints numbered for a continuous reassembly on site."
+        }
+      ]
+    },
+    {
+      "id": "stage-09-furniture",
+      "title": "Side Tables and the Fluted-Glass Screen",
+      "navLabel": "Stage 09 · Furniture",
+      "paragraphs": [
+        "The smaller pieces give the lobby its conversational corners: side tables with turned, colour-lacquered legs — one deep green, one dusty rose — carrying stone and timber tops, and a folding screen framed in brass with fluted glass panels that blur and warm whatever passes behind it. Small pieces are where proportion lives: leg turnings were profiled to the approved sample, tops set with a consistent overhang, and the screen's brass hinges adjusted so it folds flat and stands rigid.",
+        "Every loose piece was finish-matched to the same sealed box as the big joinery — the same brass tone, the same green. That consistency is what makes a lobby read as one designed interior rather than a collection of furniture, and it is only achievable when one factory holds the whole finish standard."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/09-side-tables-pair.webp",
+          "alt": "The side-table pair: turned lacquered legs in green and rose under stone and timber tops — proportion checked against the approved profile before packing.",
+          "caption": "The side-table pair: turned lacquered legs in green and rose under stone and timber tops — proportion checked against the approved profile before packing."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/09-side-table-detail.webp",
+          "alt": "A leg turning in close view: the lacquer depth even, the shoulder where turning meets top machined clean.",
+          "caption": "A leg turning in close view: the lacquer depth even, the shoulder where turning meets top machined clean."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Loose furniture finished and finish-matched to the sealed box; screen folds flat, stands rigid, hinges adjusted."
+        }
+      ]
+    },
+    {
+      "id": "stage-10-lighting",
+      "title": "Backlight Tuning in the Workshop",
+      "navLabel": "Stage 10 · Lighting",
+      "paragraphs": [
+        "The glow is the product, so before packing we lit the whole vitrine family together and tuned it as a set. Driver settings, diffuser position and colour temperature were adjusted while the cases were watched from the distance a guest actually stands at — then photographed and logged. Warm white for the retail register, with headroom in the drivers should the hotel's lighting consultant later specify a scene change.",
+        "The tuning session produced the numbers that travelled with the crates: brightness per unit, colour temperature, and the driver positions in the serviceable plinths. The close-up photographs from the session show what the hotel bought — an even wash of warm light behind clear glass, the hammered brass edges catching the glow, no LED point anywhere. What was approved in the workshop is exactly what ships."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/10-vitrine-glow-evenness.webp",
+          "alt": "The vitrine family lit together for tuning — evenness checked from the guest distance, unit by unit, and logged.",
+          "caption": "The vitrine family lit together for tuning — evenness checked from the guest distance, unit by unit, and logged."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/10-vitrine-glow-night.webp",
+          "alt": "A case photographed at full warmth in a darkened corner of the workshop: the register the lobby will carry after dark.",
+          "caption": "A case photographed at full warmth in a darkened corner of the workshop: the register the lobby will carry after dark."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/10-vitrine-glow-detail.webp",
+          "alt": "Close-up of the lit edge — hammered brass catching the cove glow, diffuser doing its work, no visible source.",
+          "caption": "Close-up of the lit edge — hammered brass catching the cove glow, diffuser doing its work, no visible source."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Backlight tuned and logged as a family: brightness, colour temperature and driver settings recorded as the commissioning baseline."
+        }
+      ]
+    },
+    {
+      "id": "stage-11-quality",
+      "title": "Final Quality Inspection",
+      "navLabel": "Stage 11 · Quality",
+      "paragraphs": [
+        "Before packing, every unit passed a documented final inspection against the sealed samples and the IFC drawings. Vitrines were checked for glow evenness, glass setting and frame tone; consoles for hammered texture, squareness and edge dressing; service stations for door reveals and lettering alignment; the back-bar modules for lacquer depth, brass reveals and shelf lines; loose furniture for proportion and finish. Each item was recorded on the QC sheet with the inspector's initials — a record that travels with the crates.",
+        "Nothing was approved from memory. Every judgement was made against the sealed sample or the drawing, and signed. The result was a packing list with no exceptions — the quiet precondition for the installation that followed."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/11-gy-qc.webp",
+          "alt": "Final inspection under the work lamp: a vitrine checked item by item against the QC sheet — glow, glass, frame tone — before it may be packed.",
+          "caption": "Final inspection under the work lamp: a vitrine checked item by item against the QC sheet — glow, glass, frame tone — before it may be packed."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "100% documented QC against sealed samples and IFC drawings; packing list closed with zero exceptions."
+        }
+      ]
+    },
+    {
+      "id": "stage-12-logistics",
+      "title": "Export Packing",
+      "navLabel": "Stage 12 · Logistics",
+      "paragraphs": [
+        "Furniture that survives a thousand-kilometre journey and a hotel's service corridor is packed, not lucky. Vitrines travelled in crate-built sub-frames with glass faces masked and corner-blocked; consoles were wrapped in foam and slid into plywood crates on edge; the back-bar wall broke down into its numbered modules, each crate-labelled with its position in the installation sequence; marble tops travelled in dedicated A-frames with the stone faces separated. Desiccant, edge protectors and isothermal blankets did the quiet work.",
+        "Every crate was labelled with its contents, its unit references and its position in the install sequence, so crates could be unloaded in reverse order of need. Packing lists were verified crate by crate against the QC sheets before the seals went on."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/12-gy-packing.webp",
+          "alt": "A wrapped console entering its plywood crate — foam, edge protectors and desiccant in place, crate labelled to the installation sequence.",
+          "caption": "A wrapped console entering its plywood crate — foam, edge protectors and desiccant in place, crate labelled to the installation sequence."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "All units export-packed, crate-labelled by module and sequence, verified against the QC sheets before sealing."
+        }
+      ]
+    },
+    {
+      "id": "stage-13-logistics",
+      "title": "Container Loading and Site Delivery",
+      "navLabel": "Stage 13 · Logistics",
+      "paragraphs": [
+        "The crates left the factory on schedule. Container loading followed the loading plan — heavy back-bar modules on the floor, vitrines and consoles braced upright, marble A-frames racked — with every crate blocked and strapped so nothing shifted in transit. The container was sealed with its packing list photographed into the record, and the hotel's receiving team got the unloading sequence in advance.",
+        "At the destination the sequence reversed: crates moved through the service corridor on protected trolleys, floor protection laid ahead of every move, and each crate staged outside the lobby in the order the installation needed it. Delivery to programme is part of the product. Ours arrived whole, on plan, and in the right order."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/13-gy-stuffing.webp",
+          "alt": "Container loading at the factory: crates guided up the ramp onto a padded deck, blocked and strapped to the loading plan before sealing.",
+          "caption": "Container loading at the factory: crates guided up the ramp onto a padded deck, blocked and strapped to the loading plan before sealing."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Delivered to programme: container loaded to plan, sealed and recorded; crates staged at the lobby in installation order."
+        }
+      ]
+    },
+    {
+      "id": "stage-14-site",
+      "title": "Installation in the Lobby",
+      "navLabel": "Stage 14 · Site",
+      "paragraphs": [
+        "Installation ran the way the workshop had rehearsed it. The back-bar wall went up first — modules numbered and matched, shelf lines reading continuous across the joints, brass trims aligned to the millimetre — then the service stations at their surveyed positions, then the vitrines and consoles, white gloves and felt sliders, every unit meeting the stone at its own measured point.",
+        "Because every unit was engraved, packed and staged in this same order, the crew never hunted for a part; the next crate was always the right crate. The photographs from the install show the quiet kind: furniture positioned once, protection down, no improvisation — the visible half of weeks of workshop discipline."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/14-gy-install.webp",
+          "alt": "Positioning a vitrine in the lobby: white gloves, felt sliders, protection down — the sequence rehearsed in the workshop, repeated on site.",
+          "caption": "Positioning a vitrine in the lobby: white gloves, felt sliders, protection down — the sequence rehearsed in the workshop, repeated on site."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Lobby installed to the rehearsed sequence: back-bar wall continuous, furniture set at surveyed positions, zero rework required."
+        }
+      ]
+    },
+    {
+      "id": "stage-15-site",
+      "title": "Leveling, Joints and Stone Alignment",
+      "navLabel": "Stage 15 · Site",
+      "paragraphs": [
+        "Five-star lobbies are inspected at floor level, so after positioning, every unit was leveled and aligned to the stone. Shims went under console feet where the screed had its honest deviations; door reveals on the service stations were re-set to the workshop standard; the back-bar wall was plumbed and its counter beam re-checked against the finished floor line. Gaps between furniture and stone joints were made to read deliberate, because in a lobby of this register the eye measures everything.",
+        "The alignment pass is invisible when it is done well — and that is the deliverable. The unit the guest leans on does not rock; the vitrine glass reflects one continuous room; the green wall meets the ceiling in one even shadow line. This is the stage that turns good fabrication into an interior that feels inevitable."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/15-gy-leveling.webp",
+          "alt": "Leveling a console at the stone joint: shims set, spirit level centred — the invisible pass that makes the furniture read as built-in.",
+          "caption": "Leveling a console at the stone joint: shims set, spirit level centred — the invisible pass that makes the furniture read as built-in."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "All units leveled, plumbed and aligned to the stone: reveals even, joints deliberate, nothing rocking, nothing improvised."
+        }
+      ]
+    },
+    {
+      "id": "stage-16-commissioning",
+      "title": "Lighting Commissioning and Evening Inspection",
+      "navLabel": "Stage 16 · Commissioning",
+      "paragraphs": [
+        "A backlit package is finally judged after dark, so commissioning waited for the evening. The vitrines and back-bar lighting were driven to the workshop baseline — brightness, colour temperature, evenness — and inspected from the lobby floor at the guest distance: glow across every deck, the green lacquer reading depth rather than blackness under the warm light, edge leakage checked against the darkened reception.",
+        "Each reading was checked against the numbers logged in the workshop and signed on site. The cases that had been tuned on a workshop bench now stood in a finished lobby, glowing exactly as approved — the workshop's numbers, verified in architecture."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/16-gy-night-commissioning.webp",
+          "alt": "Evening commissioning: the vitrine glow checked against the workshop baseline while the back-bar wall reads depth under warm light.",
+          "caption": "Evening commissioning: the vitrine glow checked against the workshop baseline while the back-bar wall reads depth under warm light."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Night commissioning passed: glow, colour and evenness verified against the workshop baseline and signed in the lobby."
+        }
+      ]
+    },
+    {
+      "id": "stage-17-handover",
+      "title": "Final Acceptance",
+      "navLabel": "Stage 17 · Handover",
+      "paragraphs": [
+        "Acceptance closed the package the way the inquiry had opened it — face to face, with everything on the table. The hotel's projects manager and our project lead walked the lobby together: brass tone under the finished lighting scheme, lacquer depth, stone meeting metal, door actions, drawer actions, glow. The punch list from the walk was short and closed within a day; acceptance was signed against the sealed samples, the QC records and the commissioning log — the same documents that had travelled with the crates.",
+        "There is a particular confidence in signing acceptance on work that was trial-assembled before it left the factory: nothing discovered on site needed a factory fix, because the factory had already met every unit. The walk confirmed what the process had built — and the lobby opened on the date the schedule had fixed in week one."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/17-gy-acceptance.webp",
+          "alt": "The acceptance walk: hotel projects manager and our project lead through the finished lobby with the punch list, against the sealed samples and the commissioning log.",
+          "caption": "The acceptance walk: hotel projects manager and our project lead through the finished lobby with the punch list, against the sealed samples and the commissioning log."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Accepted and signed: punch list closed within a day, zero factory rework, opening date held."
+        }
+      ]
+    },
+    {
+      "id": "stage-18-care",
+      "title": "Aftercare and Maintenance Handover",
+      "navLabel": "Stage 18 · Care",
+      "paragraphs": [
+        "Handover included the aftercare package: cleaning and polishing guidance for the hammered brass, lacquer-safe maintenance for the green joinery, the lamp and driver replacement procedure for the vitrines with labelled spares, the door and runner adjustment schedule for the service stations, and the sealed sample set retained as the reference for any future extension of the property's FF&E.",
+        "The aftercare routine is what keeps a lobby looking like week one for years: brass polished to its approved tone, glow maintained at its commissioned baseline, reveals kept true. The photographs from the first service visit are the package's last promise kept — the furniture performing, quietly, as background architecture for the hotel's daily life."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/four-seasons-hotel-lobby-metalwork/18-gy-aftercare.webp",
+          "alt": "Aftercare in practice: brass polished to the approved tone on the first scheduled service visit — the maintenance the furniture was designed to receive.",
+          "caption": "Aftercare in practice: brass polished to the approved tone on the first scheduled service visit — the maintenance the furniture was designed to receive."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Aftercare package delivered: maintenance schedules, labelled spares and the sealed samples retained as the permanent finish reference."
+        }
+      ]
+    },
+    {
+      "id": "stage-map",
+      "title": "Stage Map — 18 Steps, One Delivery",
+      "navLabel": "Stage map",
+      "paragraphs": [
+        "The whole journey: the eighteen stages in the order the project actually ran, from the first inquiry to the aftercare routine — the checklist the work was planned, packed, installed and accepted against."
+      ],
+      "table": {
+        "caption": "Stage Map — 18 Steps, One Delivery",
+        "headings": [
+          "Stage",
+          "Focus"
+        ],
+        "rows": [
+          [
+            "01 · Inquiry & Kickoff",
+            "One-factory scope, finishes and fixed window agreed"
+          ],
+          [
+            "02 · Site Survey",
+            "Millimetre baseline, signed survey report"
+          ],
+          [
+            "03 · Shop Drawings",
+            "IFC package: vitrines, consoles, back bar, loose furniture"
+          ],
+          [
+            "04 · Samples & Approval",
+            "Sealed brass, lacquer and backlight reference"
+          ],
+          [
+            "05 · Display Vitrines",
+            "Brass frames, glass and integrated LED, glow-balanced"
+          ],
+          [
+            "06 · Hammered Brass Consoles",
+            "Texture matched to seal, frames squared"
+          ],
+          [
+            "07 · Marble Service Stations",
+            "Stone dry-fit to actual frames, reveals matched"
+          ],
+          [
+            "08 · Green Back-Bar Wall",
+            "Numbered modules trial-assembled for continuous lines"
+          ],
+          [
+            "09 · Loose Furniture & Screen",
+            "Proportion and finish matched to the sealed box"
+          ],
+          [
+            "10 · Backlight Tuning",
+            "Family brightness and colour logged as baseline"
+          ],
+          [
+            "11 · Final QC",
+            "100% documented against sealed samples"
+          ],
+          [
+            "12 · Export Packing",
+            "Crate-by-crate verified, sequence-labelled"
+          ],
+          [
+            "13 · Shipping & Delivery",
+            "Container to plan; crates staged in install order"
+          ],
+          [
+            "14 · Lobby Installation",
+            "Rehearsed sequence executed on site"
+          ],
+          [
+            "15 · Leveling & Alignment",
+            "Every unit true to the stone"
+          ],
+          [
+            "16 · Night Commissioning",
+            "Glow verified against workshop baseline"
+          ],
+          [
+            "17 · Final Acceptance",
+            "Punch list closed within a day"
+          ],
+          [
+            "18 · Aftercare",
+            "Maintenance package and sealed samples handed over"
+          ]
+        ]
+      }
+    }
+  ],
+  "conclusion": "GUOYAO METALWORK · Bespoke hotel FF&E metalwork, display vitrines & joinery. Case study photographs are project records; every project is governed by its approved drawings and sealed samples.",
+  "relatedLinks": []
+}

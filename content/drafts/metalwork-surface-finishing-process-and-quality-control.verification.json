@@ -1,0 +1,309 @@
+{
+  "wordCount": 3953,
+  "blocks": 211,
+  "blockTypes": {
+    "paragraph": 43,
+    "list": 55,
+    "header": 58,
+    "image": 45,
+    "quote": 10
+  },
+  "bodyImages": 45,
+  "sourceSha256": "b76f43a2ddde0998bcfac96d9b515c88480802742b6943a64fcea9ab69b274bb",
+  "contentSha256": "ee85a7d0b51a5854c3218580ab5d7276f66b92fed60016ed18b7c26e697efde8",
+  "readbackSha256": "ee85a7d0b51a5854c3218580ab5d7276f66b92fed60016ed18b7c26e697efde8",
+  "contentMatches": true,
+  "localValidation": true,
+  "assets": [
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/hero-2f09fb6d5315b30b.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/hero-2f09fb6d5315b30b.webp",
+      "sha256": "2f09fb6d5315b30bbfe2cee5c834f3e13bdf9a15c539e9b0f5d76cf9dda6cbcc",
+      "bytes": 171178
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/01-spray-booth-electrostatic.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/01-spray-booth-electrostatic.webp",
+      "sha256": "e1c4dcac26a2c6de10e83fff3b79197971db69ec71d64290b78975fca6fca8a2",
+      "bytes": 132352
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/02-8k-mirror-polish.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/02-8k-mirror-polish.webp",
+      "sha256": "934d53edd67e887a0cc5a0e9de5905549cb2250aa33c27774bda5fbb1594ad73",
+      "bytes": 34484
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/03-long-grain-brushed.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/03-long-grain-brushed.webp",
+      "sha256": "340aca1b31c4a0c9ec290befca23c3f626f73c8770a5126bf552d2cc9829813e",
+      "bytes": 269840
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/04-pvd-gold-titanium.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/04-pvd-gold-titanium.webp",
+      "sha256": "ae65ed4c342879b8fc831d2e1fd777cf9d59d22ab0cdc5b880f6086b995f9afc",
+      "bytes": 56134
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/05-gloss-scale-panels.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/05-gloss-scale-panels.webp",
+      "sha256": "2136894ad1bcb6c39cba29c3f98947e4e379bd0abea78c798457a0e678ad39fd",
+      "bytes": 179952
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/06-four-finish-panels.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/06-four-finish-panels.webp",
+      "sha256": "c699d8cdd9ad9b7507298217ac4ebefc855e27b27e02afb13398f393d0971a6b",
+      "bytes": 116092
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/07-spray-pre-treatment-line.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/07-spray-pre-treatment-line.webp",
+      "sha256": "cae78bacb937489d5076d7d6606cebc8c18a2f5f65a8580454b67761430a6b9a",
+      "bytes": 212402
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/08-alkaline-degreasing-tank.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/08-alkaline-degreasing-tank.webp",
+      "sha256": "6fc8f1d98d069ec3e1b90334bd05db74ea794cf7f39a6c1ee82b1785ec215eca",
+      "bytes": 146614
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/09-dust-free-spray-booth.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/09-dust-free-spray-booth.webp",
+      "sha256": "9468f4377558e0f67d851071eaeacb5a697827cf49bf520599eda0163cfd94e5",
+      "bytes": 117090
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/10-tunnel-curing-oven.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/10-tunnel-curing-oven.webp",
+      "sha256": "14b1547bfcd1d8bea33628670ea245e0e7ee428f28a311b23fc6409e25cadf44",
+      "bytes": 212884
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/11-coating-inspection.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/11-coating-inspection.webp",
+      "sha256": "d2e407bcfd5011b7dab23cbc25afe74996f2c577d2d2b8831452e0b5afc3b19c",
+      "bytes": 81500
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/12-spray-coating-cross-section.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/12-spray-coating-cross-section.webp",
+      "sha256": "d23d32b1076dd99f8b6ae616707aaa452bed6261cbca96f977b6a98fa946b1f6",
+      "bytes": 80474
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/13-wide-belt-coarse-grinding.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/13-wide-belt-coarse-grinding.webp",
+      "sha256": "b27f260ae8eac1b011a7a52a60df3ad39752d08dfa361e997d765d7ce07e2f8e",
+      "bytes": 145410
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/14-fine-wet-grinding.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/14-fine-wet-grinding.webp",
+      "sha256": "a9e89e08142ffe975185f040c68c810cc6645cc895b225b807c60aa852e90f59",
+      "bytes": 186194
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/15-sisal-wheel-buffing.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/15-sisal-wheel-buffing.webp",
+      "sha256": "9a218e97827320bd92f7177374d7f280aa1f36407c32cb93f06b9980192abd37",
+      "bytes": 129406
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/16-cloth-wheel-finishing.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/16-cloth-wheel-finishing.webp",
+      "sha256": "0d28a907e6af4e986c2307219f83dbf39ee190b88a9ad6c887a0ba2759d79186",
+      "bytes": 163670
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/17-8k-mirror-reflection-test.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/17-8k-mirror-reflection-test.webp",
+      "sha256": "993c975e509b352017f2dcd4dbae457367139ebe3a671733965918894131ed2c",
+      "bytes": 62790
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/18-polish-grades-comparison.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/18-polish-grades-comparison.webp",
+      "sha256": "f5cb459d56a949a25005e5fbb3d37e3ec2388b19d3fc57ccfba43e96686bb7ee",
+      "bytes": 98302
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/19-substrate-cleaning.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/19-substrate-cleaning.webp",
+      "sha256": "008aa7d2f81f5d02e7f3e743b08468a43ab4b1358e3472703cb0fda92c61f261",
+      "bytes": 122584
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/20-coarse-grain-setting.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/20-coarse-grain-setting.webp",
+      "sha256": "0d3fdbb7d04a0aa34100a662ef8525d8c82dc898f7723e6b332f1da63224833a",
+      "bytes": 144698
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/21-fine-grain-refining.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/21-fine-grain-refining.webp",
+      "sha256": "abe47b4f07932533dfe9bc8ed697cc9569e9c30da9dc2cd4e2502c4b11854aa9",
+      "bytes": 105602
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/22-grain-unifying.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/22-grain-unifying.webp",
+      "sha256": "bee0a5638bfb471dd3d9ffa29303dc340c3eb6df3424a310f167335fbc665b9b",
+      "bytes": 159180
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/23-brushed-texture-comparison.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/23-brushed-texture-comparison.webp",
+      "sha256": "9ac462cb150b54557987b076f973766581bbfdbca39935a7b345a2c46c8b9422",
+      "bytes": 213630
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/24-anti-fingerprint-coating-line.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/24-anti-fingerprint-coating-line.webp",
+      "sha256": "cd625ee53419e070550eceb2c884b69e137a7a846ea26df0e010475a1daeb1a9",
+      "bytes": 168694
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/25-ultrasonic-degreasing-line.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/25-ultrasonic-degreasing-line.webp",
+      "sha256": "545f7a2c5add5ceda86143c431a9e6950d38da4b8c85a67fea68be8ac7f8a139",
+      "bytes": 210184
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/26-ion-bombardment-cleaning.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/26-ion-bombardment-cleaning.webp",
+      "sha256": "dd30f9b4cdd3ffd4b9a9b38e6d6bedae284c402761070b225d292efc7cac03bc",
+      "bytes": 98232
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/27-multi-arc-ion-plating-furnace.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/27-multi-arc-ion-plating-furnace.webp",
+      "sha256": "0bc89238d083f22038f00c806240fb3124d70574b0e04d47a3f47f3109df2cec",
+      "bytes": 248410
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/28-pvd-titanium-colour-range.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/28-pvd-titanium-colour-range.webp",
+      "sha256": "46f122d75880eb3bcb571cbeb82318bfc31621ba2441c775a4d8e93a1f95d8a5",
+      "bytes": 202716
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/29-pvd-coating-cross-section.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/29-pvd-coating-cross-section.webp",
+      "sha256": "cfb205fd9a49817a702324e033b8c4ebf90286ba9c8eb5783fe7cc2df4b1f85a",
+      "bytes": 90024
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/30-anodising-line.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/30-anodising-line.webp",
+      "sha256": "66c8a11386308bd978823660857c714d7964e0e7470645b15accf70e0573c440",
+      "bytes": 265136
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/31-coating-inspection-pvd.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/31-coating-inspection-pvd.webp",
+      "sha256": "a339ab6da2ceb61dbfaeda91bb33869bade6044a4eff94e410604086ca2f3bff",
+      "bytes": 146820
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/32-luxury-boutique-combination.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/32-luxury-boutique-combination.webp",
+      "sha256": "f415d2963dc383b048a0b338463450f615e9f18b10a4e54fe3632eeb94fe41c7",
+      "bytes": 185344
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/33-premium-residence-combination.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/33-premium-residence-combination.webp",
+      "sha256": "f26637f22961c1387013f5d1f8f9d1d082bb0c95c48a362090761d93a1d3fd23",
+      "bytes": 149902
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/34-luxury-hotel-combination.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/34-luxury-hotel-combination.webp",
+      "sha256": "4d2d061b21d53a7cd1b3e7d03923d61f153ba872972e7c827d5e8783b95313cb",
+      "bytes": 107674
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/35-coating-thickness-measurement.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/35-coating-thickness-measurement.webp",
+      "sha256": "7e41215d8c994db4d2b4110fe762b798815372c352cd05446bc3c9c2f5516faa",
+      "bytes": 115616
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/36-colour-difference-comparison.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/36-colour-difference-comparison.webp",
+      "sha256": "7c776d2ce313915147acfc1e458a36a323f38a7bdbc452893b1b9a2b18ab8e61",
+      "bytes": 99002
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/37-gloss-measurement.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/37-gloss-measurement.webp",
+      "sha256": "01d4ae7520035935ce326ef08234f1bbceebf7fef9c33a877bee3f7e01394168",
+      "bytes": 80312
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/38-cross-hatch-adhesion-test.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/38-cross-hatch-adhesion-test.webp",
+      "sha256": "98212dedb263390c55504c7bb3328bda0587041e77a3ede099c66c5fd3cd7616",
+      "bytes": 149970
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/39-environment-safety-facilities.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/39-environment-safety-facilities.webp",
+      "sha256": "f711297cf864797fe2351b438787a0114c331b71ad1013714a438107f40c48e7",
+      "bytes": 204406
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/40-coating-peeling.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/40-coating-peeling.webp",
+      "sha256": "2feb26dfe0e0e36851643fd2952518d213f958e33a1a6416cf5bdb4e86ec4c68",
+      "bytes": 112954
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/41-orange-peel-sagging.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/41-orange-peel-sagging.webp",
+      "sha256": "c598467be69c0ec4ffe22c5cee433a5aab1828e6a46e5148d5129c28e3e03a69",
+      "bytes": 192904
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/42-haze-rings.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/42-haze-rings.webp",
+      "sha256": "80beec28f45acee166c8b7dcc1a8149cbbccce4666386031a16807adb743cfc9",
+      "bytes": 56128
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/43-mismatched-grain-direction.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/43-mismatched-grain-direction.webp",
+      "sha256": "a6f21802d876cb6c581f5cea0304f106aef85411f424142d9a08047849abc288",
+      "bytes": 99680
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/44-fingerprint-residue.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/44-fingerprint-residue.webp",
+      "sha256": "7a7bda9aeb7ac84be9a2f716f1082f883bacedbb6ab31408af268cb174f6536b",
+      "bytes": 236570
+    },
+    {
+      "key": "blog/metalwork-surface-finishing-process-and-quality-control/45-pvd-film-peeling-colour-drift.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/45-pvd-film-peeling-colour-drift.webp",
+      "sha256": "4f39ca17ad6b7f68a0d64d7f581488c6b1b351b6a18379313964c333e5a34f26",
+      "bytes": 73722
+    }
+  ],
+  "createdAt": "2026-10-14T17:19:43.017Z",
+  "databaseReadback": {
+    "id": "cmv8dkgl80000nsgh63gem7vs",
+    "title": "Metal Surface Finishing: The Complete In-Depth Process Guide — Spray, Polish, Brush and Electroplate in 4 Processes, 32 Sub-Processes, 12 Defect Types and 6 Inspection Groups",
+    "slug": "metalwork-surface-finishing-process-and-quality-control",
+    "status": "DRAFT",
+    "featured": false,
+    "publishedAt": null,
+    "readTimeMinutes": 20,
+    "bodyImages": 45,
+    "coverImage": "https://media.guoyaometal.com/blog/metalwork-surface-finishing-process-and-quality-control/hero-2f09fb6d5315b30b.webp",
+    "contentMatches": true,
+    "updatedAt": "2026-10-14T17:19:41.564Z"
+  }
+}

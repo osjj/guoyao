@@ -1,0 +1,364 @@
+{
+  "wordCount": 2256,
+  "blocks": 126,
+  "blockTypes": {
+    "paragraph": 36,
+    "list": 2,
+    "header": 17,
+    "image": 54,
+    "quote": 16,
+    "delimiter": 1
+  },
+  "bodyImages": 54,
+  "sourceSha256": "770a43d14676ec0b613342c2cbc80f3d06c779b353843f97d7e0f0dbd08985e3",
+  "contentSha256": "755819d66cd2096946241b6adb95d46e76da5bea6103d143294ad7ccd5da1385",
+  "readbackSha256": "755819d66cd2096946241b6adb95d46e76da5bea6103d143294ad7ccd5da1385",
+  "contentMatches": true,
+  "localValidation": true,
+  "assets": [
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/hero-2d4173d59371b856.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/hero-2d4173d59371b856.webp",
+      "sha256": "2d4173d59371b856f9590c85049bc48ded4777156c44cb352c06165b8dea648f",
+      "bytes": 252366
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/01-inquiry-and-design-briefing.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/01-inquiry-and-design-briefing.webp",
+      "sha256": "5aea70209f2c2c8fb6e3aa5102a71620b861fd09e5d145f7f735c817e9c1ed81",
+      "bytes": 162020
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/02-site-survey-laser-measurement.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/02-site-survey-laser-measurement.webp",
+      "sha256": "3dd115208d2b0eced7aa12039f418f801e4426d6f6b5f0b2435d3571c1510e26",
+      "bytes": 243646
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/03-shop-drawings-flat-patterns.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/03-shop-drawings-flat-patterns.webp",
+      "sha256": "3ceba855af976d62d17fd81ee7126a685b1e30c641f0cc3b0f5ff78a15cca2ac",
+      "bytes": 149538
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/04-sealed-curved-sample-approval.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/04-sealed-curved-sample-approval.webp",
+      "sha256": "bc2b642b6713ab7158601568d26c439856b2529cebaccb34158f84a94f42d941",
+      "bytes": 120752
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/05-inbound-stainless-sheet-inspection.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/05-inbound-stainless-sheet-inspection.webp",
+      "sha256": "edebdf95cf1b9f5b67af458342db9be806e687cccdc99180a117b886f19d54c2",
+      "bytes": 219328
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/06-rolled-curved-strips-laid-out.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/06-rolled-curved-strips-laid-out.webp",
+      "sha256": "0da0d01d6aad76e78d43f0359368796c492c2c416f48ae62b5d5094c27b8ddc1",
+      "bytes": 152744
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/07-large-curved-panel-segments.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/07-large-curved-panel-segments.webp",
+      "sha256": "cf6fca07736ca48099c3f3afc1e46bb7a4c9b2cc323b970424371b74c0ba47c5",
+      "bytes": 133260
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/08-formed-segments-stacked-by-number.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/08-formed-segments-stacked-by-number.webp",
+      "sha256": "56abc1697a0978cb7623f66521a1de05dd3a1106c321c733289a6d5164b2f431",
+      "bytes": 72268
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/09-segments-grouped-by-radius.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/09-segments-grouped-by-radius.webp",
+      "sha256": "f942d6b734121b5b8f8c7b0b17038d52a2d57984356bb460c11d8f79f39655fc",
+      "bytes": 129650
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/10-segments-staged-for-fit-up.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/10-segments-staged-for-fit-up.webp",
+      "sha256": "3dea7f363563545fe228e897fb63cf3db1671eff091992847cd546cc0038a2e8",
+      "bytes": 132228
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/11-trial-fit-to-flat-pattern.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/11-trial-fit-to-flat-pattern.webp",
+      "sha256": "16b1c4c9ab3a16def13d51e2c8ab5a55d6c68b8568f8b76fb1a2c512c9d840f0",
+      "bytes": 97948
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/12-edge-returns-prepared.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/12-edge-returns-prepared.webp",
+      "sha256": "1c06ae926e78cb5365f827f1c4b432fe39c7dfefe0b061a90ea06a01fb450d2a",
+      "bytes": 105060
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/13-curved-strips-handled-on-edge.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/13-curved-strips-handled-on-edge.webp",
+      "sha256": "6b3fdc9419a2c800bf46b6a574fb8d990a176029f36bd44245bec6ec1233a9bb",
+      "bytes": 89322
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/14-fit-up-queue.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/14-fit-up-queue.webp",
+      "sha256": "db05b4f0f871b226cdcc522fc2ebea60a563684b293a295f67a7f2fb3f234545",
+      "bytes": 143060
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/15-compound-edge-transition-piece.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/15-compound-edge-transition-piece.webp",
+      "sha256": "a152b69ece8f7fd337af54be5c829f9584a2b2267df3c21093eb2cd93e30a178",
+      "bytes": 132482
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/16-vertical-build-on-temporary-frame.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/16-vertical-build-on-temporary-frame.webp",
+      "sha256": "d939e850dcb0877983debfaa24d9450a54041cf1971a335a1db3330fa053cb3f",
+      "bytes": 259742
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/17-full-height-shell.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/17-full-height-shell.webp",
+      "sha256": "862081cfc6b58e16cff5fc48595b9b2b3467aec4d0b19da4a06cd5204a4c5618",
+      "bytes": 232624
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/18-sightline-check-from-below.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/18-sightline-check-from-below.webp",
+      "sha256": "58300205710fdc4744908e7ea28afb7739287d72351860032bed6f5a37c6106d",
+      "bytes": 252710
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/19-paired-lobes-checked.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/19-paired-lobes-checked.webp",
+      "sha256": "cb9a03e3f59b726d4a920bed27292bbdcb1bb9ee4422efafef5549b6142a9d91",
+      "bytes": 213616
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/20-taper-check-at-full-height.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/20-taper-check-at-full-height.webp",
+      "sha256": "a1c214b6612f58809da474dca89f4ab529c93eda3603eaf12a70a274b24da6df",
+      "bytes": 238466
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/21-working-scaffold-in-factory.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/21-working-scaffold-in-factory.webp",
+      "sha256": "906c001322c81181c7adcb4d8e434b489e2bedd0695d25f919c3c763e4b76239",
+      "bytes": 229278
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/22-crown-geometry.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/22-crown-geometry.webp",
+      "sha256": "7d23f0c63158fb9b88fec5dd2d65f8f91b17e5e908098347ae55ff5f9c701836",
+      "bytes": 248316
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/23-complete-lobed-column-in-workshop.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/23-complete-lobed-column-in-workshop.webp",
+      "sha256": "2d4173d59371b856f9590c85049bc48ded4777156c44cb352c06165b8dea648f",
+      "bytes": 252366
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/24-internal-ring-frame-substructure.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/24-internal-ring-frame-substructure.webp",
+      "sha256": "9dc81bcbde481aa84426c23a6195d956486b7757d640640b36d906e89958c812",
+      "bytes": 298000
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/25-skin-and-frame-alignment.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/25-skin-and-frame-alignment.webp",
+      "sha256": "18a232e0b36e22137a8a247ce35381e7a5355d5063534866898c05a0c144a8fc",
+      "bytes": 253014
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/26-numbered-for-reassembly.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/26-numbered-for-reassembly.webp",
+      "sha256": "e52a72dd88948a82125df5b8742c347ba543fecac5fd99149591157af9510128",
+      "bytes": 275834
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/27-adjustable-fixing-connections.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/27-adjustable-fixing-connections.webp",
+      "sha256": "738bf9b8dc07b124b6a12c3d39a896d3e52229e8db8832af8d729bbb4731270c",
+      "bytes": 205534
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/28-joint-backing-detail.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/28-joint-backing-detail.webp",
+      "sha256": "fe3af666b12b4164e8c3d2a0e5b21430a5c3da6c6cf23b4d390ef4fd2b36b526",
+      "bytes": 182278
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/29-ribs-and-rings-inside-shell.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/29-ribs-and-rings-inside-shell.webp",
+      "sha256": "2a192c5c5637104c7b01813cd0ca0257e23121f4034d3cd0286d1d36b55ea6bd",
+      "bytes": 280352
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/30-corner-condition-at-lobe-junction.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/30-corner-condition-at-lobe-junction.webp",
+      "sha256": "afb06289279dff00c475090441338a2b51005f2fe4c400c9430c236968ea69d2",
+      "bytes": 243730
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/31-load-path-through-brackets.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/31-load-path-through-brackets.webp",
+      "sha256": "d376dc8305f511245816263c436d498c37b25aa90d67bd5e69431fdad7047b46",
+      "bytes": 253892
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/32-sections-staged-for-packing.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/32-sections-staged-for-packing.webp",
+      "sha256": "74c0f353a20bf2d6c946c8a86fa328edcec663a82ef8ad47922dce22dfa9e6c5",
+      "bytes": 224392
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/33-tig-welding-longitudinal-joint.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/33-tig-welding-longitudinal-joint.webp",
+      "sha256": "1edd887a01e990e02920eb16033a2426ad9ded105890503206f1a085088425ee",
+      "bytes": 113160
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/34-full-height-seam-lines.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/34-full-height-seam-lines.webp",
+      "sha256": "5d82158003552b4600f468975381c21bdd53f322647ba50af8dcc543f3d4ba2f",
+      "bytes": 173364
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/35-horizontal-joint-lines.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/35-horizontal-joint-lines.webp",
+      "sha256": "a8d41c6afe1537073e65f4a45074ec7fad85220d63d57cf733002e6608b6870f",
+      "bytes": 63250
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/36-vertical-seam-even-width.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/36-vertical-seam-even-width.webp",
+      "sha256": "30ec6c1cdc268fa0216f878ae8fa42f698690fdf1719443d9ae6512917a491ef",
+      "bytes": 67316
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/37-diagonal-seam-junction.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/37-diagonal-seam-junction.webp",
+      "sha256": "c18f019f05a930f0c21454b4bf72a93d531d171e697b0479abdecff023704e78",
+      "bytes": 53764
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/38-tapering-lobe-junction.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/38-tapering-lobe-junction.webp",
+      "sha256": "79b461a82729c4b7f98faded9057769234bcf27ced91c39ee3aec34b125c90a4",
+      "bytes": 159730
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/39-seam-narrowing-to-point.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/39-seam-narrowing-to-point.webp",
+      "sha256": "d683b059b73211b8e33cf7089ec763a6336a16e99151d8a8decc1e9248601ab9",
+      "bytes": 80536
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/40-weld-ground-flush.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/40-weld-ground-flush.webp",
+      "sha256": "dad169b725c3fa9cd84f608c6162d3680d29a3f0b4a7480a69f8c8b7401d50eb",
+      "bytes": 69982
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/41-raking-light-seam-check.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/41-raking-light-seam-check.webp",
+      "sha256": "62a497bba6d7e06aff73d6794d0cb0dcaba29c51449a0d9ce3b9d52c21627179",
+      "bytes": 118616
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/42-seam-straightness-vs-scaffold.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/42-seam-straightness-vs-scaffold.webp",
+      "sha256": "1f15c89e0bfba60f050f043c7e0fddd808af6e6972e57885389022c502fd390b",
+      "bytes": 95800
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/43-finished-surface-raking-light.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/43-finished-surface-raking-light.webp",
+      "sha256": "3e199a25b7ecb421439d5f4c011ead8f571c3975efc1d4e221d9c293c491f1ce",
+      "bytes": 168240
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/44-final-surface-sheen.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/44-final-surface-sheen.webp",
+      "sha256": "6fdec84f632f9f2e11ea06f9f0c29279848e3fa1be76408c802a0316d6cb5568",
+      "bytes": 109540
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/45-sheen-consistency-segment-to-segment.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/45-sheen-consistency-segment-to-segment.webp",
+      "sha256": "cd9a16a8037442134a8d8646e3bf0e3ceb7eb7c5fd9a08503d7f9bf0ba87b1b8",
+      "bytes": 51618
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/46-seam-after-final-finishing.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/46-seam-after-final-finishing.webp",
+      "sha256": "6ea5466180a7153a32b070a04599e043da9463f85619222d64fc016b331962c8",
+      "bytes": 48472
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/47-top-of-column-inspection.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/47-top-of-column-inspection.webp",
+      "sha256": "ba737fd857826c7eb52c5a82f8b1f246326d5a42b19679fc082055c1145cd80e",
+      "bytes": 98644
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/48-segment-signed-off-by-number.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/48-segment-signed-off-by-number.webp",
+      "sha256": "b70bddc747f4ac4d38cdcf5fd18633b3649d1ecf74d0e19e51aecc55df4095b5",
+      "bytes": 77182
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/49-export-packing-fitted-crate.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/49-export-packing-fitted-crate.webp",
+      "sha256": "0da54da0b4ee77ad156664d9b816d285a093c1e4b4d0c30067abc4faeae37670",
+      "bytes": 190146
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/50-container-loading-40ft.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/50-container-loading-40ft.webp",
+      "sha256": "19d83dd20bcfc22bfd308c8b629659cd52fd1faceeeae7723930ee5eef954a54",
+      "bytes": 195236
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/51-site-installation-lift-and-seat.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/51-site-installation-lift-and-seat.webp",
+      "sha256": "4e0646f21c4c1514f80b9b8ace1faa40138c91147550a3126c22fafbc6a8634d",
+      "bytes": 225420
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/52-site-seam-alignment.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/52-site-seam-alignment.webp",
+      "sha256": "eec4286f1de84c6c73a5b3fbbbb7071c6f60f64038ba767af500355b680a0885",
+      "bytes": 114708
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/53-client-acceptance-inspection.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/53-client-acceptance-inspection.webp",
+      "sha256": "3f4328fb89d90fc8e371e80d25c2438b4fa1fc193cbb7309c0d5e4fa36d91c24",
+      "bytes": 126486
+    },
+    {
+      "key": "blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/54-aftercare-along-the-grain.webp",
+      "url": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/54-aftercare-along-the-grain.webp",
+      "sha256": "688268e4f56976a7ebd8ce887baf755d18b50539ab29c5a72313411f01d1724f",
+      "bytes": 125350
+    }
+  ],
+  "createdAt": "2026-10-15T06:16:49.052Z",
+  "databaseReadback": {
+    "id": "cmv95btff0000wgghjsrq9war",
+    "title": "From Inquiry to Acceptance: The Murray Road Column Cladding Case Study, Hong Kong, China — A Sculptural Double-Curved Column in 16 Stages, from Site Survey and Shop Drawings to Factory Mock-Up, Export Packing and Signed Handover",
+    "slug": "murray-road-column-cladding-case-study-from-inquiry-to-acceptance",
+    "status": "DRAFT",
+    "featured": false,
+    "publishedAt": null,
+    "readTimeMinutes": 11,
+    "bodyImages": 54,
+    "coverImage": "https://media.guoyaometal.com/blog/murray-road-column-cladding-case-study-from-inquiry-to-acceptance/hero-2d4173d59371b856.webp",
+    "contentMatches": true,
+    "updatedAt": "2026-10-15T06:16:47.547Z"
+  }
+}

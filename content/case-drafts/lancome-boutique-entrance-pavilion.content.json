@@ -1,0 +1,451 @@
+{
+  "introduction": "WHITE FRAME · BLACK FASCIA · WARM LIGHT. Lancôme Style Boutique Entrance Pavilion: An Elliptical Metal Portal From Inquiry to Acceptance. For a flagship of a French luxury beauty brand, the entrance is the product: an elliptical pavilion of tall curved white columns, two oval ring beams and a black backlit fascia band carrying the rose emblem — geometry with no straight lines anywhere. This article walks through the full factory journey of such a portal: BIM engineering, ring rolling, welding, white PVDF coating, LED integration, full pre-assembly in the workshop with 21 real photos, export packing and mall installation — every stage coded, measured and benchmarked before a single crate leaves the floor. Project parameters: Elliptical Portal · 6.2 × 4.4 m | Curved Aluminium Columns | Oval Ring Beams | Backlit Fascia Band | 100% Factory Pre-Assembly | Coded Export Packing.",
+  "stats": [
+    {
+      "value": "±0.8 mm",
+      "label": "Ring beam arc tolerance"
+    },
+    {
+      "value": "3.6 m",
+      "label": "Clear portal height"
+    },
+    {
+      "value": "100%",
+      "label": "Pre-assembled before shipping"
+    },
+    {
+      "value": "2 nights",
+      "label": "On-site installation window"
+    }
+  ],
+  "sections": [
+    {
+      "id": "stage-01-inquiry-design-briefing",
+      "title": "Stage 01 · Inquiry & Design Briefing",
+      "navLabel": "Stage 01 · Inquiry & Design Briefing",
+      "paragraphs": [
+        "The enquiry arrived with renders, a floor plan and the brand's material guidelines: pure white frame, matte black fascia, brushed-gold emblem, warm 3000 K light — and one hard rule: the pavilion must read perfectly from 20 metres across the mall atrium. A printed scale model settled the geometry conversation in one meeting."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/01-g01-inquiry.webp",
+          "alt": "Chinese project team meeting a luxury retail client around a white scale model of the pavilion",
+          "caption": "Kick-off: the white scale model and render boards on the table — geometry agreed before any metal is cut."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "For brand retail, the brief is a mood, not a shape — the factory's job is to turn the mood into millimetres."
+        }
+      ]
+    },
+    {
+      "id": "stage-02-site-survey",
+      "title": "Stage 02 · Site Survey",
+      "navLabel": "Stage 02 · Site Survey",
+      "paragraphs": [
+        "A survey team measured the mall atrium: the oval setting-out, floor level differences, power feed positions and the ceiling clearance for the fascia. Every fixing point was chalked, taped and photographed, and the ellipse was re-verified against the architect's grid — because a 20 mm floor slope is invisible until the fascia reads out of level at the opening."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/02-g02-survey.webp",
+          "alt": "Survey technician measuring the oval pavilion footprint in a mall atrium",
+          "caption": "Site survey: laser meter and total station fixing the oval setting-out and floor datum."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "The pavilion is elliptical; the building is not. Shims and level detail are decided before fabrication, not improvised at 2 a.m."
+        }
+      ]
+    },
+    {
+      "id": "stage-03-bim-engineering",
+      "title": "Stage 03 · BIM Engineering",
+      "navLabel": "Stage 03 · BIM Engineering",
+      "paragraphs": [
+        "The pavilion was modelled parametrically: 12 curved columns, two oval ring beams, a segmented fascia band and hidden steel feet. Every part received a code — COL-01, RING-T-03, FAS-B-07 — that follows it from rolling bench to crate to mall floor.",
+        "Key details — Ellipse offset checked so column tops meet the ring at true tangents; Fascia segments numbered to keep the brushed grain running one direction; LED channel, diffuser and cable routes built into the model, not added later."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/03-g03-bim.webp",
+          "alt": "Engineer developing the elliptical pavilion BIM model at a modern desk",
+          "caption": "Deepening: the coded BIM model of columns, ring beams and fascia segments on screen."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "With no straight lines, every joint is a compound curve — only a coded model keeps hundreds of parts talking to each other."
+        }
+      ]
+    },
+    {
+      "id": "stage-04-material-inspection",
+      "title": "Stage 04 · Material Inspection",
+      "navLabel": "Stage 04 · Material Inspection",
+      "paragraphs": [
+        "Aluminium tube and sheet in 6063-T5 / 3003 alloys arrived with mill certificates and were re-checked by spectrometer and micrometer — wall thickness is where cheap shops shave cost, and a thin ring shows as a wave under the fascia light. Fasteners and steel feet were separated, labelled and kitted per unit code."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/04-g04-materials.webp",
+          "alt": "QC technician verifying aluminium stock in the factory warehouse",
+          "caption": "Warehouse check: spectrometer reading, thickness verification and code-tagged stock."
+        }
+      ],
+      "points": []
+    },
+    {
+      "id": "stage-05-ring-rolling-curving",
+      "title": "Stage 05 · Ring Rolling & Curving",
+      "navLabel": "Stage 05 · Ring Rolling & Curving",
+      "paragraphs": [
+        "The two oval rings were rolled from rectangular tube in matched segments; column curves were bent to the surveyed radius. Each segment was checked against an arc template and sprung back deliberately — roll, rest, re-check — so the oval stays true after welding releases stress."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/05-g05-rolling.webp",
+          "alt": "Worker roll-bending an aluminium tube into an oval ring segment",
+          "caption": "Rolling: matched ring segments formed on the 3-roll bender, arcs checked against templates."
+        }
+      ],
+      "points": []
+    },
+    {
+      "id": "stage-06-welding-frame-fitting",
+      "title": "Stage 06 · Welding & Frame Fitting",
+      "navLabel": "Stage 06 · Welding & Frame Fitting",
+      "paragraphs": [
+        "Columns, ring beams and steel feet were TIG-welded on rotational jigs, then ground and dressed until the joint disappears under paint. The white finish is unforgiving — every ripple shows in raking light — so weld dressers worked to the same standard as the brand's own display fixtures."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/06-g06-welding.webp",
+          "alt": "Welder joining a curved white column to an oval ring beam on a jig",
+          "caption": "Welding: a column-to-ring joint on the jig, dressed ready for the white coat."
+        }
+      ],
+      "points": []
+    },
+    {
+      "id": "stage-07-surface-treatment",
+      "title": "Stage 07 · Surface Treatment",
+      "navLabel": "Stage 07 · Surface Treatment",
+      "paragraphs": [
+        "The frame received a pure white 3-coat 2-bake PVDF; the fascia band was finished matte black to disappear against the glow. Colour was verified per batch with a spectrophotometer, because \"white\" across twelve columns must be one white, not twelve close whites."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/07-g07-coating.webp",
+          "alt": "Robotic spray line coating white columns and ring beams",
+          "caption": "Coating line: columns and rings through the white PVDF booth, gloss verified on exit."
+        }
+      ],
+      "points": []
+    },
+    {
+      "id": "stage-08-full-pre-assembly",
+      "title": "Stage 08 · Full Pre-Assembly",
+      "navLabel": "Stage 08 · Full Pre-Assembly",
+      "paragraphs": [
+        "The whole pavilion was erected in the workshop on scaffold: columns set plumb, both oval rings craned on, fascia segments fitted, feet shimmed. Nothing on this portal was assembled for the first time in the mall — every bolt, shim and cable had already been rehearsed.",
+        "Key details — Full-scale rig with scaffold and lifting points as on site; Column bases and ring joints matched and marked with transfer codes; Fascia corner mitres checked for grain continuity and gap; Crown nodes measured for plumb under real load."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/08-preassembly-wide.webp",
+          "alt": "Full pavilion pre-assembled on scaffold in the workshop",
+          "caption": "The rig: full ellipse standing, fascia band going on — the moment the render becomes a building."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/08-preassembly-rig.webp",
+          "alt": "Pavilion frame with scaffold and hoisting points in the workshop",
+          "caption": "Frame on the rig: scaffold bracing and hoist points mirror the mall installation plan."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/08-frame-full.webp",
+          "alt": "White elliptical portal frame standing complete in the hall",
+          "caption": "Frame complete: twelve curved columns reading as one continuous ellipse."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/08-frame-columns.webp",
+          "alt": "Curved white columns and ring beam seen across the workshop",
+          "caption": "Column grid: curvature uniformity checked by eye and by template from every direction."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/08-frame-ring.webp",
+          "alt": "Oval ring beam seated on the column tops",
+          "caption": "Ring seated: oval beam landing on the column heads, shims set to survey marks."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/08-fascia-band-top.webp",
+          "alt": "Black fascia band segments fitted around the top ring",
+          "caption": "Fascia on: black band segments numbered and hung in sequence around the oval."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/08-base-curve.webp",
+          "alt": "Curved base beam of the pavilion on the workshop floor",
+          "caption": "Base work: the curved floor beam that ties the columns and hides the fixings."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/08-base-joint.webp",
+          "alt": "Column base to curved beam joint detail",
+          "caption": "Base joint: machined plate, hidden fixings, isolation washers at every contact."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/08-top-ring-under.webp",
+          "alt": "Underside view of the oval ring and column heads",
+          "caption": "Under the ring: column heads meeting the oval — tangency verified on both axes."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/08-top-ring-frame.webp",
+          "alt": "Top ring framework with secondary ribs from below",
+          "caption": "Secondary ribs: the hidden skeleton that keeps the fascia dead straight over 20 metres of curve."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "The workshop rig is the rehearsal; the mall night shift is the performance. Good factories keep the rehearsal long and the performance short."
+        }
+      ]
+    },
+    {
+      "id": "stage-08-full-pre-assembly-nodes-details",
+      "title": "Stage 08 · Full Pre-Assembly · Nodes & Details",
+      "navLabel": "Stage 08 · Nodes & Details",
+      "paragraphs": [
+        "Zooming in on the same rig: the column-head nodes, ring splices and fascia mitres that decide whether the ellipse reads clean from twenty metres away. Each joint below was set, shimmed and matched in the workshop, then dismantled in reverse order and crated by code."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/08-crown-ring.webp",
+          "alt": "Crown ring assembly viewed upward through the frame",
+          "caption": "Crown: upper ring and bracing assembled the same way it will hang in the mall."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/08-fascia-crown.webp",
+          "alt": "Black fascia band closed at the crown with brand band fitted",
+          "caption": "Fascia closed: the band running level around the whole ellipse — no dip, no drift."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/08-fascia-corner.webp",
+          "alt": "Fascia corner mitre detail with consistent gap",
+          "caption": "Corner mitre: hairline gap, brushed grain continuing around the bend."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/08-column-node-1.webp",
+          "alt": "Column head bracket node detail",
+          "caption": "Node 01: machined head bracket transferring load without visible fixings."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/08-column-node-2.webp",
+          "alt": "Column to ring connector detail from below",
+          "caption": "Node 02: slotted connection allowing thermal movement behind a tight visual line."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/08-column-node-3.webp",
+          "alt": "Column head joint against ring beam",
+          "caption": "Node 03: shim pack set and marked — the site crew inherits numbers, not guesswork."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/08-node-bracket.webp",
+          "alt": "Bracket node between ring and column",
+          "caption": "Hidden hardware: stainless fixings, isolation pads, torque-marked bolts."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/08-ring-joint.webp",
+          "alt": "Ring beam splice joint detail",
+          "caption": "Ring splice: matched ends, alignment pins, dressed weld under the white coat."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/08-node-detail.webp",
+          "alt": "Final node detail of the pre-assembled pavilion",
+          "caption": "Final node: the joint the client will never see, engineered so they never have to."
+        }
+      ],
+      "points": []
+    },
+    {
+      "id": "stage-09-lighting-fascia-integration",
+      "title": "Stage 09 · Lighting & Fascia Integration",
+      "navLabel": "Stage 09 · Lighting & Fascia Integration",
+      "paragraphs": [
+        "Warm-white LED strips were mounted in the fascia channel behind an opal diffuser, then burned-in and measured for evenness — the black band must glow like one continuous ribbon, with no hot spots at the segment joints and no dark dips over 20 metres of curve."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/09-g08-led-fascia.webp",
+          "alt": "Workers fitting and testing LED strips in the black fascia band",
+          "caption": "Light test: LED strips in the black band, evenness checked joint by joint before closing."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/09-fascia-brand.webp",
+          "alt": "Black fascia band with brand emblem and lettering fitted",
+          "caption": "Brand band: emblem and lettering positioned to the brand manual's millimetre grid."
+        }
+      ],
+      "points": []
+    },
+    {
+      "id": "stage-10-qc-dimension-report-packing",
+      "title": "Stage 10 · QC, Dimension Report & Packing",
+      "navLabel": "Stage 10 · QC, Dimension Report & Packing",
+      "paragraphs": [
+        "After the rig was approved, critical dimensions were re-verified and documented; the pavilion was then carefully dismantled in reverse order. Every part went into a numbered crate with its own foam bed — rings crated as matched half-sets, columns sleeved, the fascia band in one long case to protect the mitres."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/10-g10-qc.webp",
+          "alt": "Laser tracker verification of a curved ring segment",
+          "caption": "Final QC: laser tracker confirming the ring arc against the model before packing."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/10-g09-packing.webp",
+          "alt": "Workers packing curved ring segments into plywood export crates",
+          "caption": "Packing: VCI film, foam edges and coded crates — each part sleeping in its own bed."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/10-g10b-container.webp",
+          "alt": "Export crates lashed inside a 40ft container",
+          "caption": "Container: crates lashed and braced for the sea leg, dunnage between every layer."
+        }
+      ],
+      "points": []
+    },
+    {
+      "id": "stage-11-mall-installation",
+      "title": "Stage 11 · Mall Installation",
+      "navLabel": "Stage 11 · Mall Installation",
+      "paragraphs": [
+        "The install ran on the mall's night shift: feet fixed to the surveyed oval, columns stood and plumbed, rings hoisted onto their marked seats, fascia hung from the code map. Because the workshop rig had already solved every joint, the crew was aligning, not inventing."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/11-g11-site-lift.webp",
+          "alt": "Ring beam hoisted into position over the white columns in the mall",
+          "caption": "Night shift: a ring beam guided onto the column heads inside the atrium."
+        }
+      ],
+      "points": []
+    },
+    {
+      "id": "stage-12-acceptance-handover",
+      "title": "Stage 12 · Acceptance & Handover",
+      "navLabel": "Stage 12 · Acceptance & Handover",
+      "paragraphs": [
+        "Acceptance is walked, not signed from a desk: the client reads the fascia glow from 20 metres, checks the emblem line-up, runs a hand along the white frame. The snag list closed at zero — the pavilion looked on night one exactly as it looked on the workshop rig, which was the whole point."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/lancome-boutique-entrance-pavilion/12-g12-night.webp",
+          "alt": "Finished illuminated entrance pavilion glowing in the mall at night",
+          "caption": "Opening night: the black band glowing as one ribbon, the white ellipse reading clean from across the atrium."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "The best compliment a retail portal can get: nobody photographs the engineering — everyone photographs the brand."
+        }
+      ]
+    },
+    {
+      "id": "stage-map",
+      "title": "Process Overview",
+      "navLabel": "Stage map",
+      "paragraphs": [
+        "The twelve stages in the order the project actually ran, from the first enquiry and scale model to the zero-snag light walk — the checklist this pavilion was planned, packed, installed and accepted against."
+      ],
+      "table": {
+        "caption": "Process overview — twelve stages",
+        "headings": [
+          "Stage",
+          "Core Work",
+          "Key Process",
+          "Quality Focus"
+        ],
+        "rows": [
+          [
+            "01 Inquiry & Briefing",
+            "Design intent, renders, brand guidelines",
+            "Scale model, render boards",
+            "Ellipse geometry, fascia band, emblem position"
+          ],
+          [
+            "02 Site Survey",
+            "Mall footprint, levels, services",
+            "Laser meter, total station",
+            "Ellipse setting-out, floor fixings"
+          ],
+          [
+            "03 BIM & Drawings",
+            "Parametric model, unit breakdown",
+            "Rhino / Tekla",
+            "Node code map, tolerance allocation"
+          ],
+          [
+            "04 Material Inspection",
+            "Aluminium tube, sheet, fasteners",
+            "Spectrometer, micrometer",
+            "Mill certs, wall thickness"
+          ],
+          [
+            "05 Ring Rolling",
+            "Oval ring beams, curved columns",
+            "CNC 3-roll bender",
+            "Arc radius vs template, springback"
+          ],
+          [
+            "06 Welding & Fitting",
+            "Frame jigs, TIG welds, correction",
+            "Rotational jigs",
+            "Weld finish, distortion control"
+          ],
+          [
+            "07 Coating",
+            "Pure white PVDF, matte black band",
+            "3-coat 2-bake line",
+            "ΔE, gloss, film thickness"
+          ],
+          [
+            "08 Pre-Assembly",
+            "Full trial build with fascia",
+            "Scaffold rig, gauges",
+            "Seams, joints, plumb, light"
+          ],
+          [
+            "09 Lighting & Signage",
+            "LED strips, diffuser, emblem",
+            "Evenness testing",
+            "Hot spots, cable routing"
+          ],
+          [
+            "10 QC & Packing",
+            "Dimensional report, crates",
+            "Laser tracker, VCI film",
+            "Coded units, sea-worthy packing"
+          ],
+          [
+            "11 Mall Installation",
+            "Night shift, hoisting, alignment",
+            "Chain hoists, shims",
+            "Seam read, level, glow"
+          ],
+          [
+            "12 Acceptance",
+            "Light walk-through, handover",
+            "Snag list, sign-off",
+            "Client impression, zero snags"
+          ]
+        ]
+      }
+    }
+  ],
+  "conclusion": "Closing note: An elliptical entrance pavilion gives a luxury facade no straight line to hide behind — every curve is a measurement, every joint is a rehearsal. From the first scale model to the zero-snag light walk, this Lancôme style portal was built the same way every Guoyao retail project is: coded parts, jigged welding, a full factory pre-assembly, and an installation crew that inherits answers instead of problems. Guoyao Metalwork · Bespoke Entrance Pavilions & Retail Portals for Luxury Beauty Brands · Factory Pre-Assembled, Coded, Reported",
+  "relatedLinks": []
+}

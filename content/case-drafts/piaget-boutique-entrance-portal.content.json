@@ -1,0 +1,543 @@
+{
+  "introduction": "Case Study · Guoyao Metalwork. Illuminated Signage & Backlit Ceiling: From Inquiry to Acceptance. A complete entrance portal for a new Piaget boutique — structural steel frame, deep black lacquer fascia, the illuminated PIAGET lettering and a perforated backlit ceiling — delivered end to end by one factory. Eighteen documented stages, from the first inquiry and the millimetre site survey through workshop trial assembly, a lit full mock-up, export packing and mall installation to final acceptance and aftercare, each stage backed by its own factory or site photographs, exactly as the work happened. Client · International luxury watch & jewellery maison | Scope · Entrance portal: frame + fascia + signage + backlit ceiling | Surfaces · Gloss black lacquer, brushed gold, warm-white LED | Delivery · Factory trial build → export crates → mall installation",
+  "stats": [
+    {
+      "value": "18",
+      "label": "stages documented end to end"
+    },
+    {
+      "value": "23",
+      "label": "project & factory photographs"
+    },
+    {
+      "value": "1",
+      "label": "factory, one finish standard"
+    },
+    {
+      "value": "100%",
+      "label": "trial-assembled and lit before packing"
+    },
+    {
+      "value": "0",
+      "label": "conditions at mock-up approval"
+    },
+    {
+      "value": "0",
+      "label": "factory rework after handover"
+    }
+  ],
+  "sections": [
+    {
+      "id": "stage-01-inquiry",
+      "title": "The Inquiry: An Entrance That Must Glow Like the Brand",
+      "navLabel": "Stage 01 · Inquiry",
+      "paragraphs": [
+        "The enquiry came from the boutique's regional fit-out team with the brevity of a brand that knows exactly what it wants: a complete entrance portal package for a new Piaget boutique — structural frame, deep black fascia cladding, the illuminated PIAGET lettering, and a perforated backlit ceiling over the entrance — fabricated as one system, finish-matched throughout, and installed inside a fixed mall fit-out window. The design intent drawings showed the register precisely: a black portal framing the boutique like a matte frame around a jewel, the name glowing warm white above the entrance, the ceiling washing the approach in soft patterned light.",
+        "We replied within twenty-four hours with the three answers that matter on branded work: yes, the portal can come from one factory — steel, cladding, lettering and backlighting under one finish standard, so no interface is someone else's problem; yes, the full portal would be trial-assembled and lit in our workshop exactly as it will stand in the mall, because an illuminated fascia must be judged lit, not on paper; and yes, we would hold the fit-out window as the fixed point around which everything else was planned. A kickoff call followed, and the project began the way it would run — drawings, samples and the schedule on one table."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/01-gy-kickoff.webp",
+          "alt": "The kickoff meeting.",
+          "caption": "The kickoff meeting. The brand's fit-out representative and our engineers over the portal elevation, with black lacquer and gold trim samples and an illuminated letter sample on the table — scope, finishes and the fixed window agreed in one conversation."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Inquiry answered in 24 hours: one-factory scope covering frame, cladding, illuminated lettering and backlit ceiling, against a fixed fit-out window."
+        }
+      ]
+    },
+    {
+      "id": "stage-02-measurement",
+      "title": "Site Survey and the Dimensional Baseline",
+      "navLabel": "Stage 02 · Measurement",
+      "paragraphs": [
+        "A portal meets the mall's shell at every point, so nothing was left to nominal dimensions. Our team surveyed the boutique unit on site with laser meters verified against tape checks, recording the storefront opening's width and level, slab soffit heights along the fascia line, the mall facade's own tolerances at each fixing position, the power supply point for the lettering and ceiling circuits, and the service lift and corridor limits that would later decide the size of every shipping crate.",
+        "Each dimension was taken twice, by two people, and where the shell showed deviations we measured them rather than averaging them away — the fascia meets the building line at every point, not on average. The signed survey report became the dimensional baseline for all shop drawings, and every later question about a dimension ended by pointing at that one document."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/02-gy-survey.webp",
+          "alt": "Site survey inside the hoarded boutique unit: laser meter, tape checks and a marked-up portal drawing — recording opening levels, soffit heights and power points rather than three overall…",
+          "caption": "Site survey inside the hoarded boutique unit: laser meter, tape checks and a marked-up portal drawing — recording opening levels, soffit heights and power points rather than three overall dimensions."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Storefront surveyed to the millimetre; signed survey report issued as the single dimensional baseline for fabrication."
+        }
+      ]
+    },
+    {
+      "id": "stage-03-design",
+      "title": "Design Development and Shop Drawings",
+      "navLabel": "Stage 03 · Design",
+      "paragraphs": [
+        "The design intent showed the effect; the shop drawings had to make it buildable. Our engineering team turned the survey into a complete fabrication package: the structural steel portal with its fixing plates back to the slab, the black fascia panels panelised to pass the service lift with joints placed where the eye expects lines, the illuminated PIAGET lettering with its mounting grid and power routing, and the perforated backlit ceiling with its LED grid and diffusion layers. Every panel and letter carried a reference that remains on the component for life.",
+        "The package went to the brand's design team as a review set, came back with comments on joint positions, letter mounting depth and ceiling module sizes, and went through two structured revision cycles — each resolved line by line and recorded on the sheet. The final drawings were issued for construction with revision numbers on every page, and the workshop floor never worked from anything else."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/03-gy-cad.webp",
+          "alt": "Design development.",
+          "caption": "Design development. Portal shop drawings on the CAD station — steel frame, fascia panelisation, letter mounting grid and backlit ceiling modules, every part referenced before the first length of steel was cut."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "IFC drawing package issued: steel frame, fascia panels, lettering grid and backlit ceiling, all tied to the survey baseline."
+        }
+      ]
+    },
+    {
+      "id": "stage-04-approval",
+      "title": "Samples and Finish Approval",
+      "navLabel": "Stage 04 · Approval",
+      "paragraphs": [
+        "A portal is read from two metres and from twenty, so samples were built at both scales. We produced black lacquer fascia samples at the specified gloss, brushed gold trim samples, a perforated backlit ceiling panel glowing through its dot matrix at true density, and an illuminated letter sample built exactly as production — same acrylic face, same LED module, same halo depth — so the brand was approving hardware, not a description.",
+        "The review focused on the depth of the black under mall lighting, the warmth and evenness of the lettering's glow, the rhythm of the ceiling's perforations, and the gold's tone against both. One adjustment round on the ceiling diffusion later, the samples were signed and sealed. The sealed box became the contractual finish reference: every production panel, letter and ceiling module was inspected against it, not against a photograph."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/04-gy-sample.webp",
+          "alt": "The sealed sample set: black lacquer, brushed gold, a perforated ceiling panel glowing through its dot matrix, and an illuminated letter built to production detail — the contractual finish…",
+          "caption": "The sealed sample set: black lacquer, brushed gold, a perforated ceiling panel glowing through its dot matrix, and an illuminated letter built to production detail — the contractual finish reference for the whole portal."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Black gloss, lettering glow and ceiling diffusion approved on sealed samples; production QC now checks every component against the seal."
+        }
+      ]
+    },
+    {
+      "id": "stage-05-fabrication",
+      "title": "Structural Steel Portal Frame",
+      "navLabel": "Stage 05 · Fabrication",
+      "paragraphs": [
+        "Behind the black surface stands the part nobody sees and everybody depends on: the galvanised steel portal frame that carries the fascia, the lettering and the backlit ceiling, and ties the whole assembly back to the building structure. The frame was fabricated as pre-assembled sections — uprights and head beam squared and braced on the workshop floor, welded to the shop drawings, with every fixing plate positioned for the actual slab as surveyed, not a nominal one.",
+        "Weld quality, bolt-hole positions and section squareness were checked against the drawings, because a portal that installs in days is one whose frame was fabricated with weeks of discipline. The finished sections were trial-mated on the floor before finishing — the first of the project's rehearsals."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/05-gy-welding.webp",
+          "alt": "Squaring and welding the portal's steel sections on the workshop floor: uprights braced plumb, head beam tacked to the drawing's dimension — the frame that everything else hangs from.",
+          "caption": "Squaring and welding the portal's steel sections on the workshop floor: uprights braced plumb, head beam tacked to the drawing's dimension — the frame that everything else hangs from."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Portal frame welded, squared and matched to surveyed levels; sections trial-mated before finishing."
+        }
+      ]
+    },
+    {
+      "id": "stage-06-fabrication",
+      "title": "Black Lacquer Fascia Cladding",
+      "navLabel": "Stage 06 · Fabrication",
+      "paragraphs": [
+        "The fascia is the portal's face, and its black has to be deep enough to disappear. Panels were fabricated in aluminium on the survey-based panelisation, edges returned and stiffened, then finished through the spray line in the approved gloss black — sanded between coats, colour-checked under both cool and warm light against the sealed sample, and inspected for orange peel at raking angle before release.",
+        "Panel joints were placed on the drawing's lines and set to a consistent reveal, and every panel carries its engraved reference matching the layout and the packing list. The photographs from the finishing line show the standard: a deep, even gloss with no wave, no shadow break, no dust — the surface the brand's name would sit on."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/06-gy-lacquer.webp",
+          "alt": "A fascia panel through the finishing line: deep gloss black checked under booth lighting at raking angle — no wave, no orange peel, no dust before a panel is released.",
+          "caption": "A fascia panel through the finishing line: deep gloss black checked under booth lighting at raking angle — no wave, no orange peel, no dust before a panel is released."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Fascia panels lacquered to the seal: gloss depth and joint reveals verified, every panel engraved and referenced."
+        }
+      ]
+    },
+    {
+      "id": "stage-07-signage",
+      "title": "Illuminated PIAGET Lettering Fabrication",
+      "navLabel": "Stage 07 · Signage",
+      "paragraphs": [
+        "The brand's name is the portal's signature, and its tolerances are tighter than anything else on the structure. The illuminated PIAGET lettering was fabricated as a separate package: letter bodies formed to the brand's typography specification, warm-white LED modules set inside each letter at even depth, halo and face membranes prepared to the approved sample, and every letter tested flat on the bench — lit, photographed and compared for brightness across the full name.",
+        "Brightness balancing was done by measurement, not by eye: a sign where one letter glows brighter than its neighbour reads as a defect instantly. The finished letters were set to their mounting grid with power routed through the fascia's concealed channels, then masked with protective film for handling. The close-up photographs from the workshop show the standard — even warm glow, crisp typographic edges, halo falling softly onto the perforated panel behind."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/07-lettering-closeup.webp",
+          "alt": "The illuminated lettering at close range on the backlit panel: warm glow even across the full name, typographic edges crisp, halo falling softly onto the perforated surface behind.",
+          "caption": "The illuminated lettering at close range on the backlit panel: warm glow even across the full name, typographic edges crisp, halo falling softly onto the perforated surface behind."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/07-fascia-lit-from-below.webp",
+          "alt": "The lit fascia read from below — the angle every guest actually sees.",
+          "caption": "The lit fascia read from below — the angle every guest actually sees. Letter spacing, glow balance and the panel's reveal all checked at this viewing height before sign-off."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Illuminated lettering fabricated and brightness-balanced by measurement; signed off against the brand typography specification."
+        }
+      ]
+    },
+    {
+      "id": "stage-08-trial",
+      "title": "Portal Trial Assembly in the Workshop",
+      "navLabel": "Stage 08 · Trial",
+      "paragraphs": [
+        "Before packing anything, we built the portal — in the workshop, at full scale, exactly as it would stand in the mall. Steel sections mated, fascia panels hung in their numbered sequence, the illuminated lettering set to its grid, the perforated ceiling modules closed in over the head beam. The trial assembly is where drawings meet steel, and where every tolerance in the system becomes visible at once.",
+        "The trial also served the process. The crew that would later install on site worked the sequence once in ideal conditions, handling methods for the long fascia panels were proven, and the adjustment procedure for a plumb fascia line was rehearsed. Every lesson from this week was written into the installation method statement that travelled with the crates."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/08-portal-assembly-workshop.webp",
+          "alt": "The portal standing in the workshop under trial assembly — black fascia, the name already glowing, scaffold at the head.",
+          "caption": "The portal standing in the workshop under trial assembly — black fascia, the name already glowing, scaffold at the head. The first time the whole system met itself."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/08-portal-workshop-wide.webp",
+          "alt": "The trial from the hall's far side: the full portal lit in the workshop, checked from the distance a mall customer would first see it.",
+          "caption": "The trial from the hall's far side: the full portal lit in the workshop, checked from the distance a mall customer would first see it."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Portal trial-assembled and lit in the workshop; handling methods and installation sequence proven and written into the method statement."
+        }
+      ]
+    },
+    {
+      "id": "stage-09-verification",
+      "title": "Height Rehearsal and Head Detail Verification",
+      "navLabel": "Stage 09 · Verification",
+      "paragraphs": [
+        "Working at height changes every handling answer — how a fascia panel is lifted, how a letter's connector is seated above shoulder height, where the second pair of hands stands. So the rehearsal continued at height: scaffold at the portal head, the ceiling-to-fascia junction closed in under real access conditions, and the head fixings checked under true load paths — exactly what the slab will carry, rehearsed in the workshop first.",
+        "The portal's corners — where two black elevations meet in one continuous line — were examined longest, as they always are. With protective film still on the panels, the crew walked the full checking list: joint reveals, letter alignment, ceiling module seating, halo falloff at the returns. What took days here would take hours on site."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/09-head-adjustment-height.webp",
+          "alt": "Closing the head junction from the scaffold — the ceiling-to-fascia detail proven under real access conditions before it meets the mall's soffit.",
+          "caption": "Closing the head junction from the scaffold — the ceiling-to-fascia detail proven under real access conditions before it meets the mall's soffit."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/09-portal-protective-film.webp",
+          "alt": "Panels under protective film during the height rehearsal: reveals, letter alignment and corner returns walked through the checking list before anything is packed.",
+          "caption": "Panels under protective film during the height rehearsal: reveals, letter alignment and corner returns walked through the checking list before anything is packed."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/09-portal-corner-detail.webp",
+          "alt": "The portal corner in close view — two black elevations meeting in one continuous line, the joint the brand's designers examine longest.",
+          "caption": "The portal corner in close view — two black elevations meeting in one continuous line, the joint the brand's designers examine longest."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Head junction and corners verified at height; protection and handling methods confirmed, rehearsal complete."
+        }
+      ]
+    },
+    {
+      "id": "stage-10-approval",
+      "title": "Full Mock-Up Review Under Light",
+      "navLabel": "Stage 10 · Approval",
+      "paragraphs": [
+        "Every previous stage built parts; the mock-up built the promise. With the portal complete and film still protecting the finish, the whole assembly was lit for the brand's formal review: the lettering across the full name, the ceiling's patterned wash over the entrance, the fascia's gloss under both lit and unlit states — judged from the customer distance, not the workbench.",
+        "The photographs are the project's proof images: the portal standing complete in the workshop at night, front elevation and from below, glowing exactly as the design intent described. The brand approved the mock-up without a single condition, and that approval became the manufacture standard for the crates that followed."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/10-portal-front-mockup.webp",
+          "alt": "The complete portal under mock-up review: front elevation lit, film still on, every glow state checked from the customer viewing distance.",
+          "caption": "The complete portal under mock-up review: front elevation lit, film still on, every glow state checked from the customer viewing distance."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/10-portal-underside-view.webp",
+          "alt": "The portal read from directly beneath — the entrance soffit, ceiling wash and fascia reveals composing the view every guest walks through.",
+          "caption": "The portal read from directly beneath — the entrance soffit, ceiling wash and fascia reveals composing the view every guest walks through."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Full mock-up approved with zero conditions; mock-up = manufacture standard for packing and installation."
+        }
+      ]
+    },
+    {
+      "id": "stage-11-quality",
+      "title": "Final Quality Inspection",
+      "navLabel": "Stage 11 · Quality",
+      "paragraphs": [
+        "Before packing, every component passed a documented final inspection against the sealed samples and the IFC drawings. Fascia panels were checked for gloss depth and reveal consistency under raking light; the lettering for glow balance and connector seating; ceiling modules for evenness and wiring strain relief; the steel frame for weld quality and hole positions. Each item was recorded on the QC sheet with the inspector's initials — a record that travels with the crates.",
+        "Nothing was approved from memory; everything was approved against the sample or the drawing, and signed. The result was a packing list with no exceptions — the quiet precondition for the installation that followed."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/11-gy-qc.webp",
+          "alt": "Final inspection under the work lamp: joint lines and letter glow checked item by item against the QC sheet, scaffold standing by — nothing approved from memory.",
+          "caption": "Final inspection under the work lamp: joint lines and letter glow checked item by item against the QC sheet, scaffold standing by — nothing approved from memory."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "100% documented QC against sealed samples and IFC drawings; packing list closed with zero exceptions."
+        }
+      ]
+    },
+    {
+      "id": "stage-12-logistics",
+      "title": "Export Packing",
+      "navLabel": "Stage 12 · Logistics",
+      "paragraphs": [
+        "A portal that survives a thousand-kilometre journey and a mall's service corridor is packed, not lucky. Fascia panels travelled on edge in foam-lined plywood crates with their protective film retained; the steel sections were packed as matched sets; the illuminated lettering travelled in its own crate with the mounting grid and jigs; ceiling modules were crated face-protected with their LED drivers boxed and labelled separately.",
+        "Every crate was labelled with its contents, its unit references and its position in the installation sequence, so crates could be unloaded in reverse order of need. Packing lists were verified crate by crate against the QC sheets before the seals went on."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/12-gy-packing.webp",
+          "alt": "A wrapped fascia panel entering its plywood crate — foam lining, edge protectors and desiccant in place, crate labelled to the installation sequence.",
+          "caption": "A wrapped fascia panel entering its plywood crate — foam lining, edge protectors and desiccant in place, crate labelled to the installation sequence."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "All components export-packed, crate-labelled by sequence, verified against the QC sheets before sealing."
+        }
+      ]
+    },
+    {
+      "id": "stage-13-logistics",
+      "title": "Container Loading and Site Delivery",
+      "navLabel": "Stage 13 · Logistics",
+      "paragraphs": [
+        "The crates left the factory on schedule. Container loading followed the loading plan — long fascia crates on the floor, steel and lettering crates braced upright, ceiling modules racked — with every crate blocked and strapped so nothing shifted in transit. The container was sealed with its packing list photographed into the record, and the site team received the unloading sequence in advance.",
+        "At the destination the sequence reversed: night-time delivery through the mall's service corridor, floor protection laid, crates staged outside the unit in the order the installation needed them. Delivery to programme is part of the product; ours arrived whole, on plan, and in the right order."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/13-gy-stuffing.webp",
+          "alt": "Container loading at the factory: crates guided up the ramp onto a padded deck, blocked and strapped to the loading plan before sealing.",
+          "caption": "Container loading at the factory: crates guided up the ramp onto a padded deck, blocked and strapped to the loading plan before sealing."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Delivered to programme: container loaded to plan, sealed and recorded; crates staged at the unit in installation order."
+        }
+      ]
+    },
+    {
+      "id": "stage-14-site",
+      "title": "Site Installation",
+      "navLabel": "Stage 14 · Site",
+      "paragraphs": [
+        "Installation ran the way the workshop had rehearsed it. The steel portal went up first, fixed to the slab at the surveyed points and laser-checked for line and level; the fascia panels followed in their numbered sequence; the illuminated lettering was set to its grid and connected through the concealed channels; the backlit ceiling modules closed in over the head beam, last of all, in one continuous composition.",
+        "Because every component was engraved, packed and staged in this same order, the crew never hunted for a part; the next crate was always the right crate. The site photographs read as quiet: scaffold, alignment, connection — the visible half of weeks of workshop discipline."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/14-gy-install.webp",
+          "alt": "Setting the portal inside the mall unit: scaffold at the head, fascia aligned to the survey line, protection down — the rehearsed sequence, repeated on site.",
+          "caption": "Setting the portal inside the mall unit: scaffold at the head, fascia aligned to the survey line, protection down — the rehearsed sequence, repeated on site."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Portal installed to the rehearsed sequence: frame plumb and laser-true, panels and lettering in number order, zero rework required."
+        }
+      ]
+    },
+    {
+      "id": "stage-15-site",
+      "title": "Leveling, Joints and Reveal Alignment",
+      "navLabel": "Stage 15 · Site",
+      "paragraphs": [
+        "Luxury retail is inspected at every angle, so after erection the portal was leveled and aligned to the mall's finishes. Shims went under the frame feet where the slab had its honest deviations; fascia reveals were re-set to the workshop standard; the lettering line was re-checked against a laser reference at both ends; ceiling module joints were made continuous across the head beam.",
+        "The alignment pass is invisible when it is done well — and that is the deliverable. The fascia reads as one plane; the name sits on one optical line; the ceiling pattern flows uninterrupted over the entrance. This is the stage that turns good fabrication into a storefront that feels inevitable."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/15-gy-leveling.webp",
+          "alt": "Leveling the fascia base at the floor joint: shims set, spirit level centred — the invisible pass that makes the portal read as one plane.",
+          "caption": "Leveling the fascia base at the floor joint: shims set, spirit level centred — the invisible pass that makes the portal read as one plane."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Portal leveled, plumbed and aligned: reveals even, lettering on one optical line, ceiling joints continuous."
+        }
+      ]
+    },
+    {
+      "id": "stage-16-commissioning",
+      "title": "Night Commissioning and Light Inspection",
+      "navLabel": "Stage 16 · Commissioning",
+      "paragraphs": [
+        "An illuminated portal is finally judged after dark, so commissioning waited for the evening. The lettering and ceiling circuits were powered to the workshop baseline and inspected from the mall floor at the customer distance: glow evenness across the full name, halo falloff on the perforated panels, the ceiling's patterned wash, and the black fascia's depth under the mall's own lighting.",
+        "Each reading was checked against the numbers logged in the workshop and signed on site. The portal that had been approved as a mock-up in a workshop now stood as the boutique's face in a mall, glowing exactly as approved."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/16-gy-night.webp",
+          "alt": "Evening commissioning at the storefront: lettering and ceiling wash checked against the workshop baseline from the customer distance, the black fascia reading deep under mall light.",
+          "caption": "Evening commissioning at the storefront: lettering and ceiling wash checked against the workshop baseline from the customer distance, the black fascia reading deep under mall light."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Night commissioning passed: glow, halo and ceiling wash verified against the workshop baseline and signed on site."
+        }
+      ]
+    },
+    {
+      "id": "stage-17-handover",
+      "title": "Final Acceptance",
+      "navLabel": "Stage 17 · Handover",
+      "paragraphs": [
+        "Acceptance closed the project the way the inquiry had opened it — face to face, with everything on the table. The brand's projects manager and our project lead walked the storefront together: gloss depth, joint lines, letter glow, ceiling evenness, the corner details. The punch list from the walk was short and closed within a day; acceptance was signed against the mock-up standard, the QC records and the commissioning log — the same documents that had travelled with the crates.",
+        "There is a particular confidence in signing acceptance on work that was trial-assembled before it left the factory: nothing discovered on site needed a factory fix, because the factory had already met every component. The walk confirmed what the process had built — and the boutique opened on the date the schedule had fixed in week one."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/17-gy-acceptance.webp",
+          "alt": "The acceptance walk: brand projects manager and our project lead through the finished boutique with the punch list, against the mock-up standard and the commissioning log.",
+          "caption": "The acceptance walk: brand projects manager and our project lead through the finished boutique with the punch list, against the mock-up standard and the commissioning log."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Accepted and signed: punch list closed within a day, zero factory rework, opening date held."
+        }
+      ]
+    },
+    {
+      "id": "stage-18-care",
+      "title": "Aftercare and Maintenance Handover",
+      "navLabel": "Stage 18 · Care",
+      "paragraphs": [
+        "Handover included the aftercare package: cleaning guidance for the gloss black and the protective-film-free finish, the LED module replacement procedure for the lettering with labelled spares, the driver access map for the ceiling circuits, and the torque-check schedule for the head fixings. The sealed sample set was retained as the reference for any future boutique in the brand's rollout.",
+        "The aftercare routine is what keeps a storefront looking like opening day for years: black polished to its approved depth, the name glowing at its commissioned baseline, reveals kept true. The first scheduled service visit is the package's last promise kept — the portal performing, quietly, as the frame around the brand's daily business."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/piaget-boutique-entrance-portal/18-gy-aftercare.webp",
+          "alt": "Aftercare in practice: the fascia wiped to its approved gloss on the first scheduled service visit — the maintenance the portal was designed to receive.",
+          "caption": "Aftercare in practice: the fascia wiped to its approved gloss on the first scheduled service visit — the maintenance the portal was designed to receive."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Aftercare package delivered: maintenance schedules, labelled spares and the sealed samples retained as the permanent finish reference."
+        }
+      ]
+    },
+    {
+      "id": "stage-map",
+      "title": "Stage Map — 18 Steps, One Delivery",
+      "navLabel": "Stage map",
+      "paragraphs": [
+        "The whole journey: the eighteen stages in the order the project actually ran, from the first inquiry to the aftercare routine — the checklist the work was planned, packed, installed and accepted against."
+      ],
+      "table": {
+        "caption": "Stage Map — 18 Steps, One Delivery",
+        "headings": [
+          "Stage",
+          "Focus"
+        ],
+        "rows": [
+          [
+            "01 · Inquiry & Kickoff",
+            "One-factory scope and fixed window agreed"
+          ],
+          [
+            "02 · Site Survey",
+            "Millimetre baseline, signed survey report"
+          ],
+          [
+            "03 · Shop Drawings",
+            "IFC package: frame, fascia, lettering, ceiling"
+          ],
+          [
+            "04 · Samples & Approval",
+            "Sealed black, gold, glow and ceiling reference"
+          ],
+          [
+            "05 · Steel Portal Frame",
+            "Welded and squared to surveyed levels"
+          ],
+          [
+            "06 · Black Lacquer Fascia",
+            "Gloss depth and reveals verified to the seal"
+          ],
+          [
+            "07 · Illuminated Lettering",
+            "Brightness balanced by measurement"
+          ],
+          [
+            "08 · Workshop Trial Assembly",
+            "Full portal built and lit before packing"
+          ],
+          [
+            "09 · Height Rehearsal",
+            "Head junction and corners proven at height"
+          ],
+          [
+            "10 · Mock-Up Approval",
+            "Approved with zero conditions"
+          ],
+          [
+            "11 · Final QC",
+            "100% documented against sealed samples"
+          ],
+          [
+            "12 · Export Packing",
+            "Crate-by-crate verified, sequence-labelled"
+          ],
+          [
+            "13 · Shipping & Delivery",
+            "Container to plan; crates staged in order"
+          ],
+          [
+            "14 · Site Installation",
+            "Rehearsed sequence executed on site"
+          ],
+          [
+            "15 · Leveling & Alignment",
+            "One plane, one optical line, continuous ceiling"
+          ],
+          [
+            "16 · Night Commissioning",
+            "Glow verified against workshop baseline"
+          ],
+          [
+            "17 · Final Acceptance",
+            "Punch list closed within a day"
+          ],
+          [
+            "18 · Aftercare",
+            "Maintenance package and sealed samples issued"
+          ]
+        ]
+      }
+    }
+  ],
+  "conclusion": "GUOYAO METALWORK · Luxury boutique fit-out, illuminated signage & architectural metalwork. Case study photographs are project records; every project is governed by its approved drawings and sealed samples.",
+  "relatedLinks": []
+}

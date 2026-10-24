@@ -1,0 +1,1054 @@
+{
+  "version": "2.31.1",
+  "time": 1791992939550,
+  "blocks": [
+    {
+      "id": "yleysepvt4",
+      "type": "paragraph",
+      "data": {
+        "text": "Raw-material screening is where a luxury retail fit-out is won or lost. Long before the first panel is welded, the grade, the surface process and the supplier have already fixed the ceiling of what the finished metalwork can look like. This guide sets out the full sourcing discipline used for luxury boutiques, high-end residences and luxury hotels: eight screening gates, fourteen test items and three rounds of sample validation that turn \"premium feel\" into procurement standards which can be quantified, re-checked and held accountable."
+      }
+    },
+    {
+      "id": "DRWU4H0Ro4",
+      "type": "paragraph",
+      "data": {
+        "text": "Headline screening targets for the whole process:"
+      }
+    },
+    {
+      "id": "R8PvPKU5fc",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "Screening gates: 8",
+          "Key test items: 14",
+          "Sample-validation rounds: 3",
+          "Standard screening cycle: 6–8 weeks",
+          "Overall supplier rejection rate: 98.3%",
+          "Same-batch colour-difference cap: ΔE ≤ 1.0"
+        ]
+      }
+    },
+    {
+      "id": "fE6RpyaT4V",
+      "type": "header",
+      "data": {
+        "text": "1. The Screening Process: An Eight-Step Closed Loop",
+        "level": 2
+      }
+    },
+    {
+      "id": "LmNYeNjTwT",
+      "type": "paragraph",
+      "data": {
+        "text": "Every step carries a \"one-vote veto item\": failing any one of them terminates the process immediately — no entry to the next round, no wasted sampling or time. The checklist below reads as Stage · Key action · Output · Owner · Cycle · One-vote veto item."
+      }
+    },
+    {
+      "id": "Y70DhlkG2o",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/01-supplier-pre-screening.webp"
+        },
+        "caption": "Supplier pre-screening on site: an auditor checking capacity and equipment in the stainless sheet-stock warehouse",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "d2P5E35W5u",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>01 Requirement breakdown</b> — Key action: fix colour code, gloss, texture, touch and jointing method from the brand VI and design drawings · Output: Metalwork Technical Requirements · Owner: Design + Procurement · Cycle: 3–5 days · One-vote veto: colour code or gloss not quantified",
+          "<b>02 Supplier pre-screening</b> — Key action: verify credentials, capacity, equipment and comparable luxury-mall projects · Output: Pre-Screening Qualified List · Owner: Procurement · Cycle: 5–7 days · One-vote veto: no ISO9001 / no luxury project references",
+          "<b>03 Material scheme comparison</b> — Key action: corrosion resistance, texture and cost trade-offs across stainless steel / brass / aluminium / titanium · Output: Base-Material Selection Comparison · Owner: Engineering + Procurement · Cycle: 5 days · One-vote veto: unclear grade designation or material substitution",
+          "<b>04 Physical &amp; chemical testing</b> — Key action: spectrometry, hardness, coating thickness, salt spray and colour difference tested by a third party · Output: Third-Party Test Report · Owner: Third-party laboratory · Cycle: 7–10 days · One-vote veto: composition deviation / salt-spray failure",
+          "<b>05 Surface-treatment sampling</b> — Key action: small sample panels of PVD, plating, brushing, mirror and shot blasting compared side by side · Output: Sample Colour-Board Confirmation · Owner: Supplier + Design · Cycle: 7–12 days · One-vote veto: ΔE &gt; 1.5 or gloss deviation &gt; 3 GU",
+          "<b>06 Trial production &amp; fitting</b> — Key action: small-batch production and 1:1 on-site trial fitting to verify joints and lighting effect · Output: Trial-Fit Acceptance Record · Owner: Supplier + Project · Cycle: 10–14 days · One-vote veto: joint &gt; 0.5 mm / poor fit",
+          "<b>07 Batch re-inspection</b> — Key action: batch sampling on arrival; re-test same-batch colour difference and coating thickness · Output: Incoming Inspection Report · Owner: Quality control · Cycle: 2–3 days per batch · One-vote veto: same-batch ΔE &gt; 1.0 / coating showing through",
+          "<b>08 Installation &amp; protection</b> — Key action: protective film and anti-fingerprint treatment on finished parts; sample retention archive set up at delivery · Output: Sample Ledger + Warranty · Owner: Project + Supplier · Cycle: with installation · One-vote veto: no retained sample / no warranty commitment"
+        ]
+      }
+    },
+    {
+      "id": "X68UBipqeS",
+      "type": "paragraph",
+      "data": {
+        "text": "The five hard gates in pre-screening: ISO9001 and environmental credentials, comparable luxury-mall projects, monthly capacity ≥ 500 m², lead time ≤ 45 days, and an in-house surface-treatment line. Failing any one of them means immediate elimination — 120 candidates typically shrink to 48 at this gate alone."
+      }
+    },
+    {
+      "id": "k3r7UTI6sQ",
+      "type": "header",
+      "data": {
+        "text": "2. The Supplier Screening Funnel: From 120 Candidates to 2",
+        "level": 2
+      }
+    },
+    {
+      "id": "enDUC6851p",
+      "type": "paragraph",
+      "data": {
+        "text": "Every level is a hard elimination, and only about 1.7% of suppliers finally enter the brand's qualified list. The funnel is not a ranking — it is a sequence of doors, each of which either opens or closes the process outright."
+      }
+    },
+    {
+      "id": "UZfvam9wT0",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/02-screening-review.webp"
+        },
+        "caption": "Supplier screening review: sample panels and technical documents screened level by level",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "DSDaWcwB3E",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>120 → 48</b> — credential and capacity pre-screening (60% eliminated)",
+          "<b>48 → 22</b> — material and process comparison (54% eliminated)",
+          "<b>22 → 9</b> — physical and chemical testing (59% eliminated)",
+          "<b>9 → 4</b> — sampling and trial fitting (56% eliminated)",
+          "<b>4 → 2</b> — onboarded to the qualified list",
+          "<b>Overall pass rate</b> — 1.7%"
+        ]
+      }
+    },
+    {
+      "id": "CVgd423jdR",
+      "type": "header",
+      "data": {
+        "text": "2.1 Main pre-screening elimination causes",
+        "level": 3
+      }
+    },
+    {
+      "id": "RKdeYwm6ej",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "No ISO9001 or environmental credentials",
+          "No luxury-mall project references",
+          "Monthly capacity &lt; 500 m² or lead time &gt; 45 days",
+          "No in-house surface-treatment line"
+        ]
+      }
+    },
+    {
+      "id": "9FuZDFsGOA",
+      "type": "header",
+      "data": {
+        "text": "2.2 Main scheme-comparison elimination causes",
+        "level": 3
+      }
+    },
+    {
+      "id": "MYs7UjgPA7",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "Insufficient colour gamut — the specified colour code cannot be matched",
+          "Poor precision on shaped parts (&gt; ±0.5 mm)",
+          "No same-heat-number / same-batch commitment",
+          "Quote clearly outside the reasonable range"
+        ]
+      }
+    },
+    {
+      "id": "4bWYQrm8Ek",
+      "type": "header",
+      "data": {
+        "text": "2.3 Main testing elimination causes",
+        "level": 3
+      }
+    },
+    {
+      "id": "9OModESHhv",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "316L nickel / molybdenum content below specification",
+          "PVD coating thickness &lt; 0.8 μm",
+          "Red rust after 480 h salt spray",
+          "Cross-hatch adhesion failure"
+        ]
+      }
+    },
+    {
+      "id": "2wialAJ59x",
+      "type": "header",
+      "data": {
+        "text": "2.4 Main sampling and trial-fit elimination causes",
+        "level": 3
+      }
+    },
+    {
+      "id": "Wj3z8Lb8XO",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "ΔE &gt; 1.5 — colour difference visible to the eye",
+          "Joint &gt; 0.5 mm, obvious under lighting",
+          "Poor trial fit, on-site re-drilling needed",
+          "Heavy fingerprint residue on surfaces"
+        ]
+      }
+    },
+    {
+      "id": "dbxZomDqDH",
+      "type": "header",
+      "data": {
+        "text": "3. Base-Material Grade and Application Matrix",
+        "level": 2
+      }
+    },
+    {
+      "id": "dUS3svLgSM",
+      "type": "paragraph",
+      "data": {
+        "text": "Never write just \"stainless steel\" — specify the grade and condition. Within the same family, different grades and heat-treatment conditions mean huge differences in corrosion resistance, workability and final texture."
+      }
+    },
+    {
+      "id": "2Uz1ccgXY1",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/03-base-material-samples.webp"
+        },
+        "caption": "Four base-material sample plates: stainless steel, brass, aluminium, titanium",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "5yKUiQUvk9",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Stainless steel 316L (022Cr17Ni12Mo2)</b> — Condition: solution-annealed + BA / 2B · Surface treatments: PVD champagne gold, brushing, 8K mirror, shot blasting · Typical applications: door casings, columns, handrails, display-case frames, skirtings · Key note: pickling and passivation mandatory after welding; avoid direct contact with carbon steel to prevent galvanic corrosion",
+          "<b>Stainless steel 304 (06Cr19Ni10)</b> — Condition: 2B · Surface treatments: brushing, shot blasting, PVD · Typical applications: concealed structural parts, back panels, internal supports · Key note: weak chloride resistance — not recommended for coastal malls or high-frequency touch surfaces",
+          "<b>Brass H59 / H62</b> — Condition: annealed · Surface treatments: nickel plating base + antique finish, transparent anti-oxidation coating · Typical applications: decorative trims, nameplates, pulls, 3D logo lettering · Key note: oxidises and discolours easily — sealing coating mandatory; fingerprints need AF treatment",
+          "<b>Aluminium alloy 6061-T6 / 6063-T5</b> — Condition: standard temper · Surface treatments: anodising, PVDF spraying, shot blasting · Typical applications: ceiling trims, light coves, lightweight partitions, shaped column wraps · Key note: low hardness — avoid high-touch areas; thin walls deform easily",
+          "<b>Titanium TA2 (commercially pure) / TC4</b> — Condition: as supplied · Surface treatments: anodised colouring, brushing, mirror · Typical applications: premium nodes, brand identity, art installations · Key note: difficult to machine and very costly; lead time usually 30+ days",
+          "<b>Copper alloy (bronze / aluminium bronze)</b> — Condition: cast or forged · Surface treatments: aged finish, antique-bronze oxidation · Typical applications: art pieces, custom hardware · Key note: mostly custom with dedicated tooling — the longest cycle and the highest risk"
+        ]
+      }
+    },
+    {
+      "id": "qaa8pv0wMt",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/04-antique-brass-closeup.webp"
+        },
+        "caption": "Antique-finish brass close-up: nickel-plated base, antique oxidation and sealing coat",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "8CLhHrguKy",
+      "type": "paragraph",
+      "data": {
+        "text": "Brass oxidises and discolours very easily; the sealing coat is the final and mandatory step. High-touch areas also need an AF anti-fingerprint treatment, or fingerprint residue quickly ruins the look."
+      }
+    },
+    {
+      "id": "jdQE8ve7cE",
+      "type": "quote",
+      "data": {
+        "text": "Selection principle: visible, touchable surfaces take 316L stainless plus PVD; accent-but-non-structural parts take antique brass; invisible, lightweight, budget-driven parts take aluminium; titanium is reserved only for well-funded nodes that must signal scarcity.",
+        "caption": "",
+        "alignment": "left"
+      }
+    },
+    {
+      "id": "80C0tSlSia",
+      "type": "header",
+      "data": {
+        "text": "4. Surface-Treatment Comparison and Cost Breakdown",
+        "level": 2
+      }
+    },
+    {
+      "id": "c4bQMRTZTx",
+      "type": "header",
+      "data": {
+        "text": "4.1 Seven mainstream surface treatments",
+        "level": 3
+      }
+    },
+    {
+      "id": "EPcQf3HlWf",
+      "type": "paragraph",
+      "data": {
+        "text": "A side-by-side comparison of film thickness, colour, wear resistance, weatherability and relative cost."
+      }
+    },
+    {
+      "id": "8iV2PRE15O",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/05-surface-treatment-samples.webp"
+        },
+        "caption": "Seven surface-treatment sample plates compared",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "bZPb7gOjPY",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>PVD vacuum coating</b> — Film thickness: 0.3–1.5 μm · Wear resistance: high · Weatherability: excellent · Relative cost: medium-high",
+          "<b>Chrome plating</b> — Film thickness: 0.1–0.5 μm · Wear resistance: medium-high · Weatherability: good · Relative cost: medium",
+          "<b>Gold plating</b> — Film thickness: 0.5–3 μm · Wear resistance: medium · Weatherability: medium · Relative cost: high",
+          "<b>Brushing / mirror</b> — Film thickness: base material itself · Wear resistance: depends on base · Weatherability: depends on base · Relative cost: low",
+          "<b>Shot blasting</b> — Film thickness: base material itself · Wear resistance: medium · Weatherability: medium · Relative cost: low",
+          "<b>Anodising (aluminium)</b> — Film thickness: 5–20 μm · Wear resistance: medium-high · Weatherability: excellent · Relative cost: medium",
+          "<b>PVDF spraying</b> — Film thickness: 30–60 μm · Wear resistance: medium · Weatherability: excellent · Relative cost: medium"
+        ]
+      }
+    },
+    {
+      "id": "m95dRiLVUD",
+      "type": "quote",
+      "data": {
+        "text": "Recommended process chain: 316L base → brushed undercoat → PVD champagne gold → AF anti-fingerprint coating. All four steps are indispensable — the final AF coating directly decides how the surface feels to a customer's touch.",
+        "caption": "",
+        "alignment": "left"
+      }
+    },
+    {
+      "id": "0fWOhkDgeD",
+      "type": "header",
+      "data": {
+        "text": "4.2 Metalwork cost breakdown",
+        "level": 3
+      }
+    },
+    {
+      "id": "6iRN5f2MA3",
+      "type": "paragraph",
+      "data": {
+        "text": "Based on one standard stainless decorative wall, split from a 100% tax-included delivered price."
+      }
+    },
+    {
+      "id": "swTf05E9tA",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/06-decorative-wall.webp"
+        },
+        "caption": "A completed stainless decorative wall — the carrier of the cost structure",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "hiAN3pbSm3",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Base material</b> — 35%",
+          "<b>Forming</b> — 22%",
+          "<b>Surface treatment</b> — 20%",
+          "<b>Testing &amp; certification</b> — 6%",
+          "<b>Packing &amp; logistics</b> — 8%",
+          "<b>Management &amp; margin</b> — 9%"
+        ]
+      }
+    },
+    {
+      "id": "VAUchSrela",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Where the savings are:</b> surface treatment is 20% — the second-largest cost after base material, and the last thing to cut. The real optimisation target is the 35% base material: consolidate purchasing, unify grades and reduce the variety of finishes to dilute cost, instead of lowering surface-treatment standards."
+      }
+    },
+    {
+      "id": "EJ0YBXSihJ",
+      "type": "header",
+      "data": {
+        "text": "5. Performance Radar of the Four Candidate Base Materials",
+        "level": 2
+      }
+    },
+    {
+      "id": "rtaPygmzvi",
+      "type": "paragraph",
+      "data": {
+        "text": "Five-dimension score on a 10-point scale, higher is better. Cost controllability combines price level with supply stability; durability and maintainability combine scratch resistance, fingerprint resistance and reparability."
+      }
+    },
+    {
+      "id": "NvgC7wEZbF",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/07-candidate-materials.webp"
+        },
+        "caption": "Four candidate base-material samples: 316L stainless, brass, aluminium, titanium",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "PdC4GcaOqb",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>316L stainless steel</b> — Corrosion resistance: 9 · Formability: 7 · Texture grade: 8 · Cost controllability: 6 · Durability &amp; maintainability: 9",
+          "<b>H59 brass</b> — Corrosion resistance: 6 · Formability: 9 · Texture grade: 9.5 · Cost controllability: 7 · Durability &amp; maintainability: 6",
+          "<b>6061 aluminium</b> — Corrosion resistance: 7 · Formability: 9.5 · Texture grade: 6 · Cost controllability: 9 · Durability &amp; maintainability: 7",
+          "<b>TA2 titanium</b> — Corrosion resistance: 10 · Formability: 5 · Texture grade: 8.5 · Cost controllability: 2 · Durability &amp; maintainability: 10"
+        ]
+      }
+    },
+    {
+      "id": "c8glOAWLC9",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>How to read it:</b> 316L stainless leads across corrosion resistance, formability, and durability and maintainability — the default answer for luxury-store metalwork. Brass scores highest on texture but is weaker on durability and cost control, so it is best used as an accent. Aluminium is the most economical but lacks texture. Titanium is balanced on every axis except cost, where it is nearly last."
+      }
+    },
+    {
+      "id": "UTVPIed4Wc",
+      "type": "header",
+      "data": {
+        "text": "6. On-Site Inspection Operations",
+        "level": 2
+      }
+    },
+    {
+      "id": "n2rxxFvbnK",
+      "type": "paragraph",
+      "data": {
+        "text": "During incoming re-inspection and trial fitting, QC staff carry portable instruments and re-measure point by point on site, recording inspection-point numbers and batch information as they go."
+      }
+    },
+    {
+      "id": "yPr9qr5MSQ",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/08-incoming-inspection.webp"
+        },
+        "caption": "Incoming re-inspection: an inspector checking a stainless column cladding with a handheld spectrometer",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "abBgFDKuTZ",
+      "type": "paragraph",
+      "data": {
+        "text": "Inspection points P-01 to P-05 are numbered one by one while a recorder logs the batch number, retained-sample number and measured values, so every column and every panel can be traced back to its exact heat number and process batch."
+      }
+    },
+    {
+      "id": "mX36PeEcMa",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Action 01 — Handheld spectrometer (PMI)</b> — point-by-point re-check of grade and nickel / molybdenum content, stopping 304 being passed off as 316L",
+          "<b>Action 02 — Spectrophotometer</b> — compared against the sealed sample: same batch ΔE ≤ 1.0, cross-batch ≤ 1.5",
+          "<b>Action 03 — Coating thickness gauge</b> — PVD ≥ 0.8 μm, chrome plating ≥ 0.3 μm; a short fall means the whole batch goes back",
+          "<b>Action 04 — Straightedge and feeler gauges</b> — 2 m straightedge against the wall, feeler gauges in the gap; visible joints ≤ 0.5 mm to pass"
+        ]
+      }
+    },
+    {
+      "id": "IznsRfxifd",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/09-pmi-spectrometer.webp"
+        },
+        "caption": "Close-up of PMI material re-inspection with a handheld spectrometer",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "LBYRJcfc6x",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/10-spectrophotometer.webp"
+        },
+        "caption": "Close-up of a spectrophotometer compared against a sealed colour sample",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "UqkGisBv6u",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/11-coating-thickness-gauge.webp"
+        },
+        "caption": "Close-up of a coating thickness gauge measuring a PVD layer",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "PxpjqXnhAm",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/12-straightedge-feeler-gauge.webp"
+        },
+        "caption": "Straightedge and feeler gauges checking wall flatness",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "a0Q52WlI2I",
+      "type": "quote",
+      "data": {
+        "text": "On-site operating requirements: inspectors must wear safety helmets and cut-resistant gloves to avoid scratching finished surfaces; instruments must be calibrated before use — the spectrometer runs one standard-block check at every start-up; every inspection point must be photographed, with files named \"area-component-point-date\"; on any failure, stop installing that batch immediately, tag it red and quarantine it — never mix it with passing parts.",
+        "caption": "",
+        "alignment": "left"
+      }
+    },
+    {
+      "id": "RN7UmsSmYu",
+      "type": "header",
+      "data": {
+        "text": "7. Fourteen Test Items and Acceptance Criteria",
+        "level": 2
+      }
+    },
+    {
+      "id": "C3NbxyTAFe",
+      "type": "paragraph",
+      "data": {
+        "text": "These clauses are recommended as a direct annex to the purchase contract, fixing test methods, frequency and disposition of non-conforming material."
+      }
+    },
+    {
+      "id": "TTC7pvjU3S",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>01 Composition</b> — Requirement: 316L Ni 10–14%, Mo 2–3%; brass Cu ≥ 59%; recycled-material blending prohibited · Method: handheld PMI spectrometer / third-party spectrometry · Frequency: every batch · On failure: return whole batch",
+          "<b>02 Mechanical properties</b> — Requirement: tensile strength and elongation per grade standard; hardness deviation ≤ ±10% · Method: universal testing machine / Rockwell hardness tester · Frequency: every batch · On failure: return whole batch",
+          "<b>03 Coating thickness</b> — Requirement: PVD ≥ 0.8 μm, chrome ≥ 0.3 μm, gold ≥ 0.5 μm · Method: coating thickness gauge (magnetic / eddy current) · Frequency: 10% sampled per batch · On failure: double sampling; return if still failing",
+          "<b>04 Coating adhesion</b> — Requirement: cross-hatch class 0 (no detachment); no peeling after 90° bend · Method: cross-hatch cutter + 3M tape · Frequency: every batch · On failure: return whole batch",
+          "<b>05 Colour consistency</b> — Requirement: same batch ΔE ≤ 1.0; cross-batch ΔE ≤ 1.5 · Method: spectrophotometer (D65 source) · Frequency: compared with retained sample each batch · On failure: off-colour pieces picked out for rework",
+          "<b>06 Gloss</b> — Requirement: deviation from sealed sample ≤ 3 GU (mirror and matte controlled separately) · Method: gloss meter, 60° · Frequency: sampled every batch · On failure: off-spec pieces reworked",
+          "<b>07 Surface roughness</b> — Requirement: brushed Ra 0.4–0.8 μm; mirror Ra ≤ 0.05 μm · Method: roughness tester · Frequency: sampled every batch · On failure: off-spec pieces reworked",
+          "<b>08 Salt spray</b> — Requirement: neutral salt spray 480 h with no red rust; decorative faces 240 h with no white rust · Method: GB/T 10125 salt-spray chamber · Frequency: quarterly / per supplier · On failure: supply suspended pending corrective action",
+          "<b>09 Wear resistance</b> — Requirement: RCA wear ≥ 100 cycles (PVD decorative faces) · Method: RCA wear tester · Frequency: quarterly · On failure: process rectification",
+          "<b>10 Artificial sweat resistance</b> — Requirement: 24 h artificial-sweat immersion with no discolouration or blistering · Method: GB/T 10125 annex / artificial sweat formulation · Frequency: quarterly · On failure: process rectification",
+          "<b>11 Environmental compliance</b> — Requirement: lead, cadmium, hexavalent chromium etc. within RoHS / REACH limits · Method: third-party test report (renewed annually) · Frequency: annual · On failure: cooperation suspended",
+          "<b>12 Flatness</b> — Requirement: mirror parts show no visible distortion over 2 m; flatness ≤ 1 mm/m · Method: 2 m straightedge + feeler gauges / laser level · Frequency: 100% inspected · On failure: re-formed on site or returned",
+          "<b>13 Joint precision</b> — Requirement: visible joints ≤ 0.5 mm; concealed joints ≤ 1.0 mm · Method: feeler gauges + on-site trial fit · Frequency: 100% inspected · On failure: reworked on site",
+          "<b>14 Packing &amp; protection</b> — Requirement: anti-fingerprint film + pearl cotton + timber crate; transport damage borne by the supplier · Method: unpacking acceptance record on arrival · Frequency: every shipment · On failure: free replacement by the supplier"
+        ]
+      }
+    },
+    {
+      "id": "4nDwfjRRb4",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/13-salt-spray-chamber.webp"
+        },
+        "caption": "Metal test coupons inside a salt-spray chamber",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "5Jk85Drz8S",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/14-third-party-laboratory.webp"
+        },
+        "caption": "Spectrometric composition analysis in a third-party laboratory",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "eRO51fZ6bI",
+      "type": "paragraph",
+      "data": {
+        "text": "Salt spray is submitted quarterly per supplier, and any failure suspends supply until corrective action is complete — it is the only objective evidence of corrosion performance. Composition, tensile strength, elongation and hardness are reported by a third party and renewed annually, with the original reports archived alongside the retained samples."
+      }
+    },
+    {
+      "id": "k6ds8cbkB2",
+      "type": "header",
+      "data": {
+        "text": "8. First-Pass Yield and Colour-Difference Control",
+        "level": 2
+      }
+    },
+    {
+      "id": "cfkjA12pmo",
+      "type": "header",
+      "data": {
+        "text": "8.1 Actual performance of seven high-frequency tests",
+        "level": 3
+      }
+    },
+    {
+      "id": "sO9ZXiTdiK",
+      "type": "paragraph",
+      "data": {
+        "text": "Statistics from metalwork submitted by high-end retail stores over the past three years, about 2,400 samples."
+      }
+    },
+    {
+      "id": "9bQvuE3e7v",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/15-gloss-meter.webp"
+        },
+        "caption": "A gloss meter measuring a brushed panel",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "0uHOMJp34c",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>PMI spectrometry</b> — 98%",
+          "<b>Hardness &amp; tensile strength</b> — 95%",
+          "<b>Coating thickness</b> — 93%",
+          "<b>Coating adhesion</b> — 91%",
+          "<b>Surface roughness</b> — 88%",
+          "<b>480 h salt spray</b> — 82%",
+          "<b>Colour difference ΔE ≤ 1.5</b> — only 76%"
+        ]
+      }
+    },
+    {
+      "id": "S1FBCEl35e",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Risk ranking:</b> colour difference (76%) &gt; salt spray (82%) &gt; roughness (88%). These three decide whether the customer's first glance reads cheap, so they must be locked down at the sampling stage."
+      }
+    },
+    {
+      "id": "HPm2WWOgA7",
+      "type": "header",
+      "data": {
+        "text": "8.2 Colour-difference control standard (ΔE scale)",
+        "level": 3
+      }
+    },
+    {
+      "id": "zvBcxfL3nd",
+      "type": "paragraph",
+      "data": {
+        "text": "Measured under a D65 standard source at 45°/0° geometry, compared against the sealed sample board."
+      }
+    },
+    {
+      "id": "liJNfFTsq3",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/16-colour-matching-booth.webp"
+        },
+        "caption": "Sealed colour boards compared under a standard light booth",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "rwhlwfFfZr",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>ΔE ≤ 0.5</b> — excellent; pass without further check",
+          "<b>ΔE ≤ 1.0</b> — good; normal pass",
+          "<b>ΔE ≤ 1.5</b> — acceptable; pick pieces for use",
+          "<b>ΔE &gt; 1.5</b> — rejected; whole batch returned"
+        ]
+      }
+    },
+    {
+      "id": "MT2kxMiWrm",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Actions to land it:</b> lock \"same heat number + same-batch PVD process\" in the contract; the supplier provides a retained colour board with every shipment, numbered and archived; re-verify on site under the same light as in operation (3000 K / 4000 K); and replacements must be colour-matched from the original batch's retained samples — cross-batch replacements are prohibited."
+      }
+    },
+    {
+      "id": "2HAbdL76E6",
+      "type": "header",
+      "data": {
+        "text": "9. Supplier Scorecard and Tiered Management",
+        "level": 2
+      }
+    },
+    {
+      "id": "GP9bOu4PMN",
+      "type": "header",
+      "data": {
+        "text": "9.1 Scoring weights",
+        "level": 3
+      }
+    },
+    {
+      "id": "UKjElr2CSW",
+      "type": "paragraph",
+      "data": {
+        "text": "Total 100 points; below 80 points does not enter sampling, and below 70 points is eliminated outright."
+      }
+    },
+    {
+      "id": "tmkQs6q2EC",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/17-supplier-scorecard.webp"
+        },
+        "caption": "A supplier scorecard reviewed alongside sample panels",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "f67Q1cYqXX",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Appearance texture &amp; colour difference</b> — 35%",
+          "<b>Physical &amp; chemical performance</b> — 25%",
+          "<b>Weather &amp; corrosion resistance</b> — 20%",
+          "<b>Machining &amp; schedule</b> — 10%",
+          "<b>Cost control</b> — 10%"
+        ]
+      }
+    },
+    {
+      "id": "Lf16euZdSw",
+      "type": "paragraph",
+      "data": {
+        "text": "Scoring example for appearance texture (35 points): ΔE ≤ 0.5 scores the full 35 points; each 0.2 over deducts 5; ΔE &gt; 1.5 scores 0 and is vetoed outright."
+      }
+    },
+    {
+      "id": "zPZJPdsjes",
+      "type": "header",
+      "data": {
+        "text": "9.2 Four-tier supplier classification",
+        "level": 3
+      }
+    },
+    {
+      "id": "gAJNUlMKns",
+      "type": "paragraph",
+      "data": {
+        "text": "Passing onboarding is not permanent; suppliers are re-evaluated at least once a year."
+      }
+    },
+    {
+      "id": "PO6XHmWvvA",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/18-supplier-evaluation-meeting.webp"
+        },
+        "caption": "Supplier evaluation meeting: scorecards reviewed alongside sample panels",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "mslsNs05XH",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Tier A — ≥ 90 points</b> — strategic supplier; joins new-store sampling, with priority on payment terms and orders",
+          "<b>Tier B — 80–89 points</b> — qualified supplier; takes orders normally, re-inspected batch by batch",
+          "<b>Tier C — 70–79 points</b> — standby supplier; non-critical areas only, with rectification within a deadline",
+          "<b>Tier D — &lt; 70 points</b> — eliminated; excluded from RFQs for two years"
+        ]
+      }
+    },
+    {
+      "id": "wOGIDPZXoy",
+      "type": "paragraph",
+      "data": {
+        "text": "Re-evaluation triggers: colour difference over limit in two consecutive batches; failed salt-spray re-test; delivery delayed more than 7 days; major customer or mall complaints; expired credentials not renewed."
+      }
+    },
+    {
+      "id": "aPo6ZWqQ1I",
+      "type": "header",
+      "data": {
+        "text": "10. Sampling and Validation Timeline (8 Weeks)",
+        "level": 2
+      }
+    },
+    {
+      "id": "0T0ZBdVyhT",
+      "type": "paragraph",
+      "data": {
+        "text": "Standard rhythm for a single batch of metalwork. Urgent projects can compress to 5 weeks, but physical and chemical testing and salt spray cannot be compressed."
+      }
+    },
+    {
+      "id": "2dPgmu8Mzh",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/19-first-sampling-round.webp"
+        },
+        "caption": "First sampling round: several colour boards laid out for comparison",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "eiHTPmqvrg",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>W1 — Requirement briefing</b> — confirm colour code, gloss, texture and jointing; issue the technical requirements",
+          "<b>W2 — Base material &amp; process confirmation</b> — lock grades, condition, surface-treatment route and same-batch commitment",
+          "<b>W3 — First sampling round</b> — provide 3–5 colour boards covering different gloss and texture options",
+          "<b>W4 — Colour &amp; physical testing</b> — four tests submitted: ΔE, gloss, coating thickness, adhesion",
+          "<b>W5 — Second sampling round</b> — adjust process parameters per test results; freeze the sealed sample board",
+          "<b>W6 — Small-batch trial</b> — trial-produce 5–10 m² to verify batch colour difference and machining precision",
+          "<b>W7 — On-site 1:1 trial fit</b> — verify joints, light reflection and closure with stone / timber",
+          "<b>W8 — Review &amp; onboarding</b> — scores archived, warranty signed, sample ledger established"
+        ]
+      }
+    },
+    {
+      "id": "cA9Q9q7o54",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/20-on-site-trial-fit.webp"
+        },
+        "caption": "On-site 1:1 trial fit: verifying joints and light reflection",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "GxBQWVWF4A",
+      "type": "paragraph",
+      "data": {
+        "text": "W7 trial-fits on site per the installation drawings — visible joints ≤ 0.5 mm and closures to stone and timber right first time — and the acceptance record is archived."
+      }
+    },
+    {
+      "id": "GwMe7mOUMA",
+      "type": "quote",
+      "data": {
+        "text": "Key reminder: a 480 h salt-spray test takes about 20 days and must run in parallel with sampling, otherwise the whole cycle stretches past 10 weeks. Send the first samples to the third-party laboratory as early as W2.",
+        "caption": "",
+        "alignment": "left"
+      }
+    },
+    {
+      "id": "t4THhV4MFk",
+      "type": "header",
+      "data": {
+        "text": "11. Common Failure Modes and Countermeasures",
+        "level": 2
+      }
+    },
+    {
+      "id": "dcatyGvYhn",
+      "type": "paragraph",
+      "data": {
+        "text": "These eight problems recur across past projects; confirm each one at the technical briefing."
+      }
+    },
+    {
+      "id": "4ewNStmDFj",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/21-batch-colour-difference.webp"
+        },
+        "caption": "Same-batch colour difference across three champagne-gold PVD panels",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "YKRSszOnnn",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/22-coating-peeling.webp"
+        },
+        "caption": "Coating peeling and cross-hatch test scratches close-up",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "zR3oe9csXI",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Visible same-batch colour difference</b> — Root cause: mixed heat numbers, or PVD coated in separate runs · Prevention: lock same heat number plus same-batch process in the contract; retained colour board with every shipment · Severity: high",
+          "<b>Coating detachment / peeling</b> — Root cause: inadequate pre-treatment cleaning, oil residue · Prevention: add cross-hatch adhesion testing, 10% sampled per batch · Severity: high",
+          "<b>Red rust in salt-spray test</b> — Root cause: impure 316L, or no pickling-passivation after welding · Prevention: PMI spectrometry sampling plus designated passivation for welded parts · Severity: high",
+          "<b>Heavy fingerprint residue</b> — Root cause: no AF anti-fingerprint coating, or insufficient wear resistance · Prevention: specify AF coating with RCA wear ≥ 100 cycles · Severity: medium-high",
+          "<b>Mirror distortion / waviness</b> — Root cause: sheet too thin, unbraced, or transport knocks · Prevention: minimum sheet thickness, rear stiffeners, timber crate plus pearl cotton · Severity: medium-high",
+          "<b>Misaligned / lipped joints</b> — Root cause: on-site re-measurement error, no factory pre-assembly · Prevention: pre-assemble and number in the factory; install by number on site · Severity: medium",
+          "<b>Brass oxidising black</b> — Root cause: missing or too-thin anti-oxidation coating · Prevention: mandatory sealing coat, with anti-oxidation care notes at delivery · Severity: medium",
+          "<b>Replacement colour mismatch</b> — Root cause: cross-batch replacement, original retained samples lost · Prevention: maintain a sample ledger; colour-match replacements from the original batch · Severity: medium"
+        ]
+      }
+    },
+    {
+      "id": "7rB3D6e9zQ",
+      "type": "paragraph",
+      "data": {
+        "text": "Inadequate pre-treatment cleaning and oil residue are the main causes of coating lifting at the edge of a cross-hatch cut. Run cross-hatch adhesion tests on 10% of each batch — class 0 passes, and there must be no peeling after a 90° bend."
+      }
+    },
+    {
+      "id": "eelxYYx8oS",
+      "type": "header",
+      "data": {
+        "text": "12. Sample Retention and Archive Checklist",
+        "level": 2
+      }
+    },
+    {
+      "id": "LAfyysqABN",
+      "type": "paragraph",
+      "data": {
+        "text": "Twelve documents must be archived at delivery. They are the only basis for replacements, maintenance and traceability, and none can be missing."
+      }
+    },
+    {
+      "id": "0oyZjA1Inh",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/23-sample-retention-cabinet.webp"
+        },
+        "caption": "Numbered colour boards in the sample retention cabinet",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "Ru6G9BnlKg",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-raw-material-screening-process-and-quality-control/24-archive-documents.webp"
+        },
+        "caption": "Original test reports, warranty and technical annex documents",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "hf9Y7C1hSv",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "Sealed colour boards (with number, date, batch number)",
+          "Original third-party test reports (composition / salt spray / environmental)",
+          "Coating thickness and adhesion test records",
+          "Base-material warranty and heat-number traceability",
+          "Surface-treatment parameter card (PVD target, time, temperature)",
+          "Trial-fit acceptance records and site photos",
+          "Supplier scorecards and tier conclusions",
+          "Purchase-contract technical annex (signed and stamped)",
+          "Installation detail drawings and numbering cross-reference",
+          "Maintenance manual (cleaners / prohibited items)",
+          "Warranty (typically 2 years; 3 years recommended for PVD faces)",
+          "Replacement response commitment (48 h quotation / 15-day delivery)"
+        ]
+      }
+    },
+    {
+      "id": "Het9HkP1N5",
+      "type": "quote",
+      "data": {
+        "text": "Sample retention policy: each batch retains at least 3 boards (A4 size) — one with the supplier, one with the project team, one with the brand. Retention is at least the warranty period plus 1 year; at expiry the boards are destroyed together and the destruction recorded.",
+        "caption": "",
+        "alignment": "left"
+      }
+    },
+    {
+      "id": "N0fl2NU7H5",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Closing note.</b> Screening looks like paperwork, but every clause in it is a decision made in advance about how the finished metalwork will look in a spotlight three years from now. Fix the gates, fix the numbers, and hold both sides to them — that is the whole method."
+      }
+    }
+  ]
+}

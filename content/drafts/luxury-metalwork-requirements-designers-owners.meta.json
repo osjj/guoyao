@@ -1,0 +1,33 @@
+{
+  "slug": "luxury-metalwork-requirements-designers-owners",
+  "title": "What Luxury Projects Really Demand From Metalwork — Through the Eyes of the Designer and the Owner",
+  "excerpt": "Luxury boutiques, five-star hotels, premium residences and museums each punish a different metalwork failure. This in-depth guide sets out what designers actually specify (the signed sample, reflection integrity, 3 mm shadow reveals, ΔE ≤ 1.0 colour identity, node detailing, interface surveys), what owners actually live with (fingerprints, wobbling reflections, rattling seams, night-time glare, cleaning damage, premature ageing), and the specifications that satisfy both. It closes with a three-act conversation between a designer, an owner's development director and a factory project manager showing how a sentence becomes a number, a test and delivered evidence — plus the requirement-to-evidence matrix and six handover checks for each venue type.",
+  "category": "Sourcing & Quality",
+  "status": "DRAFT",
+  "featured": false,
+  "coverImageAlt": "Designer, owner's development director and factory project manager reviewing metal sample coupons, shop drawings and a lobby render at one table.",
+  "sourceDir": "C:/Users/76758/WorkBuddy/2026-10-14-13-46-17/html-opt16",
+  "keyPrefix": "blog/luxury-metalwork-requirements-designers-owners",
+  "cover": {
+    "file": "photos/meeting-three.jpg",
+    "keyTemplate": "blog/luxury-metalwork-requirements-designers-owners/hero-{sha16}.webp"
+  },
+  "images": [
+    { "placeholder": "01", "file": "photos/retail-tiffany.jpg", "key": "blog/luxury-metalwork-requirements-designers-owners/01-luxury-retail-facade-night.webp" },
+    { "placeholder": "02", "file": "photos/hotel-counter.jpg", "key": "blog/luxury-metalwork-requirements-designers-owners/02-hotel-brass-bar-counter.webp" },
+    { "placeholder": "03", "file": "photos/residence-seam.jpg", "key": "blog/luxury-metalwork-requirements-designers-owners/03-residence-column-seam.webp" },
+    { "placeholder": "04", "file": "photos/museum-dome.jpg", "key": "blog/luxury-metalwork-requirements-designers-owners/04-museum-dome-rain-of-light.webp" },
+    { "placeholder": "05", "file": "photos/retail-piaget.jpg", "key": "blog/luxury-metalwork-requirements-designers-owners/05-boutique-backlit-lettering.webp" },
+    { "placeholder": "06", "file": "photos/hotel-vitrine.jpg", "key": "blog/luxury-metalwork-requirements-designers-owners/06-hammered-brass-vitrine.webp" },
+    { "placeholder": "07", "file": "photos/designer-wang.jpg", "key": "blog/luxury-metalwork-requirements-designers-owners/07-designer-sample-review.webp" },
+    { "placeholder": "08", "file": "photos/sample-wall.jpg", "key": "blog/luxury-metalwork-requirements-designers-owners/08-material-sample-board.webp" },
+    { "placeholder": "09", "file": "photos/mockup-review.jpg", "key": "blog/luxury-metalwork-requirements-designers-owners/09-full-size-mockup-review.webp" },
+    { "placeholder": "10", "file": "photos/mock-corner.jpg", "key": "blog/luxury-metalwork-requirements-designers-owners/10-mockup-corner-joint.webp" },
+    { "placeholder": "11", "file": "photos/sample-approve.jpg", "key": "blog/luxury-metalwork-requirements-designers-owners/11-signed-master-coupon.webp" },
+    { "placeholder": "12", "file": "photos/compare-panel.jpg", "key": "blog/luxury-metalwork-requirements-designers-owners/12-flatness-comparison.webp" },
+    { "placeholder": "13", "file": "photos/lab-report.jpg", "key": "blog/luxury-metalwork-requirements-designers-owners/13-salt-spray-lab-report.webp" },
+    { "placeholder": "14", "file": "photos/compare-weld.jpg", "key": "blog/luxury-metalwork-requirements-designers-owners/14-weld-quality-comparison.webp" },
+    { "placeholder": "15", "file": "photos/residence-accept.jpg", "key": "blog/luxury-metalwork-requirements-designers-owners/15-residence-acceptance-walk.webp" },
+    { "placeholder": "16", "file": "photos/museum-accept.jpg", "key": "blog/luxury-metalwork-requirements-designers-owners/16-museum-night-commissioning.webp" }
+  ]
+}

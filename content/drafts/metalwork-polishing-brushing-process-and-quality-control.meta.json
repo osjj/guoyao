@@ -1,0 +1,40 @@
+{
+  "slug": "metalwork-polishing-brushing-process-and-quality-control",
+  "title": "Metal Polishing and Brushing: The Complete Ten-Step Process, Key Data and Acceptance Standards",
+  "excerpt": "A full-process guide to architectural metal polishing and brushing for luxury boutiques, high-end residences and luxury hotels: sample approval, base-material inspection, ten grinding steps from 80# to 8000#, PVD surface treatment, brushing direction rules, defect remedies, cost structure and acceptance test methods.",
+  "category": "Fabrication Process",
+  "status": "DRAFT",
+  "featured": false,
+  "coverImageAlt": "Worker buffing a stainless steel panel to a mirror finish with a cloth wheel on a polishing machine.",
+  "sourceDir": "C:/Users/76758/WorkBuddy/2026-10-14-13-46-17/html-opt3",
+  "keyPrefix": "blog/metalwork-polishing-brushing-process-and-quality-control",
+  "cover": {
+    "file": "photos/p08_buffing.jpg",
+    "keyTemplate": "blog/metalwork-polishing-brushing-process-and-quality-control/hero-{sha16}.webp"
+  },
+  "images": [
+    { "placeholder": "01", "file": "photos/s1_boutique.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/01-boutique-mirror-cabinet.webp" },
+    { "placeholder": "02", "file": "photos/s2_residence.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/02-residence-door-surround.webp" },
+    { "placeholder": "03", "file": "photos/s3_hotel.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/03-hotel-column-cladding.webp" },
+    { "placeholder": "04", "file": "photos/m8k.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/04-gloss-8k-mirror.webp" },
+    { "placeholder": "05", "file": "photos/mchampagne.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/05-gloss-champagne-brushed.webp" },
+    { "placeholder": "06", "file": "photos/mrose.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/06-gloss-rose-brushed.webp" },
+    { "placeholder": "07", "file": "photos/msnow.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/07-gloss-frost-sand.webp" },
+    { "placeholder": "08", "file": "photos/mbronze.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/08-gloss-antique-bronze.webp" },
+    { "placeholder": "09", "file": "photos/mblack.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/09-gloss-black-titanium.webp" },
+    { "placeholder": "10", "file": "photos/p01_sample.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/10-sample-approval.webp" },
+    { "placeholder": "11", "file": "photos/p02_material.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/11-base-material-inspection.webp" },
+    { "placeholder": "12", "file": "photos/p03_cutting.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/12-laser-cutting.webp" },
+    { "placeholder": "13", "file": "photos/p03b_bending.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/13-cnc-bending.webp" },
+    { "placeholder": "14", "file": "photos/p04_coarse.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/14-coarse-grinding.webp" },
+    { "placeholder": "15", "file": "photos/p05_medium.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/15-medium-grinding.webp" },
+    { "placeholder": "16", "file": "photos/p06_fine.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/16-fine-grinding.webp" },
+    { "placeholder": "17", "file": "photos/p07_mirror.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/17-fine-finishing-brushing.webp" },
+    { "placeholder": "18", "file": "photos/p08_buffing.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/18-buffing-polishing.webp" },
+    { "placeholder": "19", "file": "photos/p09_pvd.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/19-pvd-coating.webp" },
+    { "placeholder": "20", "file": "photos/p10_inspect.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/20-inspection.webp" },
+    { "placeholder": "21", "file": "photos/p10b_packing.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/21-packing.webp" },
+    { "placeholder": "22", "file": "photos/dir_a.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/22-brushing-direction-a.webp" },
+    { "placeholder": "23", "file": "photos/dir_b.jpg", "key": "blog/metalwork-polishing-brushing-process-and-quality-control/23-brushing-direction-b.webp" }
+  ]
+}

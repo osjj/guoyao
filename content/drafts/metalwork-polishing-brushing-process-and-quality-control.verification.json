@@ -1,0 +1,177 @@
+{
+  "wordCount": 3322,
+  "blocks": 107,
+  "blockTypes": {
+    "paragraph": 18,
+    "list": 26,
+    "header": 29,
+    "image": 23,
+    "quote": 11
+  },
+  "bodyImages": 23,
+  "sourceSha256": "5d45059e25d8587836ef1ea266273f0d3389cb790111dbd38b39b20cec0ff6ae",
+  "contentSha256": "5a2104d3067ca57276787f52cfc6b5061c2f04884c579b9fb6549d7d3a9ed31a",
+  "readbackSha256": "5a2104d3067ca57276787f52cfc6b5061c2f04884c579b9fb6549d7d3a9ed31a",
+  "contentMatches": true,
+  "localValidation": true,
+  "assets": [
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/hero-4e8b2ae506d00f29.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/hero-4e8b2ae506d00f29.webp",
+      "sha256": "4e8b2ae506d00f2901cb6a24c8ec60b8b8acf9bb375e319cdcfd2deb22ade55f",
+      "bytes": 135156
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/01-boutique-mirror-cabinet.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/01-boutique-mirror-cabinet.webp",
+      "sha256": "2e2bb917ec2aa5478c44720eef0f170791c928b3048e86692c5ab2e3692c07b5",
+      "bytes": 169574
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/02-residence-door-surround.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/02-residence-door-surround.webp",
+      "sha256": "2df618430c5417aa2de9a1278eeb60eafa129945d08f46ad00cc301000fa4e61",
+      "bytes": 88014
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/03-hotel-column-cladding.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/03-hotel-column-cladding.webp",
+      "sha256": "39d77b0c0c914b5962e8e10a0213e4c2ce2a14d5d61b0aa3e2bdc2300cef08c8",
+      "bytes": 246798
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/04-gloss-8k-mirror.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/04-gloss-8k-mirror.webp",
+      "sha256": "dfa9b6720412a8ef56152e61f07157151340b2856a47eafe3ce434d578903660",
+      "bytes": 24298
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/05-gloss-champagne-brushed.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/05-gloss-champagne-brushed.webp",
+      "sha256": "6b9f56812659c2f32e29983cdcb818abf72ef53f88ec720b617ace1e0ffcb31a",
+      "bytes": 148606
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/06-gloss-rose-brushed.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/06-gloss-rose-brushed.webp",
+      "sha256": "92a753f584960357b0adee9c868fcd5ff31e4b5d039ffe56459bc2042a780661",
+      "bytes": 104268
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/07-gloss-frost-sand.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/07-gloss-frost-sand.webp",
+      "sha256": "d9b5334181f39681099e64657ffad4ae20c412e9851db23b1661f8ed75934575",
+      "bytes": 324242
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/08-gloss-antique-bronze.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/08-gloss-antique-bronze.webp",
+      "sha256": "d580077dfa99f8bfc640f1bd9d04b57dc0adba30895dd154ddeb24d1d5dda613",
+      "bytes": 205736
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/09-gloss-black-titanium.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/09-gloss-black-titanium.webp",
+      "sha256": "4a12642db785741b7087eaa255e3907f773ca68ba94d41fc7ed59825cf10dec3",
+      "bytes": 31114
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/10-sample-approval.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/10-sample-approval.webp",
+      "sha256": "831da4b5c985a92bc41f14753499271f46d951d72a53db4ba9832f6680066502",
+      "bytes": 145684
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/11-base-material-inspection.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/11-base-material-inspection.webp",
+      "sha256": "3b775e7042004a050ee340f865dbed2d506a28baa8ed179c77c65c142e6d69f1",
+      "bytes": 199506
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/12-laser-cutting.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/12-laser-cutting.webp",
+      "sha256": "f57f7d6ceb765930b0388606cd6d48b2d29f045f8455a43e55cf7e7072b8e14f",
+      "bytes": 159712
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/13-cnc-bending.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/13-cnc-bending.webp",
+      "sha256": "a36c77256e191f6c3b7c4274b8a2996b153e1f6f2ee0a7a4904b054b0eed28ea",
+      "bytes": 114860
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/14-coarse-grinding.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/14-coarse-grinding.webp",
+      "sha256": "ad491216e4b4660742aab4e3429e28e3132440974962b5dfa2aa79861ff305f8",
+      "bytes": 180990
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/15-medium-grinding.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/15-medium-grinding.webp",
+      "sha256": "9bd01f8faaf2936658204a288187525d48097ff76194f83aae2b72bef14b6b4d",
+      "bytes": 148796
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/16-fine-grinding.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/16-fine-grinding.webp",
+      "sha256": "cd3cdbe2acb0bedc95a75e8fdb63e13108c7185fb59b2f022568ef4105b769e9",
+      "bytes": 127636
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/17-fine-finishing-brushing.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/17-fine-finishing-brushing.webp",
+      "sha256": "3b27d4781a59c46bb8ea99e03f03199d780861d58af9701ad971c0500bb70eac",
+      "bytes": 174702
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/18-buffing-polishing.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/18-buffing-polishing.webp",
+      "sha256": "4e8b2ae506d00f2901cb6a24c8ec60b8b8acf9bb375e319cdcfd2deb22ade55f",
+      "bytes": 135156
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/19-pvd-coating.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/19-pvd-coating.webp",
+      "sha256": "eb6bcaeec34db5b37d0c1bc3a39739a162a978183c4a374e499b8f5983999eb3",
+      "bytes": 175592
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/20-inspection.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/20-inspection.webp",
+      "sha256": "ad26b441ba7f0524611a34789b4a4bca9ed9c4835428f48dc4d5acc00ac3e8cd",
+      "bytes": 147376
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/21-packing.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/21-packing.webp",
+      "sha256": "a30af8767fe7383b4a88a72045f3dac134d5ce3ff329a27c9ae067d71ac45bca",
+      "bytes": 227072
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/22-brushing-direction-a.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/22-brushing-direction-a.webp",
+      "sha256": "d095bfb066ca6a39f31cc472a88de6bd3ba423777a8c758b1eca72ae230aa08d",
+      "bytes": 142666
+    },
+    {
+      "key": "blog/metalwork-polishing-brushing-process-and-quality-control/23-brushing-direction-b.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/23-brushing-direction-b.webp",
+      "sha256": "e482e6905212cbdcb7871e4064db48358e22e9df58924defcbd929e330e4a79a",
+      "bytes": 74322
+    }
+  ],
+  "createdAt": "2026-10-14T15:00:58.174Z",
+  "databaseReadback": {
+    "id": "cmv88lzt10000ooghb5l18ygu",
+    "title": "Metal Polishing and Brushing: The Complete Ten-Step Process, Key Data and Acceptance Standards",
+    "slug": "metalwork-polishing-brushing-process-and-quality-control",
+    "status": "DRAFT",
+    "featured": false,
+    "publishedAt": null,
+    "readTimeMinutes": 17,
+    "bodyImages": 23,
+    "coverImage": "https://media.guoyaometal.com/blog/metalwork-polishing-brushing-process-and-quality-control/hero-4e8b2ae506d00f29.webp",
+    "contentMatches": true,
+    "updatedAt": "2026-10-14T15:00:55.045Z"
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "wordCount": 3268,
+  "blocks": 176,
+  "blockTypes": {
+    "paragraph": 45,
+    "list": 42,
+    "header": 45,
+    "image": 38,
+    "quote": 6
+  },
+  "bodyImages": 38,
+  "sourceSha256": "fff4aa7080bbf7989fc1840d2872a0a1a6d32a3a8adeb49c2e638b94e2f56db2",
+  "contentSha256": "dc5deb443766e652d9a4af54b35f1d910c7545fea5c3c5083b3010d48a8b4533",
+  "readbackSha256": "dc5deb443766e652d9a4af54b35f1d910c7545fea5c3c5083b3010d48a8b4533",
+  "contentMatches": true,
+  "localValidation": true,
+  "assets": [
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/hero-99526b96ace83137.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/hero-99526b96ace83137.webp",
+      "sha256": "99526b96ace83137007d1b98b8ffb3a3511e5575e40ce7e584ac9f50c7a7e1ff",
+      "bytes": 202688
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/01-luxury-retail-flagship.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/01-luxury-retail-flagship.webp",
+      "sha256": "38ff7d9cc2f141fa5a70923f5c84606bcc55b3b5fac817649a90ad5692ad9676",
+      "bytes": 223432
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/02-premium-residence.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/02-premium-residence.webp",
+      "sha256": "893b6ede80d4e523ced631146c7db86ef45f879e3c5edf9aef973b3b68d4eed0",
+      "bytes": 97982
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/03-luxury-hospitality.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/03-luxury-hospitality.webp",
+      "sha256": "6e382f7314c4b5b2d2962f0cf48dd6c03ea9529463d9a3d906219b2ef265c2c8",
+      "bytes": 227914
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/04-stainless-steel-316.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/04-stainless-steel-316.webp",
+      "sha256": "e6e30a8e1258b48e76c774011f75e4c21073c6865dc4fa32d2189da342379a24",
+      "bytes": 127254
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/05-brass-h62.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/05-brass-h62.webp",
+      "sha256": "01479885e1bca14385a74b93b485a8ddd2c32070d5f24a7e7f8e23fd77ae456e",
+      "bytes": 76800
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/06-aluminium-honeycomb.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/06-aluminium-honeycomb.webp",
+      "sha256": "d06a0b94f57cc4c64ed0ae3ae13c4cc8eb3fc96ebe932ebee4a7cb8cd7fcc569",
+      "bytes": 87240
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/07-copper-t2.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/07-copper-t2.webp",
+      "sha256": "e1041cf3c1ec6dddf795ca7b4aea92e9f2db72f474e27b00770ea4600e2eae5a",
+      "bytes": 141072
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/08-pvd-colour-boards.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/08-pvd-colour-boards.webp",
+      "sha256": "5110a2b716611acfcdd25a5ae761ec39ac64b10d9097c46990b829f51b4b6201",
+      "bytes": 102904
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/09-8k-mirror-polish.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/09-8k-mirror-polish.webp",
+      "sha256": "9fe037f7c6cd44b6d72dc6d2bc4645d3c9ac2abea7a082608271282f403458a8",
+      "bytes": 67240
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/10-fine-short-grain-brushed.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/10-fine-short-grain-brushed.webp",
+      "sha256": "b5d1c94877bff1aff6f6602898edcd4f1bc70d223e6f94121df436242dafe390",
+      "bytes": 112594
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/11-long-grain-brushed.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/11-long-grain-brushed.webp",
+      "sha256": "cb163ee8c0ea01bbdd2c65ba7e99e5bd556098a4a917a508d48cf2a31e7caf99",
+      "bytes": 145388
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/12-matte-shot-blasted.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/12-matte-shot-blasted.webp",
+      "sha256": "56c93adeec70b05d635e58c013de95a8864d26b3accf0f3bae0739e34ab4cf2e",
+      "bytes": 167614
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/13-chemical-etched-texture.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/13-chemical-etched-texture.webp",
+      "sha256": "64661d50b27b8593495e25b44147a014a6ec8a4492a91542ab7e4b0f6b544efc",
+      "bytes": 163146
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/14-shot-blasted-nano-coating.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/14-shot-blasted-nano-coating.webp",
+      "sha256": "781fd178e23538e2717daa2ca000c31bbe541b7db960ffeb8e61aa497c4c819b",
+      "bytes": 157840
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/15-metal-feature-wall.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/15-metal-feature-wall.webp",
+      "sha256": "8e41e0e05483226f8aaf57fffb7ed2da90f12a267a3f2706ab285b08557c2b75",
+      "bytes": 55718
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/16-sheet-metal-stockyard.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/16-sheet-metal-stockyard.webp",
+      "sha256": "654e0c63c50117d48e7b130a1eaf168c7b1a9acfab0652d80ab08d0bbc19af9f",
+      "bytes": 176126
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/17-3d-laser-survey.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/17-3d-laser-survey.webp",
+      "sha256": "fd21604c912886569edc91c0cfa09b3c2eb4744b529e6d5f5552afb270fa39b7",
+      "bytes": 136300
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/18-sample-approval.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/18-sample-approval.webp",
+      "sha256": "3d34d88d6d9887c78644794095b33261f3a74b7d5edff654a3cd1911d2e83e60",
+      "bytes": 111284
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/19-factory-cutting-bending.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/19-factory-cutting-bending.webp",
+      "sha256": "1183ab1d84b3134bdf7e900ea2b850b2a1fc0c92a3807c92a1338f811ce60193",
+      "bytes": 174282
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/20-weld-grinding.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/20-weld-grinding.webp",
+      "sha256": "69cd4abc63a4f3bd9c9b04f19e8d7085d4dbf86cda51037eed49121e0077361c",
+      "bytes": 145148
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/21-surface-treatment-pvd.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/21-surface-treatment-pvd.webp",
+      "sha256": "0a43045e1d9b41a3118cb3004c6fa8dc184258d8035a0c3270fb0d75b614f345",
+      "bytes": 171000
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/22-packing-logistics.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/22-packing-logistics.webp",
+      "sha256": "52627f96c5c051598f477cf3314f6dfff28b97234b1ff2207e0b80655884888c",
+      "bytes": 196568
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/23-site-setting-out.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/23-site-setting-out.webp",
+      "sha256": "3dec583994697d6807bf35b8d365088d0e33e7c77fde059f2a804d8fa85be244",
+      "bytes": 165526
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/24-framing-substructure.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/24-framing-substructure.webp",
+      "sha256": "f36f9990f9b86fe7bcaf37f664d92959279a736f7cecd0a52bf7f1d24c608d7b",
+      "bytes": 124476
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/25-panel-installation.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/25-panel-installation.webp",
+      "sha256": "a9057f23be8b4bf76e44aeaed725ba706e1c3d3a8e94c47e422e5bae798ae309",
+      "bytes": 146804
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/26-sealant-joint-work.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/26-sealant-joint-work.webp",
+      "sha256": "0d38a0db3a32c0a7ea734f54f71c316155f08142c54f80a178da48ead21961bb",
+      "bytes": 150222
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/27-cleaning-protection.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/27-cleaning-protection.webp",
+      "sha256": "ebd39000716dd5be725ce74b314e77651ecc65c619b70c384a31e917fdbab7e1",
+      "bytes": 68366
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/28-handover-acceptance.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/28-handover-acceptance.webp",
+      "sha256": "d68dae5e60eb4c8f699d39706e6bf33bb5b4226f4ed756857c653327629bcfcd",
+      "bytes": 125688
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/29-back-bolt-detail.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/29-back-bolt-detail.webp",
+      "sha256": "2a50e296e73b9929717b57e9309cf2615556e946c98290f1dec1463ce00bd97c",
+      "bytes": 137342
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/30-snap-fit-detail.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/30-snap-fit-detail.webp",
+      "sha256": "e82da7494d84dce9ad28de9c6c95d5e65095e9bd979be301213ac27b177719fc",
+      "bytes": 108094
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/31-outer-corner-detail.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/31-outer-corner-detail.webp",
+      "sha256": "a822396c528e12211f7e510e0c3baf34c2e97343cfc5df49d874e650c797061c",
+      "bytes": 76340
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/32-metal-to-stone-junction.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/32-metal-to-stone-junction.webp",
+      "sha256": "aeab25d438a14d8d9cd264ce5a26ef8fc5b7b6d4a74ee798960362bc12a014d8",
+      "bytes": 111918
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/33-expansion-joint-detail.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/33-expansion-joint-detail.webp",
+      "sha256": "d6241d752b5e5e46bfb930eab987760fea8597ebdad65a06a8a88c359570f6eb",
+      "bytes": 111580
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/34-concealed-light-cove.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/34-concealed-light-cove.webp",
+      "sha256": "1193fedf096e202920e3593654156f56c4b98f95337e32389e7195db426df224",
+      "bytes": 60582
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/35-programme-timeline.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/35-programme-timeline.webp",
+      "sha256": "743fcb1eabbc705f1ed42293018bb6233b77f12a48e80d6bcc7007685eaa33f5",
+      "bytes": 165790
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/36-linear-expansion-coefficients.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/36-linear-expansion-coefficients.webp",
+      "sha256": "0016e8e44bebec7db7eeec8a88177da5608c91ff2feb7cff4b9d67ade79e6e55",
+      "bytes": 117216
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/37-movement-over-temperature-range.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/37-movement-over-temperature-range.webp",
+      "sha256": "6dc5ba5a8b7e318cceb4f473991ca532390445c69b7b49d89395318bd6c6877c",
+      "bytes": 121414
+    },
+    {
+      "key": "blog/metalwork-assembly-fit-out-process-and-quality-control/38-failure-modes.webp",
+      "url": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/38-failure-modes.webp",
+      "sha256": "dd31a6cd8070521d7db37e00c63dbaaa6892dffadd24aac9710c7f316254b7ab",
+      "bytes": 108980
+    }
+  ],
+  "createdAt": "2026-10-14T16:36:18.706Z",
+  "databaseReadback": {
+    "id": "cmv8c0lsl0000k0ghalp88477",
+    "title": "Luxury Retail Fit-Out Metalwork: Assembly and Installation — 12 Process Steps, 28 Control Points and 6 Joint Details",
+    "slug": "metalwork-assembly-fit-out-process-and-quality-control",
+    "status": "DRAFT",
+    "featured": false,
+    "publishedAt": null,
+    "readTimeMinutes": 16,
+    "bodyImages": 38,
+    "coverImage": "https://media.guoyaometal.com/blog/metalwork-assembly-fit-out-process-and-quality-control/hero-99526b96ace83137.webp",
+    "contentMatches": true,
+    "updatedAt": "2026-10-14T16:36:15.573Z"
+  }
+}

@@ -1,0 +1,733 @@
+{
+  "introduction": "Case Study · Guoyao Metalwork. From Inquiry to Acceptance — the Full Delivery Story. A backlit, fluted silver facade and illuminated TIFFANY & CO. lettering for luxury boutiques at prime retail locations in China, delivered end to end by one factory. Eighteen documented stages — from the first inquiry and the millimetre site survey through fluted panel fabrication, backlight tuning, a full-scale mock-up and a vertical installation rehearsal, export packing, night commissioning and final acceptance — each stage backed by its own factory or site photographs, exactly as the work happened. Client · Global luxury maison | Scope · Backlit fluted facade + illuminated lettering | Surface · Fluted silver aluminium, LED backlighting | Delivery · Factory mock-up → export crates → mall installation",
+  "stats": [
+    {
+      "value": "18",
+      "label": "stages documented end to end"
+    },
+    {
+      "value": "137",
+      "label": "site & factory photographs taken"
+    },
+    {
+      "value": "2",
+      "label": "boutiques delivered & accepted"
+    },
+    {
+      "value": "6",
+      "label": "light states tuned & commissioned"
+    },
+    {
+      "value": "100%",
+      "label": "components QC'd against sealed samples"
+    },
+    {
+      "value": "0",
+      "label": "rework after handover"
+    }
+  ],
+  "sections": [
+    {
+      "id": "stage-01-inquiry",
+      "title": "The Inquiry and Project Kickoff",
+      "navLabel": "Stage 01 · Inquiry",
+      "paragraphs": [
+        "The file opened the way most good projects do: a short email from the brand's regional construction team, a set of reference photographs of an existing boutique, and one question — could we build a backlit, fluted silver facade wall that reads as textured crystal glass, to Tiffany & Co. standards, for two boutique locations in China, on a fixed opening date? Attached were the brand's facade design intent, the signage specification for the illuminated TIFFANY & CO. lettering, and a mall fit-out schedule that allowed no float.",
+        "We replied within twenty-four hours with three answers that mattered: yes, the fluted-and-backlit effect is a system we fabricate end to end — panels, sub-frame, LED cassettes, diffusers and illuminated lettering from one factory, so no interface is someone else's problem; yes, we could produce a full-scale mock-up in the workshop before any site work, which is how this kind of finish must be judged; and yes, we would hold the opening date as the fixed point around which everything else was planned. A kickoff call followed, and the project began the way it would continue — with the drawings, the samples and the schedule on one table."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/01-gy-kickoff.webp",
+          "alt": "The kickoff meeting.",
+          "caption": "The kickoff meeting. Brand representative and factory engineers over the boutique elevation drawing, with a fluted panel sample and the backlighting intent on the table — the single conversation where scope, finish and the non-negotiable opening date were fixed together."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Inquiry answered in 24 hours with a fabrication scope covering panels, frame, backlighting and signage — one factory, one responsibility, one opening date."
+        }
+      ]
+    },
+    {
+      "id": "stage-02-measurement",
+      "title": "Site Survey and Dimensional Survey",
+      "navLabel": "Stage 02 · Measurement",
+      "paragraphs": [
+        "Nothing in a branded facade forgives a wrong measurement, so before a single panel was cut we surveyed both boutique units on site. The work was done with laser distance meters verified against tape checks, and it recorded more than widths and heights: slab soffit levels along every metre of the facade line, column positions and their true verticality, the power supply points for the LED system, the mall's service access and its tightest corner — the dimension that would later decide how large a crate could be.",
+        "Each survey produced a marked-up set of dimensions that went straight into the survey report, cross-checked by a second engineer. Where the bare unit showed irregularities — and both did — we measured them rather than averaging them away, because the facade would meet the building line at every point, not on average. The signed survey report became the dimensional baseline for all fabrication drawings; every later dispute about 'whose dimension' ended by pointing at that document."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/02-gy-survey.webp",
+          "alt": "Site survey inside the mall.",
+          "caption": "Site survey inside the mall. Laser meter, tape checks and a marked-up clipboard — recording soffit levels, column positions and power points rather than just three overall dimensions."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Both units surveyed to the millimetre; signed survey report issued as the single dimensional baseline for fabrication."
+        }
+      ]
+    },
+    {
+      "id": "stage-03-design",
+      "title": "Design Development and Shop Drawings",
+      "navLabel": "Stage 03 · Design",
+      "paragraphs": [
+        "The design intent showed the effect; the shop drawings had to make it buildable. Our engineering team turned the survey into a complete fabrication package: the fluted panel layout with every module numbered and sequenced, the horizontal and vertical sub-frame with its fixing points back to the slab, the LED cassette grid and its wiring routes, the diffuser layer, the junctions to the storefront glazing, and the illuminated lettering with its power and fixing details. Every panel carried an engraved reference that would remain on the component for life.",
+        "The drawings went to the brand's design team as a review set, came back with comments, and went through two structured revision cycles — each one resolved line by line, with the resolution recorded on the drawing itself. The final package was issued for construction with revision numbers on every sheet, and the factory floor never worked from anything else. This is the quiet stage of a facade project, and it is the one that decides whether installation later feels routine or improvised."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/03-gy-cad.webp",
+          "alt": "Design development.",
+          "caption": "Design development. Printed elevations with dimension lines beside the 3D model — every fluted module numbered, every fixing point resolved before the first panel was cut."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "IFC drawing package issued: panel layout, sub-frame, LED grid, diffusers and signage details, all tied to the survey baseline."
+        }
+      ]
+    },
+    {
+      "id": "stage-04-approval",
+      "title": "Samples and Finish Approval",
+      "navLabel": "Stage 04 · Approval",
+      "paragraphs": [
+        "A backlit fluted surface is judged by the light in it, so samples were built the way the facade would be built. We produced fluted panel samples in the specified silver finish, a backlit sample box showing the LED effect through the flutes at the real viewing distance, and corner and joint samples showing how two modules meet. Each sample was labelled, referenced to the drawing, and mounted in the sealed sample box that travelled to the brand's design team.",
+        "The review focused on three things: the tone of the silver under both lit and unlit conditions, the rhythm and depth of the flutes, and the softness of the glow — bright enough to read as crystal, diffused enough that no LED point or hotspot ever shows. One adjustment round on the diffuser density later, the samples were signed off and sealed. The sealed sample became the contractual finish reference: every production panel was inspected against it, not against a photograph."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/04-gy-sample.webp",
+          "alt": "The sealed sample box.",
+          "caption": "The sealed sample box. Fluted panel chips in the approved silver, a backlit sample showing the glow at true density, and the sign-off sheet — the contractual finish reference for every production panel."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Finish and backlight effect approved on sealed samples; production QC now checks panels against the seal, not against opinions."
+        }
+      ]
+    },
+    {
+      "id": "stage-05-fabrication",
+      "title": "Fluted Panel Fabrication",
+      "navLabel": "Stage 05 · Fabrication",
+      "paragraphs": [
+        "The facade's signature surface is a corrugated fluted panel — aluminium sheet roll-formed into deep, even flutes, finished in the approved silver, and cut to the module lengths on the numbered layout. The photographs from the fabrication floor show the process in order: full sheets coming off the forming line in long, perfectly parallel runs; panels cut and stacked by module number; individual panels laid out for edge treatment; and completed bundles wrapped and staged in fabrication sequence so that installation order was already decided in the workshop.",
+        "Consistency across hundreds of flutes is the real test. Flute pitch, depth and line were checked against the sample on every production run, and panel edges were deburred and protected before handling. Every panel carried its engraved module reference, matching the drawing and the packing list — so a bundle opened on site a month later read like a page from the same book."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/05-pan-array.webp",
+          "alt": "Fluted panels in full run off the forming line — deep, even, parallel flutes in the approved silver, the signature surface of the whole facade.",
+          "caption": "Fluted panels in full run off the forming line — deep, even, parallel flutes in the approved silver, the signature surface of the whole facade."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/05-pan-stack.webp",
+          "alt": "Cut panels stacked by module number.",
+          "caption": "Cut panels stacked by module number. Each module is engraved with its reference from the layout drawing, so fabrication order and installation order are the same order."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/05-pan-loose.webp",
+          "alt": "A single panel staged for edge treatment.",
+          "caption": "A single panel staged for edge treatment. Edges are deburred and protected before any handling — a small step that decides whether the joints read clean on site."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/05-pan-bundle.webp",
+          "alt": "Completed panels wrapped and staged in fabrication sequence.",
+          "caption": "Completed panels wrapped and staged in fabrication sequence. When a bundle is opened on site weeks later, its contents are exactly where the installation sequence expects them."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "All fluted modules formed, finished and sequenced; flute pitch and finish verified against the sealed sample on every run."
+        }
+      ]
+    },
+    {
+      "id": "stage-06-steelwork",
+      "title": "Structural Sub-Frame Fabrication",
+      "navLabel": "Stage 06 · Steelwork",
+      "paragraphs": [
+        "Behind the silver surface stands the part nobody sees and everybody depends on: the galvanised steel sub-frame that carries the panels, the LED cassettes and the illuminated lettering, and ties the whole assembly back to the building structure. The frame was fabricated in the workshop as pre-assembled bays — welded to the shop drawings, dimensioned to the survey, with every fixing plate positioned for the actual slab, not a nominal one.",
+        "The photographs show the frame bays taking shape on the workshop floor: base rails and head rails aligned and tacked, bays squared and welded, mounting plates checked against the survey's soffit levels, and completed bays laid out in the hall before trial assembly. Weld quality, bolt-hole position and bay squareness were checked against the drawings — because a facade that installs in days is one whose frame was fabricated with weeks of discipline."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/06-frame-floor.webp",
+          "alt": "Sub-frame bays on the workshop floor — base and head rails aligned to the survey dimensions before final welding.",
+          "caption": "Sub-frame bays on the workshop floor — base and head rails aligned to the survey dimensions before final welding."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/06-frame-weld.webp",
+          "alt": "Squaring and welding a frame bay.",
+          "caption": "Squaring and welding a frame bay. Squareness here decides whether panels hang plumb on site without shimming."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/06-frame-bay.webp",
+          "alt": "A completed bay with mounting plates at the surveyed soffit levels, ready for trial assembly with the panel units.",
+          "caption": "A completed bay with mounting plates at the surveyed soffit levels, ready for trial assembly with the panel units."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/06-frame-hall.webp",
+          "alt": "Finished bays laid out in the fabrication hall, sequenced for packing and installation in the same order they will meet the slab.",
+          "caption": "Finished bays laid out in the fabrication hall, sequenced for packing and installation in the same order they will meet the slab."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Sub-frame bays welded, squared and matched to surveyed levels; installation sequence fixed at fabrication, not improvised on site."
+        }
+      ]
+    },
+    {
+      "id": "stage-07-trial",
+      "title": "Unit Trial Assembly in the Workshop",
+      "navLabel": "Stage 07 · Trial",
+      "paragraphs": [
+        "Before packing anything, we built it — in the workshop, at full scale, one complete facade bay from frame to finished panel. The trial assembly is where drawings meet steel: panel units lifted onto the frame, corner junctions closed, alignment shims set, fixing torque checked, and the engraved module numbers confirming that the sequence designed on paper survives contact with reality.",
+        "The trial also served the process, not just the product. The crew that would later install on site worked through the sequence once in ideal conditions, the handling methods for the long fluted panels were proven — two hands, two lifting points, protected edges — and the adjustment procedure for a plumb line was rehearsed. Every lesson from this week was written into the installation method statement that travelled with the crates."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/07-pan-frame.webp",
+          "alt": "Panels meeting the frame: a fluted module offered up to its bay, edges protected, engraved reference facing the fitter.",
+          "caption": "Panels meeting the frame: a fluted module offered up to its bay, edges protected, engraved reference facing the fitter."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/07-unit-corner.webp",
+          "alt": "Closing a corner junction in trial.",
+          "caption": "Closing a corner junction in trial. The corner is where every tolerance in the system becomes visible at once."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/07-unit-brace.webp",
+          "alt": "Temporary bracing holding a bay true while alignment shims and fixings are set.",
+          "caption": "Temporary bracing holding a bay true while alignment shims and fixings are set."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/07-unit-tag.webp",
+          "alt": "Module tags checked against the packing list during trial — the same numbers the site crew will see a month later.",
+          "caption": "Module tags checked against the packing list during trial — the same numbers the site crew will see a month later."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/07-unit-rack.webp",
+          "alt": "A trial bay standing complete in the workshop, ready for the backlighting tests that followed.",
+          "caption": "A trial bay standing complete in the workshop, ready for the backlighting tests that followed."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Full bay trial-assembled in the workshop; handling methods and installation sequence proven and written into the method statement."
+        }
+      ]
+    },
+    {
+      "id": "stage-08-lighting",
+      "title": "Backlight Testing and Colour Tuning",
+      "navLabel": "Stage 08 · Lighting",
+      "paragraphs": [
+        "The glow is the product. Behind every fluted panel sits a line of LED cassettes, and their light must reach the surface evenly — no hotspots, no visible points, no colour drift from one end of the wall to the other. In the workshop we built the lighting into the trial bay and tuned it under controlled conditions: cassette spacing, distance from diffuser to panel, and driver settings were adjusted while the bay was watched from the distance a customer actually stands at.",
+        "The tuning session also proved the system's flexibility for the brand's lighting scenarios: the same wall was driven through its full range — warm white for the daytime retail look, and accent settings tested in red, green and amber for seasonal campaigns — with each state photographed and logged. The approved brightness, colour temperature and diffusion settings were recorded as the commissioning baseline for both sites."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/08-led-red.webp",
+          "alt": "Accent state under test: red LEDs behind the flutes, checked for evenness and for any light leakage at the panel edges.",
+          "caption": "Accent state under test: red LEDs behind the flutes, checked for evenness and for any light leakage at the panel edges."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/08-led-green.webp",
+          "alt": "Green accent tuning.",
+          "caption": "Green accent tuning. Each colour state was photographed from the customer viewing distance and logged in the commissioning record."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/08-led-amber.webp",
+          "alt": "Warm amber state — the session covered the full working range of the wall, so what was approved in the workshop is exactly what ships to site.",
+          "caption": "Warm amber state — the session covered the full working range of the wall, so what was approved in the workshop is exactly what ships to site."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Backlight tuned and logged: cassette spacing, diffusion and colour states approved at the workshop bay and recorded as the commissioning baseline."
+        }
+      ]
+    },
+    {
+      "id": "stage-09-lighting",
+      "title": "Diffusers and Inner Liner Assembly",
+      "navLabel": "Stage 09 · Lighting",
+      "paragraphs": [
+        "Between the LEDs and the fluted face sits the layer that makes the effect possible: the diffuser liner that turns a row of light sources into one even glow. The liner was assembled as complete cassettes — acrylic diffuser sheet, LED lines, wiring and connectors — built in the workshop, labelled, and tested as units before ever meeting a panel. The close-up photographs show the build: diffuser sheets handled with gloves, cassettes mounted in their carriers, and a complete cassette wall laid out for testing.",
+        "Each cassette was powered up and inspected for dark spots, connector seating and wiring strain relief. Cassettes that passed were labelled with their position in the grid; the assembly order in the workshop became the installation order on site. This is one of the least glamorous and most consequential stages of a backlit facade — a single badly seated connector discovered on site costs a night's work; discovered here it costs five minutes."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/09-diff-hand.webp",
+          "alt": "A diffuser cassette handled with gloves — acrylic sheet, LED lines and wiring built and labelled as one testable unit.",
+          "caption": "A diffuser cassette handled with gloves — acrylic sheet, LED lines and wiring built and labelled as one testable unit."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/09-diff-wall.webp",
+          "alt": "Cassettes mounted in their carrier wall, each positioned to match the grid on the drawing.",
+          "caption": "Cassettes mounted in their carrier wall, each positioned to match the grid on the drawing."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/09-diff-grid.webp",
+          "alt": "A complete cassette assembly laid out for powered testing — every unit checked for dark spots and connector seating before it can meet a panel.",
+          "caption": "A complete cassette assembly laid out for powered testing — every unit checked for dark spots and connector seating before it can meet a panel."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Diffuser cassettes built, powered and labelled in position order; zero defects allowed to leave this station."
+        }
+      ]
+    },
+    {
+      "id": "stage-10-signage",
+      "title": "Illuminated Lettering Fabrication",
+      "navLabel": "Stage 10 · Signage",
+      "paragraphs": [
+        "The brand's name is the facade's signature, and its fabrication tolerances are tighter than anything else on the wall. The illuminated TIFFANY & CO. lettering was fabricated as a separate package: faces formed to the brand's typography specification, LED modules set inside each letter at even depth, power wiring routed through the letter bases, and every unit tested flat on the workshop bench — lit, photographed and compared for brightness and colour across the full name.",
+        "The bench photographs tell the story: letters laid out in a row for wiring, the glow test with the face membranes lighting evenly, and the assembled name seen straight-on and at angle. Letter brightness was balanced across the whole word — a sign where one letter glows brighter than its neighbour reads as a defect instantly, so balancing was done by measurement, not by eye. The finished sign was packed in its own crate with its own fixing jig."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/10-sign-flat.webp",
+          "alt": "Letters wired and laid out on the bench — each LED module set at even depth before the face goes on.",
+          "caption": "Letters wired and laid out on the bench — each LED module set at even depth before the face goes on."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/10-sign-glow.webp",
+          "alt": "The glow test: face membranes lighting evenly across the row, brightness balanced by measurement.",
+          "caption": "The glow test: face membranes lighting evenly across the row, brightness balanced by measurement."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/10-sign-front.webp",
+          "alt": "The name seen straight-on at the bench — typographic profiles, spacing and glow checked against the brand specification.",
+          "caption": "The name seen straight-on at the bench — typographic profiles, spacing and glow checked against the brand specification."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/10-sign-name.webp",
+          "alt": "The finished illuminated lettering, complete and signed off, before packing in its own crate with the fixing jig.",
+          "caption": "The finished illuminated lettering, complete and signed off, before packing in its own crate with the fixing jig."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Illuminated lettering fabricated, brightness-balanced across the full word and signed off against the brand specification."
+        }
+      ]
+    },
+    {
+      "id": "stage-11-approval",
+      "title": "Full-Scale Mock-Up for Client Approval",
+      "navLabel": "Stage 11 · Approval",
+      "paragraphs": [
+        "Every previous stage built parts; the mock-up built the promise. In the workshop we assembled a full-scale section of the boutique facade — sub-frame, fluted panels, diffuser cassettes and illuminated lettering together — exactly as it would stand in the mall, and lit it the way the store would be lit at night. This is the moment the brand's design team saw the wall not as samples and drawings but as architecture.",
+        "The mock-up review walked through the checking list face by face: flute rhythm and finish tone under lit and unlit conditions, glow evenness from the customer distance, the lettering's brightness and colour, joint lines and corner detail. The photographs — the illuminated facade standing in the workshop at night, front elevation, corner and glow detail — are the project's proof images: the client approved the mock-up without a single condition, and that approval became the manufacture standard for every remaining module."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/11-mock-air.webp",
+          "alt": "The illuminated facade section standing in the workshop at night — frame, flutes, diffusers and lettering together for the first time, exactly as the boutique will read.",
+          "caption": "The illuminated facade section standing in the workshop at night — frame, flutes, diffusers and lettering together for the first time, exactly as the boutique will read."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/11-mock-front.webp",
+          "alt": "Front elevation under review: flute rhythm, silver tone and glow evenness checked from the customer viewing distance.",
+          "caption": "Front elevation under review: flute rhythm, silver tone and glow evenness checked from the customer viewing distance."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/11-mock-corner.webp",
+          "alt": "The corner at the mock-up: two illuminated elevations meeting in one continuous flute line — the joint the brand's designers examined longest.",
+          "caption": "The corner at the mock-up: two illuminated elevations meeting in one continuous flute line — the joint the brand's designers examined longest."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/11-mock-glow.webp",
+          "alt": "Corner and glow detail approved without condition — the mock-up sign-off became the manufacture standard for all remaining modules.",
+          "caption": "Corner and glow detail approved without condition — the mock-up sign-off became the manufacture standard for all remaining modules."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Full-scale mock-up approved by the brand's design team with zero conditions; mock-up = manufacture standard."
+        }
+      ]
+    },
+    {
+      "id": "stage-12-verification",
+      "title": "Vertical Installation Simulation",
+      "navLabel": "Stage 12 · Verification",
+      "paragraphs": [
+        "The mock-up proved the facade; the rig proved the installation. In the workshop we erected a full-height scaffold rig and hung the facade assembly vertically at its true installation height, with the head fixings, alignment procedures and panel-hanging sequence exactly as the site crew would perform them. Working at height changes every handling answer — how a four-metre panel is lifted, how a plumb line is read above shoulder height, where the second pair of hands stands.",
+        "The rig week produced the site crew's most valuable deliverable: a rehearsed sequence. Head connection details were proven under real load paths, the alignment and shimming procedure was performed at height until it was routine, and the photographs from the rig — the steel head structure with its connections, the scaffold tower against the hung assembly, the full-height bay standing plumb — document the rehearsal that let the site installation run to schedule."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/12-rig-top.webp",
+          "alt": "Head connections proven under true load paths at the rig — every fixing that the slab will carry, rehearsed in the workshop first.",
+          "caption": "Head connections proven under true load paths at the rig — every fixing that the slab will carry, rehearsed in the workshop first."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/12-rig-mast.webp",
+          "alt": "The scaffold mast and the hung assembly: installation height is not a detail, it is the working condition the whole method was designed for.",
+          "caption": "The scaffold mast and the hung assembly: installation height is not a detail, it is the working condition the whole method was designed for."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/12-rig-bay.webp",
+          "alt": "A full-height bay standing plumb at the rig, alignment shims set — the sequence now rehearsed end to end.",
+          "caption": "A full-height bay standing plumb at the rig, alignment shims set — the sequence now rehearsed end to end."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/12-rig-hall.webp",
+          "alt": "The rig in the fabrication hall, the rehearsal complete: what took days here will take hours on site.",
+          "caption": "The rig in the fabrication hall, the rehearsal complete: what took days here will take hours on site."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Full-height vertical rig passed: head fixings, alignment procedure and hanging sequence rehearsed at true installation height."
+        }
+      ]
+    },
+    {
+      "id": "stage-13-quality",
+      "title": "Final Quality Inspection",
+      "navLabel": "Stage 13 · Quality",
+      "paragraphs": [
+        "Before packing, every component passed a documented final inspection against the sealed samples and the drawings. Panels were checked for finish tone and flute integrity under raking light; corners and joint faces for burrs and protection; frame bays for weld quality and hole positions; cassettes for connector seating; lettering for brightness balance. Each inspection item was recorded on the QC sheet with the inspector's initials — a record that travels with the crates.",
+        "The inspection photographs show the method: a fitter pointing out a verified flute run, module marks cross-checked against the packing list, a corner junction inspected at close range. Nothing was approved from memory; everything was approved against the sample or the drawing, and signed. The result was a packing list with no exceptions — the quiet precondition for a clean installation."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/13-qc-point.webp",
+          "alt": "A verified flute run under inspection — finish tone and flute integrity checked against the sealed sample, item by item.",
+          "caption": "A verified flute run under inspection — finish tone and flute integrity checked against the sealed sample, item by item."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/13-qc-mark.webp",
+          "alt": "Module marks cross-checked against the packing list: what the drawing says, what the workshop did, and what the crate will contain are one and the same.",
+          "caption": "Module marks cross-checked against the packing list: what the drawing says, what the workshop did, and what the crate will contain are one and the same."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/13-qc-corner.webp",
+          "alt": "A corner junction inspected at close range — the joint that customers touch with their eyes first is the one inspected last and longest.",
+          "caption": "A corner junction inspected at close range — the joint that customers touch with their eyes first is the one inspected last and longest."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "100% documented QC against sealed samples; packing list closed with zero exceptions."
+        }
+      ]
+    },
+    {
+      "id": "stage-14-logistics",
+      "title": "Export Packing",
+      "navLabel": "Stage 14 · Logistics",
+      "paragraphs": [
+        "A facade that survives a thousand-kilometre journey and a mall's service corridor is packed, not lucky. Long fluted panels were packed standing in timber crates on edge — the orientation that protects flutes best — with foam separators, edge protectors and desiccant; frame bays were packed as matched sets; cassettes and lettering travelled in dedicated crates with their fixing jigs. Every crate was labelled with its contents, module numbers, and its position in the installation sequence, so the crates could be unloaded in reverse order of need.",
+        "The packing photographs record the discipline: a long panel crate with its foam-lined partitions, matched crate sets stacked for loading, flat-packed panels braced in their crate, a sealed carton marked for the site, and a wrapped component bundle ready for the container. Packing lists were verified crate by crate against the QC sheets before the seals went on."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/14-pk-crate.webp",
+          "alt": "A long fluted panel crate: panels standing on edge in foam-lined partitions — the orientation that protects the flutes for the whole journey.",
+          "caption": "A long fluted panel crate: panels standing on edge in foam-lined partitions — the orientation that protects the flutes for the whole journey."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/14-pk-crate2.webp",
+          "alt": "Matched crate sets staged for loading, each labelled with its module numbers and its position in the installation sequence.",
+          "caption": "Matched crate sets staged for loading, each labelled with its module numbers and its position in the installation sequence."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/14-pk-flat.webp",
+          "alt": "Flat-packed panels braced in their crate, edge protectors and separators doing the quiet work.",
+          "caption": "Flat-packed panels braced in their crate, edge protectors and separators doing the quiet work."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/14-pk-box.webp",
+          "alt": "A sealed carton marked for the site — consumables, fixings and spares packed against the installation method statement.",
+          "caption": "A sealed carton marked for the site — consumables, fixings and spares packed against the installation method statement."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/14-pk-wrap.webp",
+          "alt": "A wrapped component bundle ready for the container.",
+          "caption": "A wrapped component bundle ready for the container. Every wrap was verified against the packing list before sealing."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "All components export-packed, labelled by module and sequence, and verified crate-by-crate against the QC sheets."
+        }
+      ]
+    },
+    {
+      "id": "stage-15-logistics",
+      "title": "Container Loading and Site Delivery",
+      "navLabel": "Stage 15 · Logistics",
+      "paragraphs": [
+        "The crates left the factory on schedule: container loading followed the loading plan, crate orientation and bracing set so that nothing shifted in transit, and the container sealed with its packing list photographed into the record. At the destination the sequence reversed — night-time delivery through the mall's service corridor, floor protection laid, crates moved on trolleys to the hoarded unit in the order the installation needed them.",
+        "The photographs show both ends of that journey: the container loading bay at the factory with crates going up the ramp, and the mall service run at night with wrapped packs moving toward the unit. Delivery to programme is part of the product; a facade that arrives late or arrives damaged has failed before it is opened. Ours arrived whole, on plan, and in the right order."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/15-gy-stuffing.webp",
+          "alt": "Container loading at the factory: crates guided up the ramp onto a padded deck, braced and blocked to the loading plan.",
+          "caption": "Container loading at the factory: crates guided up the ramp onto a padded deck, braced and blocked to the loading plan."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/15-gy-delivery.webp",
+          "alt": "Night delivery through the mall's service corridor — floor protection down, crates moving to the hoarded unit in installation order.",
+          "caption": "Night delivery through the mall's service corridor — floor protection down, crates moving to the hoarded unit in installation order."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Delivered to programme: container loaded to plan, sealed and recorded; crates staged at the unit in installation order."
+        }
+      ]
+    },
+    {
+      "id": "stage-16-site",
+      "title": "Site Installation",
+      "navLabel": "Stage 16 · Site",
+      "paragraphs": [
+        "Installation ran the way the rig had rehearsed it. The steel sub-frame went up first — fixed to the slab at the surveyed points, laser-checked for line and level — then the diffuser cassettes at their grid positions, then the fluted panels, hung module by module in the numbered sequence, corners closed and joint lines set to the approved detail. Because every module was engraved, packed and staged in this same order, the crew never hunted for a part; the next crate was always the right crate.",
+        "The site photographs capture the assembly closing over the frame: head connections at the slab, the ceiling junction closing in, and the hall view as the wall's last module went in. Adjustments on site were minor and expected — the shimming procedure from the rig, applied at height by a crew that had done it before. What reads as a quiet installation in these photographs is the visible half of weeks of workshop discipline."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/16-gy-siteframe.webp",
+          "alt": "The sub-frame going in: fixed to the slab at the surveyed points, laser line and level checked before the first panel moves.",
+          "caption": "The sub-frame going in: fixed to the slab at the surveyed points, laser line and level checked before the first panel moves."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/16-gy-hanging.webp",
+          "alt": "Hanging a fluted module onto the frame — two lifting points, protected edges, the sequence rehearsed at the rig.",
+          "caption": "Hanging a fluted module onto the frame — two lifting points, protected edges, the sequence rehearsed at the rig."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/16-site-head.webp",
+          "alt": "Head connections at the slab in the workshop rig, identical to what the site crew executed — the rehearsal made the site routine.",
+          "caption": "Head connections at the slab in the workshop rig, identical to what the site crew executed — the rehearsal made the site routine."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/16-site-ceiling.webp",
+          "alt": "The ceiling junction closing in over the frame line.",
+          "caption": "The ceiling junction closing in over the frame line."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/16-site-hall.webp",
+          "alt": "The hall view as the last modules went in: frame, cassettes and panels converging into one continuous silver wall.",
+          "caption": "The hall view as the last modules went in: frame, cassettes and panels converging into one continuous silver wall."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Facade installed to the rehearsed sequence: frame plumb and laser-true, modules hung in number order, zero rework required."
+        }
+      ]
+    },
+    {
+      "id": "stage-17-commissioning",
+      "title": "Night Commissioning and Light Inspection",
+      "navLabel": "Stage 17 · Commissioning",
+      "paragraphs": [
+        "A backlit facade is finally judged after dark, so commissioning waited for the night. The full system was powered and driven through its approved states — the retail warm-white setting and the accent colours tuned in the workshop — and inspected from the mall floor at the customer distance: glow evenness across every module, the lettering's brightness balance across the full name, edge light leakage, and the wall's presence against the mall's own lighting.",
+        "The night photographs are the commissioning record: the tower elevation reading as one continuous crystal surface, the name glowing evenly end to end, the accent state washing the flutes in colour. Each inspection item was checked against the workshop baseline and signed. The wall that had been approved as a mock-up in a workshop now stood as architecture in a mall, reading exactly as approved."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/17-night-tower.webp",
+          "alt": "The tower elevation at night — the full facade reading as one continuous backlit surface, inspected module by module from the mall floor.",
+          "caption": "The tower elevation at night — the full facade reading as one continuous backlit surface, inspected module by module from the mall floor."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/17-night-face.webp",
+          "alt": "The illuminated lettering at commissioning: brightness balanced across the full name, checked against the workshop baseline.",
+          "caption": "The illuminated lettering at commissioning: brightness balanced across the full name, checked against the workshop baseline."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/17-night-wall.webp",
+          "alt": "An accent state washing the flutes in colour — every commissioned state photographed and signed at the customer viewing distance.",
+          "caption": "An accent state washing the flutes in colour — every commissioned state photographed and signed at the customer viewing distance."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/17-done-run.webp",
+          "alt": "The completed wall run after commissioning, the glow even from end to end — the workshop's numbers, verified in architecture.",
+          "caption": "The completed wall run after commissioning, the glow even from end to end — the workshop's numbers, verified in architecture."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Night commissioning passed: glow, colour states and lettering balance verified against the workshop baseline and signed on site."
+        }
+      ]
+    },
+    {
+      "id": "stage-18-handover",
+      "title": "Final Acceptance and Aftercare",
+      "navLabel": "Stage 18 · Handover",
+      "paragraphs": [
+        "Acceptance closed the project the way the inquiry had opened it — face to face, with everything on the table. The brand's representative and our project manager walked the finished boutiques together: finish tone under store lighting, joint lines, corner details, the lettering, the commissioned light states. The punch list from the walk was short and closed within a day; the acceptance was signed against the mock-up standard, the QC records and the commissioning log — the same documents that had travelled with the crates.",
+        "Handover included the aftercare package: cleaning and maintenance guidance for the fluted finish, the torque-check schedule for head fixings, the cassette replacement procedure with labelled spares, and the sealed sample retained as the reference for any future extension of the boutique network. The final photographs — the boutiques trading, the facades glowing above the entrances, the detail of a finished corner — are the project's answer to its opening question: yes, and on the date we said."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/18-done-canopy.webp",
+          "alt": "The finished boutique under the canopy, trading — the facade reading exactly as approved at the mock-up.",
+          "caption": "The finished boutique under the canopy, trading — the facade reading exactly as approved at the mock-up."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/18-done-entrance.webp",
+          "alt": "Entrance detail at handover: flutes, glow and the illuminated name meeting the storefront glazing in one continuous line.",
+          "caption": "Entrance detail at handover: flutes, glow and the illuminated name meeting the storefront glazing in one continuous line."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/18-done-wide.webp",
+          "alt": "The completed wall run in daylight — the silver flutes holding their rhythm across every module.",
+          "caption": "The completed wall run in daylight — the silver flutes holding their rhythm across every module."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/18-done-door.webp",
+          "alt": "The entrance in daily use: the facade performing as background architecture for the brand's windows and doors.",
+          "caption": "The entrance in daily use: the facade performing as background architecture for the brand's windows and doors."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/18-done-close.webp",
+          "alt": "A finished corner at close range — joint lines, flute integrity and finish tone exactly as the sealed sample promised.",
+          "caption": "A finished corner at close range — joint lines, flute integrity and finish tone exactly as the sealed sample promised."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/18-gy-accept.webp",
+          "alt": "Final acceptance walk: brand representative and project manager with the punch list, against the mock-up standard, the QC records and the commissioning log.",
+          "caption": "Final acceptance walk: brand representative and project manager with the punch list, against the mock-up standard, the QC records and the commissioning log."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/tiffany-boutique-backlit-facade/18-gy-aftercare.webp",
+          "alt": "Aftercare in practice: seam cleaning and scheduled torque checks — the maintenance the facade was designed to receive.",
+          "caption": "Aftercare in practice: seam cleaning and scheduled torque checks — the maintenance the facade was designed to receive."
+        }
+      ],
+      "points": [
+        {
+          "title": "Checkpoint",
+          "text": "Accepted and handed over: punch list closed within a day, aftercare package and sealed sample delivered, opening date held."
+        }
+      ]
+    },
+    {
+      "id": "stage-map",
+      "title": "Stage Map — 18 Steps, One Delivery",
+      "navLabel": "Stage map",
+      "paragraphs": [
+        "The whole journey: the eighteen stages in the order the project actually ran, from the first inquiry to the aftercare routine — the checklist the work was planned, packed, installed and accepted against."
+      ],
+      "table": {
+        "caption": "Stage Map — 18 Steps, One Delivery",
+        "headings": [
+          "Stage",
+          "Focus"
+        ],
+        "rows": [
+          [
+            "01 · Inquiry & Kickoff",
+            "Scope, mock-up commitment, opening date fixed"
+          ],
+          [
+            "02 · Site Survey",
+            "Millimetre baseline, signed survey report"
+          ],
+          [
+            "03 · Shop Drawings",
+            "IFC package: panels, frame, LED grid, signage"
+          ],
+          [
+            "04 · Samples & Approval",
+            "Sealed finish + backlight reference"
+          ],
+          [
+            "05 · Panel Fabrication",
+            "Fluted modules formed, sequenced, engraved"
+          ],
+          [
+            "06 · Sub-Frame Fabrication",
+            "Galvanised bays welded to survey levels"
+          ],
+          [
+            "07 · Unit Trial Assembly",
+            "Full bay built; handling proven"
+          ],
+          [
+            "08 · Backlight Tuning",
+            "Colour states logged as commissioning baseline"
+          ],
+          [
+            "09 · Diffuser Cassettes",
+            "Built, powered, labelled in position order"
+          ],
+          [
+            "10 · Illuminated Lettering",
+            "Brightness balanced across the name"
+          ],
+          [
+            "11 · Full-Scale Mock-Up",
+            "Approved with zero conditions"
+          ],
+          [
+            "12 · Vertical Rig Test",
+            "Installation rehearsed at true height"
+          ],
+          [
+            "13 · Final QC",
+            "100% documented against sealed samples"
+          ],
+          [
+            "14 · Export Packing",
+            "Crate-by-crate verified packing lists"
+          ],
+          [
+            "15 · Shipping & Delivery",
+            "Container to plan; night delivery in sequence"
+          ],
+          [
+            "16 · Site Installation",
+            "Rehearsed sequence executed on site"
+          ],
+          [
+            "17 · Night Commissioning",
+            "Light states verified against baseline"
+          ],
+          [
+            "18 · Acceptance & Aftercare",
+            "Punch list closed; aftercare package issued"
+          ]
+        ]
+      }
+    }
+  ],
+  "conclusion": "GUOYAO METALWORK · Backlit architectural facades & illuminated signage. Case study photographs are project records; every project is governed by its approved drawings and sealed samples.",
+  "relatedLinks": []
+}

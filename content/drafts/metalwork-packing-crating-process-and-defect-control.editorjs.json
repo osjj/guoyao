@@ -1,0 +1,2025 @@
+{
+  "version": "2.31.1",
+  "time": 1791971945885,
+  "blocks": [
+    {
+      "id": "MpjwH05sJN",
+      "type": "paragraph",
+      "data": {
+        "text": "Luxury retail flagships, premium residences and luxury hotels all handle metalwork that is expensive, delicate on the surface and often irregular in shape. Packing and crating is not \"wrapping things up\": it is a system that brings together <b>surface protection, edge and corner protection, structural fixing and traceable labelling</b>."
+      }
+    },
+    {
+      "id": "gFZbZg9STQ",
+      "type": "paragraph",
+      "data": {
+        "text": "This guide uses <b>12 main operations · 36 sub-operations · 6 structural details · 12 defect controls</b> as its backbone, and works down through the whole chain from cleaning and film application to loading and transport."
+      }
+    },
+    {
+      "id": "NjbIneL6XO",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>12</b> main process operations",
+          "<b>36</b> sub-operations",
+          "<b>6</b> categories of structural detail drawings",
+          "<b>12</b> categories of defect prevention",
+          "<b>9</b> groups of tools and consumables",
+          "<b>≤30 days</b> maximum protection film dwell time",
+          "<b>≤800 kg</b> maximum weight per crate",
+          "<b>≤0.5%</b> target damage rate at retail"
+        ]
+      }
+    },
+    {
+      "id": "QDxDgbkkOt",
+      "type": "paragraph",
+      "data": {
+        "text": "Materials referenced throughout: PE protective film, non-woven fabric and electrostatic film; EPE pearl cotton, EVA and honeycomb paperboard; plywood crates, steel frames and corrugated cartons; QR code traceability across the whole process."
+      }
+    },
+    {
+      "id": "nZ0RXVjUoO",
+      "type": "header",
+      "data": {
+        "text": "Three scenarios and what each one prioritises",
+        "level": 2
+      }
+    },
+    {
+      "id": "QoxVXPXo4O",
+      "type": "paragraph",
+      "data": {
+        "text": "The same packing logic applies to all three, but at three different protection levels. The scenario decides the materials, the fixing method and the transport requirement: luxury retail cares about \"zero surface defects\", premium residences care about \"lightweight and easy to strip out\", and luxury hotels care about \"batch consistency\"."
+      }
+    },
+    {
+      "id": "7bsClYopZy",
+      "type": "header",
+      "data": {
+        "text": "Luxury Retail Flagship",
+        "level": 3
+      }
+    },
+    {
+      "id": "JwqVK02J22",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-packing-crating-process-and-defect-control/01-scene-luxury-crate.webp"
+        },
+        "caption": "Illustrative packing scene for a luxury retail flagship: a vertical plywood crate with cushioned metalwork panels",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "D8SB4lHdrp",
+      "type": "paragraph",
+      "data": {
+        "text": "Retail metal finishes are high value and delicate — mirror polish, PVD titanium coating — and any scratch or dent is impossible to repair. Packing is built around zero surface defects, using a vertical plywood crate with EPE pearl cotton lining and custom-moulded slots."
+      }
+    },
+    {
+      "id": "EP5CjzSEsg",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Mirror / PVD panels</b>: two-layer protection with PE film plus non-woven fabric",
+          "<b>Irregular components</b>: custom EPE pearl cotton slots, moulded in one piece",
+          "<b>Vertical transport in the crate</b>; flat stacking is prohibited",
+          "<b>QR code traceability</b>: scan to read machining parameters and installation location",
+          "Protective film must not be removed before the crate is opened on site",
+          "Maximum weight per crate ≤800 kg; anything heavier must be split"
+        ]
+      }
+    },
+    {
+      "id": "jqhkfdTiQc",
+      "type": "header",
+      "data": {
+        "text": "Premium Residence",
+        "level": 3
+      }
+    },
+    {
+      "id": "NmyGXdlRMo",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-packing-crating-process-and-defect-control/02-scene-residence-carton.webp"
+        },
+        "caption": "Illustrative packing scene for a premium residence: a horizontal corrugated carton with wrapped metal trim",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "d3JHq8xnSt",
+      "type": "paragraph",
+      "data": {
+        "text": "Residential metalwork is mostly skirting, door surrounds and wall panel inlay strips: high quantity, fragmented specifications and very little space on site. Packing is built around lightweight, easy-to-strip-out protection using cartons, bubble wrap and EPE pearl cotton, and avoids over-packing."
+      }
+    },
+    {
+      "id": "YBXoPdTCSC",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Long brushed pieces</b>: wrapped in bubble wrap plus EPE pearl cotton",
+          "<b>Cartons packed by specification</b>, each with a packing list",
+          "<b>Lightweight packing</b> that one person can carry (≤25 kg)",
+          "Labels carry the <b>room number and installation position</b>",
+          "Protective film stays on after unpacking until installation",
+          "Cartons are recyclable, reducing site waste"
+        ]
+      }
+    },
+    {
+      "id": "LmupkfYap6",
+      "type": "header",
+      "data": {
+        "text": "Luxury Hospitality",
+        "level": 3
+      }
+    },
+    {
+      "id": "UVZxujGfpC",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-packing-crating-process-and-defect-control/03-scene-hotel-steelframe.webp"
+        },
+        "caption": "Illustrative packing scene for a luxury hotel: a custom steel frame protecting metal panels",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "YMjznaVbWi",
+      "type": "paragraph",
+      "data": {
+        "text": "Hospitality projects consume a large volume of metalwork across many batches and over long transport distances. Packing is built around batch consistency plus stackability, using steel frames with EPE pearl cotton and EVA pads to balance protection with transport efficiency."
+      }
+    },
+    {
+      "id": "0JiLk5kMd6",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Etched / embossed pieces</b>: two-layer protection with EPE pearl cotton plus EVA",
+          "<b>Steel frame packing</b>, stackable up to 3 high",
+          "<b>Batch management</b>: one area per crate for easy distribution on site",
+          "<b>Labels carry floor + zone + installation position</b>",
+          "No rain exposure and no side stacking during transport",
+          "Steel frames are recoverable, lowering long-term packing cost"
+        ]
+      }
+    },
+    {
+      "id": "xpjZgwRTWW",
+      "type": "header",
+      "data": {
+        "text": "The packing material system",
+        "level": 2
+      }
+    },
+    {
+      "id": "T3gKXkkxWU",
+      "type": "paragraph",
+      "data": {
+        "text": "Packing materials fall into four layers: surface protection, cushioning, structure and outer packaging. The choice within each layer directly affects both protection and cost, and must be agreed with the client at the sample-sealing stage."
+      }
+    },
+    {
+      "id": "Ta9DUXiPzq",
+      "type": "header",
+      "data": {
+        "text": "Surface protection layer",
+        "level": 3
+      }
+    },
+    {
+      "id": "g3ndY6A7vm",
+      "type": "header",
+      "data": {
+        "text": "PE protective film",
+        "level": 4
+      }
+    },
+    {
+      "id": "t8bn4lcphh",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Thickness</b> 50–80 μm",
+          "<b>Adhesion</b> low tack / medium tack",
+          "<b>Dwell time</b> ≤30 days",
+          "<b>Best for</b> mirror and brushed surfaces"
+        ]
+      }
+    },
+    {
+      "id": "9ROikoU7uN",
+      "type": "header",
+      "data": {
+        "text": "Non-woven fabric",
+        "level": 4
+      }
+    },
+    {
+      "id": "HIVamA0tLf",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Weight</b> 30–60 g/m²",
+          "<b>Thickness</b> 0.1–0.2 mm",
+          "<b>Character</b> soft, lint-free",
+          "<b>Best for</b> PVD titanium-coated surfaces"
+        ]
+      }
+    },
+    {
+      "id": "nUq9TJULzB",
+      "type": "header",
+      "data": {
+        "text": "Bubble wrap",
+        "level": 4
+      }
+    },
+    {
+      "id": "IJGdAB0kqi",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Thickness</b> 0.5–1.0 mm",
+          "<b>Bubble diameter</b> 10–30 mm",
+          "<b>Character</b> cushioning, lightweight",
+          "<b>Best for</b> residences and small components"
+        ]
+      }
+    },
+    {
+      "id": "8BAQWMYhT1",
+      "type": "header",
+      "data": {
+        "text": "Electrostatic film",
+        "level": 4
+      }
+    },
+    {
+      "id": "RaytHAsTGL",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Thickness</b> 30–50 μm",
+          "<b>Character</b> no adhesive residue",
+          "<b>Dwell time</b> ≤60 days",
+          "<b>Best for</b> mirror-finished components"
+        ]
+      }
+    },
+    {
+      "id": "nSi1fN35EN",
+      "type": "header",
+      "data": {
+        "text": "Cushioning layer",
+        "level": 3
+      }
+    },
+    {
+      "id": "pweIl9cbHl",
+      "type": "header",
+      "data": {
+        "text": "EPE pearl cotton (expanded polyethylene)",
+        "level": 4
+      }
+    },
+    {
+      "id": "2wdUeWkQay",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Thickness</b> 10–50 mm",
+          "<b>Density</b> 20–30 kg/m³",
+          "<b>Rebound</b> good",
+          "<b>Best for</b> every scenario"
+        ]
+      }
+    },
+    {
+      "id": "t27gePh5Yb",
+      "type": "header",
+      "data": {
+        "text": "EVA pad",
+        "level": 4
+      }
+    },
+    {
+      "id": "l44xbMc13A",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Thickness</b> 5–30 mm",
+          "<b>Density</b> 40–60 kg/m³",
+          "<b>Character</b> high rebound, pressure resistant",
+          "<b>Best for</b> irregular and heavy components"
+        ]
+      }
+    },
+    {
+      "id": "Vracp3GX2Z",
+      "type": "header",
+      "data": {
+        "text": "Honeycomb paperboard",
+        "level": 4
+      }
+    },
+    {
+      "id": "HzW9uzqmqn",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Thickness</b> 10–30 mm",
+          "<b>Compression resistance</b> high",
+          "<b>Sustainability</b> recyclable",
+          "<b>Best for</b> large panels and as a crate substitute"
+        ]
+      }
+    },
+    {
+      "id": "T617e3fNKo",
+      "type": "header",
+      "data": {
+        "text": "EPS / XPS foam board",
+        "level": 4
+      }
+    },
+    {
+      "id": "aZwmHqKB2f",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Thickness</b> 20–50 mm",
+          "<b>Density</b> 15–35 kg/m³",
+          "<b>Character</b> light, thermally insulating",
+          "<b>Best for</b> void filling and corner pads"
+        ]
+      }
+    },
+    {
+      "id": "xP8XqGDyyI",
+      "type": "header",
+      "data": {
+        "text": "Structure and outer packaging",
+        "level": 3
+      }
+    },
+    {
+      "id": "EI5Cv0Bys9",
+      "type": "header",
+      "data": {
+        "text": "Plywood crate",
+        "level": 4
+      }
+    },
+    {
+      "id": "SfrYUAlrLU",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Panel thickness</b> 12–18 mm",
+          "<b>Load capacity</b> ≤800 kg",
+          "<b>Character</b> high strength, fully customisable",
+          "<b>Best for</b> retail and large items"
+        ]
+      }
+    },
+    {
+      "id": "XyZ1oK4FV4",
+      "type": "header",
+      "data": {
+        "text": "Steel frame",
+        "level": 4
+      }
+    },
+    {
+      "id": "abIFIFMF6I",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Specification</b> 40×40 square steel",
+          "<b>Stacking</b> ≤3 layers",
+          "<b>Character</b> recoverable, high strength",
+          "<b>Best for</b> hotel batch shipments"
+        ]
+      }
+    },
+    {
+      "id": "oHkzqUODgF",
+      "type": "header",
+      "data": {
+        "text": "Corrugated carton",
+        "level": 4
+      }
+    },
+    {
+      "id": "divtX4lp2p",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Flute</b> AB / BC flute",
+          "<b>Load capacity</b> ≤25 kg",
+          "<b>Character</b> light, easy to open",
+          "<b>Best for</b> residences and small components"
+        ]
+      }
+    },
+    {
+      "id": "SbqQxiB5nK",
+      "type": "header",
+      "data": {
+        "text": "PP / PET strapping band",
+        "level": 4
+      }
+    },
+    {
+      "id": "w9piDvgpYo",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Width</b> 12–19 mm",
+          "<b>Tensile strength</b> ≥800 kg",
+          "<b>Character</b> does not mark the surface",
+          "<b>Best for</b> every scenario"
+        ]
+      }
+    },
+    {
+      "id": "DZtJYEniG8",
+      "type": "header",
+      "data": {
+        "text": "Labelling and auxiliary materials",
+        "level": 3
+      }
+    },
+    {
+      "id": "1LWtXEnILr",
+      "type": "header",
+      "data": {
+        "text": "QR code label",
+        "level": 4
+      }
+    },
+    {
+      "id": "MhmLJbgtCz",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Material</b> waterproof, abrasion-resistant PET",
+          "<b>Size</b> 60×40 mm",
+          "<b>Content</b> machining parameters and installation position",
+          "<b>Scan rate required</b> 100%"
+        ]
+      }
+    },
+    {
+      "id": "ar74tN8UeJ",
+      "type": "header",
+      "data": {
+        "text": "Fragile / This Way Up labels",
+        "level": 4
+      }
+    },
+    {
+      "id": "CtHqnthtcH",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Size</b> 100×100 mm",
+          "<b>Colour</b> red / black",
+          "<b>Language</b> bilingual",
+          "<b>Applied to</b> the front face of the crate"
+        ]
+      }
+    },
+    {
+      "id": "3JGOm8euNP",
+      "type": "header",
+      "data": {
+        "text": "Moisture / centre-of-gravity labels",
+        "level": 4
+      }
+    },
+    {
+      "id": "71FO64NI6N",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Size</b> 80×80 mm",
+          "<b>Colour</b> blue / black",
+          "<b>Language</b> bilingual",
+          "<b>Applied to</b> the side face of the crate"
+        ]
+      }
+    },
+    {
+      "id": "ojEIpS0VWX",
+      "type": "header",
+      "data": {
+        "text": "Desiccant bag",
+        "level": 4
+      }
+    },
+    {
+      "id": "OtpwScjkvF",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Specification</b> 50–200 g",
+          "<b>Moisture absorption</b> ≥30%",
+          "<b>Quantity</b> 1–2 bags per crate",
+          "<b>Best for</b> sea freight and long-distance transport"
+        ]
+      }
+    },
+    {
+      "id": "JK4bicjErj",
+      "type": "header",
+      "data": {
+        "text": "Packing and crating: twelve main operations, thirty-six sub-operations",
+        "level": 2
+      }
+    },
+    {
+      "id": "9o1YLVPQEw",
+      "type": "paragraph",
+      "data": {
+        "text": "Packing is not \"wrapping things up\" — it is a complete chain from cleaning and film application through corner protection, cushioning, fixing and labelling to loading. Every step has explicit control points, and an omission at any one of them can be amplified into irreversible damage in transit."
+      }
+    },
+    {
+      "id": "ToyFyjxjBm",
+      "type": "header",
+      "data": {
+        "text": "1. Final inspection and cleaning",
+        "level": 3
+      }
+    },
+    {
+      "id": "InkGzNGhax",
+      "type": "paragraph",
+      "data": {
+        "text": "Every piece must pass a final inspection before packing: no scratches, fingerprints or colour deviation on the surface, and joint dimensions matching the fabrication order. Wipe the surface with a neutral cleaner and blow it down with compressed air so that no swarf or dust remains."
+      }
+    },
+    {
+      "id": "1NVAHwm01W",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Sub-operations</b> Surface inspection → dimension check → cleaning → drying"
+      }
+    },
+    {
+      "id": "MUPJcrLbOK",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Control point</b> No visible surface defects; fingerprints and oil fully removed; only pieces that pass inspection may enter packing."
+      }
+    },
+    {
+      "id": "fSmifaiuu9",
+      "type": "header",
+      "data": {
+        "text": "2. Surface film application",
+        "level": 3
+      }
+    },
+    {
+      "id": "584ALsiyu4",
+      "type": "paragraph",
+      "data": {
+        "text": "Mirror and PVD-coated pieces receive PE protective film or electrostatic film first, then a layer of non-woven fabric. Brushed pieces may take PE film alone. Apply the film slowly from one end to the other and use a squeegee to push out air bubbles and avoid creasing."
+      }
+    },
+    {
+      "id": "RRzQP8b0bR",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Sub-operations</b> Clean the surface → apply PE film → squeegee out air → overlay non-woven fabric → trim the edges"
+      }
+    },
+    {
+      "id": "Kvf5ye79hf",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Control point</b> No bubbles and no creases; film flush with the panel edge or slightly inset; dwell time ≤30 days."
+      }
+    },
+    {
+      "id": "9K006xToTN",
+      "type": "header",
+      "data": {
+        "text": "3. Edge and corner protection",
+        "level": 3
+      }
+    },
+    {
+      "id": "phKw7DHeSb",
+      "type": "paragraph",
+      "data": {
+        "text": "Fit plastic or EPE corner protectors to all four corners and L-shaped edge protection along the long edges. Corner protectors must be at least 10 mm thick and fixed with tape. This step is the key defence against knocks in transit, especially for mirror and irregular pieces."
+      }
+    },
+    {
+      "id": "fNwyAhDDkp",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Sub-operations</b> Fit four corner protectors → fit L-shaped edge protection → tape in place → check tightness"
+      }
+    },
+    {
+      "id": "cAdKnngaAS",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Control point</b> Corner protectors ≥10 mm thick; all four corners fully covered; tape never applied directly over the protective film."
+      }
+    },
+    {
+      "id": "pufr4fktXN",
+      "type": "header",
+      "data": {
+        "text": "4. Cushion wrapping",
+        "level": 3
+      }
+    },
+    {
+      "id": "o4pBwKba9f",
+      "type": "paragraph",
+      "data": {
+        "text": "Wrap the piece in two to three layers of EPE pearl cotton or bubble wrap, overlapping joints by at least 50 mm and fixing with tape. Irregular pieces need custom EPE pearl cotton slots, moulded in one piece, so that they cannot shift in transit."
+      }
+    },
+    {
+      "id": "7IlfVMsSE7",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Sub-operations</b> Base wrap → middle wrap → face wrap → fix the joints → custom slots for irregular pieces"
+      }
+    },
+    {
+      "id": "UhfEMgeZJ1",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Control point</b> At least two wrap layers; joints overlapped ≥50 mm; no unsupported overhang on irregular pieces."
+      }
+    },
+    {
+      "id": "3ddhqjXfsZ",
+      "type": "header",
+      "data": {
+        "text": "5. Layer separation",
+        "level": 3
+      }
+    },
+    {
+      "id": "daQK6wRxUx",
+      "type": "paragraph",
+      "data": {
+        "text": "When several panels share one crate, a separator — EPE pearl cotton sheet or honeycomb paperboard, at least 5 mm thick — must be placed between them. Metal panels must never be stacked directly against each other, because micro-vibration in transit scratches the surface."
+      }
+    },
+    {
+      "id": "luXWW9mgve",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Sub-operations</b> Measure the panel gap → cut the separator → place the separator → check coverage"
+      }
+    },
+    {
+      "id": "GQM0Xg3abT",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Control point</b> Full separator coverage between panels; separator dimensions at least equal to the panel face; never omitted."
+      }
+    },
+    {
+      "id": "XmSoZtYbq8",
+      "type": "header",
+      "data": {
+        "text": "6. Loading into the inner packaging",
+        "level": 3
+      }
+    },
+    {
+      "id": "rXOJ3YoTqM",
+      "type": "paragraph",
+      "data": {
+        "text": "Place the wrapped metalwork into the crate or carton and fill all round with EPE pearl cotton or foam board so that no void remains. Panels should stand vertically, leaving a 20–30 mm cushioning layer between the panel and the crate wall."
+      }
+    },
+    {
+      "id": "6cBaf6Digk",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Sub-operations</b> Crate floor layer → place the panels → fill around → top layer → check for voids"
+      }
+    },
+    {
+      "id": "PS7s2Qk8r7",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Control point</b> No void inside the crate; panels standing vertically; 20–30 mm cushioning layer against the crate wall."
+      }
+    },
+    {
+      "id": "ho2ffC8zXr",
+      "type": "header",
+      "data": {
+        "text": "7. Structural fixing",
+        "level": 3
+      }
+    },
+    {
+      "id": "0HSMTnOmcr",
+      "type": "paragraph",
+      "data": {
+        "text": "Add timber or steel bracing inside the crate to hold the panels against movement in transit. Any contact face between timber and panel needs an EPE pearl cotton pad. Very long pieces need an additional mid-span support to prevent bowing."
+      }
+    },
+    {
+      "id": "LQtOat337A",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Sub-operations</b> Install timber bracing → fix angle brackets → pad the contact faces → add mid-span support"
+      }
+    },
+    {
+      "id": "ARRNG4OXMY",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Control point</b> No room for panel movement; mid-span support on very long pieces; cushioning pads on every contact face."
+      }
+    },
+    {
+      "id": "URsyGL5mdm",
+      "type": "header",
+      "data": {
+        "text": "8. Closing the crate and strapping",
+        "level": 3
+      }
+    },
+    {
+      "id": "PWWXoaSjLH",
+      "type": "paragraph",
+      "data": {
+        "text": "Fit the lid and fix it with self-tapping screws or steel nails; seal cartons with packing tape. Then apply two to three PP or PET straps lengthwise and across, tighten them with buckles and keep the tension even."
+      }
+    },
+    {
+      "id": "2o04ifz4A4",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Sub-operations</b> Fix the lid → lengthwise straps → cross straps → tighten the buckles → check tension"
+      }
+    },
+    {
+      "id": "XEKTHgI38Z",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Control point</b> Even strap tension; two to three straps each way; no damage to the crate surface."
+      }
+    },
+    {
+      "id": "ZDe9dTrAiQ",
+      "type": "header",
+      "data": {
+        "text": "9. Labelling and QR codes",
+        "level": 3
+      }
+    },
+    {
+      "id": "T8Y3TGaJnB",
+      "type": "paragraph",
+      "data": {
+        "text": "Apply the QR code label to the front face of the crate so that a scan reveals machining parameters, installation position and batch information. Add This Way Up, Fragile, Moisture and centre-of-gravity labels, labelled bilingually."
+      }
+    },
+    {
+      "id": "dvTLQWF4IM",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Sub-operations</b> Print the labels → apply the QR code → apply Fragile → apply This Way Up → apply Moisture"
+      }
+    },
+    {
+      "id": "cHtf70I4pN",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Control point</b> QR code complete and scannable; labels oriented correctly; labels waterproof and abrasion resistant."
+      }
+    },
+    {
+      "id": "UHNIpdk6KR",
+      "type": "header",
+      "data": {
+        "text": "10. Weighing and records",
+        "level": 3
+      }
+    },
+    {
+      "id": "k8DSwRwdLV",
+      "type": "paragraph",
+      "data": {
+        "text": "Weigh every crate and record gross weight, net weight and crate dimensions into the logistics system. Maximum weight per crate is 800 kg; anything heavier must be split or moved to a steel frame. Photograph the packed state as pre-transport evidence."
+      }
+    },
+    {
+      "id": "qnseYINIh8",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Sub-operations</b> Weigh → record dimensions → enter into the system → photograph for the file"
+      }
+    },
+    {
+      "id": "1uDIfqccFm",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Control point</b> ≤800 kg per crate; complete dimension record; packing photographs on file."
+      }
+    },
+    {
+      "id": "VhtkVwsxBO",
+      "type": "header",
+      "data": {
+        "text": "11. Loading and securing",
+        "level": 3
+      }
+    },
+    {
+      "id": "R9j8eWdu6t",
+      "type": "paragraph",
+      "data": {
+        "text": "Crates stand vertically when loaded; never invert or lay them on their side. Fill between crates with timber or air bags and secure them to the vehicle with strapping. Load in \"last off, first on\" order, so that crates to be unloaded first sit nearest the door."
+      }
+    },
+    {
+      "id": "yKY3HFiovQ",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Sub-operations</b> Clean the vehicle bed → position the crates → fill between crates → secure to the vehicle → rain cover"
+      }
+    },
+    {
+      "id": "hLOro19akF",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Control point</b> Crates vertical; no gap between crates; secure fixing to the vehicle; rain and moisture protection."
+      }
+    },
+    {
+      "id": "pybIuigGDb",
+      "type": "header",
+      "data": {
+        "text": "12. Transport tracking and delivery",
+        "level": 3
+      }
+    },
+    {
+      "id": "9M186gjpOu",
+      "type": "paragraph",
+      "data": {
+        "text": "Stay in contact with the driver during transport and track GPS position. On arrival, inspect the outer packaging for damage before anything else and photograph it for the record. Handle gently when unloading, and follow the marked orientation — never roll a crate."
+      }
+    },
+    {
+      "id": "VrxazFiAmY",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Sub-operations</b> GPS tracking → arrival inspection → photographic record → unloading → signed acceptance"
+      }
+    },
+    {
+      "id": "IqH8gfwakm",
+      "type": "paragraph",
+      "data": {
+        "text": "<b>Control point</b> Outer packaging undamaged; unloading follows the marked orientation; signed acceptance on site."
+      }
+    },
+    {
+      "id": "94ZuaLBPIf",
+      "type": "header",
+      "data": {
+        "text": "Six key structural details",
+        "level": 2
+      }
+    },
+    {
+      "id": "iX0J84O4KQ",
+      "type": "paragraph",
+      "data": {
+        "text": "These are the six packing structures used most often, and they directly determine protection performance, transport efficiency and how easy the crate is to open on site. Each one must be fixed during the detailing stage and briefed to the packing team."
+      }
+    },
+    {
+      "id": "tWxRUFeqNl",
+      "type": "header",
+      "data": {
+        "text": "① Crate, vertical orientation",
+        "level": 3
+      }
+    },
+    {
+      "id": "7oowYVJvCE",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-packing-crating-process-and-defect-control/04-detail-crate-vertical.webp"
+        },
+        "caption": "Sectional illustration of a vertical plywood crate with cushioned metal panels and timber bracing",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "fMbQJcbO3T",
+      "type": "paragraph",
+      "data": {
+        "text": "Metal panels stand vertically with EPE pearl cotton cushioning all round and timber bracing holding them in place. This suits mirror and PVD-coated pieces for luxury retail, and large irregular components."
+      }
+    },
+    {
+      "id": "Vd8AM9SHB1",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Crate panel thickness</b> 12–18 mm",
+          "<b>EPE pearl cotton</b> 20 mm",
+          "<b>Base layer</b> EVA 20 mm",
+          "<b>Weight per crate</b> ≤800 kg"
+        ]
+      }
+    },
+    {
+      "id": "ILOFlvo5ud",
+      "type": "header",
+      "data": {
+        "text": "② Carton, horizontal orientation",
+        "level": 3
+      }
+    },
+    {
+      "id": "Ck63A6JwCh",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-packing-crating-process-and-defect-control/05-detail-carton-horizontal.webp"
+        },
+        "caption": "Sectional illustration of a horizontal corrugated carton with interlayer separators",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "ujkNgxWkuw",
+      "type": "paragraph",
+      "data": {
+        "text": "Long metal strips lie horizontally inside the carton, with separators between layers and bubble wrap plus EPE pearl cotton wrapping. This suits skirting, door surrounds, wall panel inlay strips and other small residential pieces."
+      }
+    },
+    {
+      "id": "wX0y3lY9ZX",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Flute</b> AB / BC flute",
+          "<b>Cushioning layer</b> bubble wrap plus EPE pearl cotton",
+          "<b>Interlayer separator</b> ≥5 mm",
+          "<b>Weight per crate</b> ≤25 kg"
+        ]
+      }
+    },
+    {
+      "id": "9LYUnRUSpJ",
+      "type": "header",
+      "data": {
+        "text": "③ Steel frame packing",
+        "level": 3
+      }
+    },
+    {
+      "id": "fUxTRwJV3C",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-packing-crating-process-and-defect-control/06-detail-steel-frame.webp"
+        },
+        "caption": "Sectional illustration of a steel frame with two-layer cushioning and strapping",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "na6xC2gsIv",
+      "type": "paragraph",
+      "data": {
+        "text": "Panels go into a custom steel frame with two-layer EPE pearl cotton and EVA cushioning, secured with strapping. Frames stack up to three high, which suits hotel batch shipments, and they can be recovered and reused."
+      }
+    },
+    {
+      "id": "QM72oy9nND",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Frame specification</b> 40×40 square steel",
+          "<b>Cushioning layer</b> EPE pearl cotton plus EVA",
+          "<b>Stacking</b> ≤3 layers",
+          "<b>Recovery</b> reusable"
+        ]
+      }
+    },
+    {
+      "id": "ib6jVsbc6W",
+      "type": "header",
+      "data": {
+        "text": "④ Corner protection detail",
+        "level": 3
+      }
+    },
+    {
+      "id": "gfdpnndapo",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-packing-crating-process-and-defect-control/07-detail-corner-protection.webp"
+        },
+        "caption": "Close-up illustration of a plastic corner protector and L-shaped edge protection",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "NyaH2VGMRx",
+      "type": "paragraph",
+      "data": {
+        "text": "All four corners take a plastic protector plus an EPE pearl cotton corner, and the long edges take L-shaped edge protection. Corner protectors are at least 10 mm thick and fixed with masking tape, which is never applied directly over the protective film."
+      }
+    },
+    {
+      "id": "bG4UuRnOJ2",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Plastic corner protector</b> ≥10 mm",
+          "<b>EPE pearl cotton corner</b> 20 mm",
+          "<b>L-shaped edge protection</b> full length of the long edge",
+          "<b>Fixing method</b> masking tape"
+        ]
+      }
+    },
+    {
+      "id": "o6IR6uwpso",
+      "type": "header",
+      "data": {
+        "text": "⑤ Layer separation",
+        "level": 3
+      }
+    },
+    {
+      "id": "gEXjpphNDM",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-packing-crating-process-and-defect-control/08-detail-layer-separation.webp"
+        },
+        "caption": "Sectional illustration of interlayer separators between stacked metal panels",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "zVtojRdwkO",
+      "type": "paragraph",
+      "data": {
+        "text": "When several panels share one crate, an EPE pearl cotton sheet or honeycomb paperboard at least 5 mm thick goes between them. Metal panels must never be stacked directly against each other, because micro-vibration in transit scratches the surface."
+      }
+    },
+    {
+      "id": "j0cfnUXdwX",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Separator material</b> EPE pearl cotton / honeycomb paperboard",
+          "<b>Separator thickness</b> ≥5 mm",
+          "<b>Coverage</b> at least the panel face",
+          "<b>Layer limit</b> ≤5 layers per crate"
+        ]
+      }
+    },
+    {
+      "id": "tYwoVmm7YE",
+      "type": "header",
+      "data": {
+        "text": "⑥ Labelling system",
+        "level": 3
+      }
+    },
+    {
+      "id": "LOM9EHT1JY",
+      "type": "image",
+      "data": {
+        "file": {
+          "url": "https://media.guoyaometal.com/blog/metalwork-packing-crating-process-and-defect-control/09-detail-labeling-system.webp"
+        },
+        "caption": "Illustration of the full transport labelling system applied to the front face of a crate",
+        "withBorder": false,
+        "withBackground": false,
+        "stretched": false
+      }
+    },
+    {
+      "id": "UGYexOCgcl",
+      "type": "paragraph",
+      "data": {
+        "text": "The front face of the crate carries a QR code label that reveals machining parameters, installation position and batch on scanning. Fragile, This Way Up, Moisture, centre-of-gravity and stacking labels are applied alongside it, labelled bilingually."
+      }
+    },
+    {
+      "id": "1eE9OT2Zdf",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>QR code</b> 100% coverage",
+          "<b>Label language</b> bilingual",
+          "<b>Label material</b> waterproof and abrasion resistant",
+          "<b>Position</b> top left of the front face"
+        ]
+      }
+    },
+    {
+      "id": "TlQ1Ru3HSY",
+      "type": "header",
+      "data": {
+        "text": "Packing data and cost structure",
+        "level": 2
+      }
+    },
+    {
+      "id": "N8v31nrFOW",
+      "type": "paragraph",
+      "data": {
+        "text": "Packing accounts for roughly 5–8% of the total cost of a metal finish package, but transport damage caused by inadequate packing costs five to ten times the packing cost to rework. The figures below show what the packing investment actually buys."
+      }
+    },
+    {
+      "id": "FGPXx2853U",
+      "type": "header",
+      "data": {
+        "text": "Cost structure",
+        "level": 3
+      }
+    },
+    {
+      "id": "swj4sd9o4B",
+      "type": "header",
+      "data": {
+        "text": "Cost breakdown",
+        "level": 4
+      }
+    },
+    {
+      "id": "7rYiU75k02",
+      "type": "paragraph",
+      "data": {
+        "text": "Based on a mid-to-high-end metal finish package taken as 100%. Materials take the largest share, labour the next."
+      }
+    },
+    {
+      "id": "eb18ecAaXY",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Outer packaging (crate / steel frame / carton)</b> 38%",
+          "<b>Surface protection film and non-woven fabric</b> 18%",
+          "<b>Cushioning materials (EPE / EVA)</b> 16%",
+          "<b>Packing labour</b> 14%",
+          "<b>Strapping and consumables</b> 8%",
+          "<b>Labelling and records</b> 6%"
+        ]
+      }
+    },
+    {
+      "id": "pBeGuVdVNN",
+      "type": "header",
+      "data": {
+        "text": "Damage rate comparison",
+        "level": 4
+      }
+    },
+    {
+      "id": "gEyD1x0n2t",
+      "type": "paragraph",
+      "data": {
+        "text": "Transport damage rates by packing method, from sampled data. Disciplined packing cuts the damage rate by more than 80%."
+      }
+    },
+    {
+      "id": "vKKSGayYJt",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>No packing</b> 12.5%",
+          "<b>Basic wrapping</b> 6.0%",
+          "<b>Standard packing</b> 2.0%",
+          "<b>Disciplined packing</b> 1.0%",
+          "<b>Over-packing</b> 0.6%"
+        ]
+      }
+    },
+    {
+      "id": "h6u6Ws6idJ",
+      "type": "header",
+      "data": {
+        "text": "Material performance comparison",
+        "level": 3
+      }
+    },
+    {
+      "id": "6lYagjMlYM",
+      "type": "header",
+      "data": {
+        "text": "Cushioning performance",
+        "level": 4
+      }
+    },
+    {
+      "id": "6MlKoEHGlL",
+      "type": "paragraph",
+      "data": {
+        "text": "Combined rebound and compression resistance score, 0–100."
+      }
+    },
+    {
+      "id": "gIZNsP7ZMR",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>EVA pad</b> 95",
+          "<b>EPE pearl cotton</b> 85",
+          "<b>Honeycomb paperboard</b> 78",
+          "<b>Bubble wrap</b> 62",
+          "<b>EPS foam board</b> 55"
+        ]
+      }
+    },
+    {
+      "id": "J1w5r16xqc",
+      "type": "header",
+      "data": {
+        "text": "Protection level by scenario",
+        "level": 4
+      }
+    },
+    {
+      "id": "tkNWOrMaGU",
+      "type": "paragraph",
+      "data": {
+        "text": "Recommended protection level by scenario, 0–100, combined across surface, edge, cushioning and structure."
+      }
+    },
+    {
+      "id": "VUDrfDXuts",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Luxury retail</b> 93",
+          "<b>Luxury hospitality</b> 80",
+          "<b>Premium residence</b> 63"
+        ]
+      }
+    },
+    {
+      "id": "reel9hCHxr",
+      "type": "header",
+      "data": {
+        "text": "Time cost: packing labour",
+        "level": 4
+      }
+    },
+    {
+      "id": "wS8uUzExZf",
+      "type": "paragraph",
+      "data": {
+        "text": "Packing labour per piece by packing method, in minutes."
+      }
+    },
+    {
+      "id": "kn8gpqoaQw",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Crate, vertical orientation</b> 45 min",
+          "<b>Steel frame packing</b> 38 min",
+          "<b>Carton, horizontal orientation</b> 18 min",
+          "<b>Basic wrapping</b> 8 min"
+        ]
+      }
+    },
+    {
+      "id": "rEC7XQgSW7",
+      "type": "header",
+      "data": {
+        "text": "Packing standards across the three scenarios",
+        "level": 2
+      }
+    },
+    {
+      "id": "QYaTlKBvgk",
+      "type": "paragraph",
+      "data": {
+        "text": "The same control dimension varies markedly between scenarios. Luxury retail standards are typically two to three times stricter than residential, but over-packing also adds cost and makes unpacking harder."
+      }
+    },
+    {
+      "id": "iOonLA7ZJV",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Outer packaging</b> — Luxury retail: plywood crate, vertical · Premium residence: corrugated carton, horizontal · Luxury hospitality: steel frame or crate",
+          "<b>Surface protection</b> — Luxury retail: PE film plus non-woven, double layer · Premium residence: PE film, single layer · Luxury hospitality: PE film plus non-woven",
+          "<b>Cushioning material</b> — Luxury retail: EPE pearl cotton 20 mm plus EVA · Premium residence: bubble wrap plus EPE 10 mm · Luxury hospitality: EPE plus EVA, double layer",
+          "<b>Corner protection</b> — Luxury retail: plastic corners ≥10 mm, all four corners · Premium residence: EPE corners, four corners · Luxury hospitality: plastic corners ≥10 mm",
+          "<b>Interlayer separator</b> — Luxury retail: EPE ≥5 mm · Premium residence: EPE ≥5 mm · Luxury hospitality: EVA ≥8 mm",
+          "<b>Weight per crate</b> — Luxury retail: ≤800 kg · Premium residence: ≤25 kg · Luxury hospitality: ≤800 kg",
+          "<b>Stacking</b> — Luxury retail: single layer only, never stacked · Premium residence: ≤3 layers · Luxury hospitality: ≤3 layers",
+          "<b>Transport</b> — Luxury retail: vertical, dedicated vehicle · Premium residence: standard truck, rain and moisture protected · Luxury hospitality: vertical, stackable",
+          "<b>Labelling</b> — Luxury retail: QR code + Fragile + This Way Up + centre of gravity · Premium residence: QR code + room number + installation position · Luxury hospitality: QR code + floor + zone + stacking",
+          "<b>Protective film dwell time</b> — Luxury retail: ≤30 days, removed before installation · Premium residence: ≤30 days · Luxury hospitality: ≤30 days",
+          "<b>Damage rate target</b> — Luxury retail: ≤0.5% · Premium residence: ≤1.0% · Luxury hospitality: ≤0.8%"
+        ]
+      }
+    },
+    {
+      "id": "kDFDFRoMa4",
+      "type": "header",
+      "data": {
+        "text": "Inspection and acceptance",
+        "level": 3
+      }
+    },
+    {
+      "id": "x0hsjWf32t",
+      "type": "header",
+      "data": {
+        "text": "Before packing",
+        "level": 4
+      }
+    },
+    {
+      "id": "ljBoWsaL77",
+      "type": "paragraph",
+      "data": {
+        "text": "Items that must be completed before packing starts."
+      }
+    },
+    {
+      "id": "4x5zOzPCZo",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Surface check</b> — no scratches, no fingerprints, no colour deviation",
+          "<b>Dimension check</b> — matches the fabrication order, joint dimensions within tolerance",
+          "<b>Cleaning confirmation</b> — no swarf, no dust, no oil",
+          "<b>Protective film</b> — no bubbles, no creases"
+        ]
+      }
+    },
+    {
+      "id": "44CEGcxZFg",
+      "type": "header",
+      "data": {
+        "text": "During packing",
+        "level": 4
+      }
+    },
+    {
+      "id": "0VVO9smPOq",
+      "type": "paragraph",
+      "data": {
+        "text": "Control points to confirm one by one as packing proceeds."
+      }
+    },
+    {
+      "id": "ihRYrWDTtS",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Corner protection</b> — all four corners covered, thickness within specification",
+          "<b>Cushioning layer</b> — at least two wraps, joints overlapped ≥50 mm",
+          "<b>Separators</b> — no direct contact between panels",
+          "<b>Fixing</b> — no room for movement inside the crate"
+        ]
+      }
+    },
+    {
+      "id": "eCb0nqA0hT",
+      "type": "header",
+      "data": {
+        "text": "After packing",
+        "level": 4
+      }
+    },
+    {
+      "id": "W0N4r3nKr4",
+      "type": "paragraph",
+      "data": {
+        "text": "Final items to confirm once the crate is closed."
+      }
+    },
+    {
+      "id": "6vnUdmv92R",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Labels</b> — QR code scannable, all labels present",
+          "<b>Strapping</b> — even tension, nothing loose",
+          "<b>Weighing</b> — crate weight within limit, record complete",
+          "<b>Photographs</b> — packed state on file as pre-transport evidence"
+        ]
+      }
+    },
+    {
+      "id": "LUnmrYN4gg",
+      "type": "quote",
+      "data": {
+        "text": "The purpose of packing and crating is to deliver metalwork to site with zero damage. Surface protection is the foundation, edge and corner protection is the critical point, structural fixing is the guarantee, and traceable labelling closes the loop. Skipping or simplifying any one step can be amplified into irreversible damage in transit — disciplined packing brings the damage rate from 12.5% down to below 1.0%, an extremely favourable return on the effort.",
+        "caption": "",
+        "alignment": "left"
+      }
+    },
+    {
+      "id": "LlLZ66WfSD",
+      "type": "header",
+      "data": {
+        "text": "Common packing and transport defects, and how to prevent them",
+        "level": 2
+      }
+    },
+    {
+      "id": "lTBMiiDwH4",
+      "type": "paragraph",
+      "data": {
+        "text": "The twelve problems below account for more than 90% of transport damage to metalwork. Identifying the cause and defending against it at the packing stage costs an order of magnitude less than rework afterwards."
+      }
+    },
+    {
+      "id": "VHzn7egfTu",
+      "type": "header",
+      "data": {
+        "text": "Surface scratches (SCRATCH)",
+        "level": 3
+      }
+    },
+    {
+      "id": "i2lDwpvVmg",
+      "type": "paragraph",
+      "data": {
+        "text": "Panels are stacked without separators, protective film is torn, or panels shift and rub against each other in transit, scratching the mirror or brushed surface. <b>Prevention</b> Separators ≥5 mm between panels; protective film intact throughout; crate fixing tight so nothing can move."
+      }
+    },
+    {
+      "id": "aEciZirc3g",
+      "type": "header",
+      "data": {
+        "text": "Corner damage (CORNER DAMAGE)",
+        "level": 3
+      }
+    },
+    {
+      "id": "oxqDoerlDq",
+      "type": "paragraph",
+      "data": {
+        "text": "Corner protectors are missing or too thin, crates are rolled during unloading, or crates collide while being loaded, denting or deforming the edges. <b>Prevention</b> Corner protectors ≥10 mm on all four corners; unload following the marked orientation; fill between crates when loading."
+      }
+    },
+    {
+      "id": "v7vuBtEEXM",
+      "type": "header",
+      "data": {
+        "text": "Surface impressions (DENT)",
+        "level": 3
+      }
+    },
+    {
+      "id": "5U85fPL8rK",
+      "type": "paragraph",
+      "data": {
+        "text": "Too many layers stacked, heavy loads resting on top of crates, or insufficient cushioning thickness leave impressions in the metal surface. <b>Prevention</b> Strictly control the number of stacked layers; never rest heavy loads on crates; cushioning at specification, with EPE pearl cotton ≥20 mm."
+      }
+    },
+    {
+      "id": "yk2OM8o3xe",
+      "type": "header",
+      "data": {
+        "text": "Bowing and deformation (DEFORMATION)",
+        "level": 3
+      }
+    },
+    {
+      "id": "LCmK0rFZ9a",
+      "type": "paragraph",
+      "data": {
+        "text": "Very long pieces without mid-span support, laid flat, or loaded with uneven forces in transit, causing the panel to bow. <b>Prevention</b> Add mid-span support to long pieces; stand panels vertically; brace with timber."
+      }
+    },
+    {
+      "id": "dMv1WzPN4I",
+      "type": "header",
+      "data": {
+        "text": "Moisture and corrosion (MOISTURE)",
+        "level": 3
+      }
+    },
+    {
+      "id": "X4vH2ajFNC",
+      "type": "paragraph",
+      "data": {
+        "text": "Rain exposure in transit, insufficient moisture protection on the crate, or residual moisture on the metal surface leads to corrosion or oxidation. <b>Prevention</b> Desiccant bags inside the crate; waterproof crate treatment; rainproof vehicle; surfaces fully dry before packing."
+      }
+    },
+    {
+      "id": "t5EhyOwJZc",
+      "type": "header",
+      "data": {
+        "text": "Protective film residue (RESIDUE)",
+        "level": 3
+      }
+    },
+    {
+      "id": "QWQfV0lziG",
+      "type": "paragraph",
+      "data": {
+        "text": "Film left in place beyond 30 days, exposed to high temperature, or of poor quality leaves adhesive marks when removed. <b>Prevention</b> Dwell time ≤30 days; avoid high-temperature exposure; specify low-tack quality PE film or electrostatic film."
+      }
+    },
+    {
+      "id": "62jrJk1kGk",
+      "type": "header",
+      "data": {
+        "text": "Label loss (LABEL LOSS)",
+        "level": 3
+      }
+    },
+    {
+      "id": "PtJmWAFYLH",
+      "type": "paragraph",
+      "data": {
+        "text": "Label material that is not waterproof, weak adhesion or abrasion in transit causes QR codes and labels to fall off, losing traceability. <b>Prevention</b> Specify waterproof, abrasion-resistant labels; clean the crate surface before applying; cover important labels with clear tape."
+      }
+    },
+    {
+      "id": "knaGeiPppQ",
+      "type": "header",
+      "data": {
+        "text": "Unpacking damage (UNPACKING)",
+        "level": 3
+      }
+    },
+    {
+      "id": "Bmk8hI2oVP",
+      "type": "paragraph",
+      "data": {
+        "text": "A craft knife scoring the metal surface during unpacking, forced opening, or film peeled off too quickly leaving residue. <b>Prevention</b> Dedicated unpacking tools; controlled blade angle that cannot reach the surface; peel the film slowly."
+      }
+    },
+    {
+      "id": "hg2DQua0Dz",
+      "type": "header",
+      "data": {
+        "text": "Strap marks (STRAP MARK)",
+        "level": 3
+      }
+    },
+    {
+      "id": "NLViFzv6JX",
+      "type": "paragraph",
+      "data": {
+        "text": "Excessive strap tension, straps in direct contact with the metal surface, or no corner pad under the strap leaves marks on the finish. <b>Prevention</b> Moderate strap tension; corner pads at every contact face; wider straps to spread the pressure."
+      }
+    },
+    {
+      "id": "M4hIyeoLtI",
+      "type": "header",
+      "data": {
+        "text": "Crate damage (CRATE DAMAGE)",
+        "level": 3
+      }
+    },
+    {
+      "id": "v5Dkefc0DP",
+      "type": "paragraph",
+      "data": {
+        "text": "Insufficient crate panel thickness, excessive strap tension or collisions in transit cause the crate to split or deform. <b>Prevention</b> Crate panels ≥12 mm; even strap tension; fill between crates when loading."
+      }
+    },
+    {
+      "id": "M9vMXmaCuJ",
+      "type": "header",
+      "data": {
+        "text": "Water trapped under the film (WATER TRAP)",
+        "level": 3
+      }
+    },
+    {
+      "id": "iXKqaoapTd",
+      "type": "paragraph",
+      "data": {
+        "text": "Unsealed film edges or rain in transit let moisture under the film, oxidising or corroding the metal surface. <b>Prevention</b> Press the film edges down firmly; waterproof the crate; cover the vehicle against rain; inspect promptly on arrival."
+      }
+    },
+    {
+      "id": "yPgvfm8I6L",
+      "type": "header",
+      "data": {
+        "text": "QR code failure (QR FAIL)",
+        "level": 3
+      }
+    },
+    {
+      "id": "Qz2CQsgFcS",
+      "type": "paragraph",
+      "data": {
+        "text": "Poor print quality, a worn label or the wrong scanning angle makes the information unreadable. <b>Prevention</b> High-precision printing; waterproof and abrasion-resistant labels; back up key information on the packing list."
+      }
+    },
+    {
+      "id": "4VgQCtg33o",
+      "type": "header",
+      "data": {
+        "text": "Tools and consumables checklist",
+        "level": 2
+      }
+    },
+    {
+      "id": "9zd5dtfOby",
+      "type": "paragraph",
+      "data": {
+        "text": "Equipment and consumables for packing and crating, grouped by function. Stock them in one go before the project starts so that a material shortage never holds up the programme."
+      }
+    },
+    {
+      "id": "cxfei7bBN3",
+      "type": "header",
+      "data": {
+        "text": "Cleaning",
+        "level": 3
+      }
+    },
+    {
+      "id": "wYqXDDOp5H",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "Neutral cleaner",
+          "Microfibre cloth",
+          "Compressed air gun",
+          "Lint-free paper"
+        ]
+      }
+    },
+    {
+      "id": "ZeQEfzvAS1",
+      "type": "header",
+      "data": {
+        "text": "Filming",
+        "level": 3
+      }
+    },
+    {
+      "id": "NnW3PWHRSf",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "PE protective film, 50–80 μm",
+          "Electrostatic film, 30–50 μm",
+          "Non-woven fabric, 30–60 g/m²",
+          "Squeegee / pressure roller"
+        ]
+      }
+    },
+    {
+      "id": "1fcVKhSffM",
+      "type": "header",
+      "data": {
+        "text": "Cushioning",
+        "level": 3
+      }
+    },
+    {
+      "id": "lJkZzjNlQU",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "EPE pearl cotton, 10–50 mm",
+          "EVA pad, 5–30 mm",
+          "Bubble wrap, 0.5–1.0 mm",
+          "Foam board / honeycomb paperboard"
+        ]
+      }
+    },
+    {
+      "id": "j6aGzImg39",
+      "type": "header",
+      "data": {
+        "text": "Corner protection",
+        "level": 3
+      }
+    },
+    {
+      "id": "7hHj6T2QKn",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "Plastic corner protectors, ≥10 mm",
+          "EPE pearl cotton corners, 20 mm",
+          "L-shaped edge protection",
+          "Masking tape"
+        ]
+      }
+    },
+    {
+      "id": "sfqoIulPQU",
+      "type": "header",
+      "data": {
+        "text": "Structural materials",
+        "level": 3
+      }
+    },
+    {
+      "id": "CgVqczp1Xo",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "Plywood crate, 12–18 mm",
+          "Steel frame, 40×40 square steel",
+          "Timber, 40×40 mm",
+          "Corrugated carton, AB flute"
+        ]
+      }
+    },
+    {
+      "id": "l74poFrxel",
+      "type": "header",
+      "data": {
+        "text": "Strapping and fixing",
+        "level": 3
+      }
+    },
+    {
+      "id": "HN6nkKTNrh",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "PP / PET strapping band",
+          "Strapping buckles / strapping tool",
+          "Packing tape",
+          "Air bags"
+        ]
+      }
+    },
+    {
+      "id": "1Jid5my2SQ",
+      "type": "header",
+      "data": {
+        "text": "Labelling",
+        "level": 3
+      }
+    },
+    {
+      "id": "KqDYeWN3vc",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "QR code labels",
+          "Fragile / This Way Up labels",
+          "Moisture / centre-of-gravity labels",
+          "Label printer"
+        ]
+      }
+    },
+    {
+      "id": "CW8KiWbtnO",
+      "type": "header",
+      "data": {
+        "text": "Inspection",
+        "level": 3
+      }
+    },
+    {
+      "id": "xm8LqITnho",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "Colour meter",
+          "Tape measure / vernier callipers",
+          "Floor scale / electronic scale",
+          "Camera / barcode scanner"
+        ]
+      }
+    },
+    {
+      "id": "xO5gaLsOb0",
+      "type": "header",
+      "data": {
+        "text": "Moisture protection",
+        "level": 3
+      }
+    },
+    {
+      "id": "K1G8RV3Oc4",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "Desiccant bags, 50–200 g",
+          "Desiccant",
+          "Waterproof tape",
+          "Waterproof tarpaulin"
+        ]
+      }
+    },
+    {
+      "id": "HHkfnTAuKA",
+      "type": "header",
+      "data": {
+        "text": "Packing environment and safety",
+        "level": 2
+      }
+    },
+    {
+      "id": "tc8PbRpBYg",
+      "type": "paragraph",
+      "data": {
+        "text": "Packing work involves cutting, strapping and manual handling, so both the working environment and operator safety need attention. Handling packing materials responsibly at the end of the job is part of project delivery too."
+      }
+    },
+    {
+      "id": "KpcWHDA5AJ",
+      "type": "header",
+      "data": {
+        "text": "Working environment",
+        "level": 3
+      }
+    },
+    {
+      "id": "OE4gwk3O0F",
+      "type": "paragraph",
+      "data": {
+        "text": "Requirements for the packing area."
+      }
+    },
+    {
+      "id": "YrzwR65cwd",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Temperature</b> 15–30°C",
+          "<b>Humidity</b> 40–65% RH, for moisture control",
+          "<b>Lighting</b> ≥300 lux, for inspection",
+          "<b>Floor</b> level, dry and dust-free",
+          "<b>Aisles</b> ≥1.2 m wide",
+          "<b>Fire safety</b> extinguishers and no-smoking signage"
+        ]
+      }
+    },
+    {
+      "id": "8VmShPeTwI",
+      "type": "header",
+      "data": {
+        "text": "Personnel safety",
+        "level": 3
+      }
+    },
+    {
+      "id": "GIq66GiWpf",
+      "type": "paragraph",
+      "data": {
+        "text": "Protective equipment that operators must have."
+      }
+    },
+    {
+      "id": "g42GQgk4GF",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Gloves</b> cut-resistant, for cutting work",
+          "<b>Goggles</b> splash protection",
+          "<b>Safety shoes</b> impact and puncture protection",
+          "<b>Masks</b> dust protection when cutting foam",
+          "<b>Handling</b> ≤25 kg per person; two people or a forklift above that",
+          "<b>Training</b> on packing equipment operation"
+        ]
+      }
+    },
+    {
+      "id": "qmFkjktZdX",
+      "type": "header",
+      "data": {
+        "text": "Recycling and environmental handling",
+        "level": 3
+      }
+    },
+    {
+      "id": "7bkl3NBM3k",
+      "type": "paragraph",
+      "data": {
+        "text": "Recovery and environmental requirements for packing materials."
+      }
+    },
+    {
+      "id": "q1eBwJ3yAa",
+      "type": "list",
+      "data": {
+        "style": "unordered",
+        "items": [
+          "<b>Cartons</b> recyclable, sorted on site",
+          "<b>Crates</b> recyclable and reusable",
+          "<b>Steel frames</b> recyclable, circulated back into use",
+          "<b>EPE pearl cotton</b> recyclable, professionally processed",
+          "<b>Protective film</b> sorted for recycling, never discarded at will",
+          "<b>Desiccant</b> disposed of compliantly, never landfilled"
+        ]
+      }
+    },
+    {
+      "id": "VCl4oGlmZu",
+      "type": "quote",
+      "data": {
+        "text": "Packing materials should be chosen for recyclability, degradability and reusability wherever possible. Structural materials such as steel frames and crates should be recovered and reused, which both lowers cost and reduces waste on site. Film, EPE pearl cotton and similar materials must be sorted for recycling and never discarded or burned at will. Disposal of all packing waste must comply with local environmental regulations, with records kept.",
+        "caption": "",
+        "alignment": "left"
+      }
+    },
+    {
+      "id": "MwgBctTaSz",
+      "type": "paragraph",
+      "data": {
+        "text": "Process parameters in this article are industry reference values. Each project must follow its own detail drawings, sealed samples and transport plan."
+      }
+    }
+  ]
+}
