@@ -106,7 +106,7 @@ async function main() {
     } catch {
       const data = await readFile(path.join(meta.sourceDir, video.file));
       const uploaded = await withRetry(`upload ${video.key}`, () =>
-        uploadVideoToR2({ data, key: video.key, cacheControl: "public, max-age=31536000, immutable" }),
+        uploadVideoToR2({ data, key: video.key, format: video.key.toLowerCase().endsWith(".webm") ? "webm" : "mp4" }),
       );
       videoUpload = { key: uploaded.key, url: uploaded.url, skipped: false, size: uploaded.size };
       console.log(`  video ${path.basename(uploaded.key)} — ${(uploaded.size / 1048576).toFixed(2)} MB (${uploaded.contentType})`);
