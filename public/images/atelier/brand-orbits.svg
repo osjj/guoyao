@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="650" viewBox="0 0 1600 650" fill="none">
+  <defs>
+    <linearGradient id="orb-metal" x1="200" y1="-300" x2="-160" y2="280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9B7A42"/><stop offset=".16" stop-color="#D7C398"/><stop offset=".32" stop-color="#FFF6DA"/><stop offset=".45" stop-color="#B79A65"/><stop offset=".53" stop-color="#F8EDCF"/><stop offset=".71" stop-color="#D6C6A2"/><stop offset=".87" stop-color="#A78650"/><stop offset="1" stop-color="#E8DAB9"/>
+    </linearGradient>
+    <linearGradient id="orb-satin" x1="-360" y1="-120" x2="340" y2="170" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A39474"/><stop offset=".25" stop-color="#E7DCC3"/><stop offset=".49" stop-color="#FFF9E7"/><stop offset=".63" stop-color="#D0BC91"/><stop offset=".84" stop-color="#A78C5C"/><stop offset="1" stop-color="#EBDBB5"/>
+    </linearGradient>
+    <linearGradient id="orb-edge" x1="-500" y1="50" x2="450" y2="-60" gradientUnits="userSpaceOnUse"><stop stop-color="#866A3E"/><stop offset=".34" stop-color="#FFFAE9"/><stop offset=".7" stop-color="#F2DFB4"/><stop offset="1" stop-color="#9A7A46"/></linearGradient>
+    <linearGradient id="orb-alpha" x1="650" y1="0" x2="1060" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0"/><stop offset=".28" stop-color="white" stop-opacity=".5"/><stop offset="1" stop-color="white"/></linearGradient>
+    <mask id="orb-mask"><rect width="1600" height="650" fill="url(#orb-alpha)"/></mask>
+  </defs>
+  <g mask="url(#orb-mask)">
+    <g transform="translate(1285 205) rotate(-22)">
+      <path d="M-650 0a650 265 0 1 0 1300 0a650 265 0 1 0-1300 0Zm80 0a570 185 0 1 1 1140 0a570 185 0 1 1-1140 0Z" fill="url(#orb-metal)" fill-rule="evenodd"/>
+      <ellipse rx="650" ry="265" stroke="url(#orb-edge)" stroke-width="2"/>
+      <ellipse rx="570" ry="185" stroke="#917345" stroke-opacity=".55" stroke-width="2.5"/>
+      <path d="M-646 0a646 260 0 0 1 1292 0" stroke="#FFFAE9" stroke-opacity=".8" stroke-width="3"/>
+      <path d="M-575 0a575 190 0 0 0 1150 0" stroke="#FFF6D6" stroke-opacity=".5" stroke-width="2"/>
+    </g>
+    <g transform="translate(1302 259) rotate(-22)">
+      <path d="M-480 0a480 190 0 1 0 960 0a480 190 0 1 0-960 0Zm76 0a404 119 0 1 1 808 0a404 119 0 1 1-808 0Z" fill="url(#orb-satin)" fill-rule="evenodd"/>
+      <ellipse rx="480" ry="190" stroke="url(#orb-edge)" stroke-width="2"/>
+      <ellipse rx="404" ry="119" stroke="#977A48" stroke-opacity=".55" stroke-width="2"/>
+      <path d="M-475 0a475 185 0 0 1 950 0" stroke="#FFFAE8" stroke-opacity=".8" stroke-width="2.5"/>
+    </g>
+    <g transform="translate(1316 305) rotate(-22)">
+      <path d="M-307 0a307 124 0 1 0 614 0a307 124 0 1 0-614 0Zm62 0a245 65 0 1 1 490 0a245 65 0 1 1-490 0Z" fill="url(#orb-metal)" fill-rule="evenodd"/>
+      <ellipse rx="307" ry="124" stroke="url(#orb-edge)" stroke-width="1.8"/>
+      <ellipse rx="245" ry="65" stroke="#987844" stroke-opacity=".55" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

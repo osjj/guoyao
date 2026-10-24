@@ -1,0 +1,104 @@
+{
+  "sourceFile": "2016年-2026年公司项目.pdf",
+  "checkedOn": "2026-10-24",
+  "policy": "Project experience only. Periods retained from register; no completion, direct-contract or endorsement claims. Photos are not attached to these records because location-specific photo mapping is unverified. Source PDF stays private.",
+  "records": [
+    {
+      "id": "2025-2026-shanghai-ifc-tiffany",
+      "sourcePage": 4,
+      "sourcePeriod": "2025年-2026年",
+      "sourceName": "上海国际金融中心Tiffany 工程"
+    },
+    {
+      "id": "2025-2026-beijing-skp-lv",
+      "sourcePage": 4,
+      "sourcePeriod": "2025年-2026年",
+      "sourceName": "北京SKP LV 工程"
+    },
+    {
+      "id": "2025-2026-hong-kong-prada",
+      "sourcePage": 4,
+      "sourcePeriod": "2025年-2026年",
+      "sourceName": "香港亞歷山大厦PRADA 工程",
+      "note": "Address specifies Prada hoarding; do not label a completed facade."
+    },
+    {
+      "id": "2024-las-vegas-tiffany",
+      "sourcePage": 3,
+      "sourcePeriod": "2024年",
+      "sourceName": "美國拉斯維加斯Tiffany 工程"
+    },
+    {
+      "id": "2023-shanghai-qiantan-tiffany",
+      "sourcePage": 3,
+      "sourcePeriod": "2023年",
+      "sourceName": "上海前滩太古里Tiffany 工程"
+    },
+    {
+      "id": "2023-beijing-daxing-tiffany",
+      "sourcePage": 3,
+      "sourcePeriod": "2023年",
+      "sourceName": "北京大兴机场Tiffany 工程"
+    },
+    {
+      "id": "2023-macau-four-seasons-tiffany",
+      "sourcePage": 3,
+      "sourcePeriod": "2023年",
+      "sourceName": "澳门四季Tiffany 工程"
+    },
+    {
+      "id": "2022-hangzhou-cartier",
+      "sourcePage": 3,
+      "sourcePeriod": "2022年",
+      "sourceName": "杭州卡地亚 工程"
+    },
+    {
+      "id": "2021-shenzhen-mixc-lv",
+      "sourcePage": 3,
+      "sourcePeriod": "2021年",
+      "sourceName": "深圳万象城LV 工程"
+    },
+    {
+      "id": "2020-chengdu-ifs-dior",
+      "sourcePage": 2,
+      "sourcePeriod": "2020年",
+      "sourceName": "成都IFS Dior 工程"
+    },
+    {
+      "id": "2019-delhi-tiffany",
+      "sourcePage": 2,
+      "sourcePeriod": "2019年",
+      "sourceName": "德里夏纳克亚Tiffany 工程"
+    },
+    {
+      "id": "2018-sydney-tiffany",
+      "sourcePage": 2,
+      "sourcePeriod": "2018年",
+      "sourceName": "悉尼 Tiffany"
+    },
+    {
+      "id": "2017-hong-kong-tiffany",
+      "sourcePage": 1,
+      "sourcePeriod": "2017年",
+      "sourceName": "香港海港城Tiffany"
+    },
+    {
+      "id": "2016-hong-kong-moncler",
+      "sourcePage": 1,
+      "sourcePeriod": "2016年",
+      "sourceName": "香港MONCLER铺 工程"
+    },
+    {
+      "id": "2016-hong-kong-valentino",
+      "sourcePage": 1,
+      "sourcePeriod": "2016年",
+      "sourceName": "Valentino 香港銅鑼灣利園店鋪 工程"
+    },
+    {
+      "id": "2016-changsha-ferragamo",
+      "sourcePage": 1,
+      "sourcePeriod": "2016年",
+      "sourceName": "长沙ferragamo 工程"
+    }
+  ]
+}

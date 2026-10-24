@@ -1,5 +1,7 @@
 .header { position: fixed; inset: 0 0 auto; z-index: 50; background: #f5f2ecf5; color: #22231f; border-bottom: 1px solid #25262016; backdrop-filter: blur(16px); font-family: var(--font-home-sans), sans-serif; }
 .headerInner { width: min(1440px, calc(100% - 100px)); height: 88px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.readingProgress { position: absolute; right: 0; bottom: -1px; left: 0; height: 3px; overflow: hidden; background: #aa8b591a; pointer-events: none; }
+.readingProgressFill { width: 100%; height: 100%; background: linear-gradient(90deg, #9b783f, #c7a565 60%, #e3c995); transform: scaleX(0); transform-origin: left center; }
 .logo { display: inline-flex; align-items: center; gap: 10px; flex-shrink: 0; color: #22231f; }
 .logoMark { position: relative; width: 43px; height: 58px; overflow: hidden; mix-blend-mode: multiply; flex-shrink: 0; }
 .logoMark img { position: absolute; width: 128px; height: 128px; max-width: none; top: -27px; left: -41px; }
@@ -33,6 +35,17 @@
 .contacts p { font-size: 12px; color: #bdbdb3; margin: 8px 0 0; }
 .footerBottom { display: flex; justify-content: space-between; align-items: center; gap: 20px; border-top: 1px solid #f5f2ec26; padding-top: 24px; font-size: 10px; letter-spacing: .1em; color: #bdbdb3; }
 .headerCta:active, .footerCta:active, .menuToggle:active { transform: scale(.97); }
+.header[data-home="true"] { background: #14211ff5; color: #eee9df; border-bottom-color: #c3aa7838; }
+.header[data-home="true"] .desktopNav a { color: #c3c9bc; font-size: 12px; letter-spacing: .02em; }
+.header[data-home="true"] .desktopNav a.active { color: #f0e8d7; }
+.header[data-home="true"] .desktopNav a::after { background: #d0b785; }
+.header[data-home="true"] .headerCta { border-color: #bda16d80; color: #eadfc7; box-shadow: inset 0 1px #e7d9b60a; }
+.header[data-home="true"] .mobileNav { background: #14211f; border-color: #c3aa7838; }
+.header[data-home="true"] .mobileNav > a { border-color: #c3aa7838; }
+.header[data-home="true"] .mobileNav > a[aria-current] { color: #d3bd91; }
+.header[data-home="true"] .mobileNav > a > span { color: #bba16e; }
+.header[data-home="true"] .mobileNav p { color: #b5bcae; }
+@media (hover: hover) and (pointer: fine) { .header[data-home="true"] .headerCta:hover { color: #17231d; background: #d6bf93; } }
 @media (hover: hover) and (pointer: fine) { .desktopNav a:hover::after { transform: scaleX(1); } .headerCta:hover { background: #22231f; color: #f5f2ec; } .footerCta:hover { background: #f5f2ec; color: #22231f; } .footerGrid a:hover { color: #c6ad8b; } }
 @media (max-width: 1100px) { .headerInner { width: calc(100% - 48px); gap: 22px; } .desktopNav { gap: 24px; } .logoWords strong { font-size: 18px; } .logoWords > span { font-size: 6.5px; } .footerInner { width: calc(100% - 72px); } }
 @media (max-width: 800px) { .desktopNav, .headerCta { display: none; } .menuToggle { display: flex; } .mobileNav { display: block; padding: 20px 24px 32px; border-top: 1px solid #d4cec3; max-height: calc(100dvh - 88px); overflow-y: auto; background: #f5f2ec; box-shadow: 0 30px 40px #22231f1f; } .mobileNav > a { display: flex; align-items: center; min-height: 64px; gap: 18px; border-bottom: 1px solid #d4cec3; font-family: var(--font-home-display), serif; font-size: 29px; } .mobileNav > a > span { font-family: var(--font-home-sans), sans-serif; font-size: 9px; color: #917553; } .mobileNav > a > svg { margin-left: auto; } .mobileNav > a[aria-current] { color: #917553; } .mobileNav p { font-size: 11px; line-height: 1.8; color: #717167; margin-top: 24px; } .footerInvitation { display: block; padding-bottom: 42px; } .footerCta { margin-top: 28px; } .footerInner { width: calc(100% - 48px); padding-top: 60px; } .footerGrid { grid-template-columns: 1fr 1fr; gap: 36px 20px; padding: 38px 0; } .footerGrid > div:first-child { grid-column: 1 / -1; } .footerBottom { flex-wrap: wrap; font-size: 7px; } }
@@ -40,3 +53,5 @@
 @media (max-width: 800px) { .footerBottom { font-size: 10px; } }
 @media (max-width: 380px) { .contacts { font-size: 12px; } }
 @media (prefers-reduced-motion: reduce) { .headerCta, .footerCta, .desktopNav a::after { transition: none; } }
+@media (max-width: 600px) { .footerGrid { grid-template-columns: .8fr 1.4fr; column-gap: 24px; } .contacts a { gap: 8px; font-size: 12px; } }
+@media (max-width: 380px) { .footerGrid { grid-template-columns: 1fr; } }

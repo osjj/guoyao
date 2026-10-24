@@ -16,6 +16,9 @@ const SOURCE_FETCH_ATTEMPT_TIMEOUT_MS = 6_000;
 const SOURCE_FETCH_RETRY_DELAY_MS = 350;
 const GENERATION_TIMEOUT_MS = 145_000;
 const MAX_SOURCE_IMAGE_BYTES = 12 * 1024 * 1024;
+const MAX_REFERENCE_IMAGES = 4;
+const MAX_JSON_REQUEST_BYTES = 32 * 1024;
+const MAX_MULTIPART_REQUEST_BYTES = 50 * 1024 * 1024;
 const MAX_GENERATED_IMAGE_BYTES = 25 * 1024 * 1024;
 const MAX_UPSTREAM_RESPONSE_BYTES = 36 * 1024 * 1024;
 const MAX_INPUT_PIXELS = 40_000_000;
@@ -161,10 +164,14 @@ function formatForMimeType(mimeType: string): ImageFormat | null {
   return null;
 }
 
-async function readLimitedBody(response: Response, maximumBytes: number) {
+async function readLimitedBody(
+  response: Pick<Response, "headers" | "body">,
+  maximumBytes: number,
+  tooLargeMessage = "The image response is too large.",
+) {
   const declaredLength = Number(response.headers.get("content-length"));
   if (Number.isFinite(declaredLength) && declaredLength > maximumBytes) {
-    throw new RouteError("The image response is too large.", 413);
+    throw new RouteError(tooLargeMessage, 413);
   }
   if (!response.body) throw new RouteError("The image service returned an empty response.", 502);
 
@@ -179,7 +186,7 @@ async function readLimitedBody(response: Response, maximumBytes: number) {
       totalBytes += value.byteLength;
       if (totalBytes > maximumBytes) {
         await reader.cancel();
-        throw new RouteError("The image response is too large.", 413);
+        throw new RouteError(tooLargeMessage, 413);
       }
       chunks.push(value);
     }
@@ -188,6 +195,80 @@ async function readLimitedBody(response: Response, maximumBytes: number) {
   }
 
   return Buffer.concat(chunks.map((chunk) => Buffer.from(chunk)), totalBytes);
+}
+
+async function parseImageRequest(request: Request, multipart: boolean) {
+  if (!request.body) throw new RouteError("The AI image request is empty.", 400);
+  const data = await readLimitedBody(
+    request,
+    multipart ? MAX_MULTIPART_REQUEST_BYTES : MAX_JSON_REQUEST_BYTES,
+    "The AI image request is too large.",
+  );
+  if (!multipart) {
+    try {
+      return { input: JSON.parse(data.toString("utf8")) as unknown, files: [] as File[] };
+    } catch {
+      throw new RouteError("Send a valid JSON request.", 400);
+    }
+  }
+
+  let form: FormData;
+  try {
+    // Bound the incoming stream before invoking the platform multipart parser.
+    form = await new Response(Uint8Array.from(data), {
+      headers: { "Content-Type": request.headers.get("content-type")! },
+    }).formData();
+  } catch {
+    throw new RouteError("Send a valid multipart image request.", 400);
+  }
+  const input: Record<string, string> = Object.create(null);
+  const files: File[] = [];
+  for (const [key, value] of form.entries()) {
+    if (key === "referenceImages") {
+      if (typeof value === "string") throw new RouteError("Attach reference images as files.", 400);
+      files.push(value);
+      if (files.length > MAX_REFERENCE_IMAGES) {
+        throw new RouteError(`Attach at most ${MAX_REFERENCE_IMAGES} reference images.`, 400);
+      }
+    } else {
+      if (typeof value !== "string" || Object.hasOwn(input, key)) {
+        throw new RouteError("Check the image prompt and output options.", 400);
+      }
+      input[key] = value;
+    }
+  }
+  return { input, files };
+}
+
+async function validateReferenceImage(file: File) {
+  if (!file.size) throw new RouteError("A reference image is empty.", 400);
+  if (file.size > MAX_SOURCE_IMAGE_BYTES) {
+    throw new RouteError("Each reference image must be 12 MB or smaller.", 413);
+  }
+  const suppliedFormat = formatForMimeType(normalizedMimeType(file.type));
+  if (!suppliedFormat) {
+    throw new RouteError("Reference images must be PNG, JPEG, or WebP files.", 415);
+  }
+  const data = Buffer.from(await file.arrayBuffer());
+  let metadata: sharp.Metadata;
+  try {
+    const image = sharp(data, { failOn: "error", limitInputPixels: MAX_INPUT_PIXELS });
+    metadata = await image.metadata();
+    // Decode as well as inspecting headers so truncated/corrupt pixels cannot
+    // reach the provider. Forward the original bytes to retain orientation.
+    await image.stats();
+  } catch {
+    throw new RouteError("A reference image is invalid or too large.", 415);
+  }
+  const detectedFormat = metadata.format ? FORMAT_BY_SHARP_FORMAT[metadata.format] : undefined;
+  if (!metadata.width || !metadata.height || !detectedFormat || detectedFormat !== suppliedFormat) {
+    throw new RouteError("A reference image type could not be verified.", 415);
+  }
+  return {
+    data,
+    mimeType: MIME_TYPE_BY_FORMAT[detectedFormat],
+    extension: detectedFormat === "jpeg" ? "jpg" : detectedFormat,
+  };
 }
 
 function waitForSourceRetry(requestSignal: AbortSignal, delayMs: number) {
@@ -388,22 +469,29 @@ export async function POST(request: Request) {
   const admin = await getCurrentAdmin();
   if (!admin) return errorResponse("Your admin session has expired. Sign in again.", 401);
 
-  const declaredLength = Number(request.headers.get("content-length"));
-  if (Number.isFinite(declaredLength) && declaredLength > 32 * 1024) {
-    return errorResponse("The AI image request is too large.", 413);
+  const contentType = normalizedMimeType(request.headers.get("content-type"));
+  const multipart = contentType === "multipart/form-data";
+  if (!multipart && contentType !== "application/json") {
+    return errorResponse("Send the AI image request as JSON or multipart form data.", 415);
   }
-  if (!request.headers.get("content-type")?.toLowerCase().startsWith("application/json")) {
-    return errorResponse("Send the AI image request as JSON.", 415);
+  const declaredLength = Number(request.headers.get("content-length"));
+  if (Number.isFinite(declaredLength) && declaredLength > (multipart ? MAX_MULTIPART_REQUEST_BYTES : MAX_JSON_REQUEST_BYTES)) {
+    return errorResponse("The AI image request is too large.", 413);
   }
 
   try {
-    const parsed = requestSchema.safeParse(await request.json());
+    const { input, files } = await parseImageRequest(request, multipart);
+    const parsed = requestSchema.safeParse(input);
     if (!parsed.success) return errorResponse("Check the image prompt and output options.", 400);
 
     const sourceUrl = parsed.data.sourceUrl
       ? authorizedSourceUrl(parsed.data.sourceUrl, request.url)
       : null;
     const configuration = openAiConfiguration();
+    // Validate every local attachment before fetching a remote source or
+    // reading a logo; malformed uploads never reach any external service.
+    const uploadedReferences = [];
+    for (const file of files) uploadedReferences.push(await validateReferenceImage(file));
     const [sourceImage, referenceImage] = await Promise.all([
       sourceUrl ? fetchSourceImage(sourceUrl, request.signal) : Promise.resolve(null),
       parsed.data.referenceImage === "glarivo-blue-logo"
@@ -411,12 +499,21 @@ export async function POST(request: Request) {
         : Promise.resolve(null),
     ]);
 
-    const hasReferenceImages = Boolean(sourceImage || referenceImage);
-    const prompt = referenceImage
+    const hasReferenceImages = Boolean(sourceImage || referenceImage || uploadedReferences.length);
+    let prompt = referenceImage
       ? `${parsed.data.prompt}\n\n${sourceImage
         ? "The first input image is the source image. The second input image is the approved blue GLARIVO GLASSWARE logo reference. Use the second image only as the replacement logo"
-        : "The input image is the approved blue GLARIVO GLASSWARE logo reference. Use it only as the logo in the requested new image"}; preserve its exact geometry, wording, and blue color.`
+        : uploadedReferences.length
+          ? "The first input image is the approved blue GLARIVO GLASSWARE logo reference. Use the first image only as the logo in the requested new image"
+          : "The input image is the approved blue GLARIVO GLASSWARE logo reference. Use it only as the logo in the requested new image"}; preserve its exact geometry, wording, and blue color.`
       : parsed.data.prompt;
+    if (uploadedReferences.length) {
+      const firstReferenceIndex = Number(Boolean(sourceImage)) + Number(Boolean(referenceImage)) + 1;
+      const descriptions = uploadedReferences.map((_image, index) =>
+        `Input image ${firstReferenceIndex + index} is user reference ${index + 1}.`,
+      );
+      prompt += `\n\n${sourceImage ? "Input image 1 is the source image to edit. " : ""}${descriptions.join(" ")} Use the user references as visual context according to the prompt.`;
+    }
     const parameters = {
       model: OPENAI_IMAGE_MODEL,
       prompt,
@@ -443,6 +540,13 @@ export async function POST(request: Request) {
           `glarivo-logo-blue.${referenceImage.extension}`,
         );
       }
+      uploadedReferences.forEach((image, index) => {
+        form.append(
+          "image[]",
+          new Blob([Uint8Array.from(image.data)], { type: image.mimeType }),
+          `reference-${index + 1}.${image.extension}`,
+        );
+      });
       for (const [key, value] of Object.entries(parameters)) form.set(key, String(value));
       body = form;
     } else {
@@ -511,6 +615,7 @@ export async function POST(request: Request) {
     );
   } catch (error) {
     if (error instanceof RouteError) return errorResponse(error.message, error.status);
+    if (request.signal.aborted) return errorResponse("The AI image request was cancelled.", 499);
     if (error instanceof SyntaxError) return errorResponse("Send a valid JSON request.", 400);
     console.error("AI image request failed", error);
     return errorResponse("The image could not be generated.", 500);

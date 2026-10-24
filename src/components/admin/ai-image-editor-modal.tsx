@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useId, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import {
   ImageIcon,
@@ -12,6 +12,7 @@ import {
   Settings2,
   Sparkles,
   Trash2,
+  Upload,
   X,
 } from "lucide-react";
 import type { AdminProductImageInput } from "@/types/admin-product";
@@ -39,6 +40,25 @@ const BACKGROUND_OPTIONS = [
   { value: "hotel", label: "酒店宴会桌", prompt: "高端酒店宴会餐桌，简洁花艺与柔和灯光，优雅布置" },
   { value: "studio", label: "纯白摄影棚", prompt: "纯白无缝摄影棚背景与白色台面，柔和棚拍光和自然接触阴影" },
 ] as const;
+
+const MAX_REFERENCE_IMAGES = 4;
+const MAX_REFERENCE_IMAGE_BYTES = 12 * 1024 * 1024;
+const REFERENCE_IMAGE_TYPES = ["image/png", "image/jpeg", "image/webp"];
+
+type LocalReferenceImage = {
+  id: string;
+  file: File;
+  previewUrl: string;
+};
+
+function transferFiles(transfer: DataTransfer | null) {
+  if (!transfer) return [];
+  const files = Array.from(transfer.items ?? [])
+    .filter((item) => item.kind === "file")
+    .map((item) => item.getAsFile())
+    .filter((file): file is File => file !== null);
+  return files.length ? files : Array.from(transfer.files ?? []);
+}
 
 type ImageSize = (typeof SIZE_OPTIONS)[number];
 type ImageQuality = (typeof QUALITY_OPTIONS)[number];
@@ -224,7 +244,11 @@ function AiImageEditorSession({
   const defaultTemplates = isProduct ? DEFAULT_PROMPT_TEMPLATES : EDITORIAL_PROMPT_TEMPLATES;
   const storageKey = isProduct ? PROMPT_TEMPLATES_STORAGE_KEY : EDITORIAL_TEMPLATES_STORAGE_KEY;
   const titleId = useId();
+  const referenceHelpId = useId();
   const dialogRef = useRef<HTMLElement>(null);
+  const referenceInputRef = useRef<HTMLInputElement>(null);
+  const referenceButtonRef = useRef<HTMLButtonElement>(null);
+  const localReferencesRef = useRef<LocalReferenceImage[]>([]);
   // Capture before the opening render disables the caller's form controls.
   const returnFocusRef = useRef<HTMLElement | null>(
     typeof document !== "undefined" && document.activeElement instanceof HTMLElement
@@ -253,6 +277,48 @@ function AiImageEditorSession({
   const [generating, setGenerating] = useState(false);
   const [finishing, setFinishing] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [localReferences, setLocalReferences] = useState<LocalReferenceImage[]>([]);
+  const [referenceError, setReferenceError] = useState<string | null>(null);
+
+  const addReferenceFiles = useCallback((files: File[]) => {
+    if (!files.length || generating || finishing) return;
+    if (localReferencesRef.current.length + files.length > MAX_REFERENCE_IMAGES) {
+      setReferenceError(`最多添加 ${MAX_REFERENCE_IMAGES} 张参考图，请先移除不需要的图片。`);
+      return;
+    }
+    if (files.some((file) => !REFERENCE_IMAGE_TYPES.includes(file.type))) {
+      setReferenceError("参考图仅支持 PNG、JPEG 和 WebP 格式。");
+      return;
+    }
+    if (files.some((file) => file.size === 0 || file.size > MAX_REFERENCE_IMAGE_BYTES)) {
+      setReferenceError("每张参考图需大于 0 字节且不超过 12 MB。");
+      return;
+    }
+    const additions = files.map((file) => ({
+      id: createPromptTemplateId(),
+      file,
+      previewUrl: URL.createObjectURL(file),
+    }));
+    const next = [...localReferencesRef.current, ...additions];
+    localReferencesRef.current = next;
+    setLocalReferences(next);
+    setReferenceError(null);
+    setGeneratedImage(null);
+    setError(null);
+  }, [generating, finishing, setGeneratedImage, setError]);
+
+  function removeReferenceImage(id: string) {
+    if (generating || finishing) return;
+    const removed = localReferencesRef.current.find((image) => image.id === id);
+    const next = localReferencesRef.current.filter((image) => image.id !== id);
+    localReferencesRef.current = next;
+    setLocalReferences(next);
+    if (removed) URL.revokeObjectURL(removed.previewUrl);
+    setReferenceError(null);
+    setGeneratedImage(null);
+    setError(null);
+    window.requestAnimationFrame(() => referenceButtonRef.current?.focus());
+  }
 
   useEffect(() => {
     callbacksRef.current = { onClose, onFinish };
@@ -297,26 +363,54 @@ function AiImageEditorSession({
       callbacksRef.current.onClose();
     });
     const stopPropagation = (event: Event) => event.stopPropagation();
-    const preventTransfer = (event: Event) => {
-      event.preventDefault();
-      event.stopPropagation();
-    };
     window.addEventListener("keydown", handleKeyDown, true);
     window.addEventListener("keyup", stopPropagation, true);
-    window.addEventListener("paste", stopPropagation, true);
     window.addEventListener("cut", stopPropagation, true);
-    window.addEventListener("drop", preventTransfer, true);
-    window.addEventListener("dragover", preventTransfer, true);
     return () => {
       window.removeEventListener("keydown", handleKeyDown, true);
       window.removeEventListener("keyup", stopPropagation, true);
-      window.removeEventListener("paste", stopPropagation, true);
       window.removeEventListener("cut", stopPropagation, true);
-      window.removeEventListener("drop", preventTransfer, true);
-      window.removeEventListener("dragover", preventTransfer, true);
       siblings.forEach(({ element, inert }) => { element.inert = inert; });
     };
   }, [mounted]);
+
+  useEffect(() => {
+    if (!mounted) return;
+    // Handle transfers at window capture before EditorJS document listeners.
+    // Text-only paste retains its native input behavior.
+    const paste = (event: ClipboardEvent) => {
+      event.stopPropagation();
+      const files = transferFiles(event.clipboardData);
+      if (!files.length) return;
+      event.preventDefault();
+      addReferenceFiles(files);
+    };
+    const drop = (event: DragEvent) => {
+      event.preventDefault();
+      event.stopPropagation();
+      if (event.target instanceof Node && dialogRef.current?.contains(event.target)) {
+        addReferenceFiles(transferFiles(event.dataTransfer));
+      }
+    };
+    const dragOver = (event: DragEvent) => {
+      event.preventDefault();
+      event.stopPropagation();
+      if (event.dataTransfer) event.dataTransfer.dropEffect = generating || finishing ? "none" : "copy";
+    };
+    window.addEventListener("paste", paste, true);
+    window.addEventListener("drop", drop, true);
+    window.addEventListener("dragover", dragOver, true);
+    return () => {
+      window.removeEventListener("paste", paste, true);
+      window.removeEventListener("drop", drop, true);
+      window.removeEventListener("dragover", dragOver, true);
+    };
+  }, [mounted, addReferenceFiles, generating, finishing]);
+
+  useEffect(() => () => {
+    localReferencesRef.current.forEach((image) => URL.revokeObjectURL(image.previewUrl));
+    localReferencesRef.current = [];
+  }, []);
 
   useEffect(() => {
     if (!generating && !finishing) return;
@@ -415,17 +509,25 @@ function AiImageEditorSession({
     setError(null);
 
     try {
+      const requestOptions = {
+        ...(useSourceImage && sourceImage?.url ? { sourceUrl: sourceImage.url } : {}),
+        prompt: finalPrompt,
+        size,
+        quality,
+        outputFormat,
+        referenceImage: isProduct ? referenceImage : "none",
+      };
+      let body: FormData | string = JSON.stringify(requestOptions);
+      if (localReferences.length) {
+        const form = new FormData();
+        Object.entries(requestOptions).forEach(([name, value]) => form.set(name, value));
+        localReferences.forEach((image) => form.append("referenceImages", image.file));
+        body = form;
+      }
       const response = await fetch("/api/admin/product-image-ai", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...(useSourceImage && sourceImage?.url ? { sourceUrl: sourceImage.url } : {}),
-          prompt: finalPrompt,
-          size,
-          quality,
-          outputFormat,
-          referenceImage: isProduct ? referenceImage : "none",
-        }),
+        ...(typeof body === "string" ? { headers: { "Content-Type": "application/json" } } : {}),
+        body,
         signal: controller.signal,
       });
       const payload = (await response.json().catch(() => null)) as
@@ -603,7 +705,7 @@ function AiImageEditorSession({
                 <MagnifiableImage key={sourceImage.url} src={sourceImage.url} alt={sourceImage.alt || `Original ${contentLabel} image`} />
               ) : (
                 <div className="grid aspect-square place-items-center rounded-2xl border border-[#d7dcd8] bg-[#eef0ed] p-6 text-center text-sm text-[var(--ink-muted)]">
-                  No reference image. Describe the image you want to generate.
+                  No current image. Add reference images below or describe the image you want to generate.
                 </div>
               )}
             </figure>
@@ -656,10 +758,68 @@ function AiImageEditorSession({
             <span>
               <span className="block font-black">引用当前图片作为参考</span>
               <span className="mt-1 block text-xs leading-5 text-[var(--ink-muted)]">
-                {useSourceImage ? "会将当前图片发送给 AI 作为上下文。" : "不会发送当前图片；AI 将根据提示词生成新图片。"}
+                {useSourceImage ? "会将当前图片发送给 AI 作为上下文。" : "不会发送当前图片；仍可使用下方添加的参考图。"}
               </span>
             </span>
           </label>
+
+          <div className="mt-4 rounded-2xl border border-dashed border-[#b8c5bd] bg-[#f8f9f7] p-4">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <h3 className="text-sm font-black">添加参考图片</h3>
+              <button
+                ref={referenceButtonRef}
+                type="button"
+                className="button-secondary min-h-10 text-sm"
+                onClick={() => referenceInputRef.current?.click()}
+                disabled={busy || localReferences.length >= MAX_REFERENCE_IMAGES}
+                aria-describedby={referenceHelpId}
+              >
+                <Upload className="size-4" aria-hidden="true" />
+                选择参考图片
+              </button>
+            </div>
+            <input
+              ref={referenceInputRef}
+              type="file"
+              accept={REFERENCE_IMAGE_TYPES.join(",")}
+              multiple
+              hidden
+              disabled={busy}
+              aria-label="上传参考图片"
+              onChange={(event) => {
+                addReferenceFiles(Array.from(event.target.files ?? []));
+                event.target.value = "";
+              }}
+            />
+            <p id={referenceHelpId} className="mt-2 text-xs leading-5 text-[var(--ink-muted)]">
+              选择文件、拖入图片，或在弹窗内按 Ctrl+V / ⌘V 粘贴截图或复制的图片。支持 PNG、JPEG、WebP，最多 4 张，每张不超过 12 MB。图片只作为生成参考。
+            </p>
+            <p role="status" className="mt-2 text-xs font-bold text-[var(--ink-muted)]">
+              已添加 {localReferences.length} / {MAX_REFERENCE_IMAGES} 张参考图
+            </p>
+            {localReferences.length ? (
+              <ul className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                {localReferences.map((image, index) => (
+                  <li key={image.id} className="min-w-0 rounded-xl border border-[#d7dcd8] bg-white p-2">
+                    <div className="relative aspect-square overflow-hidden rounded-lg bg-[#eef0ed]">
+                      <Image src={image.previewUrl} alt={`上传参考图 ${index + 1}`} fill unoptimized sizes="160px" className="object-contain" />
+                      <button
+                        type="button"
+                        className="absolute right-1 top-1 grid size-8 place-items-center rounded-lg bg-white/95 text-[var(--ink)] shadow-sm focus-visible:outline-2 focus-visible:outline-[var(--accent)]"
+                        aria-label={`移除参考图 ${index + 1}`}
+                        onClick={() => removeReferenceImage(image.id)}
+                        disabled={busy}
+                      >
+                        <X className="size-4" aria-hidden="true" />
+                      </button>
+                    </div>
+                    <p title={image.file.name} className="mt-2 truncate text-xs text-[var(--ink-muted)]">{image.file.name}</p>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+            {referenceError ? <p role="alert" className="mt-3 text-sm font-bold text-[#7d2e27]">{referenceError}</p> : null}
+          </div>
 
           <label className="mt-6 block text-sm font-black">
             Editing instructions

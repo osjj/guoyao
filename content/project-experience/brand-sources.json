@@ -1,0 +1,175 @@
+{
+  "note": "Downloaded original logo asset bytes. No geometry modification, tracing, generated text, or third-party hotlinking. Sources include Wikimedia Commons and Worldvectorlogo when official retail sites block access. Source pages provide rights details; logo acquisition does not establish brand endorsement.",
+  "brands": [
+    {
+      "id": "tiffany",
+      "name": "Tiffany & Co.",
+      "file": "/brand/project-brands/tiffany.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Tiffany_%26_Co._2024_logo.svg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Tiffany_%26_Co._2024_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "originalFileTitle": "Tiffany & Co. 2024 logo.svg",
+      "acquiredDate": "2026-10-24",
+      "width": "500",
+      "height": "55.21",
+      "viewBox": "0 0 634 70",
+      "bytes": 6380,
+      "sha256": "3291d11d896b4316f4e8bf9ba17b3e7933a8e358aa18975347823d179bcfa9b6",
+      "license": "Wikimedia Commons labels PD-textlogo or PD-shape; trademark restrictions remain. See source page.",
+      "svgChecks": {
+        "scripts": false,
+        "externalReferences": false,
+        "eventHandlers": false
+      }
+    },
+    {
+      "id": "cartier",
+      "name": "Cartier",
+      "file": "/brand/project-brands/cartier.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cartier_logo.svg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/8/86/Cartier_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "originalFileTitle": "Cartier logo.svg",
+      "acquiredDate": "2026-10-24",
+      "width": "1024",
+      "height": "297",
+      "viewBox": "-21.5207445 -21.5207445 2622.274389 760.399639",
+      "bytes": 8702,
+      "sha256": "7f112af1c5e4c764800b57d702080cd2eaf07b7f8bd47065a9787559a5085bd6",
+      "license": "Wikimedia Commons labels PD-textlogo or PD-shape; trademark restrictions remain. See source page.",
+      "svgChecks": {
+        "scripts": false,
+        "externalReferences": false,
+        "eventHandlers": false
+      }
+    },
+    {
+      "id": "louis-vuitton",
+      "name": "Louis Vuitton",
+      "file": "/brand/project-brands/louis-vuitton.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Louis_Vuitton_logo.svg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Louis_Vuitton_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "originalFileTitle": "Louis Vuitton logo.svg",
+      "acquiredDate": "2026-10-24",
+      "width": "1024",
+      "height": "111",
+      "viewBox": "-31.05 -31.05 10164.6 1097.1",
+      "bytes": 9012,
+      "sha256": "2b4b5d33c7b3516768da8bb8272b416ad043e45453a711d7ee2f47146776c5aa",
+      "license": "Wikimedia Commons labels PD-textlogo or PD-shape; trademark restrictions remain. See source page.",
+      "svgChecks": {
+        "scripts": false,
+        "externalReferences": false,
+        "eventHandlers": false
+      }
+    },
+    {
+      "id": "dior",
+      "name": "Dior",
+      "file": "/brand/project-brands/dior.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Dior_Logo_2022.svg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Dior_Logo_2022.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "originalFileTitle": "Dior Logo 2022.svg",
+      "acquiredDate": "2026-10-24",
+      "width": null,
+      "height": null,
+      "viewBox": "0 0 494.5 138.3",
+      "bytes": 1423,
+      "sha256": "9e907f5d264235bc12f7ac84b39b28221c39f94d688d1a5812d5eef1085524b4",
+      "license": "Wikimedia Commons labels PD-textlogo or PD-shape; trademark restrictions remain. See source page.",
+      "svgChecks": {
+        "scripts": false,
+        "externalReferences": false,
+        "eventHandlers": false
+      }
+    },
+    {
+      "id": "ferragamo",
+      "name": "Ferragamo",
+      "file": "/brand/project-brands/ferragamo.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Fergamo_-_logo_%28Italy%2C_2022%29.svg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/Fergamo_-_logo_%28Italy%2C_2022%29.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "originalFileTitle": "Fergamo - logo (Italy, 2022).svg",
+      "acquiredDate": "2026-10-24",
+      "width": "632px",
+      "height": "79px",
+      "viewBox": "0 0 632 79",
+      "bytes": 5767,
+      "sha256": "c77af61e6a34a0f1b6ee8ca899ebe3db4c25317115a26158dcb961d771f6c5d6",
+      "license": "Wikimedia Commons labels PD-textlogo or PD-shape; trademark restrictions remain. See source page.",
+      "svgChecks": {
+        "scripts": false,
+        "externalReferences": false,
+        "eventHandlers": false
+      }
+    },
+    {
+      "id": "valentino",
+      "name": "Valentino",
+      "file": "/brand/project-brands/valentino.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Valentino_logo.svg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Valentino_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "originalFileTitle": "Valentino logo.svg",
+      "acquiredDate": "2026-10-24",
+      "width": "19629.975pt",
+      "height": "9662pt",
+      "viewBox": "0 0 19629.975 9662",
+      "bytes": 10334,
+      "sha256": "147e3f213ed4da9c6079601a37f4933011afc21e34d99a3d6dddc20e9e50fc35",
+      "license": "Source page labels PD-textlogo; trademark restrictions remain. Structured license metadata differs; refer to full source page.",
+      "note": "Generic VALENTINO mark with V emblem, matching the generic Valentino project identity; avoids GARAVANI sub-brand lockup.",
+      "svgChecks": {
+        "scripts": false,
+        "externalReferences": false,
+        "eventHandlers": false,
+        "foreignObject": false
+      }
+    },
+    {
+      "id": "moncler",
+      "name": "Moncler",
+      "file": "/brand/project-brands/moncler.svg",
+      "sourcePage": "https://worldvectorlogo.com/logo/moncler-1",
+      "downloadUrl": "https://cdn.worldvectorlogo.com/logos/moncler-1.svg",
+      "acquiredDate": "2026-10-24",
+      "width": "2500",
+      "height": "1633",
+      "viewBox": "87.1 117.1 728.1 321.5",
+      "bytes": 7463,
+      "sha256": "37592cc07f21229df060cf6260d74be403274b9f83b7b2dd6d59a121f7ae39cb",
+      "license": "No reuse license verified. See source page and trademark owner terms.",
+      "note": "Original downloaded retail Moncler emblem plus MONCLER wordmark. Replaces rejected CompaniesLogo Group lockup. No geometry or text has been removed or redrawn.",
+      "svgChecks": {
+        "scripts": false,
+        "externalReferences": false,
+        "eventHandlers": false,
+        "foreignObject": false
+      },
+      "visualVerification": {
+        "method": "Sharp rasterization and white-background flatten, then view_image inspection",
+        "previewPath": "C:\\Users\\osjj\\AppData\\Local\\Temp\\guoyao-moncler-retail-1-white.png",
+        "verifiedText": "MONCLER",
+        "verifiedEmblem": true,
+        "containsGroupText": false
+      }
+    },
+    {
+      "id": "prada",
+      "name": "Prada",
+      "file": "/brand/project-brands/prada.svg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Prada-Logo.svg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Prada-Logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "originalFileTitle": "Prada-Logo.svg",
+      "acquiredDate": "2026-10-24",
+      "width": null,
+      "height": null,
+      "viewBox": "0 0 2279.41 353.7",
+      "bytes": 2850,
+      "sha256": "8700a055b7e75deb906e802acd251fcf84344c0ab42eddc1367dfab42b747850",
+      "license": "Wikimedia Commons labels PD-textlogo or PD-shape; trademark restrictions remain. See source page.",
+      "svgChecks": {
+        "scripts": false,
+        "externalReferences": false,
+        "eventHandlers": false
+      }
+    }
+  ]
+}

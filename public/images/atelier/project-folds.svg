@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="750" viewBox="0 0 1600 750" fill="none">
+  <defs>
+    <linearGradient id="fold-face" x1="790" y1="-30" x2="1460" y2="460" gradientUnits="userSpaceOnUse"><stop stop-color="#122B23"/><stop offset=".23" stop-color="#587167"/><stop offset=".41" stop-color="#9DABA0"/><stop offset=".5" stop-color="#3C574B"/><stop offset=".76" stop-color="#1D392C"/><stop offset="1" stop-color="#0C2019"/></linearGradient>
+    <linearGradient id="fold-return" x1="1100" y1="0" x2="1260" y2="590" gradientUnits="userSpaceOnUse"><stop stop-color="#0A1D16"/><stop offset=".35" stop-color="#274A38"/><stop offset=".66" stop-color="#718678"/><stop offset=".8" stop-color="#1A3627"/><stop offset="1" stop-color="#091D15"/></linearGradient>
+    <linearGradient id="fold-brass" x1="960" y1="0" x2="1490" y2="580" gradientUnits="userSpaceOnUse"><stop stop-color="#A4854F"/><stop offset=".21" stop-color="#E6D1A2"/><stop offset=".43" stop-color="#8F774B"/><stop offset=".61" stop-color="#D6C194"/><stop offset="1" stop-color="#4E5438"/></linearGradient>
+    <linearGradient id="fold-light" x1="1190" y1="60" x2="1510" y2="600" gradientUnits="userSpaceOnUse"><stop stop-color="#CED0B5"/><stop offset=".22" stop-color="#7E9883"/><stop offset=".55" stop-color="#3B5948"/><stop offset="1" stop-color="#112B20"/></linearGradient>
+    <linearGradient id="fold-alpha" x1="700" y1="0" x2="1110" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0"/><stop offset=".45" stop-color="white" stop-opacity=".5"/><stop offset="1" stop-color="white"/></linearGradient>
+    <linearGradient id="fold-fade" x1="0" y1="260" x2="0" y2="750" gradientUnits="userSpaceOnUse"><stop stop-color="white"/><stop offset=".7" stop-color="white" stop-opacity=".7"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient>
+    <mask id="fold-side"><rect width="1600" height="750" fill="url(#fold-alpha)"/></mask>
+    <mask id="fold-bottom"><rect width="1600" height="750" fill="url(#fold-fade)"/></mask>
+  </defs>
+  <g mask="url(#fold-bottom)">
+    <g mask="url(#fold-side)">
+      <path d="M774-125 1051-125 1539 750H1285Z" fill="url(#fold-face)"/>
+      <path d="M1051-125 1096-125 1584 750H1539Z" fill="url(#fold-return)"/>
+      <path d="M1051-125 1062-125 1550 750H1539Z" fill="url(#fold-brass)"/>
+      <path d="M1102-125 1310-125 1798 750H1584Z" fill="url(#fold-face)"/>
+      <path d="M1310-125 1361-125 1849 750H1798Z" fill="url(#fold-return)"/>
+      <path d="M1310-125 1322-125 1810 750H1798Z" fill="url(#fold-brass)"/>
+      <path d="M1430-125 1640-125 2128 750H1918Z" fill="url(#fold-light)"/>
+      <path d="M774-125 1285 750M1102-125 1584 750M1430-125 1918 750" stroke="#C9D0BA" stroke-opacity=".45" stroke-width="1.5"/>
+      <path d="M1051-125 1539 750M1310-125 1798 750" stroke="#F0D6A1" stroke-opacity=".9" stroke-width="1.7"/>
+      <path d="M835-125 1334 750M1163-125 1633 750M1491-125 1967 750" stroke="#C7CEB6" stroke-opacity=".14" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

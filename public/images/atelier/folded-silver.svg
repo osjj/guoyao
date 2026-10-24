@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <defs>
+    <linearGradient id="s-top" x1="890" y1="-40" x2="1190" y2="302" gradientUnits="userSpaceOnUse"><stop stop-color="#F6F4E9"/><stop offset=".28" stop-color="#CDD6CD"/><stop offset=".56" stop-color="#F3F6ED"/><stop offset=".78" stop-color="#A1B2AA"/><stop offset="1" stop-color="#798F84"/></linearGradient>
+    <linearGradient id="s-fold" x1="1044" y1="207" x2="1308" y2="511" gradientUnits="userSpaceOnUse"><stop stop-color="#F8F8EE"/><stop offset=".13" stop-color="#C8D3C8"/><stop offset=".43" stop-color="#849D91"/><stop offset=".72" stop-color="#B4C2B7"/><stop offset="1" stop-color="#EFF0DF"/></linearGradient>
+    <linearGradient id="s-turn" x1="1119" y1="503" x2="1319" y2="811" gradientUnits="userSpaceOnUse"><stop stop-color="#647F73"/><stop offset=".08" stop-color="#879F90"/><stop offset=".36" stop-color="#CCD3C2"/><stop offset=".6" stop-color="#EDF0E3"/><stop offset="1" stop-color="#B8C5B9"/></linearGradient>
+    <linearGradient id="s-right" x1="1413" y1="349" x2="1652" y2="680" gradientUnits="userSpaceOnUse"><stop stop-color="#F3F2DF"/><stop offset=".16" stop-color="#D3DCCF"/><stop offset=".39" stop-color="#FBFAED"/><stop offset=".52" stop-color="#D1D9CA"/><stop offset=".8" stop-color="#9AAFA0"/><stop offset="1" stop-color="#E8ECDD"/></linearGradient>
+    <linearGradient id="s-rim" x1="1538" y1="-9" x2="1529" y2="347" gradientUnits="userSpaceOnUse"><stop stop-color="#A6B6AA"/><stop offset=".4" stop-color="#F7F6E6"/><stop offset="1" stop-color="#6C8577"/></linearGradient>
+    <linearGradient id="s-left" x1="100" y1="724" x2="228" y2="924" gradientUnits="userSpaceOnUse"><stop stop-color="#F3F4E8"/><stop offset=".43" stop-color="#BDCABC"/><stop offset=".7" stop-color="#8FA598"/><stop offset="1" stop-color="#EDF0E2"/></linearGradient>
+    <linearGradient id="s-alpha" x1="600" y1="450" x2="1180" y2="450" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0"/><stop offset=".36" stop-color="white" stop-opacity=".3"/><stop offset=".8" stop-color="white" stop-opacity=".9"/><stop offset="1" stop-color="white"/></linearGradient>
+    <linearGradient id="s-bottom-alpha" x1="200" y1="660" x2="200" y2="920" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0"/><stop offset=".45" stop-color="white" stop-opacity=".5"/><stop offset="1" stop-color="white"/></linearGradient>
+    <mask id="s-mask"><rect width="1600" height="900" fill="url(#s-alpha)"/></mask>
+    <mask id="s-bottom-mask"><rect width="600" height="900" fill="url(#s-bottom-alpha)"/></mask>
+    <filter id="s-shadow" x="-30%" y="-30%" width="160%" height="170%" color-interpolation-filters="sRGB"><feDropShadow dx="-11" dy="22" stdDeviation="15" flood-color="#34483C" flood-opacity=".19"/></filter>
+  </defs>
+  <g mask="url(#s-mask)" filter="url(#s-shadow)">
+    <path d="M615-90 1120 28 1454 350 1050 206Z" fill="url(#s-top)"/>
+    <path d="m1050 206 404 144-254 254-253-224Z" fill="url(#s-fold)"/>
+    <path d="m947 380 253 224 68 386h-134Z" fill="url(#s-turn)"/>
+    <path d="m1454 350 316-220v860h-502l-68-386Z" fill="url(#s-right)"/>
+    <path d="M1120 28 1550-130l220 260-316 220Z" fill="url(#s-rim)"/>
+    <path d="m615-90 435 296 404 144M947 380l253 224 254-254M1200 604l68 386" stroke="#FAF9EC" stroke-opacity=".72" stroke-width="1.6"/>
+    <path d="m1120 28 334 322-254 254" stroke="#5A7265" stroke-opacity=".4" stroke-width="1.5"/>
+    <path d="m1050 206 397 144-247 254" stroke="#FDFCEE" stroke-opacity=".34" stroke-width="4"/>
+  </g>
+  <g mask="url(#s-bottom-mask)">
+    <path d="M-130 887 191 685l286 257H-130Z" fill="url(#s-left)"/>
+    <path d="m191 685 65 167 221 90Z" fill="#E8EBDB"/>
+    <path d="m-130 887 386-35-65-167" stroke="#FFFFFF" stroke-opacity=".72" stroke-width="1.4"/>
+    <path d="m256 852 221 90" stroke="#7A9281" stroke-opacity=".3" stroke-width="1.4"/>
+  </g>
+</svg>

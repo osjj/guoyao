@@ -10,7 +10,7 @@ import styles from "./metal-shell.module.css";
 
 const navigation = [
   { href: "/", label: "Home" },
-  { href: "/case-studies", label: "Case" },
+  { href: "/case-studies", label: "Projects" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
 ] as const;
@@ -20,6 +20,34 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const trigger = useRef<HTMLButtonElement>(null);
   const header = useRef<HTMLElement>(null);
+  const readingProgress = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const distance = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = distance > 0 ? Math.min(1, Math.max(0, window.scrollY / distance)) : 0;
+      if (readingProgress.current) readingProgress.current.style.transform = `scaleX(${progress})`;
+    };
+    const schedule = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+    const observer = new ResizeObserver(schedule);
+    observer.observe(document.documentElement);
+    observer.observe(document.body);
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    window.addEventListener("pageshow", schedule);
+    schedule();
+    return () => {
+      window.cancelAnimationFrame(frame);
+      observer.disconnect();
+      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("resize", schedule);
+      window.removeEventListener("pageshow", schedule);
+    };
+  }, [pathname]);
 
   useEffect(() => {
     if (!open) return;
@@ -36,9 +64,9 @@ export function SiteHeader() {
 
   const active = (href: string) => href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
   return (
-    <header ref={header} className={styles.header}>
+    <header ref={header} className={styles.header} data-home={pathname === "/" ? "true" : undefined}>
       <div className={styles.headerInner}>
-        <Logo compact />
+        <Logo compact variant={pathname === "/" ? "white" : "blue"} />
         <nav className={styles.desktopNav} aria-label="Primary navigation">
           {navigation.map((item) => <Link key={item.href} href={item.href} className={active(item.href) ? styles.active : ""} aria-current={active(item.href) ? "page" : undefined}>{item.label}</Link>)}
         </nav>
@@ -47,8 +75,9 @@ export function SiteHeader() {
       </div>
       {open && <nav className={styles.mobileNav} id="mobile-navigation" aria-label="Mobile navigation">
         {navigation.map((item, index) => <Link key={item.href} href={item.href} aria-current={active(item.href) ? "page" : undefined} onClick={() => setOpen(false)}><span>0{index + 1}</span>{item.label}<ArrowUpRight size={22} aria-hidden="true" /></Link>)}
-        <p>Architectural metalworks.<br />A considered material perspective.</p>
+        <p>Custom architectural metalwork.<br />For retail and architectural spaces.</p>
       </nav>}
+      <div className={styles.readingProgress} aria-hidden="true"><div ref={readingProgress} className={styles.readingProgressFill} /></div>
     </header>
   );
 }

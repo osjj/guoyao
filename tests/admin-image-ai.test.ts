@@ -4,6 +4,7 @@ import { createRequire } from "node:module";
 import { resolve } from "node:path";
 import test from "node:test";
 import { runInNewContext } from "node:vm";
+import sharp from "sharp";
 import ts from "typescript";
 
 const requireModule = createRequire(resolve("package.json"));
@@ -81,6 +82,134 @@ function generatedResponse() {
 function sourceResponse() {
   return new Response(png, { headers: { "content-type": "image/png" } });
 }
+
+function referenceRequest(
+  files: File[],
+  body: Record<string, unknown> = options,
+  customize?: (form: FormData) => void,
+) {
+  const form = new FormData();
+  for (const [key, value] of Object.entries(body)) form.set(key, String(value));
+  for (const file of files) form.append("referenceImages", file);
+  customize?.(form);
+  return new Request("https://site.example.test/api/admin/product-image-ai", { method: "POST", body: form });
+}
+
+function referencePng(name = "clipboard.png") {
+  return new File([png], name, { type: "image/png" });
+}
+
+test("uploaded and clipboard references use edits without source fetches or storage writes", async () => {
+  const jpeg = await sharp(png).jpeg().toBuffer();
+  const webp = await sharp(png).webp().toBuffer();
+  const references = [referencePng(), new File([Uint8Array.from(jpeg)], "photo.jpg", { type: "image/jpeg" }), new File([Uint8Array.from(webp)], "scene.webp", { type: "image/webp" }), referencePng("fourth.png")];
+  const harness = loadRoute("product-image-ai", { fetch: async () => generatedResponse() });
+  const result = await harness.post(referenceRequest(references));
+  assert.equal(result.status, 200, await result.text());
+  assert.equal(harness.calls.length, 1);
+  assert.equal(harness.calls[0].url, "https://ai.example.test/v1/images/edits");
+  assert.equal(new Headers(harness.calls[0].init?.headers).has("content-type"), false);
+  const form = harness.calls[0].init?.body as FormData;
+  const files = form.getAll("image[]") as File[];
+  assert.deepEqual(files.map((file) => file.name), ["reference-1.png", "reference-2.jpg", "reference-3.webp", "reference-4.png"]);
+  for (let index = 0; index < references.length; index += 1) {
+    assert.deepEqual(Buffer.from(await files[index].arrayBuffer()), Buffer.from(await references[index].arrayBuffer()));
+    assert.equal(files[index].type, references[index].type);
+  }
+  assert.match(String(form.get("prompt")), /Input image 1 is user reference 1.*Input image 4 is user reference 4/);
+  assert.equal(form.get("size"), options.size);
+  assert.equal(form.get("quality"), options.quality);
+  assert.equal(form.get("output_format"), options.outputFormat);
+  assert.deepEqual(harness.uploads, []);
+  assert.deepEqual(harness.logoReads, []);
+});
+
+test("source, logo and uploaded reference order agrees with the provider prompt", async () => {
+  for (const sourceUrl of ["/cover.png", undefined]) {
+    const harness = loadRoute("product-image-ai", { fetch: async (url) => url.endsWith("/edits") ? generatedResponse() : sourceResponse() });
+    const body = { ...options, referenceImage: "glarivo-blue-logo", ...(sourceUrl ? { sourceUrl } : {}) };
+    const result = await harness.post(referenceRequest([referencePng(), referencePng("second.png")], body));
+    assert.equal(result.status, 200, await result.text());
+    const form = harness.calls.at(-1)?.init?.body as FormData;
+    assert.deepEqual((form.getAll("image[]") as File[]).map((file) => file.name), [
+      ...(sourceUrl ? ["product.png"] : []), "glarivo-logo-blue.png", "reference-1.png", "reference-2.png",
+    ]);
+    assert.match(String(form.get("prompt")), sourceUrl ? /second input image.*logo reference/ : /first input image.*logo reference/);
+    assert.match(String(form.get("prompt")), new RegExp(`Input image ${sourceUrl ? 3 : 2} is user reference 1`));
+    assert.equal(harness.uploads.length, 0);
+  }
+});
+
+test("multipart without attachments retains prompt-only JSON generation", async () => {
+  const harness = loadRoute("product-image-ai", { fetch: async () => generatedResponse() });
+  assert.equal((await harness.post(referenceRequest([]))).status, 200);
+  assert.equal(harness.calls[0].url, "https://ai.example.test/v1/images/generations");
+  assert.equal(JSON.parse(harness.calls[0].init?.body as string).prompt, options.prompt);
+});
+
+test("bad references and multipart fields are rejected before source fetching or generation", async () => {
+  const cases: [Request, number][] = [
+    [referenceRequest(Array.from({ length: 5 }, () => referencePng())), 400],
+    [referenceRequest([new File([], "empty.png", { type: "image/png" })]), 400],
+    [referenceRequest([new File([new Uint8Array(12 * 1024 * 1024 + 1)], "large.png", { type: "image/png" })]), 413],
+    [referenceRequest([new File(["<svg/>"], "image.svg", { type: "image/svg+xml" })]), 415],
+    [referenceRequest([new File([png], "wrong.jpg", { type: "image/jpeg" })]), 415],
+    [referenceRequest([new File(["invalid"], "broken.png", { type: "image/png" })]), 415],
+    [referenceRequest([referencePng(), new File(["invalid"], "broken.png", { type: "image/png" })], { ...options, sourceUrl: "/cover.png", referenceImage: "glarivo-blue-logo" }), 415],
+    [referenceRequest([new File([png.subarray(0, 45)], "truncated.png", { type: "image/png" })]), 415],
+    [referenceRequest([referencePng()], { ...options, sourceUrl: "https://attacker.test/image.png" }), 400],
+    [referenceRequest([], options, (form) => form.set("referenceImages", "not a file")), 400],
+    [referenceRequest([], options, (form) => form.append("prompt", "duplicate")), 400],
+    [referenceRequest([], { ...options, unknown: "field" }), 400],
+    [referenceRequest([], options, (form) => form.set("prompt", referencePng())), 400],
+    [new Request("https://site.example.test/api", { method: "POST", body: "broken", headers: { "content-type": "multipart/form-data; boundary=missing" } }), 400],
+  ];
+  for (const [request, status] of cases) {
+    const harness = loadRoute("product-image-ai");
+    const result = await harness.post(request);
+    assert.equal(result.status, status, await result.text());
+    assert.equal(harness.calls.length, 0);
+    assert.equal(harness.uploads.length, 0);
+    assert.equal(harness.logoReads.length, 0);
+  }
+});
+
+test("multipart authentication and configuration fail without reading attachments or contacting services", async () => {
+  const unauthorized = loadRoute("product-image-ai", { authenticated: false });
+  const request = referenceRequest([referencePng()]);
+  assert.equal((await unauthorized.post(request)).status, 401);
+  assert.equal(request.bodyUsed, false);
+  const unconfigured = loadRoute("product-image-ai", { configured: false });
+  assert.equal((await unconfigured.post(referenceRequest([referencePng()], { ...options, sourceUrl: "/cover.png" }))).status, 503);
+  assert.equal(unauthorized.calls.length, 0);
+  assert.equal(unconfigured.calls.length, 0);
+});
+
+test("request byte limits apply to declared and streamed bodies even without content-length", async () => {
+  const declared = referenceRequest([referencePng()]);
+  declared.headers.set("content-length", String(50 * 1024 * 1024 + 1));
+  const harness = loadRoute("product-image-ai");
+  assert.equal((await harness.post(declared)).status, 413);
+  assert.equal(declared.bodyUsed, false);
+  for (const [contentType, limit] of [["application/json", 32 * 1024], ["multipart/form-data; boundary=bounded", 50 * 1024 * 1024]] as const) {
+    let cancelled = false;
+    let bytes = 0;
+    const chunk = new Uint8Array(64 * 1024);
+    const stream = new ReadableStream<Uint8Array>({
+      pull(controller) {
+        bytes += chunk.length;
+        controller.enqueue(chunk);
+      },
+      cancel() { cancelled = true; },
+    });
+    const request = new Request("https://site.example.test/api", { method: "POST", headers: { "content-type": contentType }, body: stream, duplex: "half" } as RequestInit);
+    const response = await harness.post(request);
+    assert.equal(response.status, 413);
+    assert.equal(cancelled, true);
+    assert.ok(bytes <= limit + 2 * chunk.length, "reader stops promptly at its byte budget");
+  }
+  assert.equal(harness.calls.length, 0);
+});
 
 test("no reference generates with JSON and never loads a source or logo", async () => {
   const harness = loadRoute("product-image-ai", { fetch: async () => generatedResponse() });
