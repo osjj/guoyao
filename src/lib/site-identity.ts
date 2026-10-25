@@ -5,4 +5,8 @@ export const DEFAULT_SITE_URL = "https://www.guoyaometal.com";
 
 export const SALES_EMAIL = "sales@guoyaometal.com";
 export const SALES_TELEPHONES = ["+86 186 8875 7773", "+86 188 2591 3441"] as const;
+export const SALES_WHATSAPP_CONTACTS = SALES_TELEPHONES.map((phone) => ({
+  phone,
+  href: `https://wa.me/${phone.replace(/\D/g, "")}`,
+}));
 

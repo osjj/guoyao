@@ -1,10 +1,11 @@
 "use client";
 
-import { createContext, useContext, useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useId, useRef, useState, type FormEvent, type ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import { ArrowRight, CheckCircle2, X } from "lucide-react";
 import { ChatTeardropText, EnvelopeSimple, WhatsappLogo } from "@phosphor-icons/react";
-import { inquiryAttribution, inquiryMessage, inquirySchema, SALES_EMAIL, SALES_WHATSAPP, type InquiryContext } from "@/lib/inquiries";
+import { inquiryAttribution, inquiryMessage, inquirySchema, SALES_EMAIL, type InquiryContext } from "@/lib/inquiries";
+import { SALES_WHATSAPP_CONTACTS } from "@/lib/site-identity";
 import styles from "./inquiry-contact.module.css";
 
 const InquiryContextValue = createContext<(product?: InquiryContext) => void>(() => {});
@@ -12,6 +13,60 @@ const InquiryContextValue = createContext<(product?: InquiryContext) => void>(()
 export function InquiryButton({ children, className, product }: { children: ReactNode; className?: string; product?: InquiryContext }) {
   const open = useContext(InquiryContextValue);
   return <button type="button" className={className} onClick={() => open(product)} aria-haspopup="dialog">{children}</button>;
+}
+
+function WhatsAppContactPicker() {
+  const [open, setOpen] = useState(false);
+  const container = useRef<HTMLDivElement>(null);
+  const trigger = useRef<HTMLButtonElement>(null);
+  const pointerType = useRef("");
+  const panelId = useId();
+
+  useEffect(() => {
+    if (!open) return;
+
+    function onPointerDown(event: PointerEvent) {
+      if (event.target instanceof Node && !container.current?.contains(event.target)) setOpen(false);
+    }
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key !== "Escape") return;
+      setOpen(false);
+      if (container.current?.contains(document.activeElement)) trigger.current?.focus();
+    }
+
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open]);
+
+  return <div
+    ref={container}
+    className={styles.whatsappPicker}
+    onPointerEnter={(event) => { if (event.pointerType === "mouse") setOpen(true); }}
+    onPointerLeave={(event) => {
+      if (event.pointerType === "mouse" && !event.currentTarget.contains(document.activeElement)) setOpen(false);
+    }}
+    onBlur={(event) => {
+      if (!(event.relatedTarget instanceof Node) || !event.currentTarget.contains(event.relatedTarget)) setOpen(false);
+    }}
+  >
+    <button ref={trigger} type="button" className={styles.whatsappTrigger} aria-label="Choose a WhatsApp number" aria-expanded={open} aria-controls={panelId}
+      onPointerDown={(event) => { pointerType.current = event.pointerType; }}
+      onClick={(event) => setOpen((current) => event.detail > 0 && pointerType.current === "mouse" ? true : !current)}>
+      <WhatsappLogo size={22} weight="regular" aria-hidden="true" />
+    </button>
+    <div id={panelId} className={styles.whatsappPanel} hidden={!open}>
+      <div className={styles.whatsappChoices}>
+        <p>Chat on WhatsApp</p>
+        {SALES_WHATSAPP_CONTACTS.map(({ phone, href }) => <a key={href} href={href} target="_blank" rel="noopener noreferrer" aria-label={`WhatsApp ${phone}`}>
+          <WhatsappLogo size={18} weight="regular" aria-hidden="true" />{phone}
+        </a>)}
+      </div>
+    </div>
+  </div>;
 }
 
 export function InquiryProvider({ children }: { children: ReactNode }) {
@@ -26,7 +81,7 @@ export function InquiryProvider({ children }: { children: ReactNode }) {
     {children}
     <aside className={styles.rail} aria-label="Project enquiries">
       <a href={`mailto:${SALES_EMAIL}`} aria-label={`Email ${SALES_EMAIL}`} title={SALES_EMAIL}><EnvelopeSimple size={21} weight="regular" aria-hidden="true" /></a>
-      <a href={SALES_WHATSAPP} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +86 18825913441" title="WhatsApp +86 18825913441"><WhatsappLogo size={22} weight="regular" aria-hidden="true" /></a>
+      <WhatsAppContactPicker key={pathname} />
       <button className={styles.inquire} type="button" onClick={() => open()} aria-label="Discuss a project" aria-haspopup="dialog"><ChatTeardropText size={21} weight="regular" aria-hidden="true" /><span>Discuss a project</span></button>
     </aside>
     {request && <InquiryModal key={request.id} submissionId={request.id} product={request.product} sourcePath={request.sourcePath} productSlug={request.productSlug} onClose={() => setRequest(null)} />}
@@ -88,7 +143,7 @@ function InquiryModal({ submissionId, product, sourcePath, productSlug, onClose 
           <div className={styles.directContact}>
             <span>Prefer a direct conversation?</span>
             <a href={`mailto:${SALES_EMAIL}`}><EnvelopeSimple size={18} aria-hidden="true" />{SALES_EMAIL}</a>
-            <a href={SALES_WHATSAPP} target="_blank" rel="noopener noreferrer"><WhatsappLogo size={19} aria-hidden="true" />+86 18825913441</a>
+            {SALES_WHATSAPP_CONTACTS.map(({ phone, href }) => <a key={href} href={href} target="_blank" rel="noopener noreferrer"><WhatsappLogo size={19} aria-hidden="true" />{phone}</a>)}
           </div>
           <p className={styles.note}>Project context is a good place to begin. Drawings, dimensions and finish references can follow in the conversation.</p>
         </div>

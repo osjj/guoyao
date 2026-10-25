@@ -1,10 +1,23 @@
 .rail { position: fixed; right: 28px; bottom: 28px; z-index: 45; display: flex; align-items: stretch; background: #f5f2ec; border: 1px solid #22231f26; box-shadow: 0 8px 32px #22231f14; color: #22231f; font-family: var(--font-home-sans), sans-serif; }
-.rail a, .rail button { min-width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; gap: 10px; color: inherit; cursor: pointer; transition: background 160ms, color 160ms; }
-.rail a { border-right: 1px solid #22231f26; }
-.rail a:hover { background: #e9e3d9; }
+.rail > a, .rail > button, .whatsappTrigger { min-width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; gap: 10px; color: inherit; cursor: pointer; touch-action: manipulation; transition: background 160ms, color 160ms; }
+.rail > a { border-right: 1px solid #22231f26; }
 .rail .inquire { background: #22231f; color: #f5f2ec; border: 0; padding: 0 20px; font-size: 12px; letter-spacing: .02em; }
 .rail .inquire:hover { background: #4a4a40; }
 .rail a:focus-visible, .rail button:focus-visible { outline: 2px solid #ae9069; outline-offset: 4px; }
+.whatsappPicker { position: relative; display: flex; }
+.whatsappTrigger { border: 0; border-right: 1px solid #22231f26; padding: 0; background: transparent; -webkit-tap-highlight-color: transparent; user-select: none; }
+.whatsappTrigger[aria-expanded="true"], .whatsappTrigger:active { background: #e9e3d9; }
+/* Padding keeps the pointer inside the picker while crossing the visual gap. */
+.whatsappPanel { position: absolute; bottom: 100%; right: 0; width: max-content; max-width: calc(100vw - 32px); padding-bottom: 12px; }
+.whatsappPanel[hidden] { display: none; }
+.whatsappChoices { padding: 10px; border: 1px solid #22231f26; background: #f5f2ec; box-shadow: 0 8px 32px #22231f1f; }
+.whatsappChoices p { margin: 0; padding: 5px 10px 8px; color: #626259; font-size: 11px; line-height: 1.5; }
+.whatsappChoices a { min-height: 44px; display: flex; align-items: center; gap: 10px; padding: 10px; color: #22231f; font-size: 13px; line-height: 1.5; white-space: nowrap; text-decoration: none; touch-action: manipulation; transition: background 160ms; }
+.whatsappChoices a svg { flex: 0 0 auto; color: #806747; }
+.whatsappChoices a:active { background: #e9e3d9; }
+@media (hover: hover) and (pointer: fine) {
+  .rail > a:hover, .whatsappTrigger:hover, .whatsappChoices a:hover { background: #e9e3d9; }
+}
 .dialog { padding: 0; border: 1px solid #22231f26; margin: auto; width: min(910px, calc(100% - 48px)); max-height: calc(100dvh - 48px); color: #22231f; background: #f5f2ec; border-radius: 0; box-shadow: 0 30px 100px #22231f44; overflow: auto; overscroll-behavior: contain; font-family: var(--font-home-sans), sans-serif; }
 .dialog::backdrop { background: #22231f88; backdrop-filter: blur(5px); }
 .panel { position: relative; padding: 52px 42px 36px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 36px; }
@@ -51,8 +64,8 @@
 .success > p:not(.kicker) { font-size: 14px; line-height: 1.8; color: #626259; }
 @media (max-width: 720px) {
   .rail { right: 16px; bottom: max(16px, env(safe-area-inset-bottom)); }
-  .rail a, .rail button { height: 44px; min-width: 44px; }
-  .rail a { display: none; }
+  .rail > a, .rail > button { height: 44px; min-width: 44px; }
+  .rail > a { display: none; }
   .rail .inquire { width: 48px; height: 48px; padding: 0; }
   .rail .inquire span { display: none; }
   .dialog { width: calc(100% - 24px); max-height: calc(100dvh - 24px); }
