@@ -77,7 +77,7 @@ Enter the approved references and actual store requirements. The workbook contai
 
 Start with the [Coffee & Tea Glassware topic](/guides/coffee-tea-glassware), [glass coffee mugs](/products/category/glass-coffee-mugs) and [glass cups](/products/category/glass-tumblers). Send Glarivo your shortlist, drink roles, store count, trial requirements, quantities by item and destination, and artwork if decoration is required.
 
-Email the brief to [sales@glarivoglass.com](mailto:sales@glarivoglass.com). Ask for the quotation to separate the glass, decoration, sample work, accessories, packing and delivery scope. Confirm availability, order minimums and dates against the selected models and delivery plan.
+Email the brief to [sales@guoyaometal.com](mailto:sales@guoyaometal.com). Ask for the quotation to separate the glass, decoration, sample work, accessories, packing and delivery scope. Confirm availability, order minimums and dates against the selected models and delivery plan.
 
 ## Frequently asked questions
 

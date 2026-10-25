@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { InquiryButton } from "@/components/site/inquiry-contact";
 import { MetalMotion } from "@/components/site/metal-motion";
@@ -11,9 +10,6 @@ import { ProjectRecordsCarousel } from "@/components/site/project-records-carous
 import { homepageGalleryItems } from "@/data/homepage-gallery";
 import { projectRecords } from "@/data/project-experience";
 import styles from "./home.module.css";
-
-const atelierDisplay = Manrope({ subsets: ["latin"], variable: "--font-atelier-display", display: "swap" });
-const atelierSerif = Cormorant_Garamond({ subsets: ["latin"], weight: "500", style: "italic", variable: "--font-atelier-serif", display: "swap" });
 
 const extra = "/images/home-projects/extra/";
 const imageSrc = (image: string) => image.startsWith("/") ? image : `${extra}${image}`;
@@ -47,7 +43,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <MetalMotion className={`${styles.page} ${atelierDisplay.variable} ${atelierSerif.variable}`}>
+    <MetalMotion className={styles.page}>
       <section className={styles.hero} aria-labelledby="home-title">
         <div className={styles.container}>
           <div className={styles.heroIntro}>

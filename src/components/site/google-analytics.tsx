@@ -1,6 +1,7 @@
 import Script from "next/script";
 
-const measurementId = "G-ZN5MYTQSBP";
+// This dedicated Guoyao tag sends data only to its GA4 stream, G-0WRGEBX2MG.
+const googleTagId = "GT-T5N2FB37";
 
 export function GoogleAnalytics() {
   // Keep development visits out of the production property.
@@ -15,12 +16,12 @@ export function GoogleAnalytics() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${measurementId}');
+          gtag('config', '${googleTagId}');
         `}
       </Script>
       <Script
         id="google-analytics-script"
-        src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId}`}
         strategy="afterInteractive"
       />
     </>

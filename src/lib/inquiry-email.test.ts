@@ -14,7 +14,7 @@ test("SMTP configuration defaults to the sales inbox and selects TLS for port 46
   assert.equal(getInquirySmtpConfig({}), null);
   assert.equal(getInquirySmtpConfig({ INQUIRY_NOTIFICATION_EMAIL: "sales@example.test" }), null);
   const defaults = getInquirySmtpConfig(smtp)!;
-  assert.equal(defaults.to, "sales@glarivoglass.com");
+  assert.equal(defaults.to, "sales@guoyaometal.com");
   assert.equal(defaults.port, 587);
   assert.equal(defaults.secure, false);
   assert.equal(getInquirySmtpConfig({ ...smtp, SMTP_PORT: "465" })!.secure, true);

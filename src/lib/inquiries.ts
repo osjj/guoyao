@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { getArticleProductSection, isArticleProduct } from "@/data/article-products";
 
-export const SALES_EMAIL = "sales@glarivoglass.com";
+export const SALES_EMAIL = "sales@guoyaometal.com";
 export const SALES_WHATSAPP = "https://wa.me/8618825913441";
 export const inquiryStatuses = ["NEW", "CONTACTED", "CLOSED", "SPAM"] as const;
 export const inquiryStatusLabels = { NEW: "New", CONTACTED: "Contacted", CLOSED: "Closed", SPAM: "Spam" };

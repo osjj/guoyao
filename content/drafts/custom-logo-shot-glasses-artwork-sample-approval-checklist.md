@@ -150,7 +150,7 @@ Start with the [shot glass collection](https://www.glarivoglass.com/products/cat
 - **Approval:** physical-sample requirements, care expectations and supporting documents needed.
 - **Timing:** required dispatch or arrival milestone and delivery location.
 
-Email the brief to **sales@glarivoglass.com** or use the website's inquiry option. Ask for a quotation that separates glass, decoration, setup, samples and packing, and identifies any exclusions. Model availability, process feasibility, minimum quantities and lead times need confirmation for the specific order.
+Email the brief to **sales@guoyaometal.com** or use the website's inquiry option. Ask for a quotation that separates glass, decoration, setup, samples and packing, and identifies any exclusions. Model availability, process feasibility, minimum quantities and lead times need confirmation for the specific order.
 
 Return to [Shot Glass Sourcing](https://www.glarivoglass.com/guides/shot-glass-sourcing) to compare the broader buying decisions.
 

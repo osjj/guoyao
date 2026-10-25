@@ -34,9 +34,9 @@ export function HomeFooter() {
                 <a href="tel:+8618825913441">+86 188 2591 3441</a>
               </span>
             </div>
-            <a href="mailto:sales@glarivoglass.com" className={styles.contactItem}>
+            <a href="mailto:sales@guoyaometal.com" className={styles.contactItem}>
               <span className={styles.contactIcon}><EnvelopeSimple size={19} aria-hidden="true" /></span>
-              <span>sales@glarivoglass.com</span>
+              <span>sales@guoyaometal.com</span>
             </a>
             <a href="https://www.glarivoglass.com" className={styles.contactItem}>
               <span className={styles.contactIcon}><Globe size={19} aria-hidden="true" /></span>

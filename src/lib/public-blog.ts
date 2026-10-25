@@ -25,7 +25,25 @@ export type PublicBlogPost = {
   updatedAt: Date;
 };
 
-function serializeBlogPost(post: NonNullable<PublishedBlogPostRecord>): PublicBlogPost {
+export type PublicBlogPostSummary = Omit<PublicBlogPost, "content">;
+
+const blogSummarySelect = {
+  id: true,
+  title: true,
+  slug: true,
+  excerpt: true,
+  category: true,
+  readTimeMinutes: true,
+  coverImage: true,
+  coverImageAlt: true,
+  featured: true,
+  publishedAt: true,
+  updatedAt: true,
+} as const;
+
+type BlogSummaryRecord = Pick<BlogPost, keyof typeof blogSummarySelect>;
+
+function serializeBlogPostSummary(post: BlogSummaryRecord): PublicBlogPostSummary {
   const publishedAt = post.publishedAt ?? post.updatedAt;
 
   return {
@@ -36,7 +54,6 @@ function serializeBlogPost(post: NonNullable<PublishedBlogPostRecord>): PublicBl
     category: post.category,
     readTime: `${post.readTimeMinutes} min read`,
     readTimeMinutes: post.readTimeMinutes,
-    content: post.content,
     coverImage: post.coverImage || DEFAULT_COVER_IMAGE,
     coverImageAlt: post.coverImage ? post.coverImageAlt || post.title : "Illustrative material study",
     featured: post.featured,
@@ -50,6 +67,21 @@ function serializeBlogPost(post: NonNullable<PublishedBlogPostRecord>): PublicBl
     updatedAt: post.updatedAt,
   };
 }
+
+function serializeBlogPost(post: NonNullable<PublishedBlogPostRecord>): PublicBlogPost {
+  return { ...serializeBlogPostSummary(post), content: post.content };
+}
+
+export const getPublishedBlogPostSummaries = cache(async (): Promise<PublicBlogPostSummary[]> => {
+  const { prisma } = await import("@/lib/prisma");
+  const posts = await prisma.blogPost.findMany({
+    where: { status: "PUBLISHED", publishedAt: { lte: new Date() } },
+    orderBy: [{ featured: "desc" }, { publishedAt: "desc" }, { updatedAt: "desc" }],
+    select: blogSummarySelect,
+  });
+
+  return posts.map(serializeBlogPostSummary);
+});
 
 export const getPublishedBlogPosts = cache(async (): Promise<PublicBlogPost[]> => {
   const { prisma } = await import("@/lib/prisma");

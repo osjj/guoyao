@@ -64,9 +64,9 @@ export function SiteHeader() {
 
   const active = (href: string) => href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
   return (
-    <header ref={header} className={styles.header} data-home={pathname === "/" ? "true" : undefined}>
+    <header ref={header} className={styles.header}>
       <div className={styles.headerInner}>
-        <Logo compact variant={pathname === "/" ? "white" : "blue"} />
+        <Logo compact variant="white" />
         <nav className={styles.desktopNav} aria-label="Primary navigation">
           {navigation.map((item) => <Link key={item.href} href={item.href} className={active(item.href) ? styles.active : ""} aria-current={active(item.href) ? "page" : undefined}>{item.label}</Link>)}
         </nav>

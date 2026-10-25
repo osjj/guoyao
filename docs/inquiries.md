@@ -2,7 +2,7 @@
 
 ## Customer flow
 
-- Homepage right-hand fixed rail: Email (`sales@glarivoglass.com`), WhatsApp (`https://wa.me/8618825913441`), and Inquire.
+- Homepage right-hand fixed rail: Email (`sales@guoyaometal.com`), WhatsApp (`https://wa.me/8618825913441`), and Inquire.
 - Inquire opens a keyboard-accessible modal with Email, country calling code / Mobile / WhatsApp, Name, Company name, and Message. Email, Name and Message are required. The optional country code supports suggested values and manual entry.
 - The header quote button and product inquiry buttons open the same form. Product buttons prefill the message; the server resolves the published product name and SKU from the source path.
 - Successful submissions are persisted before showing confirmation. Failed submissions preserve the customer's inputs. Retrying a submission uses the same UUID and does not create another record.
@@ -18,7 +18,7 @@ Email and WhatsApp links open the corresponding external application. Each newly
 
 ## Email notifications
 
-Notifications are sent to `sales@glarivoglass.com` by default. The message includes the customer's name, email, optional company and Mobile / WhatsApp, full inquiry message, the server-resolved product name / SKU, source page, received time and an authenticated admin detail link. Reply-To is the customer's email; From must be an address authorized by the SMTP provider.
+Notifications are sent to `sales@guoyaometal.com` by default. The message includes the customer's name, email, optional company and Mobile / WhatsApp, full inquiry message, the server-resolved product name / SKU, source page, received time and an authenticated admin detail link. Reply-To is the customer's email; From must be an address authorized by the SMTP provider.
 
 The database transaction commits first. Next.js `after()` sends the notification after returning the successful response, so a slow or failed mail server does not delay the customer's confirmation or remove the admin record. Only the request that creates the record schedules a notification. Identical retries, rejected requests and admin updates do not send another email.
 
@@ -35,7 +35,7 @@ SMTP_SECURE="false"
 SMTP_USER="your-smtp-account"
 SMTP_PASS="your-smtp-password-or-app-password"
 SMTP_FROM="authorized-sender@your-domain.com"
-INQUIRY_NOTIFICATION_EMAIL="sales@glarivoglass.com"
+INQUIRY_NOTIFICATION_EMAIL="sales@guoyaometal.com"
 ```
 
 Use the provider's actual host, account and sender address. Port 465 uses `SMTP_SECURE="true"` (TLS on connect); port 587 uses `"false"` and requires STARTTLS. Leaving `SMTP_SECURE` empty selects TLS on connect for port 465, and STARTTLS for other ports. Certificate verification remains enabled. [Nodemailer SMTP configuration](https://nodemailer.com/smtp).

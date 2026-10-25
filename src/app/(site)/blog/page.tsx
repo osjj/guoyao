@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { getPublishedBlogPosts } from "@/lib/public-blog";
-import { ContentState, EditorialImage, EditorialIntro, loadEditorialContent } from "@/components/site/metal-editorial";
-import styles from "@/components/site/metal-editorial.module.css";
+import { getPublishedBlogPostSummaries } from "@/lib/public-blog";
+import { loadEditorialContent } from "@/components/site/metal-editorial";
+import { ArchiveState } from "@/components/site/metal-archive-ui";
+import styles from "@/components/site/metal-archives.module.css";
 
 export const dynamic = "force-dynamic";
 
@@ -17,53 +18,50 @@ export const metadata: Metadata = {
 const topics = ["Materials & finishes", "Architecture & interiors", "Details & craftsmanship"];
 
 export default async function BlogPage() {
-  const result = await loadEditorialContent(getPublishedBlogPosts());
+  const result = await loadEditorialContent(getPublishedBlogPostSummaries());
   const articles = result.available ? result.data : [];
   const featured = articles.find((article) => article.featured) ?? articles[0];
   const remaining = featured ? articles.filter((article) => article.id !== featured.id) : [];
 
-  return <div className={styles.page}>
-    <EditorialIntro label="The material journal / Blog" title={<>A closer look.<br /><em>A new perspective.</em></>}
-      description="Ideas, observations and practical notes from the world of architectural metal. A place to explore what a material can bring to a space."
-      note="Material / Detail / Perspective" />
-    <EditorialImage src="/images/metal/material-study.webp" alt="Architectural metal surfaces arranged as a material and finish study" caption="Material study · Concept imagery" />
-
-    <section className={`${styles.container} ${styles.section}`} aria-labelledby="journal-heading">
-      <div className={styles.sectionHeading}>
-        <div><p className={styles.eyebrow}>From the journal</p><h2 id="journal-heading">Notes worth a closer look.</h2></div>
-        {result.available && <span className={styles.count}>{String(articles.length).padStart(2, "0")} / {articles.length === 1 ? "ARTICLE" : "ARTICLES"}</span>}
-      </div>
-
-      {!result.available ? <ContentState unavailable type="articles" /> : !featured ? <ContentState type="articles" /> : <>
-        <Link href={`/blog/${featured.slug}`} className={styles.featured} aria-label={`Read ${featured.title}`}>
-          <div className={`${styles.cardImage} ${featured.coverImageFit === "contain" ? styles.contain : ""}`}>
-            <Image src={featured.coverImage} alt={featured.coverImageAlt} fill unoptimized sizes="(min-width: 1000px) 55vw, 92vw" />
-          </div>
-          <div className={styles.featuredCopy}>
-            <div className={styles.meta}><span>Featured perspective</span><span>{featured.readTime}</span></div>
-            <h3>{featured.title}</h3><p>{featured.excerpt}</p>
-            <span className={styles.textLink}>Read the story<ArrowUpRight size={19} aria-hidden="true" /></span>
-          </div>
+  return <div className={styles.journalPage}>
+    <header className={`${styles.container} ${styles.journalMasthead}`}>
+      <div className={styles.mastheadLine}><p className={styles.eyebrow}>Guoyao Metal / Ideas & observations</p><span>Material. Detail. Perspective.</span></div>
+      <div className={styles.mastheadTitle}><h1 id="journal-heading">The Material Journal.</h1><p>Notes on what we make, <br />and what goes into the making.</p></div>
+    </header>
+    <section className={styles.container} aria-label="Featured article">
+      {featured ? <article className={styles.featureArticle}>
+        <Link href={`/blog/${featured.slug}`} className={`${styles.featureImage} ${featured.coverImageFit === "contain" ? styles.contain : ""}`} aria-label={`Read ${featured.title}`}>
+          <Image src={featured.coverImage} alt={featured.coverImageAlt} fill unoptimized preload sizes="(min-width: 1000px) 52vw, 92vw" />
         </Link>
-        {remaining.length > 0 && <div className={styles.articleGrid}>
-          {remaining.map((article) => <article key={article.id} className={styles.articleCard}>
-            <Link href={`/blog/${article.slug}`}>
-              <div className={`${styles.cardImage} ${article.coverImageFit === "contain" ? styles.contain : ""}`}>
-                <Image src={article.coverImage} alt={article.coverImageAlt} fill unoptimized sizes="(min-width: 1000px) 30vw, (min-width: 461px) 45vw, 92vw" />
-              </div>
-              <div className={styles.meta}><span>{article.category}</span><time dateTime={article.publishedAt}>{article.publishedLabel}</time></div>
-              <h3>{article.title}</h3>
-            </Link>
-            <p>{article.excerpt}</p>
-            <Link href={`/blog/${article.slug}`} className={styles.textLink}>Read the story<ArrowUpRight size={17} aria-hidden="true" /></Link>
-          </article>)}
-        </div>}
-      </>}
-
-      <div className={styles.topics}>
-        <div><p className={styles.eyebrow}>Our editorial lens</p><h2>The conversations<br />that shape our thinking.</h2></div>
-        <ul className={styles.topicList}>{topics.map((topic, index) => <li key={topic}><span>{String(index + 1).padStart(2, "0")}</span>{topic}<ArrowUpRight size={16} aria-hidden="true" /></li>)}</ul>
-      </div>
+        <div className={styles.featureCopy}>
+          <p className={styles.featureLabel}><span>EDITOR’S SELECTION</span><span>{featured.readTime}</span></p>
+          <p className={styles.category}>{featured.category}</p>
+          <h2><Link href={`/blog/${featured.slug}`}>{featured.title}</Link></h2>
+          <p className={styles.excerpt}>{featured.excerpt}</p>
+          <div className={styles.featureEnd}><time dateTime={featured.publishedAt}>{featured.publishedLabel}</time><Link className={styles.quietLink} href={`/blog/${featured.slug}`}>Read article<ArrowUpRight size={18} aria-hidden="true" /></Link></div>
+        </div>
+      </article> : <ArchiveState type="articles" unavailable={!result.available} />}
     </section>
+    {remaining.length > 0 && <section id="journal-archive" className={`${styles.container} ${styles.journalArchive}`} aria-labelledby="reading-heading">
+      <div className={styles.sectionHeading}><h2 id="reading-heading">Further reading</h2><span>{String(articles.length).padStart(2, "0")} ARTICLES IN THE JOURNAL</span></div>
+      <div>
+        {remaining.map(article => <article className={styles.articleRow} key={article.id}>
+          <div className={styles.articleDate}><time dateTime={article.publishedAt}>{article.publishedLabel}</time><span>{article.readTime}</span></div>
+          <div className={styles.articleCopy}>
+            <p className={styles.category}>{article.category}</p>
+            <h3><Link href={`/blog/${article.slug}`}>{article.title}</Link></h3>
+            <p className={styles.excerpt}>{article.excerpt}</p>
+            <Link className={styles.quietLink} href={`/blog/${article.slug}`}>Read article<ArrowUpRight size={16} aria-hidden="true" /></Link>
+          </div>
+          <Link href={`/blog/${article.slug}`} className={`${styles.articleImage} ${article.coverImageFit === "contain" ? styles.contain : ""}`} aria-label={`Read ${article.title}`}>
+            <Image src={article.coverImage} alt={article.coverImageAlt} fill unoptimized sizes="(min-width: 1000px) 280px, (min-width: 601px) 220px, 100px" />
+          </Link>
+        </article>)}
+      </div>
+    </section>}
+    <aside className={`${styles.container} ${styles.editorialLens}`} aria-label="Journal topics">
+      <p className={styles.eyebrow}>Our editorial lens</p>
+      <ul>{topics.map((topic, index) => <li key={topic}><span>0{index + 1}</span>{topic}</li>)}</ul>
+    </aside>
   </div>;
 }
