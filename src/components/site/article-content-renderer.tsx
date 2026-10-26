@@ -6,6 +6,7 @@ import {
   sanitizeArticleInlineHtml,
 } from "@/lib/article-content-server";
 import { isSafeArticleImageUrl, type ArticleListItem } from "@/lib/article-content";
+import { canOptimizeImage } from "@/lib/image-optimization";
 import tableStyles from "./article-tables.module.css";
 
 export function headingId(value: string, index: number) {
@@ -129,7 +130,7 @@ export function RichContentRenderer({
               alt={captionText || fallbackImageAlt}
               width={1200}
               height={800}
-              unoptimized
+              unoptimized={!canOptimizeImage(url)}
               sizes="(max-width: 768px) 100vw, 768px"
               className="h-auto w-full rounded-xl object-cover"
             />

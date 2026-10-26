@@ -5,6 +5,7 @@ import type { CustomerCaseStudy } from "@/data/shangri-la-case-study";
 import { getCaseSectionImages, getCaseVideoSectionId } from "@/lib/case-study-content";
 import { SITE_NAME } from "@/lib/site-identity";
 import { getSiteUrl } from "@/lib/site-url";
+import { canOptimizeImage } from "@/lib/image-optimization";
 import { CaseStudyImageGallery } from "./case-study-image-gallery";
 import { CaseStudyVideoPlayer } from "./case-study-video";
 import styles from "./metal-editorial.module.css";
@@ -29,6 +30,7 @@ export function MetalCaseStudyArticle({ study, preview = false }: { study: Custo
         "@type": "Article", headline: study.title, description: study.excerpt,
         dateModified: study.updatedAt, mainEntityOfPage: `${siteUrl}/case-studies/${study.slug}`,
         ...(study.coverImage ? { image: new URL(study.coverImage, siteUrl).href } : {}),
+        author: { "@type": "Organization", "@id": `${siteUrl}/#organization`, name: SITE_NAME, url: `${siteUrl}/` },
         publisher: { "@type": "Organization", "@id": `${siteUrl}/#organization`, name: SITE_NAME },
       },
       {
@@ -47,10 +49,10 @@ export function MetalCaseStudyArticle({ study, preview = false }: { study: Custo
       <Link href="/case-studies" className={styles.back}><ArrowLeft size={15} aria-hidden="true" />Back to case studies</Link>
       <p className={styles.eyebrow}>{study.category}</p>
       <h1>{study.title}</h1><p className={styles.detailSummary}>{study.excerpt}</p>
-      <div className={styles.meta}><span>Project story / Guoyao Metal</span></div>
+      <div className={styles.meta}><span>By <Link href="/about">{SITE_NAME}</Link></span><span>Updated <time dateTime={study.updatedAt}>{new Intl.DateTimeFormat("en", { dateStyle: "medium", timeZone: "UTC" }).format(new Date(study.updatedAt))}</time></span></div>
     </header>
     {study.coverImage && <div className={styles.container}><div className={styles.detailCover}>
-      <Image src={study.coverImage} alt={study.coverImageAlt ?? study.title} fill preload unoptimized sizes="(min-width: 1600px) 1440px, 92vw" />
+      <Image src={study.coverImage} alt={study.coverImageAlt || study.title} fill preload unoptimized={!canOptimizeImage(study.coverImage)} sizes="(min-width: 1600px) 1440px, 92vw" />
     </div></div>}
     <div className={styles.container}>
       <section className={styles.projectIntro} aria-labelledby="project-overview"><div><p className={styles.eyebrow}>The project</p><h2 id="project-overview">A closer look at the brief.</h2></div><p>{study.introduction}</p></section>

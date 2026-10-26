@@ -5,19 +5,30 @@ import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { getPublishedCaseStudySummaries } from "@/lib/public-case-studies";
 import { loadEditorialContent } from "@/components/site/metal-editorial";
 import { ArchiveState } from "@/components/site/metal-archive-ui";
+import { SITE_NAME } from "@/lib/site-identity";
+import { canOptimizeImage } from "@/lib/image-optimization";
 import styles from "@/components/site/metal-archives.module.css";
 
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Case Studies — Material in Context",
+  title: "Architectural Metalwork Case Studies",
   description: "Explore published Guoyao Metal project stories, with the material choices, design briefs and architectural details behind each space.",
   alternates: { canonical: "/case-studies" },
+  openGraph: {
+    title: "Architectural Metalwork Case Studies", type: "website", url: "/case-studies", siteName: SITE_NAME,
+    description: "Explore published Guoyao Metal project stories, with the material choices, design briefs and architectural details behind each space.",
+    images: [{ url: "/images/home-projects/column-assembly.webp", alt: "Sculptural metal column cladding during workshop pre-assembly" }],
+  },
+  twitter: {
+    card: "summary_large_image", title: "Architectural Metalwork Case Studies",
+    description: "Explore published Guoyao Metal project stories, with the material choices, design briefs and architectural details behind each space.",
+    images: [{ url: "/images/home-projects/column-assembly.webp", alt: "Sculptural metal column cladding during workshop pre-assembly" }],
+  },
 };
 
 export default async function CaseStudiesPage() {
-  const result = await loadEditorialContent(getPublishedCaseStudySummaries());
-  const studies = result.available ? result.data : [];
+  const studies = await loadEditorialContent(getPublishedCaseStudySummaries());
   const [lead, ...remaining] = studies;
 
   return <div className={styles.projectsPage}>
@@ -29,12 +40,12 @@ export default async function CaseStudiesPage() {
         {remaining.length > 0 && <a className={styles.quietLink} href="#project-archive">Browse the project stories<ArrowDown size={16} aria-hidden="true" /></a>}
         <div className={styles.projectIndex}>
           <span>THE PROJECT ARCHIVE</span>
-          {result.available ? <p><strong>{String(studies.length).padStart(2, "0")}</strong><span>Published {studies.length === 1 ? "project" : "projects"}<br />Details, documented.</span></p> : <p className={styles.indexNote}>Architecture. Interiors.<br />The making, in detail.</p>}
+          <p><strong>{String(studies.length).padStart(2, "0")}</strong><span>Published {studies.length === 1 ? "project" : "projects"}<br />Details, documented.</span></p>
         </div>
       </header>
       {lead ? <article className={styles.projectLead}>
         <Link href={`/case-studies/${lead.slug}`} className={styles.leadImage} aria-label={`View ${lead.title}`}>
-          {lead.coverImage ? <Image src={lead.coverImage} alt={lead.coverImageAlt ?? lead.title} fill unoptimized preload sizes="(min-width: 1000px) 62vw, 92vw" /> : <div className={styles.imagePlaceholder}>Guoyao Metal / Project 01</div>}
+          {lead.coverImage ? <Image src={lead.coverImage} alt={lead.coverImageAlt || lead.title} fill unoptimized={!canOptimizeImage(lead.coverImage)} preload sizes="(min-width: 1000px) 62vw, 92vw" /> : <div className={styles.imagePlaceholder}>Guoyao Metal / Project 01</div>}
           <span className={styles.imageIndex}>01 / PROJECT STORY</span>
           <span className={styles.imageArrow}><ArrowUpRight size={23} aria-hidden="true" /></span>
         </Link>
@@ -44,14 +55,14 @@ export default async function CaseStudiesPage() {
           <p className={styles.excerpt}>{lead.excerpt}</p>
           <Link href={`/case-studies/${lead.slug}`} className={styles.quietLink}>Inside the project<ArrowUpRight size={17} aria-hidden="true" /></Link>
         </div>
-      </article> : <ArchiveState type="projects" unavailable={!result.available} />}
+      </article> : <ArchiveState type="projects" />}
     </section>
     {remaining.length > 0 && <section id="project-archive" className={`${styles.container} ${styles.moreProjects}`} aria-labelledby="more-projects-heading">
       <div className={styles.sectionHeading}><h2 id="more-projects-heading">More project stories</h2><span>02 — {String(studies.length).padStart(2, "0")}</span></div>
       <div className={styles.projectGrid}>
         {remaining.map((study, index) => <article key={study.slug} className={styles.projectCard}>
           <Link href={`/case-studies/${study.slug}`} className={styles.projectImage} aria-label={`View ${study.title}`}>
-            {study.coverImage ? <Image src={study.coverImage} alt={study.coverImageAlt ?? study.title} fill unoptimized sizes="(min-width: 761px) 45vw, 92vw" /> : <div className={styles.imagePlaceholder}>Guoyao Metal / Project record</div>}
+            {study.coverImage ? <Image src={study.coverImage} alt={study.coverImageAlt || study.title} fill unoptimized={!canOptimizeImage(study.coverImage)} sizes="(min-width: 761px) 45vw, 92vw" /> : <div className={styles.imagePlaceholder}>Guoyao Metal / Project record</div>}
             <span className={styles.imageArrow}><ArrowUpRight size={22} aria-hidden="true" /></span>
           </Link>
           <div className={styles.cardMeta}><span>{String(index + 2).padStart(2, "0")}</span><p className={styles.category}>{study.category}</p></div>

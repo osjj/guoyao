@@ -27,7 +27,9 @@ export const metadata: Metadata = {
   },
   description:
     "A material perspective on architecture. Discover Guoyao Metal, architectural metalwork, design studies and ideas for considered spaces.",
-  alternates: { canonical: "./" },
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION?.trim() || undefined,
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -36,11 +38,12 @@ export const metadata: Metadata = {
     description:
       "Metal, made remarkable. Architectural metalworks and a considered approach to material, form and detail.",
     url: siteUrl,
-    images: [{ url: "/images/metal/hero-sculpture.webp", width: 1672, height: 941, alt: "Architectural metalwork concept study" }],
+    images: [{ url: "/images/home-projects/extra/cartier-night.webp", alt: "Geometric architectural metal storefront facade at night" }],
   },
   robots: {
     index: true,
     follow: true,
+    "max-image-preview": "large",
   },
 };
 

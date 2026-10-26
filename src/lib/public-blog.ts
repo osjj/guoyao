@@ -109,5 +109,10 @@ export const getPublishedBlogPostBySlug = cache(
 );
 
 export async function getPublishedBlogSitemapEntries() {
-  return (await getPublishedBlogPosts()).map(({ slug, updatedAt }) => ({ slug, updatedAt }));
+  const { prisma } = await import("@/lib/prisma");
+  return prisma.blogPost.findMany({
+    where: { status: "PUBLISHED", publishedAt: { lte: new Date() } },
+    select: { slug: true, updatedAt: true, coverImage: true },
+    orderBy: { slug: "asc" },
+  });
 }

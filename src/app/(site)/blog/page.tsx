@@ -5,21 +5,32 @@ import { ArrowUpRight } from "lucide-react";
 import { getPublishedBlogPostSummaries } from "@/lib/public-blog";
 import { loadEditorialContent } from "@/components/site/metal-editorial";
 import { ArchiveState } from "@/components/site/metal-archive-ui";
+import { SITE_NAME } from "@/lib/site-identity";
+import { canOptimizeImage } from "@/lib/image-optimization";
 import styles from "@/components/site/metal-archives.module.css";
 
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Blog — The Material Journal",
+  title: "Architectural Metal & Finishes Blog",
   description: "Perspectives on architectural metal, surface finishes and the details that shape a space. Read the Guoyao Metal journal.",
   alternates: { canonical: "/blog" },
+  openGraph: {
+    title: "Architectural Metal & Finishes Blog", type: "website", url: "/blog", siteName: SITE_NAME,
+    description: "Perspectives on architectural metal, surface finishes and the details that shape a space. Read the Guoyao Metal journal.",
+    images: [{ url: "/images/home-projects/extra/entrance-joint-detail.webp", alt: "Connection detail of a curved architectural metal entrance framework" }],
+  },
+  twitter: {
+    card: "summary_large_image", title: "Architectural Metal & Finishes Blog",
+    description: "Perspectives on architectural metal, surface finishes and the details that shape a space. Read the Guoyao Metal journal.",
+    images: [{ url: "/images/home-projects/extra/entrance-joint-detail.webp", alt: "Connection detail of a curved architectural metal entrance framework" }],
+  },
 };
 
 const topics = ["Materials & finishes", "Architecture & interiors", "Details & craftsmanship"];
 
 export default async function BlogPage() {
-  const result = await loadEditorialContent(getPublishedBlogPostSummaries());
-  const articles = result.available ? result.data : [];
+  const articles = await loadEditorialContent(getPublishedBlogPostSummaries());
   const featured = articles.find((article) => article.featured) ?? articles[0];
   const remaining = featured ? articles.filter((article) => article.id !== featured.id) : [];
 
@@ -31,7 +42,7 @@ export default async function BlogPage() {
     <section className={styles.container} aria-label="Featured article">
       {featured ? <article className={styles.featureArticle}>
         <Link href={`/blog/${featured.slug}`} className={`${styles.featureImage} ${featured.coverImageFit === "contain" ? styles.contain : ""}`} aria-label={`Read ${featured.title}`}>
-          <Image src={featured.coverImage} alt={featured.coverImageAlt} fill unoptimized preload sizes="(min-width: 1000px) 52vw, 92vw" />
+          <Image src={featured.coverImage} alt={featured.coverImageAlt} fill unoptimized={!canOptimizeImage(featured.coverImage)} preload sizes="(min-width: 1000px) 52vw, 92vw" />
         </Link>
         <div className={styles.featureCopy}>
           <p className={styles.featureLabel}><span>EDITOR’S SELECTION</span><span>{featured.readTime}</span></p>
@@ -40,7 +51,7 @@ export default async function BlogPage() {
           <p className={styles.excerpt}>{featured.excerpt}</p>
           <div className={styles.featureEnd}><time dateTime={featured.publishedAt}>{featured.publishedLabel}</time><Link className={styles.quietLink} href={`/blog/${featured.slug}`}>Read article<ArrowUpRight size={18} aria-hidden="true" /></Link></div>
         </div>
-      </article> : <ArchiveState type="articles" unavailable={!result.available} />}
+      </article> : <ArchiveState type="articles" />}
     </section>
     {remaining.length > 0 && <section id="journal-archive" className={`${styles.container} ${styles.journalArchive}`} aria-labelledby="reading-heading">
       <div className={styles.sectionHeading}><h2 id="reading-heading">Further reading</h2><span>{String(articles.length).padStart(2, "0")} ARTICLES IN THE JOURNAL</span></div>
@@ -54,7 +65,7 @@ export default async function BlogPage() {
             <Link className={styles.quietLink} href={`/blog/${article.slug}`}>Read article<ArrowUpRight size={16} aria-hidden="true" /></Link>
           </div>
           <Link href={`/blog/${article.slug}`} className={`${styles.articleImage} ${article.coverImageFit === "contain" ? styles.contain : ""}`} aria-label={`Read ${article.title}`}>
-            <Image src={article.coverImage} alt={article.coverImageAlt} fill unoptimized sizes="(min-width: 1000px) 280px, (min-width: 601px) 220px, 100px" />
+            <Image src={article.coverImage} alt={article.coverImageAlt} fill unoptimized={!canOptimizeImage(article.coverImage)} sizes="(min-width: 1000px) 280px, (min-width: 601px) 220px, 100px" />
           </Link>
         </article>)}
       </div>

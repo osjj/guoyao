@@ -5,20 +5,15 @@ import type { ReactNode } from "react";
 import { InquiryButton } from "./inquiry-contact";
 import styles from "./metal-editorial.module.css";
 
-export type EditorialContent<T> = { available: true; data: T } | { available: false };
-
-export async function loadEditorialContent<T>(request: Promise<T>): Promise<EditorialContent<T>> {
+export async function loadEditorialContent<T>(request: Promise<T>): Promise<T> {
   let deadline: ReturnType<typeof setTimeout> | undefined;
   try {
-    const data = await Promise.race([
+    return await Promise.race([
       request,
       new Promise<never>((_, reject) => {
         deadline = setTimeout(() => reject(new Error("Editorial content request timed out")), 4000);
       }),
     ]);
-    return { available: true, data };
-  } catch {
-    return { available: false };
   } finally {
     if (deadline) clearTimeout(deadline);
   }

@@ -8,7 +8,9 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/admin/", "/healthz"],
+      // Login is crawlable so its noindex can be read. Other admin routes
+      // require authentication; robots.txt is not an access control.
+      disallow: ["/api/", "/healthz"],
     },
     sitemap: `${baseUrl}/sitemap.xml`,
   };

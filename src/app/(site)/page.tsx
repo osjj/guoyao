@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
@@ -9,6 +8,7 @@ import { ProjectBrands } from "@/components/site/project-brands";
 import { ProjectRecordsCarousel } from "@/components/site/project-records-carousel";
 import { homepageGalleryItems } from "@/data/homepage-gallery";
 import { projectRecords } from "@/data/project-experience";
+import { createPageMetadata } from "@/lib/seo";
 import styles from "./home.module.css";
 
 const extra = "/images/home-projects/extra/";
@@ -35,11 +35,12 @@ const workshopViews = [
   { image: "protected-components.webp", title: "Protecting the component", detail: "Protective wrapping / workshop view", alt: "Metal components protected with wrapping before handling" },
 ] as const;
 
-export const metadata: Metadata = {
-  title: { absolute: "GUOYAO METAL | Custom Architectural Metalwork" },
+export const metadata = createPageMetadata({
+  title: "GUOYAO METAL | Custom Architectural Metalwork",
   description: "Explore Guoyao Metal projects and workshop photographs: retail facades, curved architectural cladding, stair balustrades and custom display fixtures.",
-  alternates: { canonical: "/" },
-};
+  path: "/",
+  image: { url: "/images/home-projects/extra/cartier-night.webp", alt: "Geometric metal storefront facade photographed at night" },
+});
 
 export default function HomePage() {
   return (
@@ -48,7 +49,7 @@ export default function HomePage() {
         <div className={styles.container}>
           <div className={styles.heroIntro}>
             <div><p className={styles.kicker}>GUOYAO METAL / ARCHITECTURAL METALWORK</p><h1 id="home-title">Metalwork.<br /><em>With presence.</em></h1></div>
-            <div className={styles.heroBrief}><p>For the spaces we enter, move through and remember. Explore metalwork for retail and architecture — through its forms, surfaces and details.</p><div className={styles.heroActions}><a href="#project-gallery" className={styles.darkButton}>Explore the collection <ArrowDown size={16} aria-hidden="true" /></a><InquiryButton className={styles.textLink}>Discuss a project <ArrowUpRight size={16} aria-hidden="true" /></InquiryButton></div></div>
+            <div className={styles.heroBrief}><p>Custom architectural metalwork for retail facades, curved cladding, stairs and display fixtures. Explore Guoyao Metal projects through installed views, workshop photographs and fabrication details.</p><div className={styles.heroActions}><a href="#project-gallery" className={styles.darkButton}>Explore the collection <ArrowDown size={16} aria-hidden="true" /></a><InquiryButton className={styles.textLink}>Discuss a project <ArrowUpRight size={16} aria-hidden="true" /></InquiryButton></div></div>
           </div>
           <div className={styles.heroMosaic}>
             <figure className={styles.heroMain}><div className={styles.heroPhoto}><Image src={`${extra}cartier-night.webp`} alt="Installed geometric metal storefront facade with illuminated Cartier lettering at night" fill preload sizes="(max-width: 850px) calc(100vw - 40px), 66vw" /></div><figcaption><div><span>RETAIL / INSTALLED VIEW</span><p>A facade with a different rhythm.</p></div><a href="#project-gallery" aria-label="Explore the project photograph collection"><ArrowUpRight size={22} aria-hidden="true" /></a></figcaption></figure>

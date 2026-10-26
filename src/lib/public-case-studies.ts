@@ -48,6 +48,15 @@ export const getPublishedCaseStudies = cache(async (): Promise<CustomerCaseStudy
   return records.map(serializeCaseStudy);
 });
 
+export async function getPublishedCaseStudySitemapEntries() {
+  const { prisma } = await import("@/lib/prisma");
+  return prisma.caseStudy.findMany({
+    where: { status: "PUBLISHED", publishedAt: { lte: new Date() } },
+    select: { slug: true, updatedAt: true, coverImage: true },
+    orderBy: { slug: "asc" },
+  });
+}
+
 export const getPublishedCaseStudy = cache(async (slug: string): Promise<CustomerCaseStudy | null> => {
   const { prisma } = await import("@/lib/prisma");
   const record = await prisma.caseStudy.findUnique({ where: { slug } });

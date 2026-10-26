@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { InquiryButton } from "@/components/site/inquiry-contact";
@@ -7,6 +7,8 @@ import { MetalMotion } from "@/components/site/metal-motion";
 import { ProjectRecordsCarousel } from "@/components/site/project-records-carousel";
 import { projectRecords } from "@/data/project-experience";
 import { COMPANY_NAME } from "@/lib/site-identity";
+import { createPageMetadata } from "@/lib/seo";
+import { getSiteUrl } from "@/lib/site-url";
 import home from "../home.module.css";
 import styles from "./about.module.css";
 
@@ -92,16 +94,29 @@ const proofPoints = [
   { ask: "No surprises on site.", answer: "Survey before fabrication — site conflicts resolved before cutting. Measured, not promised." },
 ];
 
-export const metadata: Metadata = {
-  title: "About — GUOYAO METAL | Architectural Metalwork",
+export const metadata = createPageMetadata({
+  title: "About Our Architectural Metalwork Workshop | GUOYAO METAL",
   description:
-    "Meet GUOYAO METAL (广州市国耀高薪材料科技有限公司): a Foshan workshop of 4,500 m² and 80+ specialists fabricating storefronts, curved cladding, stairs and display fixtures for luxury retail, hotels, residences and museums — a decade of brand programs across 10+ countries.",
-  alternates: { canonical: "/about" },
-};
+    "Meet Guoyao Metal: a Foshan workshop making retail facades, curved cladding, stairs and display fixtures. Explore our team, processes and project experience.",
+  path: "/about",
+  image: { url: `${media}hero-factory.webp`, alt: "Guoyao Metal workshop assembly hall" },
+});
 
 export default function AboutPage() {
+  const siteUrl = getSiteUrl();
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": `${siteUrl}/about#webpage`,
+    url: `${siteUrl}/about`,
+    name: "About Guoyao Metal",
+    isPartOf: { "@id": `${siteUrl}/#website` },
+    about: { "@id": `${siteUrl}/#organization` },
+    inLanguage: "en",
+  };
   return (
     <MetalMotion className={`${home.page} ${atelierDisplay.variable} ${atelierSerif.variable} ${styles.about}`}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
       {/* HERO — dark atelier style */}
       <section className={home.hero} aria-labelledby="about-title">
         <div className={home.container}>
@@ -201,16 +216,16 @@ export default function AboutPage() {
               <p className={home.kicker}>03 / SELECTED PROJECT STORIES</p>
               <h2 id="stories-title">A closer look at <em>the work.</em></h2>
             </div>
-            <a href="/case-studies" className={home.textLink}>All project stories <ArrowUpRight size={17} aria-hidden="true" /></a>
+            <Link href="/case-studies" className={home.textLink}>All project stories <ArrowUpRight size={17} aria-hidden="true" /></Link>
           </div>
           <div className={home.storyGrid}>
             {stories.map((story, index) => (
               <article className={home.storyCard} key={story.href} data-metal-reveal>
-                <a href={story.href} className={home.storyImageLink} aria-label={`View ${story.title}`}>
+                <Link href={story.href} className={home.storyImageLink} aria-label={`View ${story.title}`}>
                   <div className={home.storyImage}><Image src={story.image} alt={story.alt} fill sizes="(max-width: 700px) calc(100vw - 40px), 40vw" /></div>
-                </a>
+                </Link>
                 <div className={home.storyMeta}><span>{story.stage}</span><span>0{index + 1}</span></div>
-                <a href={story.href} className={home.storyTitle}><h3>{story.title}</h3><ArrowUpRight size={19} aria-hidden="true" /></a>
+                <Link href={story.href} className={home.storyTitle}><h3>{story.title}</h3><ArrowUpRight size={19} aria-hidden="true" /></Link>
                 <p>{story.text}</p>
               </article>
             ))}
