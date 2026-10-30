@@ -6,6 +6,8 @@ import { MetalMotion } from "@/components/site/metal-motion";
 import { ProjectGallery } from "@/components/site/project-gallery";
 import { ProjectBrands } from "@/components/site/project-brands";
 import { ProjectRecordsCarousel } from "@/components/site/project-records-carousel";
+import { HeroCarousel } from "@/components/site/hero-carousel";
+import { homepageHeroPhotos } from "@/data/homepage-hero";
 import { homepageGalleryItems } from "@/data/homepage-gallery";
 import { projectRecords } from "@/data/project-experience";
 import { createPageMetadata } from "@/lib/seo";
@@ -52,7 +54,7 @@ export default function HomePage() {
             <div className={styles.heroBrief}><p>Custom architectural metalwork for retail facades, curved cladding, stairs and display fixtures. Explore Guoyao Metal projects through installed views, workshop photographs and fabrication details.</p><div className={styles.heroActions}><a href="#project-gallery" className={styles.darkButton}>Explore the collection <ArrowDown size={16} aria-hidden="true" /></a><InquiryButton className={styles.textLink}>Discuss a project <ArrowUpRight size={16} aria-hidden="true" /></InquiryButton></div></div>
           </div>
           <div className={styles.heroMosaic}>
-            <figure className={styles.heroMain}><div className={styles.heroPhoto}><Image src={`${extra}cartier-night.webp`} alt="Installed geometric metal storefront facade with illuminated Cartier lettering at night" fill preload sizes="(max-width: 850px) calc(100vw - 40px), 66vw" /></div><figcaption><div><span>RETAIL / INSTALLED VIEW</span><p>A facade with a different rhythm.</p></div><a href="#project-gallery" aria-label="Explore the project photograph collection"><ArrowUpRight size={22} aria-hidden="true" /></a></figcaption></figure>
+            <HeroCarousel photos={homepageHeroPhotos} className={styles.heroMain} photoClassName={styles.heroPhoto} />
             <div className={styles.heroSide}>
               <figure><div className={styles.heroPhoto}><Image src={`${extra}tiffany-corner.webp`} alt="Reflective metal facade around the corner of a Tiffany boutique" fill sizes="(max-width: 700px) 66vw, 45vw" /></div><figcaption><div><span>RETAIL / INSTALLED VIEW</span><p>Reflection, around the corner.</p></div></figcaption></figure>
               <figure><div className={styles.heroPhoto}><Image src={`${extra}staircase-site.webp`} alt="Curved metal balustrade on a staircase photographed during site work" fill sizes="(max-width: 700px) 66vw, 45vw" /></div><figcaption><div><span>STAIRS / ON-SITE WORK</span><p>A line through the space.</p></div></figcaption></figure>

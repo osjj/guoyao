@@ -1,0 +1,21 @@
+.carousel { min-width: 0; }
+.viewport { touch-action: pan-y pinch-zoom; }
+.track { display: flex; width: 100%; height: 100%; }
+.track[data-animating="true"] { transition: transform 500ms cubic-bezier(.77, 0, .175, 1); }
+.slide { position: relative; flex: 0 0 100%; min-width: 0; height: 100%; }
+.arrow { position: absolute; z-index: 1; top: 50%; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid #d3bd9180; border-radius: 50%; background: #14211ed9; color: #f1e5cd; cursor: pointer; opacity: 0; pointer-events: none; transform: translateY(-50%); transition: background-color 160ms ease, opacity 160ms ease; }
+.previous { left: 16px; }
+.next { right: 16px; }
+.controls { position: absolute; z-index: 2; inset: auto 12px 6px; display: grid; grid-template-columns: 70px 1fr 70px; align-items: center; height: 28px; pointer-events: none; }
+.counter { color: #f1e5cd; font-family: var(--atelier-mono); font-size: 9px; letter-spacing: .08em; text-shadow: 0 1px 4px #000; }
+.dots { display: flex; justify-content: center; justify-self: center; padding-inline: 4px; border-radius: 20px; background: #14211ebd; pointer-events: auto; }
+.dot { position: relative; display: grid; place-items: center; width: 24px; height: 28px; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.dot::before { content: ""; width: 7px; height: 7px; border: 1px solid #c4ac7e; border-radius: 50%; background: transparent; opacity: .65; transition: background-color 160ms ease, opacity 160ms ease; }
+.dot[aria-pressed="true"]::before { background: #d3bd91; opacity: 1; }
+.toggle { display: flex; align-items: center; justify-content: flex-end; gap: 6px; min-height: 28px; padding: 0; border: 0; background: transparent; color: #f1e5cd; font-family: var(--atelier-mono); font-size: 9px; text-shadow: 0 1px 4px #000; cursor: pointer; pointer-events: auto; }
+.toggle:disabled { cursor: default; opacity: .45; }
+.viewport:focus-visible, .arrow:focus-visible, .dot:focus-visible, .toggle:focus-visible { outline: 2px solid #e2cfaa; outline-offset: -3px; }
+.viewport:focus-visible .arrow, .arrow:focus-visible { opacity: 1; pointer-events: auto; }
+@media (hover: hover) and (pointer: fine) { .viewport:hover .arrow { opacity: 1; pointer-events: auto; } .arrow:hover { background: #476047; } .dot:hover::before { opacity: 1; } .toggle:hover { color: #f1e5cd; } }
+@media (max-width: 700px) { .previous { left: 10px; } .next { right: 10px; } .arrow { width: 40px; height: 40px; } }
+@media (prefers-reduced-motion: reduce) { .track[data-animating="true"] { transition: none; } .arrow, .dot::before { transition: none; } }
