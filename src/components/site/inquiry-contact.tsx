@@ -7,16 +7,18 @@ import { ChatTeardropText, EnvelopeSimple, WhatsappLogo } from "@phosphor-icons/
 import { inquiryAttribution, inquiryMessage, inquirySchema, SALES_EMAIL, type InquiryContext } from "@/lib/inquiries";
 import { SALES_WHATSAPP_CONTACTS } from "@/lib/site-identity";
 import styles from "./inquiry-contact.module.css";
+import { useDialogMotion } from "./use-dialog-motion";
 
-const InquiryContextValue = createContext<(product?: InquiryContext) => void>(() => {});
+const InquiryContextValue = createContext<(product?: InquiryContext, animate?: boolean) => void>(() => {});
 
 export function InquiryButton({ children, className, product }: { children: ReactNode; className?: string; product?: InquiryContext }) {
   const open = useContext(InquiryContextValue);
-  return <button type="button" className={className} onClick={() => open(product)} aria-haspopup="dialog">{children}</button>;
+  return <button type="button" className={className} onClick={event => open(product, event.detail > 0)} aria-haspopup="dialog">{children}</button>;
 }
 
 function WhatsAppContactPicker() {
   const [open, setOpen] = useState(false);
+  const [animated, setAnimated] = useState(false);
   const container = useRef<HTMLDivElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
   const pointerType = useRef("");
@@ -30,6 +32,7 @@ function WhatsAppContactPicker() {
     }
     function onKeyDown(event: KeyboardEvent) {
       if (event.key !== "Escape") return;
+      setAnimated(false);
       setOpen(false);
       if (container.current?.contains(document.activeElement)) trigger.current?.focus();
     }
@@ -45,20 +48,21 @@ function WhatsAppContactPicker() {
   return <div
     ref={container}
     className={styles.whatsappPicker}
-    onPointerEnter={(event) => { if (event.pointerType === "mouse") setOpen(true); }}
+    onKeyDownCapture={event => { if (event.key === "Tab") setAnimated(false); }}
+    onPointerEnter={(event) => { if (event.pointerType === "mouse") { setAnimated(true); setOpen(true); } }}
     onPointerLeave={(event) => {
       if (event.pointerType === "mouse" && !event.currentTarget.contains(document.activeElement)) setOpen(false);
     }}
     onBlur={(event) => {
-      if (!(event.relatedTarget instanceof Node) || !event.currentTarget.contains(event.relatedTarget)) setOpen(false);
+      if (!(event.relatedTarget instanceof Node) || !event.currentTarget.contains(event.relatedTarget)) { setAnimated(false); setOpen(false); }
     }}
   >
     <button ref={trigger} type="button" className={styles.whatsappTrigger} aria-label="Choose a WhatsApp number" aria-expanded={open} aria-controls={panelId}
       onPointerDown={(event) => { pointerType.current = event.pointerType; }}
-      onClick={(event) => setOpen((current) => event.detail > 0 && pointerType.current === "mouse" ? true : !current)}>
+      onClick={(event) => { setAnimated(event.detail > 0); setOpen((current) => event.detail > 0 && pointerType.current === "mouse" ? true : !current); }}>
       <WhatsappLogo size={22} weight="regular" aria-hidden="true" />
     </button>
-    <div id={panelId} className={styles.whatsappPanel} hidden={!open}>
+    <div id={panelId} className={styles.whatsappPanel} hidden={!open} inert={!open} data-motion={animated}>
       <div className={styles.whatsappChoices}>
         <p>Chat on WhatsApp</p>
         {SALES_WHATSAPP_CONTACTS.map(({ phone, href }) => <a key={href} href={href} target="_blank" rel="noopener noreferrer" aria-label={`WhatsApp ${phone}`}>
@@ -71,10 +75,10 @@ function WhatsAppContactPicker() {
 
 export function InquiryProvider({ children }: { children: ReactNode }) {
   const pathname = usePathname();
-  const [request, setRequest] = useState<{ id: string; product?: InquiryContext; sourcePath: string; productSlug?: string } | null>(null);
-  function open(product?: InquiryContext) {
+  const [request, setRequest] = useState<{ id: string; product?: InquiryContext; sourcePath: string; productSlug?: string; animate: boolean } | null>(null);
+  function open(product?: InquiryContext, animate = true) {
     const context = inquiryAttribution(pathname, window.location.search, product);
-    setRequest({ id: crypto.randomUUID(), sourcePath: context.sourcePath, productSlug: context.productSlug,
+    setRequest({ id: crypto.randomUUID(), sourcePath: context.sourcePath, productSlug: context.productSlug, animate,
       product: product ? { ...product, slug: context.productSlug, brief: context.brief } : undefined });
   }
   return <InquiryContextValue.Provider value={open}>
@@ -82,30 +86,19 @@ export function InquiryProvider({ children }: { children: ReactNode }) {
     <aside className={styles.rail} aria-label="Project enquiries">
       <a href={`mailto:${SALES_EMAIL}`} aria-label={`Email ${SALES_EMAIL}`} title={SALES_EMAIL}><EnvelopeSimple size={21} weight="regular" aria-hidden="true" /></a>
       <WhatsAppContactPicker key={pathname} />
-      <button className={styles.inquire} type="button" onClick={() => open()} aria-label="Discuss a project" aria-haspopup="dialog"><ChatTeardropText size={21} weight="regular" aria-hidden="true" /><span>Discuss a project</span></button>
+      <button className={styles.inquire} type="button" onClick={event => open(undefined, event.detail > 0)} aria-label="Discuss a project" aria-haspopup="dialog"><ChatTeardropText size={21} weight="regular" aria-hidden="true" /><span>Discuss a project</span></button>
     </aside>
-    {request && <InquiryModal key={request.id} submissionId={request.id} product={request.product} sourcePath={request.sourcePath} productSlug={request.productSlug} onClose={() => setRequest(null)} />}
+    {request && <InquiryModal key={request.id} submissionId={request.id} product={request.product} sourcePath={request.sourcePath} productSlug={request.productSlug} animateOpen={request.animate} onClose={() => setRequest(null)} />}
   </InquiryContextValue.Provider>;
 }
 
-function InquiryModal({ submissionId, product, sourcePath, productSlug, onClose }: { submissionId: string; product?: InquiryContext; sourcePath: string; productSlug?: string; onClose: () => void }) {
-  const dialog = useRef<HTMLDialogElement>(null);
+function InquiryModal({ submissionId, product, sourcePath, productSlug, animateOpen, onClose }: { submissionId: string; product?: InquiryContext; sourcePath: string; productSlug?: string; animateOpen: boolean; onClose: () => void }) {
+  const { dialog, close } = useDialogMotion(animateOpen, onClose);
   const submitting = useRef(false);
   const [busy, setBusy] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
   const [values, setValues] = useState({ email: "", countryCode: "", phone: "", name: "", companyName: "", message: inquiryMessage(product), website: "" });
-
-  useEffect(() => {
-    const element = dialog.current;
-    const previousFocus = document.activeElement as HTMLElement | null;
-    const previousOverflow = document.body.style.overflow;
-    const previousRootOverflow = document.documentElement.style.overflow;
-    element?.showModal();
-    document.body.style.overflow = "hidden";
-    document.documentElement.style.overflow = "hidden";
-    return () => { element?.close(); document.body.style.overflow = previousOverflow; document.documentElement.style.overflow = previousRootOverflow; if (previousFocus?.isConnected) previousFocus.focus(); };
-  }, []);
 
   function change(field: keyof typeof values, value: string) { setValues((current) => ({ ...current, [field]: value })); }
   async function submit(event: FormEvent<HTMLFormElement>) {
@@ -126,15 +119,15 @@ function InquiryModal({ submissionId, product, sourcePath, productSlug, onClose 
     } finally { submitting.current = false; setBusy(false); }
   }
 
-  return <dialog ref={dialog} className={styles.dialog} aria-labelledby="inquiry-title" aria-describedby={success ? "inquiry-received" : "inquiry-description"} onCancel={(event) => { event.preventDefault(); if (!busy) onClose(); }} onClick={(event) => { if (event.target === event.currentTarget && !busy) onClose(); }}>
+  return <dialog ref={dialog} className={styles.dialog} aria-labelledby="inquiry-title" aria-describedby={success ? "inquiry-received" : "inquiry-description"} onCancel={(event) => { event.preventDefault(); if (!busy) close(false); }} onClick={(event) => { if (event.target === event.currentTarget && !busy) close(event.detail > 0); }}>
     <div className={styles.panel}>
-      <button type="button" className={styles.close} aria-label="Close inquiry" disabled={busy} onClick={onClose}><X size={23} /></button>
+      <button type="button" className={styles.close} aria-label="Close inquiry" disabled={busy} onClick={event => close(event.detail > 0)}><X size={23} /></button>
       {success ? <div className={styles.success} role="status">
         <CheckCircle2 size={48} aria-hidden="true" />
         <p className={styles.kicker}>A CONVERSATION BEGINS</p>
         <h2 id="inquiry-title">Your project enquiry<br />has been received.</h2>
         <p id="inquiry-received">Thank you for sharing the details. Your message and contact information have been saved for our team to review.</p>
-        <button type="button" className={styles.submit} onClick={onClose}>Continue exploring <ArrowRight size={18} /></button>
+        <button type="button" className={styles.submit} onClick={event => close(event.detail > 0)}>Continue exploring <ArrowRight size={18} /></button>
       </div> : <>
         <div className={styles.intro}>
           <p className={styles.kicker}>LET’S TALK MATERIALS</p>

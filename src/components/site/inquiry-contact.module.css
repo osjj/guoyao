@@ -8,8 +8,10 @@
 .whatsappTrigger { border: 0; border-right: 1px solid #22231f26; padding: 0; background: transparent; -webkit-tap-highlight-color: transparent; user-select: none; }
 .whatsappTrigger[aria-expanded="true"], .whatsappTrigger:active { background: #e9e3d9; }
 /* Padding keeps the pointer inside the picker while crossing the visual gap. */
-.whatsappPanel { position: absolute; bottom: 100%; right: 0; width: max-content; max-width: calc(100vw - 32px); padding-bottom: 12px; }
-.whatsappPanel[hidden] { display: none; }
+.whatsappPanel { position: absolute; bottom: 100%; right: 0; width: max-content; max-width: calc(100vw - 32px); padding-bottom: 12px; display: block; opacity: 1; transform: none; transform-origin: bottom right; }
+.whatsappPanel[data-motion="true"] { transition: opacity 160ms var(--ease-out), transform 160ms var(--ease-out), display 160ms allow-discrete; }
+.whatsappPanel[hidden] { display: none; opacity: 0; transform: translateY(6px) scale(.97); }
+@starting-style { .whatsappPanel[data-motion="true"]:not([hidden]) { opacity: 0; transform: translateY(6px) scale(.97); } }
 .whatsappChoices { padding: 10px; border: 1px solid #22231f26; background: #f5f2ec; box-shadow: 0 8px 32px #22231f1f; }
 .whatsappChoices p { margin: 0; padding: 5px 10px 8px; color: #626259; font-size: 11px; line-height: 1.5; }
 .whatsappChoices a { min-height: 44px; display: flex; align-items: center; gap: 10px; padding: 10px; color: #22231f; font-size: 13px; line-height: 1.5; white-space: nowrap; text-decoration: none; touch-action: manipulation; transition: background 160ms; }
@@ -85,5 +87,5 @@
   .rail .inquire { padding: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .rail a, .rail button, .submit { transition: none; }
+  .rail a, .rail button, .submit, .whatsappPanel[data-motion="true"] { transition: none; transform: none; }
 }

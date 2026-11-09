@@ -23,6 +23,9 @@
 .metal-skip-link:focus { transform: translateY(0); }
 
 :root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
   --paper: #ffffff;
   --surface: #f5f7fa;
   --surface-blue: #eef3f9;
@@ -43,6 +46,14 @@
   --home-ink: #14243c;
   --home-gold: #d5b77b;
 }
+
+dialog[data-motion-dialog="true"]::backdrop {
+  opacity: 1;
+  transition: opacity 180ms var(--ease-out);
+}
+dialog[data-motion-dialog="true"][data-closing="true"]::backdrop { opacity: 0; }
+@starting-style { dialog[data-motion-dialog="true"]::backdrop { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { dialog[data-motion-dialog]::backdrop { transition: none; } }
 
 .home-luxe {
   font-family: var(--font-home-sans), Arial, "Segoe UI", sans-serif;

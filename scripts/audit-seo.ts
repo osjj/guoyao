@@ -64,6 +64,10 @@ async function main() {
     if (/^\/(blog|case-studies)\/.+/.test(canonical.pathname)) {
       check(schemaTypes.includes("Article") && schemaTypes.includes("BreadcrumbList"), `${canonical.pathname}: missing article/breadcrumb schema`);
     }
+    if (canonical.pathname.startsWith("/case-studies/")) {
+      const invalidGalleryUrl = $("script").text().match(/https:\/\/media\.guoyaometal\.com\/case-studies\/[^\s"\\<>]+\.(?:avif|gif|jpe?g|png|webp)-\d+(?=[\s"\\<>]|$)/i)?.[0];
+      check(!invalidGalleryUrl, `${canonical.pathname}: malformed gallery image URL in page scripts: ${invalidGalleryUrl}`);
+    }
     $("a[href]").each((_, element) => {
       const href = $(element).attr("href")!;
       try {

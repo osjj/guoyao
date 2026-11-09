@@ -8,10 +8,11 @@ export function CaseStudyImageGallery({ images, label }: { images: readonly Case
   if (images.length === 0) return null;
 
   const multiple = images.length > 1;
+  // Next.js serializes server-rendered keys into the page. Keep URLs out of them.
   return (
     <div className={`${styles.gallery} ${multiple ? styles.multiple : ""}`} role="group" aria-label={`${label} images`}>
       {images.map((image, index) => (
-        <figure className={styles.figure} key={`${image.url}-${index}`}>
+        <figure className={styles.figure} key={`gallery-image-${index}`}>
           <ImagePreviewButton src={image.url} alt={image.alt} className={styles.preview}>
             <Image
               src={image.url}
