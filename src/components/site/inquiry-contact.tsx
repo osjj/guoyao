@@ -6,6 +6,7 @@ import { ArrowRight, CheckCircle2, X } from "lucide-react";
 import { ChatTeardropText, EnvelopeSimple, WhatsappLogo } from "@phosphor-icons/react";
 import { inquiryAttribution, inquiryMessage, inquirySchema, SALES_EMAIL, type InquiryContext } from "@/lib/inquiries";
 import { SALES_WHATSAPP_CONTACTS } from "@/lib/site-identity";
+import { inquiryAnalytics } from "@/lib/inquiry-analytics";
 import styles from "./inquiry-contact.module.css";
 import { useDialogMotion } from "./use-dialog-motion";
 
@@ -76,6 +77,24 @@ function WhatsAppContactPicker() {
 export function InquiryProvider({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const [request, setRequest] = useState<{ id: string; product?: InquiryContext; sourcePath: string; productSlug?: string; animate: boolean } | null>(null);
+  useEffect(() => {
+    function trackContact(event: MouseEvent) {
+      if (event.defaultPrevented || (event.type === "click" ? event.button !== 0 : event.button !== 1)) return;
+      const target = event.target instanceof Element ? event.target : null;
+      const link = target?.closest<HTMLAnchorElement>("a[href]");
+      if (!link) return;
+      const location = link.closest<HTMLElement>("[data-contact-location]")?.dataset.contactLocation
+        || (link.closest("footer") ? "footer" : "page_content");
+      inquiryAnalytics.trackContactClick({ href: link.href, sourcePath: window.location.pathname, location });
+    }
+    document.addEventListener("click", trackContact);
+    document.addEventListener("auxclick", trackContact);
+    return () => {
+      document.removeEventListener("click", trackContact);
+      document.removeEventListener("auxclick", trackContact);
+    };
+  }, []);
+
   function open(product?: InquiryContext, animate = true) {
     const context = inquiryAttribution(pathname, window.location.search, product);
     setRequest({ id: crypto.randomUUID(), sourcePath: context.sourcePath, productSlug: context.productSlug, animate,
@@ -83,7 +102,7 @@ export function InquiryProvider({ children }: { children: ReactNode }) {
   }
   return <InquiryContextValue.Provider value={open}>
     {children}
-    <aside className={styles.rail} aria-label="Project enquiries">
+    <aside className={styles.rail} aria-label="Project enquiries" data-contact-location="floating_rail">
       <a href={`mailto:${SALES_EMAIL}`} aria-label={`Email ${SALES_EMAIL}`} title={SALES_EMAIL}><EnvelopeSimple size={21} weight="regular" aria-hidden="true" /></a>
       <WhatsAppContactPicker key={pathname} />
       <button className={styles.inquire} type="button" onClick={event => open(undefined, event.detail > 0)} aria-label="Discuss a project" aria-haspopup="dialog"><ChatTeardropText size={21} weight="regular" aria-hidden="true" /><span>Discuss a project</span></button>
@@ -114,6 +133,7 @@ function InquiryModal({ submissionId, product, sourcePath, productSlug, animateO
       const result = await response.json();
       if (!response.ok || !result.success) throw new Error(result.error || "Your request could not be saved. Please try again.");
       setSuccess(true);
+      inquiryAnalytics.trackSavedInquiry({ responseOk: response.ok, result, submissionId, sourcePath });
     } catch (cause) {
       setError(cause instanceof Error && cause.name !== "TimeoutError" ? cause.message : "The request timed out. Please retry; your inquiry will not be saved twice.");
     } finally { submitting.current = false; setBusy(false); }
@@ -133,7 +153,7 @@ function InquiryModal({ submissionId, product, sourcePath, productSlug, animateO
           <p className={styles.kicker}>LET’S TALK MATERIALS</p>
           <h2 id="inquiry-title">Start with<br /> an idea.</h2>
           <p id="inquiry-description" className={styles.description}>Tell us about the space, the material, and the detail you have in mind.</p>
-          <div className={styles.directContact}>
+          <div className={styles.directContact} data-contact-location="inquiry_form">
             <span>Prefer a direct conversation?</span>
             <a href={`mailto:${SALES_EMAIL}`}><EnvelopeSimple size={18} aria-hidden="true" />{SALES_EMAIL}</a>
             {SALES_WHATSAPP_CONTACTS.map(({ phone, href }) => <a key={href} href={href} target="_blank" rel="noopener noreferrer"><WhatsappLogo size={19} aria-hidden="true" />{phone}</a>)}

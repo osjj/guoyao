@@ -8,6 +8,31 @@
 - Successful submissions are persisted before showing confirmation. Failed submissions preserve the customer's inputs. Retrying a submission uses the same UUID and does not create another record.
 - The form displays the requested response-time copy: within 24 hours / one business day. The sales team must handle these responses.
 
+## Inquiry conversion measurement
+
+The public site uses the existing Guoyao Google tag `GT-T5N2FB37` and GA4 stream `G-0WRGEBX2MG` (property `560660345`). Tracking stays disabled in development. The server inquiry API, persistence and email notifications are unchanged.
+
+| Event | Meaning | GA4 key event |
+| --- | --- | --- |
+| `generate_lead` | The API acknowledged a saved inquiry. One queued event per submission UUID in the current page lifetime; a retry after a lost response may provide the first successful acknowledgement. | Yes, once per event |
+| `contact_email` | Actual activation of a configured sales email link. | No |
+| `contact_whatsapp` | Actual activation of either configured sales WhatsApp link. Opening the number picker does not count. | No |
+
+Contact events cover the rail, footer, inquiry modal and other public page links using one listener. Custom parameters contain only fixed `page_type`, `contact_location` and `form_id` categories; customer names, emails, phone numbers, messages, company names, URLs, query strings and submission UUIDs are not sent as custom parameters. Contact clicks are intent signals, not proof of a delivered message. `generate_lead` confirms receipt in the inquiry database, not a qualified lead, successful email notification or sale. Blocking analytics may prevent a recorded event; the inquiry confirmation still succeeds.
+
+Use the **Create with code** flow to register `generate_lead` as a key event in property `560660345`, **Once per event**, with no invented default monetary value. Do not create a `form_submit`/`page_view` derived event with the same name and do not mark contact clicks as saved inquiries. Existing key events are left unchanged. Registration does not backfill historical inquiries.
+
+### Manual deployment and verification
+
+1. Deploy this code using the normal manual deployment process. No database migration or new secret is required.
+2. Verify one genuine approved inquiry in the admin, then check for `generate_lead` in GA4 Realtime; repeated acknowledgement of the same submission must not add another event.
+3. Confirm email and both WhatsApp links appear as their separate contact events and that opening the WhatsApp picker adds none.
+4. Allow processing time for standard reports. The GA4 setting alone does not prove that undeployed code is sending events.
+
+Local browser QA must intercept `/api/inquiries` and Google analytics traffic so it cannot save production inquiries, send notification emails or pollute the live property. Run `npm run test:inquiry-analytics` for dispatcher/privacy/deduplication and inquiry-validation checks.
+
+Verified on 2026-11-15: `generate_lead` was registered and its saved key-event state, once-per-event counting and unset default value were checked in GA4. The 16 analytics/inquiry tests, TypeScript, scoped ESLint and production webpack build passed. Intercepted local production browser checks verified actual Google tag payloads for the three events, lost-response retry, rejected requests and analytics-failure isolation. An early event queued before Google configuration was also consumed by the real tag with its collection request intercepted. No live inquiry or analytics test event was sent. The implementation is not yet deployed; production receipt verification follows manual deployment.
+
 ## Admin flow
 
 `/admin/inquiries` requires an active administrator session. It provides newest-first pagination (20 per page), text search and status filters. `/admin/inquiries/[id]` shows the complete submission, source page and product snapshot, and supports internal notes and New / Contacted / Closed / Spam statuses. The dashboard shows the new-inquiry count.
