@@ -17,6 +17,12 @@ const navigation = [
 
 export function SiteHeader() {
   const pathname = usePathname();
+  if (pathname === "/") return null;
+  return <InnerSiteHeader />;
+}
+
+function InnerSiteHeader() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [animated, setAnimated] = useState(false);
   const trigger = useRef<HTMLButtonElement>(null);

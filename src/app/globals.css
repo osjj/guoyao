@@ -18,6 +18,7 @@
   font-family: var(--font-home-sans), Arial, sans-serif;
 }
 .metal-main { padding-top: 88px; }
+.metal-main:has([data-redesign-home]) { padding-top: 0; }
 .metal-main:focus { outline: none; }
 .metal-skip-link { position: fixed; z-index: 100; top: 10px; left: 10px; transform: translateY(-180%); background: #f5f2ec; color: #22231f; padding: 12px 20px; }
 .metal-skip-link:focus { transform: translateY(0); }

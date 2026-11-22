@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ArrowUpRight } from "lucide-react";
 import { Logo } from "./logo";
 import { InquiryButton } from "./inquiry-contact";
@@ -6,6 +9,8 @@ import { COMPANY_NAME, SALES_EMAIL, SALES_TELEPHONES } from "@/lib/site-identity
 import styles from "./metal-shell.module.css";
 
 export function SiteFooter() {
+  const pathname = usePathname();
+  if (pathname === "/") return null;
   return (
     <footer className={styles.footer}>
       <div className={styles.footerInner} data-footer-inner>
