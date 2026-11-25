@@ -1,0 +1,28 @@
+.canvas {
+  pointer-events: none;
+}
+
+.canvas:not([data-rendered]) {
+  background: url("/images/redesign/folded-liquid-steel.webp") right center / cover no-repeat;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(5, 6, 8, 0.75), rgba(5, 6, 8, 0.28) 54%, transparent 78%),
+    linear-gradient(180deg, rgba(5, 6, 8, 0.44), transparent 23%, transparent 73%, rgba(5, 6, 8, 0.88));
+  pointer-events: none;
+}
+
+@media (max-width: 820px) {
+  .canvas:not([data-rendered]) {
+    background-image: url("/images/redesign/folded-liquid-steel-portrait.webp");
+  }
+
+  .scrim {
+    background:
+      linear-gradient(90deg, rgba(5, 6, 8, 0.84), rgba(5, 6, 8, 0.54) 62%, rgba(5, 6, 8, 0.12)),
+      linear-gradient(180deg, rgba(5, 6, 8, 0.45), transparent 18%, transparent 70%, rgba(5, 6, 8, 0.84));
+  }
+}
