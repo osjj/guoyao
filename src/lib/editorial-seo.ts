@@ -61,6 +61,12 @@ const curatedEditorialSeo: Record<string, CuratedEditorialSeo> = {
     "title": "High-End Metalwork Welding & Quality Control",
     "description": "Review high-end metalwork welding, from base-metal and filler selection to TIG and laser welding, distortion control, finishing and acceptance checks."
   },
+  "blog/metalwork-cutting-fabrication-process-and-quality-control": {
+    "sourceTitle": "Metalwork Cutting and Fabrication: Full Process, Details and Quality Control",
+    "sourceExcerpt": "A full-process technical guide to architectural metalwork fabrication for luxury retail, premium residential and hotel projects: material grades and surface finishes, nesting and cutting, V-grooving and bending, welding and polishing, PVD coating, four typical junction details, inspection standards, defect control and key production data.",
+    "title": "Metal Cutting & Fabrication Quality Control",
+    "description": "Review metalwork fabrication from sheet nesting and cutting to V-grooving, bending, junction details, factory inspection and site acceptance."
+  },
   "blog/metalwork-raw-material-screening-process-and-quality-control": {
     "sourceTitle": "Luxury Retail Fit-Out Metalwork: Raw Material Screening — Eight Gates, Fourteen Tests and Three Validation Rounds",
     "sourceExcerpt": "Procurement-grade raw-material screening guide for luxury metalwork: an 8-step closed loop with veto items; a 120→2 supplier funnel; a base-material grade matrix; 7 surface treatments and cost structure; on-site inspection; 14 contract tests and acceptance criteria; first-pass yield and ΔE control; tiered supplier management; an 8-week sampling timeline; 8 common failure modes; and 12 document types to archive.",

@@ -26,6 +26,16 @@ const nextConfig: NextConfig = {
         destination: "/case-studies/helical-metal-feature-staircase",
         permanent: true,
       },
+      {
+        source: "/blog/metalwork-surface-finishing-process-and-quality-control",
+        destination: "/blog/architectural-metal-finishes-brushed-mirror-hammered-pvd-guide",
+        permanent: true,
+      },
+      {
+        source: "/blog/metalwork-polishing-brushing-process-and-quality-control",
+        destination: "/blog/architectural-metal-finishes-brushed-mirror-hammered-pvd-guide",
+        permanent: true,
+      },
     ];
   },
   async headers() {
