@@ -197,7 +197,7 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </div>
 
-      <footer className={styles.readingEnd}>
+      <footer className={styles.readingEnd} id="article-inquiry">
         <div className={`${styles.container} ${styles.readingEndInner}`}>
           <div>
             <p className={styles.eyebrow}>The Material Journal</p>

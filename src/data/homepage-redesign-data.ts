@@ -240,6 +240,7 @@ export const REDESIGN_IMAGES = {
 export const DISCIPLINES = [
   {
     id: "facades",
+    href: "/capabilities/storefront-facades",
     index: "01",
     title: "Storefronts & Facades",
     shortTitle: "Facades",
@@ -253,6 +254,7 @@ export const DISCIPLINES = [
   },
   {
     id: "cladding",
+    href: "/capabilities/curved-architectural-cladding",
     index: "02",
     title: "Curved Architectural Cladding",
     shortTitle: "Cladding",
@@ -266,6 +268,7 @@ export const DISCIPLINES = [
   },
   {
     id: "stairs",
+    href: "/capabilities/custom-staircases-balustrades",
     index: "03",
     title: "Stairs & Balustrades",
     shortTitle: "Stairs",
@@ -279,6 +282,7 @@ export const DISCIPLINES = [
   },
   {
     id: "displays",
+    href: "/capabilities/display-vitrines-hospitality-ffe",
     index: "04",
     title: "Display Vitrines & Fixtures",
     shortTitle: "Displays",
@@ -421,6 +425,16 @@ export const PROCESS_STEPS = [
   },
 ] as const;
 
+export type FeaturedArticle = {
+  href: string;
+  kicker: string;
+  title: string;
+  summary: string;
+  image: { src: string; alt: string };
+};
+
+export const PREFERRED_FEATURED_ARTICLE_SLUG = "architectural-metal-finishes-brushed-mirror-hammered-pvd-guide";
+
 export const FEATURED_ARTICLE = {
   href: "/blog/metalwork-welding-process-and-quality-control",
   kicker: "Technical Journal",
@@ -431,7 +445,7 @@ export const FEATURED_ARTICLE = {
     src: "https://media.guoyaometal.com/blog/metalwork-welding-process-and-quality-control/hero-cc4cc95d6eaf9f92.webp",
     alt: "Stainless steel sheet-metal workshop with welding in progress",
   },
-} as const;
+} satisfies FeaturedArticle;
 
 export const BRIEF_CHECKLIST = [
   { num: "01", label: "Project location & architectural application" },

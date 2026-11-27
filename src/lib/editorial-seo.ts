@@ -66,6 +66,30 @@ const curatedEditorialSeo: Record<string, CuratedEditorialSeo> = {
     "sourceExcerpt": "Procurement-grade raw-material screening guide for luxury metalwork: an 8-step closed loop with veto items; a 120→2 supplier funnel; a base-material grade matrix; 7 surface treatments and cost structure; on-site inspection; 14 contract tests and acceptance criteria; first-pass yield and ΔE control; tiered supplier management; an 8-week sampling timeline; 8 common failure modes; and 12 document types to archive.",
     "title": "Raw Material Screening for Luxury Metalwork",
     "description": "Screen raw materials for luxury metalwork with eight process gates, 14 tests, supplier checks, surface treatment reviews and sampling approval steps."
+  },
+  "blog/why-1-to-1-factory-trial-assembly-matters-curved-metalwork": {
+    "sourceTitle": "What a 1:1 Factory Trial Assembly Should Prove for Curved Metalwork",
+    "sourceExcerpt": "Use a full-scale workshop trial to check the hard-to-correct interfaces in curved cladding, handrails and balustrades. Define the trial extent, datums, finish review and evidence before packing.",
+    "title": "1:1 Factory Trial Assembly for Curved Metalwork",
+    "description": "Specify a 1:1 factory trial for curved cladding, stair handrails or balustrades. Define the extent, datums, seam and finish checks before dispatch."
+  },
+  "blog/how-to-prepare-rfq-package-custom-architectural-metalwork": {
+    "sourceTitle": "How to Prepare an RFQ Package for Custom Architectural Metalwork",
+    "sourceExcerpt": "Build a fabricator-ready RFQ with coordinated drawings, finish and sample requirements, surveyed interfaces and a delivery route. Use the bid checklist to compare scope and assumptions.",
+    "title": "RFQ Checklist for Custom Architectural Metalwork",
+    "description": "Prepare an architectural metalwork RFQ with coordinated drawings, finish samples, site dimensions and packing requirements. Compare bids on the same scope."
+  },
+  "blog/architectural-metal-finishes-brushed-mirror-hammered-pvd-guide": {
+    "sourceTitle": "How to Specify Brushed, Mirror, Hammered and PVD Architectural Metal Finishes",
+    "sourceExcerpt": "A buyer's guide to comparing brushed and mirror stainless steel, hammered brass and PVD colour on full-size samples, joints and curves before releasing a metalwork package.",
+    "title": "Architectural Metal Finishes: Brushed, Mirror & PVD",
+    "description": "Compare brushed, mirror, hammered brass and PVD metal finishes. See what to check on formed samples, corners and joints before approving fabrication."
+  },
+  "blog/stainless-steel-304-vs-316l-brass-bronze-commercial-projects": {
+    "sourceTitle": "304 vs 316L Stainless Steel, Brass and Bronze for Commercial Metalwork",
+    "sourceExcerpt": "Choose substrates for commercial metalwork by exposure and fabrication. Compare 304 with 316L stainless steel, identify brass and bronze alloys, and specify PVD separately from the base grade.",
+    "title": "304 vs 316L Stainless Steel, Brass & Bronze",
+    "description": "Choose 304 or 316L stainless steel, brass or bronze for commercial metalwork. Compare exposure, welds, finishes and bill-of-materials checks."
   }
 };
 

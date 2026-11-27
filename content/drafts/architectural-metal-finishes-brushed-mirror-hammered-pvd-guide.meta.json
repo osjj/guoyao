@@ -1,0 +1,42 @@
+{
+  "slug": "architectural-metal-finishes-brushed-mirror-hammered-pvd-guide",
+  "title": "How to Specify Brushed, Mirror, Hammered and PVD Architectural Metal Finishes",
+  "excerpt": "A buyer's guide to comparing brushed and mirror stainless steel, hammered brass and PVD colour on full-size samples, joints and curves before releasing a metalwork package.",
+  "category": "Materials & Finishes",
+  "status": "DRAFT",
+  "featured": false,
+  "coverImageAlt": "Close-up of a mitred hammered brass corner around a glazed display case",
+  "sourceDir": "public/images/capabilities",
+  "keyPrefix": "blog/architectural-metal-finishes-brushed-mirror-hammered-pvd-guide",
+  "cover": {
+    "file": "display-vitrines-hospitality-ffe/hammered-brass-mitre.webp",
+    "keyTemplate": "blog/architectural-metal-finishes-brushed-mirror-hammered-pvd-guide/hero-{sha16}.webp"
+  },
+  "images": [
+    {
+      "placeholder": "1",
+      "file": "display-vitrines-hospitality-ffe/hammered-brass-mitre.webp",
+      "key": "blog/architectural-metal-finishes-brushed-mirror-hammered-pvd-guide/01-hammered-brass-mitre-16058893050b.webp"
+    },
+    {
+      "placeholder": "2",
+      "file": "display-vitrines-hospitality-ffe/fluted-brass-counter.webp",
+      "key": "blog/architectural-metal-finishes-brushed-mirror-hammered-pvd-guide/02-fluted-brass-counter-6436e7068441.webp"
+    },
+    {
+      "placeholder": "3",
+      "file": "curved-architectural-cladding/satin-column-seam.webp",
+      "key": "blog/architectural-metal-finishes-brushed-mirror-hammered-pvd-guide/03-satin-column-seam-1d70634b24d9.webp"
+    },
+    {
+      "placeholder": "4",
+      "file": "curved-architectural-cladding/champagne-fluted-end-pod.webp",
+      "key": "blog/architectural-metal-finishes-brushed-mirror-hammered-pvd-guide/04-champagne-fluted-end-pod-1bdc90c778fa.webp"
+    },
+    {
+      "placeholder": "5",
+      "file": "display-vitrines-hospitality-ffe/satin-metal-display-island.webp",
+      "key": "blog/architectural-metal-finishes-brushed-mirror-hammered-pvd-guide/05-satin-metal-display-island-e3f1ac8046a3.webp"
+    }
+  ]
+}

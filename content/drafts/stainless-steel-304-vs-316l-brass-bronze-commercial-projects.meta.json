@@ -1,0 +1,42 @@
+{
+  "slug": "stainless-steel-304-vs-316l-brass-bronze-commercial-projects",
+  "title": "304 vs 316L Stainless Steel, Brass and Bronze for Commercial Metalwork",
+  "excerpt": "Choose substrates for commercial metalwork by exposure and fabrication. Compare 304 with 316L stainless steel, identify brass and bronze alloys, and specify PVD separately from the base grade.",
+  "category": "Materials & Finishes",
+  "status": "DRAFT",
+  "featured": false,
+  "coverImageAlt": "Curved stainless steel column shells standing beside vertical inspection lights in the workshop",
+  "sourceDir": "public/images/capabilities",
+  "keyPrefix": "blog/stainless-steel-304-vs-316l-brass-bronze-commercial-projects",
+  "cover": {
+    "file": "curved-architectural-cladding/full-height-column-light-check.webp",
+    "keyTemplate": "blog/stainless-steel-304-vs-316l-brass-bronze-commercial-projects/hero-{sha16}.webp"
+  },
+  "images": [
+    {
+      "placeholder": "1",
+      "file": "curved-architectural-cladding/full-height-column-light-check.webp",
+      "key": "blog/stainless-steel-304-vs-316l-brass-bronze-commercial-projects/01-full-height-column-light-check-de203ce966c4.webp"
+    },
+    {
+      "placeholder": "2",
+      "file": "custom-staircases-balustrades/handrail-bracket-weld.webp",
+      "key": "blog/stainless-steel-304-vs-316l-brass-bronze-commercial-projects/02-handrail-bracket-weld-c12005251622.webp"
+    },
+    {
+      "placeholder": "3",
+      "file": "display-vitrines-hospitality-ffe/hammered-brass-mitre.webp",
+      "key": "blog/stainless-steel-304-vs-316l-brass-bronze-commercial-projects/03-hammered-brass-mitre-16058893050b.webp"
+    },
+    {
+      "placeholder": "4",
+      "file": "display-vitrines-hospitality-ffe/fluted-brass-counter.webp",
+      "key": "blog/stainless-steel-304-vs-316l-brass-bronze-commercial-projects/04-fluted-brass-counter-6436e7068441.webp"
+    },
+    {
+      "placeholder": "5",
+      "file": "storefront-facades/facade-workshop-subframe.webp",
+      "key": "blog/stainless-steel-304-vs-316l-brass-bronze-commercial-projects/05-facade-workshop-subframe-30a9992a4e6d.webp"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "how-to-prepare-rfq-package-custom-architectural-metalwork",
+  "title": "How to Prepare an RFQ Package for Custom Architectural Metalwork",
+  "excerpt": "Build a fabricator-ready RFQ with coordinated drawings, finish and sample requirements, surveyed interfaces and a delivery route. Use the bid checklist to compare scope and assumptions.",
+  "category": "Procurement Guide",
+  "status": "DRAFT",
+  "featured": false,
+  "coverImageAlt": "Unfinished curved escalator panel with parallel flutes on a workshop bench",
+  "sourceDir": "public/images/capabilities",
+  "keyPrefix": "blog/how-to-prepare-rfq-package-custom-architectural-metalwork",
+  "cover": {
+    "file": "curved-architectural-cladding/bare-fluted-escalator-panel.webp",
+    "keyTemplate": "blog/how-to-prepare-rfq-package-custom-architectural-metalwork/hero-{sha16}.webp"
+  },
+  "images": [
+    {
+      "placeholder": "1",
+      "file": "curved-architectural-cladding/bare-fluted-escalator-panel.webp",
+      "key": "blog/how-to-prepare-rfq-package-custom-architectural-metalwork/01-bare-fluted-escalator-panel-70a47cf62442.webp"
+    },
+    {
+      "placeholder": "2",
+      "file": "custom-staircases-balustrades/formed-handrail-stock.webp",
+      "key": "blog/how-to-prepare-rfq-package-custom-architectural-metalwork/02-formed-handrail-stock-45cf7e49501a.webp"
+    },
+    {
+      "placeholder": "3",
+      "file": "display-vitrines-hospitality-ffe/lit-hammered-brass-vitrine.webp",
+      "key": "blog/how-to-prepare-rfq-package-custom-architectural-metalwork/03-lit-hammered-brass-vitrine-f6da25e50e10.webp"
+    },
+    {
+      "placeholder": "4",
+      "file": "custom-staircases-balustrades/balustrade-floor-layout.webp",
+      "key": "blog/how-to-prepare-rfq-package-custom-architectural-metalwork/04-balustrade-floor-layout-9acde9733714.webp"
+    }
+  ]
+}

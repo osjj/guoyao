@@ -1,3 +1,4 @@
+import { CAPABILITIES_PATH, CAPABILITY_LINKS } from "@/data/capabilities";
 import { DEFAULT_SITE_URL, SALES_EMAIL, SALES_WHATSAPP_CONTACTS } from "./site-identity";
 
 export type InquiryAnalyticsEvent = "generate_lead" | "contact_email" | "contact_whatsapp";
@@ -7,9 +8,9 @@ type AnalyticsSender = (name: InquiryAnalyticsEvent, parameters: InquiryAnalytic
 const contactLocations = new Set(["floating_rail", "inquiry_form", "footer", "page_content"]);
 const whatsappDestinations = new Set(SALES_WHATSAPP_CONTACTS.map(({ href }) => href));
 
-function pageType(sourcePath: string): string {
-  const path = sourcePath.split(/[?#]/, 1)[0].replace(/\/$/, "") || "/";
+function pageType(path: string): string {
   if (path === "/") return "home";
+  if (path === CAPABILITIES_PATH) return "capabilities";
   if (path === "/case-studies") return "projects";
   if (path.startsWith("/case-studies/")) return "project";
   if (path === "/blog") return "blog";
@@ -17,6 +18,14 @@ function pageType(sourcePath: string): string {
   if (path.startsWith("/products/")) return "product";
   if (path === "/about") return "about";
   return "other";
+}
+
+function pageAttribution(sourcePath: string): InquiryAnalyticsParameters {
+  const path = sourcePath.split(/[?#]/, 1)[0].replace(/\/$/, "") || "/";
+  const capability = CAPABILITY_LINKS.find(({ href }) => href === path);
+  return capability
+    ? { page_type: "capability", capability_slug: capability.slug }
+    : { page_type: pageType(path) };
 }
 
 export function createInquiryAnalytics(send: AnalyticsSender) {
@@ -42,7 +51,7 @@ export function createInquiryAnalytics(send: AnalyticsSender) {
     }): boolean {
       if (!responseOk || !result || typeof result !== "object" || !("success" in result) || result.success !== true) return false;
       if (!submissionId || countedSubmissions.has(submissionId)) return false;
-      const queued = emit("generate_lead", { form_id: "project_inquiry", page_type: pageType(sourcePath) });
+      const queued = emit("generate_lead", { form_id: "project_inquiry", ...pageAttribution(sourcePath) });
       if (queued) countedSubmissions.add(submissionId);
       return queued;
     },
@@ -63,7 +72,7 @@ export function createInquiryAnalytics(send: AnalyticsSender) {
         return false;
       }
       return emit(name, {
-        page_type: pageType(sourcePath),
+        ...pageAttribution(sourcePath),
         contact_location: contactLocations.has(location) ? location : "page_content",
       });
     },

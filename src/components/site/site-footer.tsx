@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { ArrowUpRight } from "lucide-react";
 import { BRIEF_CHECKLIST } from "@/data/homepage-redesign-data";
 import { COMPANY_NAME, SALES_EMAIL } from "@/lib/site-identity";
+import { CapabilityFooterLinks } from "./capability-footer-links";
 import { InquiryButton } from "./inquiry-contact";
 import { EmberField } from "./home-styles/style-10-liquid-effects";
 import { FoldedAlloyCanvas } from "./home-styles/style-13-folded-alloy-canvas";
@@ -79,6 +80,7 @@ export function SiteFooter() {
             <Link href="/about">About Guoyao</Link>
             <a href="#main-content">Back to top ↑</a>
           </nav>
+          <CapabilityFooterLinks className={`${mirror.footerLinks} ${alloyStyles.footerLinks} ${alloyStyles.footerCapabilities}`} />
         </div>
       </div>
     </footer>

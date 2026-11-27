@@ -1,0 +1,37 @@
+{
+  "slug": "why-1-to-1-factory-trial-assembly-matters-curved-metalwork",
+  "title": "What a 1:1 Factory Trial Assembly Should Prove for Curved Metalwork",
+  "excerpt": "Use a full-scale workshop trial to check the hard-to-correct interfaces in curved cladding, handrails and balustrades. Define the trial extent, datums, finish review and evidence before packing.",
+  "category": "Engineering & QC",
+  "status": "DRAFT",
+  "featured": false,
+  "coverImageAlt": "Four curved metal handrail runs on an unfinished stair mock-up in the workshop",
+  "sourceDir": "public/images/capabilities",
+  "keyPrefix": "blog/why-1-to-1-factory-trial-assembly-matters-curved-metalwork",
+  "cover": {
+    "file": "custom-staircases-balustrades/stair-handrail-full-scale-fit.webp",
+    "keyTemplate": "blog/why-1-to-1-factory-trial-assembly-matters-curved-metalwork/hero-{sha16}.webp"
+  },
+  "images": [
+    {
+      "placeholder": "1",
+      "file": "custom-staircases-balustrades/stair-handrail-full-scale-fit.webp",
+      "key": "blog/why-1-to-1-factory-trial-assembly-matters-curved-metalwork/01-stair-handrail-full-scale-fit-4d6e28de5247.webp"
+    },
+    {
+      "placeholder": "2",
+      "file": "custom-staircases-balustrades/balustrade-floor-layout.webp",
+      "key": "blog/why-1-to-1-factory-trial-assembly-matters-curved-metalwork/02-balustrade-floor-layout-9acde9733714.webp"
+    },
+    {
+      "placeholder": "3",
+      "file": "curved-architectural-cladding/full-height-column-light-check.webp",
+      "key": "blog/why-1-to-1-factory-trial-assembly-matters-curved-metalwork/03-full-height-column-light-check-de203ce966c4.webp"
+    },
+    {
+      "placeholder": "4",
+      "file": "curved-architectural-cladding/suspended-escalator-trial.webp",
+      "key": "blog/why-1-to-1-factory-trial-assembly-matters-curved-metalwork/04-suspended-escalator-trial-a16aaf7ca5f9.webp"
+    }
+  ]
+}

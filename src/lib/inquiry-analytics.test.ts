@@ -87,6 +87,31 @@ test("classifies core pages and falls back to a fixed value for unknown paths", 
   assert.deepEqual(events.map(({ parameters }) => parameters.page_type), ["projects", "blog", "product", "about", "other"]);
 });
 
+test("attributes leads and contacts to known capability pages", () => {
+  const { analytics, events } = recorder();
+  const slugs = ["storefront-facades", "curved-architectural-cladding", "custom-staircases-balustrades", "display-vitrines-hospitality-ffe"];
+  for (const slug of slugs) {
+    const sourcePath = `/capabilities/${slug}/?email=private@example.com`;
+    analytics.trackSavedInquiry({ ...saved, submissionId: slug, sourcePath });
+    analytics.trackContactClick({ href: "mailto:sales@guoyaometal.com", sourcePath, location: "footer" });
+  }
+  assert.deepEqual(events, slugs.flatMap((slug) => [
+    { name: "generate_lead", parameters: { form_id: "project_inquiry", page_type: "capability", capability_slug: slug } },
+    { name: "contact_email", parameters: { page_type: "capability", capability_slug: slug, contact_location: "footer" } },
+  ]));
+});
+
+test("uses a fixed classification for the capability overview and unknown capability paths", () => {
+  const { analytics, events } = recorder();
+  for (const sourcePath of ["/capabilities", "/capabilities/customer@example.com"]) {
+    analytics.trackContactClick({ href: "mailto:sales@guoyaometal.com", sourcePath, location: "footer" });
+  }
+  assert.deepEqual(events.map(({ parameters }) => parameters), [
+    { page_type: "capabilities", contact_location: "footer" },
+    { page_type: "other", contact_location: "footer" },
+  ]);
+});
+
 test("production transport queues Google Arguments commands before the tag initializes", () => {
   const originalEnvironment = process.env.NODE_ENV;
   const originalWindow = Object.getOwnPropertyDescriptor(globalThis, "window");

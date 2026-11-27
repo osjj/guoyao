@@ -19,11 +19,13 @@ import {
   type CSSProperties,
   type PointerEvent,
 } from "react";
+import { CapabilityFooterLinks } from "@/components/site/capability-footer-links";
 import { HeaderContactBar, InquiryButton } from "@/components/site/inquiry-contact";
 import {
   BRIEF_CHECKLIST,
   DISCIPLINES,
   FEATURED_ARTICLE,
+  type FeaturedArticle,
   FEATURED_CASE_STUDIES,
   PROCESS_STEPS,
   SURFACE_FINISHES,
@@ -170,15 +172,28 @@ function ParticleDisciplineLab() {
                     <li key={spec}>{spec}</li>
                   ))}
                 </ul>
-                <InquiryButton
-                  className={styles.glassCta}
-                  product={{ name: activeDiscipline.inquiry }}
-                >
-                  Request specs for {activeDiscipline.shortTitle.toLowerCase()}
-                  <ArrowUpRight size={15} aria-hidden="true" />
-                </InquiryButton>
+                <div className={alloyStyles.disciplineActions}>
+                  <InquiryButton
+                    className={styles.glassCta}
+                    product={{ name: activeDiscipline.inquiry }}
+                  >
+                    Request specs for {activeDiscipline.shortTitle.toLowerCase()}
+                    <ArrowUpRight size={15} aria-hidden="true" />
+                  </InquiryButton>
+                  <Link href={activeDiscipline.href} className={alloyStyles.disciplineExplore}>
+                    Explore {activeDiscipline.shortTitle} Capabilities
+                    <ArrowUpRight size={15} aria-hidden="true" />
+                  </Link>
+                </div>
               </div>
             </article>
+            <nav className={alloyStyles.disciplineLinks} aria-label="All fabrication disciplines">
+              {DISCIPLINES.map(({ href, shortTitle }) => (
+                <Link key={href} href={href} aria-label={`${shortTitle} capabilities`}>
+                  {shortTitle}
+                </Link>
+              ))}
+            </nav>
           </div>
         </div>
       </div>
@@ -386,7 +401,7 @@ function AlloyFinishLab() {
   );
 }
 
-export function Style13FoldedAlloy() {
+export function Style13FoldedAlloy({ featuredArticle = FEATURED_ARTICLE }: { featuredArticle?: FeaturedArticle }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [region, setRegion] = useState<RegionFilter>("All");
   const [showAllRecords, setShowAllRecords] = useState(false);
@@ -718,19 +733,19 @@ export function Style13FoldedAlloy() {
             </div>
           )}
 
-          <Link href={FEATURED_ARTICLE.href} className={styles.journalCard} onPointerMove={trackCardSheen}>
+          <Link href={featuredArticle.href} className={styles.journalCard} onPointerMove={trackCardSheen}>
             <div className={styles.journalMedia}>
               <Image
-                src={FEATURED_ARTICLE.image.src}
-                alt={FEATURED_ARTICLE.image.alt}
+                src={featuredArticle.image.src}
+                alt={featuredArticle.image.alt}
                 fill
                 sizes="(max-width: 820px) 100vw, 34vw"
               />
             </div>
             <div className={styles.journalBody}>
-              <span className={styles.eyebrow}>{FEATURED_ARTICLE.kicker}</span>
-              <h3>{FEATURED_ARTICLE.title}</h3>
-              <p>{FEATURED_ARTICLE.summary}</p>
+              <span className={styles.eyebrow}>{featuredArticle.kicker}</span>
+              <h3>{featuredArticle.title}</h3>
+              <p>{featuredArticle.summary}</p>
               <span className={styles.inlineLink}>
                 Read technical guide <ArrowUpRight size={16} aria-hidden="true" />
               </span>
@@ -790,6 +805,7 @@ export function Style13FoldedAlloy() {
               <Link href="/blog">Technical Journal</Link>
               <Link href="/about">About Guoyao</Link>
             </div>
+            <CapabilityFooterLinks className={`${styles.footerLinks} ${alloyStyles.footerLinks} ${alloyStyles.footerCapabilities}`} />
           </div>
         </div>
       </footer>

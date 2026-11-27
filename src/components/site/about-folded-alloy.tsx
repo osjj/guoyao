@@ -22,6 +22,7 @@ import {
   type CSSProperties,
   type PointerEvent,
 } from "react";
+import { CapabilityFooterLinks } from "@/components/site/capability-footer-links";
 import { HeaderContactBar, InquiryButton } from "@/components/site/inquiry-contact";
 import {
   BRIEF_CHECKLIST,
@@ -949,6 +950,7 @@ export function AboutFoldedAlloy() {
               <Link href="/blog">Technical Journal</Link>
               <Link href="/about">About Guoyao</Link>
             </div>
+            <CapabilityFooterLinks className={`${mirror.footerLinks} ${alloyStyles.footerLinks} ${alloyStyles.footerCapabilities}`} />
           </div>
         </div>
       </footer>

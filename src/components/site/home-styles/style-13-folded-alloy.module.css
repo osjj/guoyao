@@ -161,6 +161,45 @@
   flex-wrap: wrap;
 }
 
+.footerCapabilities {
+  flex-basis: 100%;
+}
+
+.disciplineActions,
+.disciplineLinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+}
+
+.disciplineExplore,
+.disciplineLinks a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 44px;
+  font-size: 0.84rem;
+  text-underline-offset: 4px;
+}
+
+.disciplineExplore {
+  color: var(--gold-bright);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.disciplineLinks {
+  padding-inline: 8px;
+  border-block-end: 1px solid var(--line);
+  color: var(--silver);
+}
+
+.disciplineLinks a:hover {
+  color: var(--gold-bright);
+  text-decoration: underline;
+}
+
 @media (max-width: 720px) {
   .footerBottom {
     --contact-clearance: calc(68px + max(12px, env(safe-area-inset-right, 0px)));

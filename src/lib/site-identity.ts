@@ -5,6 +5,7 @@ export const DEFAULT_SITE_URL = "https://www.guoyaometal.com";
 
 export const PRIMARY_NAVIGATION = [
   { href: "/", label: "Home" },
+  { href: "/capabilities", label: "Capabilities" },
   { href: "/case-studies", label: "Projects" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },

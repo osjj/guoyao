@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { CAPABILITIES, CAPABILITIES_OVERVIEW, CAPABILITIES_PATH } from "@/data/capabilities";
 import { getPublishedBlogSitemapEntries } from "@/lib/public-blog";
 import { getSiteUrl } from "@/lib/site-url";
 import { getPublishedCaseStudySitemapEntries } from "@/lib/public-case-studies";
@@ -28,6 +29,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: baseUrl,
       images: [`${baseUrl}/images/home-projects/extra/cartier-night.webp`],
     },
+    {
+      url: `${baseUrl}${CAPABILITIES_PATH}`,
+      images: sitemapImages(CAPABILITIES_OVERVIEW.heroImage.src, baseUrl),
+    },
+    ...CAPABILITIES.map(({ slug, heroImage }) => ({
+      url: `${baseUrl}${CAPABILITIES_PATH}/${slug}`,
+      images: sitemapImages(heroImage.src, baseUrl),
+    })),
     { url: `${baseUrl}/blog` },
     { url: `${baseUrl}/case-studies` },
     ...caseStudies.map((study) => ({
