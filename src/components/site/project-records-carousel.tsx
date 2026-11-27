@@ -49,7 +49,13 @@ function moveTrack(element: HTMLOListElement, direction: number, instant: boolea
   if (left !== undefined) element.scrollTo({ left, behavior: instant || next === undefined ? "instant" : "smooth" });
 }
 
-export function ProjectRecordsCarousel({ items }: { items: readonly ProjectRecord[] }) {
+export function ProjectRecordsCarousel({
+  items,
+  appearance = "atelier",
+}: {
+  items: readonly ProjectRecord[];
+  appearance?: "atelier" | "mirror";
+}) {
   const section = useRef<HTMLElement>(null);
   const track = useRef<HTMLOListElement>(null);
   const toggle = useRef<HTMLButtonElement>(null);
@@ -131,10 +137,12 @@ export function ProjectRecordsCarousel({ items }: { items: readonly ProjectRecor
 
   if (!items.length) return null;
 
+  const mirror = appearance === "mirror";
+
   return (
     <section
       ref={section}
-      className={styles.section}
+      className={mirror ? `${styles.section} ${styles.mirror}` : styles.section}
       id="project-records"
       aria-labelledby={`${id}-title`}
       aria-roledescription="carousel"
@@ -144,10 +152,14 @@ export function ProjectRecordsCarousel({ items }: { items: readonly ProjectRecor
       <div className={styles.inner}>
         <div className={styles.header}>
           <div>
-            <p className={styles.kicker}>SELECTED PROJECTS / 2016–2026</p>
+            {!mirror && <p className={styles.kicker}>SELECTED PROJECTS / 2016–2026</p>}
             <h2 id={`${id}-title`}>Project archive.</h2>
           </div>
-          <p className={styles.intro}>A selection of places and projects from our 2016–2026 portfolio.</p>
+          <p className={styles.intro}>
+            {mirror
+              ? "Selected entries from the 2016–2026 project register."
+              : "A selection of places and projects from our 2016–2026 portfolio."}
+          </p>
         </div>
         <ol
           ref={track}

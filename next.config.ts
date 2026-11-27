@@ -4,6 +4,20 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
   allowedDevOrigins: ["127.0.0.1"],
+  async redirects() {
+    return [
+      {
+        source: "/case-studies/tiffany-boutique-backlit-facade",
+        destination: "/case-studies/backlit-fluted-metal-boutique-facade",
+        permanent: true,
+      },
+      {
+        source: "/case-studies/lancome-boutique-entrance-pavilion",
+        destination: "/case-studies/elliptical-curved-metal-entrance-pavilion",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return ["/admin/:path*", "/api/:path*", "/healthz"].map((source) => ({
       source,

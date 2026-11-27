@@ -8,9 +8,16 @@ import { getSiteUrl } from "@/lib/site-url";
 import { canOptimizeImage } from "@/lib/image-optimization";
 import { CaseStudyImageGallery } from "./case-study-image-gallery";
 import { CaseStudyVideoPlayer } from "./case-study-video";
+import { InquiryButton } from "./inquiry-contact";
 import styles from "./metal-editorial.module.css";
 
-export function MetalCaseStudyArticle({ study, preview = false }: { study: CustomerCaseStudy; preview?: boolean }) {
+export function MetalCaseStudyArticle({
+  study,
+  preview = false,
+}: {
+  study: CustomerCaseStudy;
+  preview?: boolean;
+}) {
   const siteUrl = getSiteUrl();
   const videoSectionId = getCaseVideoSectionId(study.sections);
   let conclusionId = "project-reflections";
@@ -22,63 +29,268 @@ export function MetalCaseStudyArticle({ study, preview = false }: { study: Custo
     try {
       const target = new URL(link.href, siteUrl);
       return !/^\/(products|guides)(\/|$)/.test(target.pathname);
-    } catch { return false; }
+    } catch {
+      return false;
+    }
   });
   const structuredData = {
-    "@context": "https://schema.org", "@graph": [
+    "@context": "https://schema.org",
+    "@graph": [
       {
-        "@type": "Article", headline: study.title, description: study.excerpt,
-        dateModified: study.updatedAt, mainEntityOfPage: `${siteUrl}/case-studies/${study.slug}`,
+        "@type": "Article",
+        headline: study.title,
+        description: study.excerpt,
+        dateModified: study.updatedAt,
+        mainEntityOfPage: `${siteUrl}/case-studies/${study.slug}`,
         ...(study.coverImage ? { image: new URL(study.coverImage, siteUrl).href } : {}),
-        author: { "@type": "Organization", "@id": `${siteUrl}/#organization`, name: SITE_NAME, url: `${siteUrl}/` },
-        publisher: { "@type": "Organization", "@id": `${siteUrl}/#organization`, name: SITE_NAME },
+        author: {
+          "@type": "Organization",
+          "@id": `${siteUrl}/#organization`,
+          name: SITE_NAME,
+          url: `${siteUrl}/`,
+        },
+        publisher: {
+          "@type": "Organization",
+          "@id": `${siteUrl}/#organization`,
+          name: SITE_NAME,
+        },
       },
       {
-        "@type": "BreadcrumbList", itemListElement: [
+        "@type": "BreadcrumbList",
+        itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
           { "@type": "ListItem", position: 2, name: "Case Studies", item: `${siteUrl}/case-studies` },
-          { "@type": "ListItem", position: 3, name: study.title, item: `${siteUrl}/case-studies/${study.slug}` },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: study.title,
+            item: `${siteUrl}/case-studies/${study.slug}`,
+          },
         ],
       },
     ],
   };
 
-  return <article className={styles.page}>
-    {!preview && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />}
-    <header className={`${styles.container} ${styles.detailHeader}`}>
-      <Link href="/case-studies" className={styles.back}><ArrowLeft size={15} aria-hidden="true" />Back to case studies</Link>
-      <p className={styles.eyebrow}>{study.category}</p>
-      <h1>{study.title}</h1><p className={styles.detailSummary}>{study.excerpt}</p>
-      <div className={styles.meta}><span>By <Link href="/about">{SITE_NAME}</Link></span><span>Updated <time dateTime={study.updatedAt}>{new Intl.DateTimeFormat("en", { dateStyle: "medium", timeZone: "UTC" }).format(new Date(study.updatedAt))}</time></span></div>
-    </header>
-    {study.coverImage && <div className={styles.container}><div className={styles.detailCover}>
-      <Image src={study.coverImage} alt={study.coverImageAlt || study.title} fill preload unoptimized={!canOptimizeImage(study.coverImage)} sizes="(min-width: 1600px) 1440px, 92vw" />
-    </div></div>}
-    <div className={styles.container}>
-      <section className={styles.projectIntro} aria-labelledby="project-overview"><div><p className={styles.eyebrow}>The project</p><h2 id="project-overview">A closer look at the brief.</h2></div><p>{study.introduction}</p></section>
-      {study.stats.length > 0 && <dl className={styles.stats} aria-label="Project at a glance">{study.stats.map((stat, index) => <div key={`${stat.label}-${index}`}><dt>{stat.label}</dt><dd>{stat.value}</dd></div>)}</dl>}
-    </div>
-    <div className={`${styles.container} ${styles.readingLayout}`}>
-      <aside className={styles.contents}>
-        <nav aria-label="In this case study"><p className={styles.eyebrow}>Inside the project</p><ol>{study.video && <li><a href={`#${videoSectionId}`}>Project video</a></li>}{study.sections.map((section) => <li key={section.id}><a href={`#${section.id}`}>{section.navLabel}</a></li>)}<li><a href={`#${conclusionId}`}>Project reflections</a></li></ol></nav>
-        {relatedLinks.length > 0 && <nav className={styles.related} aria-label="Related reading"><p className={styles.eyebrow}>Related reading</p><ol>{relatedLinks.map((link, index) => <li key={`${link.href}-${index}`}><Link href={link.href}>{link.label}</Link></li>)}</ol></nav>}
-      </aside>
-      <div className={styles.prose}>
-        {study.video && <section id={videoSectionId} className={styles.projectSection} aria-label={study.video.title}>
-          <p className={styles.eyebrow}>Project video</p><h2>{study.video.title}</h2>
-          <CaseStudyVideoPlayer video={study.video} />
-        </section>}
-        {study.sections.map((section, index) => <section id={section.id} key={section.id} className={styles.projectSection}>
-          <p className={styles.eyebrow}>{String(index + 1).padStart(2, "0")} / {section.navLabel}</p><h2>{section.title}</h2>
-          {section.paragraphs.map((paragraph, paragraphIndex) => <p key={paragraphIndex}>{paragraph}</p>)}
-          <CaseStudyImageGallery images={getCaseSectionImages(section)} label={section.title} />
-          {section.video && <CaseStudyVideoPlayer video={section.video} />}
-          {section.points && <ul className={styles.points}>{section.points.map((point, pointIndex) => <li key={pointIndex}><h3>{point.title}</h3><p>{point.text}</p></li>)}</ul>}
-          {section.table && <div className={styles.tableWrap}><table><caption>{section.table.caption}</caption><thead><tr>{section.table.headings.map((heading, headingIndex) => <th scope="col" key={headingIndex}>{heading}</th>)}</tr></thead><tbody>{section.table.rows.map((row, rowIndex) => <tr key={rowIndex}>{row.map((cell, cellIndex) => cellIndex === 0 ? <th scope="row" key={cellIndex}>{cell}</th> : <td key={cellIndex}>{cell}</td>)}</tr>)}</tbody></table></div>}
-        </section>)}
-        <section id={conclusionId} className={styles.projectConclusion}><p className={styles.eyebrow}>Project reflections</p><h2>From the brief to the detail.</h2><p>{study.conclusion}</p></section>
+  return (
+    <article className={`${styles.page} ${preview ? styles.previewShell : ""}`}>
+      {!preview && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+          }}
+        />
+      )}
+
+      <div className={styles.detailHeroBand}>
+        <header className={`${styles.container} ${styles.detailHeader}`}>
+          <Link href="/case-studies" className={styles.back}>
+            <ArrowLeft size={15} aria-hidden="true" />
+            Back to case studies
+          </Link>
+          <p className={styles.eyebrow}>{study.category}</p>
+          <h1>{study.title}</h1>
+          <p className={styles.detailSummary}>{study.excerpt}</p>
+          <div className={styles.meta}>
+            <span>
+              By <Link href="/about">{SITE_NAME}</Link>
+            </span>
+            <span>
+              Updated{" "}
+              <time dateTime={study.updatedAt}>
+                {new Intl.DateTimeFormat("en", { dateStyle: "medium", timeZone: "UTC" }).format(
+                  new Date(study.updatedAt),
+                )}
+              </time>
+            </span>
+            <span>Documented Fabrication Record</span>
+          </div>
+        </header>
+
+        {study.coverImage && (
+          <div className={styles.container}>
+            <div className={styles.detailCover}>
+              <Image
+                src={study.coverImage}
+                alt={study.coverImageAlt || study.title}
+                fill
+                priority
+                unoptimized={!canOptimizeImage(study.coverImage)}
+                sizes="(min-width: 1440px) 1320px, 92vw"
+              />
+            </div>
+          </div>
+        )}
       </div>
-    </div>
-    <footer className={styles.readingEnd}><div className={styles.container}><span>Discover more material stories.</span><Link href="/case-studies" className={styles.textLink}>Explore case studies<ArrowUpRight size={18} aria-hidden="true" /></Link></div></footer>
-  </article>;
+
+      <div className={styles.container}>
+        <section className={styles.projectIntro} aria-labelledby="project-overview">
+          <div>
+            <p className={styles.eyebrow}>The Project Brief</p>
+            <h2 id="project-overview">
+              A closer look <span className={styles.displayItalic}>at the brief.</span>
+            </h2>
+          </div>
+          <p>{study.introduction}</p>
+        </section>
+
+        {study.stats.length > 0 && (
+          <dl className={styles.stats} aria-label="Project at a glance">
+            {study.stats.map((stat, index) => (
+              <div key={`${stat.label}-${index}`}>
+                <dt>{stat.label}</dt>
+                <dd>{stat.value}</dd>
+              </div>
+            ))}
+          </dl>
+        )}
+      </div>
+
+      <div className={`${styles.container} ${styles.readingLayout}`}>
+        <aside className={styles.contents}>
+          <div className={styles.contentsCard}>
+            <nav aria-label="In this case study">
+              <p className={styles.eyebrow}>Inside the project</p>
+              <ol>
+                {study.video && (
+                  <li>
+                    <a href={`#${videoSectionId}`}>Project video</a>
+                  </li>
+                )}
+                {study.sections.map((section, idx) => (
+                  <li key={section.id}>
+                    <a href={`#${section.id}`}>
+                      <span>{String(idx + 1).padStart(2, "0")}</span>
+                      {section.navLabel}
+                    </a>
+                  </li>
+                ))}
+                <li>
+                  <a href={`#${conclusionId}`}>
+                    <span>{String(study.sections.length + 1).padStart(2, "0")}</span>
+                    Project reflections
+                  </a>
+                </li>
+              </ol>
+            </nav>
+
+            {relatedLinks.length > 0 && (
+              <nav className={styles.related} aria-label="Related reading">
+                <p className={styles.eyebrow}>Related reading</p>
+                <ol>
+                  {relatedLinks.map((link, index) => (
+                    <li key={`${link.href}-${index}`}>
+                      <Link href={link.href}>
+                        {link.label}
+                        <ArrowUpRight size={13} aria-hidden="true" />
+                      </Link>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            )}
+          </div>
+        </aside>
+
+        <div className={styles.prose}>
+          {study.video && (
+            <section
+              id={videoSectionId}
+              className={styles.projectSection}
+              aria-label={study.video.title}
+            >
+              <p className={styles.eyebrow}>Project video</p>
+              <h2>{study.video.title}</h2>
+              <CaseStudyVideoPlayer video={study.video} />
+            </section>
+          )}
+
+          {study.sections.map((section, index) => (
+            <section id={section.id} key={section.id} className={styles.projectSection}>
+              <p className={styles.eyebrow}>
+                {String(index + 1).padStart(2, "0")} · {section.navLabel}
+              </p>
+              <h2>{section.title}</h2>
+              {section.paragraphs.map((paragraph, paragraphIndex) => (
+                <p key={paragraphIndex}>{paragraph}</p>
+              ))}
+              <CaseStudyImageGallery images={getCaseSectionImages(section)} label={section.title} />
+              {section.video && <CaseStudyVideoPlayer video={section.video} />}
+              {section.points && (
+                <ul className={styles.points}>
+                  {section.points.map((point, pointIndex) => (
+                    <li key={pointIndex}>
+                      <h3>{point.title}</h3>
+                      <p>{point.text}</p>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {section.table && (
+                <div className={styles.tableWrap}>
+                  <table>
+                    <caption>{section.table.caption}</caption>
+                    <thead>
+                      <tr>
+                        {section.table.headings.map((heading, headingIndex) => (
+                          <th scope="col" key={headingIndex}>
+                            {heading}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {section.table.rows.map((row, rowIndex) => (
+                        <tr key={rowIndex}>
+                          {row.map((cell, cellIndex) =>
+                            cellIndex === 0 ? (
+                              <th scope="row" key={cellIndex}>
+                                {cell}
+                              </th>
+                            ) : (
+                              <td key={cellIndex}>{cell}</td>
+                            ),
+                          )}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </section>
+          ))}
+
+          <section id={conclusionId} className={styles.projectConclusion}>
+            <p className={styles.eyebrow}>Project reflections</p>
+            <h2>
+              From the brief <span className={styles.displayItalic}>to the detail.</span>
+            </h2>
+            <p>{study.conclusion}</p>
+          </section>
+        </div>
+      </div>
+
+      <footer className={styles.readingEnd}>
+        <div className={`${styles.container} ${styles.readingEndInner}`}>
+          <div>
+            <p className={styles.eyebrow}>Continue Exploring</p>
+            <span>Discover more documented architectural metalwork stories.</span>
+          </div>
+          <div className={styles.readingEndActions}>
+            {!preview && (
+              <InquiryButton
+                className={styles.moltenCta}
+                product={{ name: `Similar project to ${study.title}` }}
+              >
+                Discuss a similar brief <ArrowUpRight size={16} aria-hidden="true" />
+              </InquiryButton>
+            )}
+            <Link href="/case-studies" className={styles.outlineBtn}>
+              Explore all case studies <ArrowUpRight size={16} aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
+      </footer>
+    </article>
+  );
 }

@@ -3,6 +3,9 @@ import { test } from "node:test";
 import { changedCopyFields, mergeSelectedCopy, suggestedSectionKeys, validateRewrite, rewriteRequestSchema, type RewriteRequest } from "../src/lib/product-copy";
 import { authorizedCopyImageUrl, generateProductCopy } from "../src/lib/product-copy-ai";
 
+const testSiteUrl = "https://store.example.test";
+const testMediaUrl = "https://media.example.test";
+
 const request: RewriteRequest = {
   mode: "rewrite", buyerFocus: "", verifiedNotes: "", images: [],
   copy: { name: "300 ml Glass Bottle", summary: "Clear glass bottle, 300 ml.", description: "Glass bottle.", features: ["Capacity: 300 ml"],
@@ -75,16 +78,18 @@ test("rejects unauthorized fields and absent required input", () => {
   assert.equal(rewriteRequestSchema.safeParse({ ...request, mode: "optimize", images: Array.from({ length: 6 }, () => ({ url: "https://www.glarivoglass.com/images/a.webp", role: "gallery" })) }).success, false);
 });
 test("reference images must come from public site or configured media", () => {
-  const previous = process.env.R2_PUBLIC_URL;
-  process.env.R2_PUBLIC_URL = "https://media.glarivoglass.com";
+  const previous = { site: process.env.NEXT_PUBLIC_SITE_URL, media: process.env.R2_PUBLIC_URL };
+  process.env.NEXT_PUBLIC_SITE_URL = testSiteUrl;
+  process.env.R2_PUBLIC_URL = testMediaUrl;
   try {
-    assert.equal(authorizedCopyImageUrl("/images/products/bottle.webp"), "https://www.glarivoglass.com/images/products/bottle.webp");
-    assert.equal(authorizedCopyImageUrl("https://media.glarivoglass.com/products/bottle.webp"), "https://media.glarivoglass.com/products/bottle.webp");
-    for (const value of ["https://example.com/a.webp", "http://media.glarivoglass.com/a.webp", "https://www.glarivoglass.com/api/admin/secret.png", "https://media.glarivoglass.com/a.webp?token=secret"]) {
+    assert.equal(authorizedCopyImageUrl("/images/products/bottle.webp"), `${testSiteUrl}/images/products/bottle.webp`);
+    assert.equal(authorizedCopyImageUrl(`${testMediaUrl}/products/bottle.webp`), `${testMediaUrl}/products/bottle.webp`);
+    for (const value of ["https://example.com/a.webp", "http://media.example.test/a.webp", `${testSiteUrl}/api/admin/secret.png`, `${testMediaUrl}/a.webp?token=secret`]) {
       assert.throws(() => authorizedCopyImageUrl(value));
     }
   } finally {
-    if (previous === undefined) delete process.env.R2_PUBLIC_URL; else process.env.R2_PUBLIC_URL = previous;
+    if (previous.site === undefined) delete process.env.NEXT_PUBLIC_SITE_URL; else process.env.NEXT_PUBLIC_SITE_URL = previous.site;
+    if (previous.media === undefined) delete process.env.R2_PUBLIC_URL; else process.env.R2_PUBLIC_URL = previous.media;
   }
 });
 test("upstream request disables storage, uses structured output and does not expose upstream errors", async () => {
@@ -108,11 +113,12 @@ test("upstream request disables storage, uses structured output and does not exp
   }
 });
 test("optimization sends selected photos with text and accepts a text-only section", async () => {
-  const previous = { key: process.env.OPENAI_API_KEY, endpoint: process.env.OPENAI_API_ENDPOINT, fetch: globalThis.fetch };
+  const previous = { key: process.env.OPENAI_API_KEY, endpoint: process.env.OPENAI_API_ENDPOINT, site: process.env.NEXT_PUBLIC_SITE_URL, fetch: globalThis.fetch };
   process.env.OPENAI_API_KEY = "test-only"; process.env.OPENAI_API_ENDPOINT = "https://api.openai.com";
+  process.env.NEXT_PUBLIC_SITE_URL = testSiteUrl;
   const input: RewriteRequest = { ...request, mode: "optimize", fields: ["features", "contentSections"], buyerFocus: "Restaurant buyers",
     copy: { ...request.copy, features: Array.from({ length: 5 }, () => "Glass bottle") },
-    images: [{ url: "https://www.glarivoglass.com/images/products/bottle.webp", role: "gallery" }] };
+    images: [{ url: `${testSiteUrl}/images/products/bottle.webp`, role: "gallery" }] };
   try {
     globalThis.fetch = async (_url, init) => {
       const body = JSON.parse(String(init?.body));
@@ -143,5 +149,6 @@ test("optimization sends selected photos with text and accepts a text-only secti
     globalThis.fetch = previous.fetch;
     if (previous.key === undefined) delete process.env.OPENAI_API_KEY; else process.env.OPENAI_API_KEY = previous.key;
     if (previous.endpoint === undefined) delete process.env.OPENAI_API_ENDPOINT; else process.env.OPENAI_API_ENDPOINT = previous.endpoint;
+    if (previous.site === undefined) delete process.env.NEXT_PUBLIC_SITE_URL; else process.env.NEXT_PUBLIC_SITE_URL = previous.site;
   }
 });
