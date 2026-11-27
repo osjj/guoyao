@@ -1,38 +1,50 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import backlitFacade from "../content/case-drafts/backlit-fluted-metal-boutique-facade.meta.json";
+import escalator from "../content/case-drafts/curved-fluted-escalator-atrium-cladding.meta.json";
+import entrancePavilion from "../content/case-drafts/elliptical-curved-metal-entrance-pavilion.meta.json";
+import staircase from "../content/case-drafts/helical-metal-feature-staircase.meta.json";
+import hotelLobby from "../content/case-drafts/luxury-hotel-lobby-brass-vitrines-ffe.meta.json";
+import columnCladding from "../content/case-drafts/murray-road-column-cladding.meta.json";
 import { getEditorialSeo } from "../src/lib/editorial-seo";
 
-const caseStudy = {
-  slug: "tiffany-boutique-backlit-facade",
-  title: "Tiffany & Co. Boutique Backlit Facade — From Inquiry to Acceptance",
-  excerpt: "How Guoyao Metalwork delivered a backlit fluted silver facade and illuminated TIFFANY & CO. lettering for luxury boutiques in China — 18 documented stages from the first inquiry through fabrication, mock-up, export packing and site installation to final acceptance and aftercare.",
-};
+const reviewedCases = [
+  [backlitFacade, "Backlit Fluted Metal Boutique Storefront Facade"],
+  [escalator, "Double-Curved Fluted Metal Escalator Cladding"],
+  [entrancePavilion, "Elliptical Curved Metal Retail Entrance Pavilion"],
+  [staircase, "Helical Metal Feature Staircase & Balustrade"],
+  [hotelLobby, "Hotel Lobby Brass Display Vitrines & FF&E"],
+  [columnCladding, "Double-Curved Stainless Steel Column Cladding"],
+] as const;
 
-test("reviewed case metadata is concise while source content stays intact", () => {
-  const original = { ...caseStudy };
-  const metadata = getEditorialSeo("case-studies", caseStudy);
-  assert.equal(metadata.title, "Tiffany & Co. Backlit Metal Facade");
-  assert.ok(metadata.description.length < caseStudy.excerpt.length);
-  assert.ok(metadata.description.endsWith("."));
-  assert.ok(!metadata.title.includes("GUOYAO METAL"));
-  assert.deepEqual(caseStudy, original);
-});
+for (const [{ slug, title, excerpt }, expectedTitle] of reviewedCases) {
+  test(`reviewed case metadata is concise for ${slug}`, () => {
+    const source = { slug, title, excerpt };
+    const metadata = getEditorialSeo("case-studies", source);
+
+    assert.equal(metadata.title, expectedTitle);
+    assert.ok(metadata.title.length <= 60);
+    assert.ok(metadata.description.length <= 155);
+    assert.ok(metadata.description.length < excerpt.length && metadata.description.endsWith("."));
+    assert.deepEqual(source, { slug, title, excerpt });
+  });
+}
 
 test("unknown entries and another editorial kind retain the supplied metadata", () => {
   const source = { slug: "new-project", title: "New project", excerpt: "New project description." };
   assert.deepEqual(getEditorialSeo("case-studies", source), { title: source.title, description: source.excerpt });
-  assert.deepEqual(getEditorialSeo("blog", caseStudy), { title: caseStudy.title, description: caseStudy.excerpt });
+  assert.deepEqual(getEditorialSeo("blog", backlitFacade), { title: backlitFacade.title, description: backlitFacade.excerpt });
 });
 
 test("changing a reviewed source title disables the old editorial override", () => {
-  const source = { ...caseStudy, title: "Revised Tiffany project" };
+  const source = { ...backlitFacade, title: "Revised storefront project" };
   assert.deepEqual(getEditorialSeo("case-studies", source), { title: source.title, description: source.excerpt });
 });
 
 test("a later excerpt edit takes precedence over the reviewed description", () => {
-  const source = { ...caseStudy, excerpt: "A newly edited description of the project." };
+  const source = { ...backlitFacade, excerpt: "A newly edited description of the project." };
   const metadata = getEditorialSeo("case-studies", source);
-  assert.equal(metadata.title, "Tiffany & Co. Backlit Metal Facade");
+  assert.equal(metadata.title, "Backlit Fluted Metal Boutique Storefront Facade");
   assert.equal(metadata.description, source.excerpt);
 });
 

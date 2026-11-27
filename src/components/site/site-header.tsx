@@ -4,38 +4,34 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { Logo } from "./logo";
-import { InquiryButton } from "./inquiry-contact";
-import styles from "./metal-shell.module.css";
-
-const navigation = [
-  { href: "/", label: "Home" },
-  { href: "/case-studies", label: "Projects" },
-  { href: "/blog", label: "Blog" },
-  { href: "/about", label: "About" },
-] as const;
+import { PRIMARY_NAVIGATION } from "@/lib/site-identity";
+import { HeaderContactBar, InquiryButton } from "./inquiry-contact";
+import mirror from "./home-styles/style-10-liquid.module.css";
+import alloyStyles from "./home-styles/style-13-folded-alloy.module.css";
 
 export function SiteHeader() {
   const pathname = usePathname();
-  if (pathname === "/") return null;
-  return <InnerSiteHeader />;
+  if (pathname === "/" || pathname === "/about") return null;
+  return <AlloyInnerHeader />;
 }
 
-function InnerSiteHeader() {
+function AlloyInnerHeader() {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
-  const [animated, setAnimated] = useState(false);
-  const trigger = useRef<HTMLButtonElement>(null);
-  const header = useRef<HTMLElement>(null);
-  const readingProgress = useRef<HTMLDivElement>(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const progressRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let frame = 0;
     const update = () => {
       frame = 0;
-      const distance = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const doc = document.documentElement;
+      const distance = doc.scrollHeight - doc.clientHeight;
       const progress = distance > 0 ? Math.min(1, Math.max(0, window.scrollY / distance)) : 0;
-      if (readingProgress.current) readingProgress.current.style.transform = `scaleX(${progress})`;
+      if (progressRef.current) {
+        progressRef.current.style.transform = `scaleX(${progress})`;
+      }
     };
     const schedule = () => {
       if (!frame) frame = window.requestAnimationFrame(update);
@@ -57,34 +53,127 @@ function InnerSiteHeader() {
   }, [pathname]);
 
   useEffect(() => {
-    if (!open) return;
-    const close = (event: KeyboardEvent) => {
-      if (event.key === "Escape") { setAnimated(false); setOpen(false); trigger.current?.focus(); }
-    };
-    const outside = (event: PointerEvent) => {
-      if (event.target instanceof Node && !header.current?.contains(event.target)) { setAnimated(true); setOpen(false); }
-    };
-    document.addEventListener("keydown", close);
-    document.addEventListener("pointerdown", outside);
-    return () => { document.removeEventListener("keydown", close); document.removeEventListener("pointerdown", outside); };
-  }, [open]);
+    if (!menuOpen) return;
 
-  const active = (href: string) => href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
+    const desktop = window.matchMedia("(width > 960px)");
+    const closeOnDesktop = () => {
+      if (desktop.matches) setMenuOpen(false);
+    };
+    const dialogIsOpen = () => document.querySelector("dialog[open]") !== null;
+    const closeOnOutsidePress = (event: globalThis.PointerEvent) => {
+      if (dialogIsOpen()) return;
+      if (event.target instanceof Node && !headerRef.current?.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    };
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key !== "Escape" || event.defaultPrevented || dialogIsOpen()) return;
+      if (headerRef.current?.contains(document.activeElement)) {
+        menuButtonRef.current?.focus();
+      }
+      setMenuOpen(false);
+    };
+
+    desktop.addEventListener("change", closeOnDesktop);
+    document.addEventListener("pointerdown", closeOnOutsidePress);
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      desktop.removeEventListener("change", closeOnDesktop);
+      document.removeEventListener("pointerdown", closeOnOutsidePress);
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [menuOpen]);
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
+
   return (
-    <header ref={header} className={styles.header} onKeyDownCapture={event => { if (event.key === "Tab" || event.key === "Escape") setAnimated(false); }}>
-      <div className={styles.headerInner}>
-        <Logo compact variant="white" />
-        <nav className={styles.desktopNav} aria-label="Primary navigation">
-          {navigation.map((item) => <Link key={item.href} href={item.href} className={active(item.href) ? styles.active : ""} aria-current={active(item.href) ? "page" : undefined}>{item.label}</Link>)}
+    <>
+      <div
+        ref={progressRef}
+        className={mirror.scrollTrack}
+        style={{ transform: "scaleX(0)" }}
+        aria-hidden="true"
+      />
+      <header
+        ref={headerRef}
+        className={`${mirror.header} ${alloyStyles.navigationHeader}`}
+        style={{
+          position: "fixed",
+          inset: "0 0 auto",
+          zIndex: 55,
+          paddingTop: "env(safe-area-inset-top, 0px)",
+          background: "rgba(5, 6, 8, 0.88)",
+        }}
+      >
+        <div className={mirror.headerInner}>
+          <Link
+            href="/"
+            className={mirror.brand}
+            aria-label="Guoyao Metal, home"
+            onClick={() => setMenuOpen(false)}
+          >
+            <span className={mirror.brandOrb} aria-hidden="true" />
+            <span>GUOYAO</span>
+            <span className={mirror.brandSub}>METAL</span>
+          </Link>
+
+          <nav className={`${mirror.nav} ${alloyStyles.primaryNav}`} aria-label="Primary navigation">
+            {PRIMARY_NAVIGATION.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                aria-current={isActive(href) ? "page" : undefined}
+              >
+                {label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className={mirror.headerRight}>
+            <HeaderContactBar />
+            <InquiryButton className={`${mirror.moltenCta} ${alloyStyles.desktopInquiry}`}>
+              Start a Project <ArrowUpRight size={15} aria-hidden="true" />
+            </InquiryButton>
+            <button
+              type="button"
+              ref={menuButtonRef}
+              className={`${mirror.menuBtn} ${alloyStyles.menuToggle}`}
+              aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={menuOpen}
+              aria-controls="site-mobile-nav"
+              onClick={() => setMenuOpen((v) => !v)}
+            >
+              {menuOpen ? <X size={18} aria-hidden="true" /> : <Menu size={18} aria-hidden="true" />}
+              Menu
+            </button>
+          </div>
+        </div>
+
+        <nav
+          id="site-mobile-nav"
+          className={`${mirror.mobileNav} ${alloyStyles.mobileMenu}`}
+          hidden={!menuOpen}
+          aria-label="Mobile navigation"
+        >
+          {PRIMARY_NAVIGATION.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              aria-current={isActive(href) ? "page" : undefined}
+              onClick={() => {
+                if (isActive(href)) menuButtonRef.current?.focus();
+                setMenuOpen(false);
+              }}
+            >
+              {label}
+            </Link>
+          ))}
+          <InquiryButton className={mirror.moltenCta}>
+            Start a Project <ArrowUpRight size={15} aria-hidden="true" />
+          </InquiryButton>
         </nav>
-        <InquiryButton className={styles.headerCta}>Discuss a project <ArrowUpRight size={16} aria-hidden="true" /></InquiryButton>
-        <button ref={trigger} type="button" className={styles.menuToggle} aria-expanded={open} aria-controls="mobile-navigation" aria-label={open ? "Close navigation" : "Open navigation"} onClick={event => { setAnimated(event.detail > 0); setOpen(!open); }}>{open ? <X size={23} /> : <Menu size={23} />}</button>
-      </div>
-      <nav className={styles.mobileNav} id="mobile-navigation" aria-label="Mobile navigation" hidden={!open} inert={!open} data-motion={animated}>
-        {navigation.map((item, index) => <Link key={item.href} href={item.href} aria-current={active(item.href) ? "page" : undefined} onClick={event => { setAnimated(event.detail > 0); setOpen(false); }}><span>0{index + 1}</span>{item.label}<ArrowUpRight size={22} aria-hidden="true" /></Link>)}
-        <p>Custom architectural metalwork.<br />For retail and architectural spaces.</p>
-      </nav>
-      <div className={styles.readingProgress} aria-hidden="true"><div ref={readingProgress} className={styles.readingProgressFill} /></div>
-    </header>
+      </header>
+    </>
   );
 }

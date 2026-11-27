@@ -160,7 +160,11 @@ function createProgram(gl: WebGLRenderingContext) {
   return null;
 }
 
-function startAlloy(canvas: HTMLCanvasElement, hero: HTMLElement) {
+type AlloyPlacement = "hero" | "footer";
+
+function startAlloy(canvas: HTMLCanvasElement, placement: AlloyPlacement) {
+  const isFooter = placement === "footer";
+  const hero = isFooter ? null : canvas.closest("section");
   const gl = canvas.getContext("webgl", { alpha: true, antialias: true, depth: true });
   if (!gl) return;
 
@@ -209,7 +213,7 @@ function startAlloy(canvas: HTMLCanvasElement, hero: HTMLElement) {
 
   const draw = () => {
     const still = motion.matches;
-    gl.uniform1f(uniforms.time, still ? 0 : time);
+    gl.uniform1f(uniforms.time, still ? 0 : time * (isFooter ? 0.44 : 1));
     gl.uniform3f(uniforms.cursor, cursor.x, cursor.y, still ? 0 : cursor.strength);
     gl.uniform3f(uniforms.ripple, ripple.x, ripple.y, still ? 3 : time - ripple.start);
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
@@ -252,11 +256,12 @@ function startAlloy(canvas: HTMLCanvasElement, hero: HTMLElement) {
     const aspect = width / height;
     const blend = Math.max(0, Math.min(1, (aspect - 0.52) / (1.1 - 0.52)));
     const portrait = 1 - blend * blend * (3 - 2 * blend);
-    composition.x = 0.44 + 0.23 * portrait;
-    composition.y = 0.11 * portrait;
-    composition.scale = 1 - 0.28 * portrait;
+    composition.x = isFooter ? 0.63 + 0.12 * portrait : 0.44 + 0.23 * portrait;
+    composition.y = isFooter ? -0.17 + 0.12 * portrait : 0.11 * portrait;
+    composition.scale = isFooter ? 1.28 - 0.49 * portrait : 1 - 0.28 * portrait;
     composition.aspect = aspect;
-    const resolution = Math.min(window.devicePixelRatio || 1, 1.25, Math.sqrt(1_050_000 / (width * height)));
+    const maxPixels = isFooter ? 680_000 : 1_050_000;
+    const resolution = Math.min(window.devicePixelRatio || 1, 1.25, Math.sqrt(maxPixels / (width * height)));
     canvas.width = Math.round(width * resolution);
     canvas.height = Math.round(height * resolution);
     gl.viewport(0, 0, canvas.width, canvas.height);
@@ -296,9 +301,9 @@ function startAlloy(canvas: HTMLCanvasElement, hero: HTMLElement) {
   size.observe(canvas);
   motion.addEventListener("change", syncAnimation);
   document.addEventListener("visibilitychange", syncAnimation);
-  hero.addEventListener("pointermove", onMove, { passive: true });
-  hero.addEventListener("pointerleave", onLeave);
-  hero.addEventListener("pointerdown", onDown, { passive: true });
+  hero?.addEventListener("pointermove", onMove, { passive: true });
+  hero?.addEventListener("pointerleave", onLeave);
+  hero?.addEventListener("pointerdown", onDown, { passive: true });
   resize();
 
   return () => {
@@ -307,29 +312,28 @@ function startAlloy(canvas: HTMLCanvasElement, hero: HTMLElement) {
     size.disconnect();
     motion.removeEventListener("change", syncAnimation);
     document.removeEventListener("visibilitychange", syncAnimation);
-    hero.removeEventListener("pointermove", onMove);
-    hero.removeEventListener("pointerleave", onLeave);
-    hero.removeEventListener("pointerdown", onDown);
+    hero?.removeEventListener("pointermove", onMove);
+    hero?.removeEventListener("pointerleave", onLeave);
+    hero?.removeEventListener("pointerdown", onDown);
     delete canvas.dataset.rendered;
     release();
   };
 }
 
-export function FoldedAlloyCanvas({ className }: { className: string }) {
+export function FoldedAlloyCanvas({ className, placement = "hero" }: { className: string; placement?: AlloyPlacement }) {
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = ref.current;
-    const hero = canvas?.closest("section");
-    if (!canvas || !hero) return;
+    if (!canvas) return;
 
-    let stop = startAlloy(canvas, hero);
+    let stop = startAlloy(canvas, placement);
     const onLost = (event: Event) => {
       event.preventDefault();
       stop?.();
       stop = undefined;
     };
-    const onRestored = () => { stop = startAlloy(canvas, hero); };
+    const onRestored = () => { stop = startAlloy(canvas, placement); };
     canvas.addEventListener("webglcontextlost", onLost);
     canvas.addEventListener("webglcontextrestored", onRestored);
     return () => {
@@ -337,7 +341,7 @@ export function FoldedAlloyCanvas({ className }: { className: string }) {
       canvas.removeEventListener("webglcontextlost", onLost);
       canvas.removeEventListener("webglcontextrestored", onRestored);
     };
-  }, []);
+  }, [placement]);
 
-  return <canvas ref={ref} className={className} data-folded-alloy aria-hidden="true" />;
+  return <canvas ref={ref} className={className} data-folded-alloy={placement} aria-hidden="true" />;
 }

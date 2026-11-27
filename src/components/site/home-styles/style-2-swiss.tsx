@@ -8,6 +8,7 @@ import { InquiryButton } from "@/components/site/inquiry-contact";
 import {
   BRIEF_CHECKLIST,
   DISCIPLINES,
+  FEATURED_ARTICLE,
   PROCESS_STEPS,
   REDESIGN_IMAGES,
   REDESIGN_NAV,
@@ -25,8 +26,8 @@ const SWISS_HERO_PLATES = [
   },
   {
     code: "PL.02",
-    label: "Reflective Boutique Elevation",
-    image: REDESIGN_IMAGES.tiffanyFrontPanoramic,
+    label: "Illuminated Boutique Corner",
+    image: REDESIGN_IMAGES.backlitFacadeTwilight,
   },
   {
     code: "PL.03",
@@ -37,13 +38,13 @@ const SWISS_HERO_PLATES = [
 
 const PORTFOLIO_INDEX = [
   {
-    id: "tiffany-front",
+    id: "backlit-facade",
     category: "Facades",
     code: "IDX-01",
-    title: "Reflective Storefront Elevation",
-    note: "Full-width boutique elevation with precision vertical cladding modules.",
-    href: "/case-studies/tiffany-boutique-backlit-facade",
-    image: REDESIGN_IMAGES.tiffanyFrontPanoramic,
+    title: "Backlit Fluted Metal Storefront",
+    note: "Illuminated retail corner with folded silver profiles and prismatic facing.",
+    href: "/case-studies/backlit-fluted-metal-boutique-facade",
+    image: REDESIGN_IMAGES.backlitFacadeTwilight,
   },
   {
     id: "cartier-ifs",
@@ -68,17 +69,17 @@ const PORTFOLIO_INDEX = [
     category: "Cladding",
     code: "IDX-04",
     title: "Compound-Curved Escalator Pod",
-    note: "Fluted champagne-toned architectural metal skin trial-fitted before shipment.",
-    href: "/case-studies",
+    note: "Fluted champagne-toned architectural metal skin photographed during workshop trial fitting.",
+    href: "/case-studies/curved-fluted-escalator-atrium-cladding",
     image: REDESIGN_IMAGES.escalatorPodWorkshop,
   },
   {
     id: "stair-spiral",
     category: "Stairs",
     code: "IDX-05",
-    title: "Helical Staircase & Bronze Rail",
-    note: "Continuous curved balustrade geometry tracked through site installation.",
-    href: "/case-studies",
+    title: "Helical Staircase & Curved Balustrade",
+    note: "Mirror-finished balusters and a continuous dark handrail documented during site fit-out.",
+    href: "/case-studies/helical-metal-feature-staircase",
     image: REDESIGN_IMAGES.stairSpiralOverhead,
   },
   {
@@ -284,8 +285,8 @@ export function Style2Swiss() {
               <p className={styles.monoTag}>02 / FABRICATION PROTOCOL</p>
               <h2 id="swiss-process-title">From CAD surface to protected crate.</h2>
             </div>
-            <Link href="/blog/metalwork-polishing-brushing-process-and-quality-control" className={styles.btnOutline}>
-              Read finishing guide <ArrowUpRight size={15} aria-hidden="true" />
+            <Link href={FEATURED_ARTICLE.href} className={styles.btnOutline}>
+              Read welding guide <ArrowUpRight size={15} aria-hidden="true" />
             </Link>
           </div>
           <div className={styles.processGrid}>

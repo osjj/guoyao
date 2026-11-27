@@ -1,0 +1,210 @@
+{
+  "introduction": "A helical feature stair rises through a commercial interior, its dark stringer and handrail set against mirror-finished stainless steel balusters and black stone treads. Site photographs record the exposed curved steel during erection and the assembled stair near the end of fit-out. Close views show the starter treads, the rail’s scroll-shaped end and the balustrade against the faceted mirrored wall.",
+  "stats": [
+    {
+      "value": "Curved steel",
+      "label": "Primary stair structure"
+    },
+    {
+      "value": "Mirror-polished stainless steel",
+      "label": "Baluster finish"
+    },
+    {
+      "value": "Black stone",
+      "label": "Tread material"
+    },
+    {
+      "value": "Site progress photographs",
+      "label": "Erection and fit-out record"
+    }
+  ],
+  "sections": [
+    {
+      "id": "project-scope",
+      "title": "A Helical Stair with Curved Rails and Stone Treads",
+      "navLabel": "Project Scope",
+      "paragraphs": [
+        "The record covers the curved steel flights, the balustrade and its continuous dark handrail, and the adjoining stone treads. The flights curve around an open well and meet a landing, where the rail links the different slopes in a continuous profile."
+      ],
+      "table": {
+        "caption": "Stair components and visible fit-out interfaces",
+        "headings": [
+          "Component",
+          "Base Material & Finish",
+          "Key Control Focus",
+          "Verification Method"
+        ],
+        "rows": [
+          [
+            "Main stringers",
+            "Curved structural steel",
+            "Flight profile and landing relationship",
+            "Exposed site erection views"
+          ],
+          [
+            "Balusters",
+            "Mirror-finished stainless steel",
+            "Rhythm and alignment around the curve",
+            "Close site view and overhead view"
+          ],
+          [
+            "Handrail",
+            "Dark-finished curved rail",
+            "Rail continuity, slope change at the landing and scroll termination",
+            "Landing overview and termination detail"
+          ],
+          [
+            "Starter treads and flight finishes",
+            "Dark stone",
+            "Tread edges and the transition into the rising flight",
+            "Starter tread and near-complete site views"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "engineering-challenges",
+      "title": "Controlling Geometry Across the Flights and Landing",
+      "navLabel": "Engineering Challenges",
+      "paragraphs": [
+        "The steel, tread edge and guard follow the same plan curve at different elevations. The tread meets the stringer at a changing angle, while each reflective baluster makes small changes in the guard line easy to see against the mirror wall."
+      ],
+      "points": [
+        {
+          "title": "Rising stringer and landing",
+          "text": "Set the steel curve and landing level from common plan and section datums so the finished tread line can follow the structure."
+        },
+        {
+          "title": "Baluster rhythm",
+          "text": "Review posts along the inner and outer guard separately. As the stair turns, the balusters are seen in both direct view and reflection, exposing irregular breaks in their spacing."
+        },
+        {
+          "title": "Rail and tread transitions",
+          "text": "Resolve the handrail rise, the rail end and the curved starter treads together. Each follows a different profile at the base of the stair."
+        }
+      ]
+    },
+    {
+      "id": "forming-and-substructure",
+      "title": "Curved Steel Stringers during Site Erection",
+      "navLabel": "Fabrication & Substructure",
+      "paragraphs": [
+        "Before the architectural finishes were fitted, the structure was visible through the temporary scaffold. The erection photographs show the exposed curved stringer profiles, the lower stair geometry and the locations where the individual treads meet the rising steel."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/helical-metal-feature-staircase/01-steel-erection-overview.webp",
+          "alt": "Bare helical steel stair during erection alongside temporary site scaffold",
+          "caption": "This site progress view records the steel runs before the finished surfaces and balustrades were fitted."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/helical-metal-feature-staircase/02-curved-steel-stringer.webp",
+          "alt": "Exposed curved steel stringer and lower tread framework during erection",
+          "caption": "A front view shows the curved stringer joining the broad lower treads to the rising flight."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/helical-metal-feature-staircase/03-steel-tread-interface.webp",
+          "alt": "A curved steel stair stringer alongside unfinished tread supports",
+          "caption": "The close view shows how individual treads meet the curved steel stringer as the flight rises."
+        }
+      ]
+    },
+    {
+      "id": "workshop-trial-assembly",
+      "title": "Stone Treads, Scroll Return and Balustrade Fit-Out",
+      "navLabel": "Fit-Out Details",
+      "paragraphs": [
+        "The site detail photographs show the curved stone starter treads and the dark rail above the polished balusters. A separate close-up records the rail’s scroll-shaped termination. Together, the photographs show how the touch points of the stair were detailed and how the polished posts appear against the adjoining faceted mirrors."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/helical-metal-feature-staircase/04-stone-starter-treads.webp",
+          "alt": "Curved dark stone starter treads with protective material still present",
+          "caption": "The splayed stone starter treads are shown before site protection was removed, with the straight upper run visible behind them."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/helical-metal-feature-staircase/05-handrail-scroll-return.webp",
+          "alt": "Scroll-shaped end detail of a dark curved handrail",
+          "caption": "The handrail end forms a compact scroll return with a continuous rounded surface."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/helical-metal-feature-staircase/06-mirror-finished-balusters.webp",
+          "alt": "Mirror-finished stainless steel balusters below the dark handrail beside faceted wall mirrors",
+          "caption": "The installed detail shows the regular rhythm of the reflective balusters below the dark rail and the way the adjacent mirrored wall repeats the pattern."
+        }
+      ]
+    },
+    {
+      "id": "installed-outcome",
+      "title": "Near-Complete Staircase during Site Fit-Out",
+      "navLabel": "Installed Outcome",
+      "paragraphs": [
+        "The upper and lower site views trace the handrail through the landing and around the open well. Tread protection remains in the photographs. The paired views from below and above make the steel profile and the differing radii of the inner and outer guards visible."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/helical-metal-feature-staircase/07-connected-stair-flights.webp",
+          "alt": "Near-complete helical staircase with dark handrails and polished balusters across two levels",
+          "caption": "The upper and lower flights are visible together, with the dark handrail following the turn through the landing. Tread protection is still in place."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/helical-metal-feature-staircase/08-helical-flight-from-below.webp",
+          "alt": "Low-angle view of the installed curving stair and its reflective balustrade",
+          "caption": "The lower approach shows how the balustrade follows the rising curve. The photograph records the stairs before temporary protection was removed."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/helical-metal-feature-staircase/09-two-flight-elevation.webp",
+          "alt": "Side elevation of two curved black staircase flights and reflective balustrades",
+          "caption": "The side view shows how the two dark stringer profiles are separated at the landing and linked visually by the rising rail."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/helical-metal-feature-staircase/10-landing-handrail-return.webp",
+          "alt": "View down into a near-complete stair turn framed by dark curved handrails",
+          "caption": "Viewed from above, the landing rail follows the curved opening while the outer balustrade tracks the line of the treads."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/helical-metal-feature-staircase/11-spiral-opening.webp",
+          "alt": "Overhead view of the inner helical stair opening and polished balusters",
+          "caption": "The overhead view traces the inner edge of the curved stringer and shows the polished balusters repeating around the open well."
+        }
+      ]
+    },
+    {
+      "id": "buyer-specification-checklist",
+      "title": "What to Specify for a Helical Feature Stair",
+      "navLabel": "Specification Checklist",
+      "paragraphs": [
+        "For a comparable project, share the coordinated architectural and structural information early enough to resolve where the visible metalwork meets the supporting steel, slab edges and stone."
+      ],
+      "points": [
+        {
+          "title": "Geometry and interfaces",
+          "text": "Provide CAD or dimensioned PDF plans and sections showing floor levels, the rise and going, inner and outer radii, landing edges and supporting structure."
+        },
+        {
+          "title": "Guard and finish samples",
+          "text": "Specify the guard and handrail requirements with the project team. Review the actual polish, rail section and end termination using a representative junction mock-up."
+        },
+        {
+          "title": "Transport and erection",
+          "text": "Confirm delivery sizes, lifts and site sequence with the structural and site teams, including how stone and polished surfaces will be protected through fit-out."
+        }
+      ]
+    }
+  ],
+  "conclusion": "A helical stair brings the steel structure, guard, handrail and stone into one continuous line through the interior. For an initial fabrication review, send coordinated CAD or PDF drawings with the floor levels, opening and landing geometry, preferred finishes and any restrictions on site access or lifting.",
+  "relatedLinks": [
+    {
+      "href": "/case-studies/curved-fluted-escalator-atrium-cladding",
+      "label": "Double-curved fluted escalator cladding"
+    },
+    {
+      "href": "/blog/metalwork-welding-process-and-quality-control",
+      "label": "Metalwork welding and quality control"
+    },
+    {
+      "href": "/blog/metalwork-assembly-fit-out-process-and-quality-control",
+      "label": "Metalwork assembly and fit-out"
+    }
+  ]
+}

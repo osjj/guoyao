@@ -1,0 +1,219 @@
+{
+  "introduction": "Paired escalators frame a multi-level retail atrium. Their champagne-bronze metal casings follow the incline and turn around rounded end pods, with flutes running across the double-curved undersides. This fabrication record covers the architectural casing. The photographs follow the work from bare formed panels through full-scale fit-up on steel rigs to the installed escalator runs.",
+  "stats": [
+    {
+      "value": "Double-curved",
+      "label": "Fluted casing geometry"
+    },
+    {
+      "value": "Champagne bronze",
+      "label": "Visible metal finish"
+    },
+    {
+      "value": "1:1",
+      "label": "Workshop fit-up scale"
+    },
+    {
+      "value": "Multi-level atrium",
+      "label": "Installed application"
+    }
+  ],
+  "sections": [
+    {
+      "id": "project-scope",
+      "title": "Architectural Casing for Paired Atrium Escalators",
+      "navLabel": "Project Scope",
+      "paragraphs": [
+        "The metal scope comprises the inclined underside skins, rounded end pods and surrounding smooth fascia. The mirrored escalator arrangement puts the slopes and fluting in the same sightline, so the main curves and edge transitions read as one architectural element from the atrium floor."
+      ],
+      "table": {
+        "caption": "Case scope and photographic verification",
+        "headings": [
+          "Component",
+          "Base Material & Finish",
+          "Key Control Focus",
+          "Verification Method"
+        ],
+        "rows": [
+          [
+            "Inclined underside skin",
+            "Formed metal, champagne-bronze finish",
+            "Flute alignment along the incline",
+            "Bare panel views and elevated 1:1 fit-up"
+          ],
+          [
+            "Rounded end pod",
+            "Double-curved fluted and smooth metal",
+            "Rib termination and seam placement at the nose",
+            "Unfinished and finished pod views on stands"
+          ],
+          [
+            "Fit-up supports",
+            "Steel jig and workshop stands",
+            "Full-scale relationship between pod and incline",
+            "Workshop overview and underside views"
+          ],
+          [
+            "Smooth fascia",
+            "Champagne-bronze finished metal",
+            "Transition from the fluted skin to the fascia",
+            "Workshop side views and installed close-ups"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "engineering-challenges",
+      "title": "Keeping the Flute Pattern Through a Double Curve",
+      "navLabel": "Engineering Challenges",
+      "paragraphs": [
+        "At the rounded pod, the ribs turn through a changing radius while terminating against a smooth band. From below, local ripples, stepped seams and changes in finish direction are easy to see because the underside catches long bands of reflected light."
+      ],
+      "points": [
+        {
+          "title": "Forming the rib field",
+          "text": "On a double curve, the rib geometry and the folded perimeter have to be developed together. A change at the return can shift where the visible rib ends land."
+        },
+        {
+          "title": "Rib-to-fascia alignment",
+          "text": "The rounded nose brings smooth metal and multiple flutes into one sightline. The break line should read continuously from both the side and the underside."
+        },
+        {
+          "title": "Finish direction",
+          "text": "Adjacent champagne-bronze panels must be assessed together under the intended viewing angles. Direction changes are most apparent where broad fluted faces pick up raking light."
+        }
+      ]
+    },
+    {
+      "id": "forming-and-substructure",
+      "title": "Forming the Fluted Skins and Pod Transitions",
+      "navLabel": "Fabrication & Substructure",
+      "paragraphs": [
+        "At the bench, the bare fluted skin shows the relationship between its rib field and the continuous folded edge. The unfinished pod exposes the joints and the smooth areas that frame the curved ribs. These views make the panel geometry visible before the champagne-bronze finish draws the surfaces together."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/curved-fluted-escalator-atrium-cladding/01-bare-fluted-panel.webp",
+          "alt": "Bare fluted metal escalator panel on a workshop bench",
+          "caption": "The bare fluted panel is shown on a bench before the finish is applied. The ribs follow the changing section as the panel turns."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/curved-fluted-escalator-atrium-cladding/02-curved-panel-return.webp",
+          "alt": "Side view of the formed ribs and folded edge of an escalator panel",
+          "caption": "At the edge of the panel, the fluted face transitions into a folded return that forms a clean boundary for the adjoining skin."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/curved-fluted-escalator-atrium-cladding/03-uncoated-end-pod.webp",
+          "alt": "Unfinished double-curved end pod with exposed joints and uncoated flutes",
+          "caption": "The unfinished end pod exposes the transitions between the fluted fields and the surrounding smooth metal, along with seams that are dressed during fabrication."
+        }
+      ]
+    },
+    {
+      "id": "workshop-trial-assembly",
+      "title": "Full-Scale Fit-Up on Steel Rigs",
+      "navLabel": "1:1 Trial Assembly",
+      "paragraphs": [
+        "The workshop rig raises the casing so the team can see the same underside that visitors will see from below. Viewed along the incline and at the nose, the fitted modules show how the flutes carry across long runs and converge at the end pods. Separate pods on stands provide a closer view of the side profile and nose transitions."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/curved-fluted-escalator-atrium-cladding/04-full-length-fit-up.webp",
+          "alt": "Full-length escalator cladding suspended for workshop fit-up",
+          "caption": "The elevated workshop set-up reveals how the end pod, inclined run and fluted underside meet at full scale."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/curved-fluted-escalator-atrium-cladding/05-inclined-shell-fit-up.webp",
+          "alt": "Champagne-toned escalator shell and rounded end pod during full-scale fit-up",
+          "caption": "The shell is viewed along the incline while the team works around the curved end and underside."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/curved-fluted-escalator-atrium-cladding/06-underside-fit-up.webp",
+          "alt": "Workshop team looking up at flutes along an elevated escalator underside",
+          "caption": "Viewed from below, the full-scale fit-up makes it possible to compare the direction and alignment of the flutes across the underside."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/curved-fluted-escalator-atrium-cladding/07-end-pod-side-profile.webp",
+          "alt": "Side profile of a champagne-bronze end pod on workshop stands",
+          "caption": "The end pod's side profile shows where the smooth fascia gives way to the fluted metal that wraps beneath the nose."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/curved-fluted-escalator-atrium-cladding/08-end-pod-flute-transition.webp",
+          "alt": "Three-quarter view of flutes wrapping around a double-curved end pod",
+          "caption": "The reverse three-quarter view shows how the ribs travel across the curved nose and taper into the smooth fascia."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/curved-fluted-escalator-atrium-cladding/09-module-fit-up-stations.webp",
+          "alt": "Multiple escalator cladding modules supported on workshop rigs",
+          "caption": "An elevated workshop view shows multiple casing modules arranged on support rigs for full-scale fit-up."
+        }
+      ]
+    },
+    {
+      "id": "installed-outcome",
+      "title": "Installed Cladding in the Atrium",
+      "navLabel": "Installed Outcome",
+      "paragraphs": [
+        "The installed views trace the cladding from the paired lower-level approach to the stacked runs above. The close view across the atrium void shows the curved nose from below, where the rib field turns into the smooth perimeter just beneath the glass guard."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/curved-fluted-escalator-atrium-cladding/10-paired-atrium-escalators.webp",
+          "alt": "Matching champagne-bronze fluted escalator casings on either side of a retail atrium",
+          "caption": "The paired installations frame the atrium with matching fluted undersides and rounded transitions from the horizontal ceiling line into the inclined runs."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/curved-fluted-escalator-atrium-cladding/11-stacked-atrium-runs.webp",
+          "alt": "Stacked escalator runs with fluted casings and glass balustrades in a multi-level atrium",
+          "caption": "The atrium elevation puts the stacked runs in context and shows the junction with the glass balustrades and floor edges."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/curved-fluted-escalator-atrium-cladding/12-installed-fluted-nose.webp",
+          "alt": "Installed fluted end pod above the lower escalator run",
+          "caption": "Seen across the void, the rounded end pod shows the flutes folding upward into the smooth fascia below the curved glass guard."
+        }
+      ]
+    },
+    {
+      "id": "buyer-specification-checklist",
+      "title": "What to Specify for a Fluted Escalator Casing",
+      "navLabel": "Specification Checklist",
+      "paragraphs": [
+        "Coordinate the casing geometry with the escalator supplier’s envelope and the architect’s finished floor and ceiling lines before fixing module seams."
+      ],
+      "points": [
+        {
+          "title": "Drawings",
+          "text": "Supply coordinated CAD or dimensioned PDFs with the escalator envelope, section datums, inclined run, end-pod geometry and required service clearances."
+        },
+        {
+          "title": "Samples",
+          "text": "Review a curved sample with the actual rib spacing, end transition and proposed champagne-bronze finish under representative lighting."
+        },
+        {
+          "title": "Handling",
+          "text": "Confirm the maximum shipping and site access envelope, lifting route and practical module split. Agree a numbering plan with the installer before packing."
+        }
+      ]
+    }
+  ],
+  "conclusion": "The photographs show why fluted escalator cladding needs to be reviewed from below as well as in elevation. On a similar atrium project, send the escalator supplier’s CAD or PDF envelope, the architectural sections and the proposed finish direction so the panel breaks, pod geometry and full-scale fit-up can be scoped together.",
+  "relatedLinks": [
+    {
+      "href": "/case-studies/murray-road-column-cladding",
+      "label": "Double-curved stainless steel column cladding"
+    },
+    {
+      "href": "/case-studies/helical-metal-feature-staircase",
+      "label": "Helical metal feature staircase"
+    },
+    {
+      "href": "/blog/metalwork-welding-process-and-quality-control",
+      "label": "Metalwork welding and quality control"
+    },
+    {
+      "href": "/blog/metalwork-assembly-fit-out-process-and-quality-control",
+      "label": "Metalwork assembly and fit-out"
+    }
+  ]
+}

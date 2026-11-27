@@ -1,0 +1,211 @@
+{
+  "introduction": "An elliptical metal pavilion was developed as a freestanding entrance feature for a high-end retail setting. Rolled upper ring beams, straight steel ties and slim paired posts establish the shape, while the curved fascia cladding and base pieces follow the oval perimeter. The workshop photographs record the full-size pre-assembly and the fit of the post heads, curved fascia transitions and lower returns before site work.",
+  "stats": [
+    {
+      "value": "Elliptical",
+      "label": "Plan geometry"
+    },
+    {
+      "value": "Rolled rings and ties",
+      "label": "Upper frame"
+    },
+    {
+      "value": "Paired metal uprights",
+      "label": "Post arrangement"
+    },
+    {
+      "value": "1:1 workshop dry fit",
+      "label": "Assembly verification"
+    }
+  ],
+  "sections": [
+    {
+      "id": "project-scope",
+      "title": "A freestanding oval entrance frame with curved perimeter trim",
+      "navLabel": "Project Scope",
+      "paragraphs": [
+        "The assembly brings the rolled upper rings, steel ties, paired posts and curved lower plinth into one opening. The fascia sheets and infill follow the outer ring, while the paired posts leave the central entrance clear. The scope shown here is fabrication and full-scale workshop verification."
+      ],
+      "table": {
+        "caption": "Pavilion components and full-scale workshop checks",
+        "headings": [
+          "Component",
+          "Base Material & Finish",
+          "Key Control Focus",
+          "Verification Method"
+        ],
+        "rows": [
+          [
+            "Upper ring and straight ties",
+            "Rolled metal perimeter and steel ties",
+            "Continuity of the oval and tie connections",
+            "Underside view of the standing mock-up"
+          ],
+          [
+            "Paired posts and head nodes",
+            "Metal uprights with metal head trim",
+            "Fit between uprights, ties and ring bands",
+            "Close review at the post head"
+          ],
+          [
+            "Curved fascia and lower plinth",
+            "Shaped metal trim with fascia infill",
+            "Panel transitions and curved base alignment",
+            "Trial fit of fascia edges and base returns"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "engineering-challenges",
+      "title": "Close the oval while keeping the opening and joints aligned",
+      "navLabel": "Engineering Challenges",
+      "paragraphs": [
+        "The upper and lower curves must resolve to the same post positions. That relationship is important at the head of the assembly, where ring segments, panel edges and straight ties converge."
+      ],
+      "points": [
+        {
+          "title": "Ring closure",
+          "text": "The two curved bands have to meet at their split joints without interrupting the oval profile or shifting the fascia line."
+        },
+        {
+          "title": "Post-head interfaces",
+          "text": "The post heads receive both the curved framing and the straight ties. A full-size fit lets the team inspect closely spaced connections together."
+        },
+        {
+          "title": "Finish and base continuity",
+          "text": "At the top and bottom, the visible edge must follow the perimeter into the post trim while allowing the pieces to be assembled in sequence."
+        }
+      ]
+    },
+    {
+      "id": "forming-and-substructure",
+      "title": "Rolled ring segments, straight ties and curved bases",
+      "navLabel": "Fabrication & Substructure",
+      "paragraphs": [
+        "The underside views show the rolled rings in relation to the cross ties. At the post head, a boxed junction connects the straight and curved members within the same depth of framing.",
+        "The lower radius piece sits between post groups. Its photographed fit makes it possible to compare the lower line with the plan shape of the ring above."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/elliptical-curved-metal-entrance-pavilion/01-curved-plinth-between-posts.webp",
+          "alt": "Curved base segment fitted between paired pavilion posts",
+          "caption": "The curved plinth locates the two post groups and establishes the lower edge of the oval assembly."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/elliptical-curved-metal-entrance-pavilion/02-elliptical-ring-and-cross-ties.webp",
+          "alt": "Oval upper ring with steel cross ties seen from directly below",
+          "caption": "Cross ties span the rolled perimeter and meet at the middle of the oval."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/elliptical-curved-metal-entrance-pavilion/03-post-to-beam-junction.webp",
+          "alt": "Close workshop view of steel ties and curved rim at a pavilion post head",
+          "caption": "The post head brings the straight tie member, inner ring and outer fascia into the same connection zone."
+        }
+      ]
+    },
+    {
+      "id": "workshop-trial-assembly",
+      "title": "Assemble the complete ellipse at full height in the workshop",
+      "navLabel": "1:1 Trial Assembly",
+      "paragraphs": [
+        "The pavilion stood at full height so the workshop team could see the curved fascia, post groups, diagonal ties and base segments as one assembly. Front and oblique views show the stepped layers of the fascia and how the vertical members relate to the base radius.",
+        "The underside views show the perimeter from inside the opening. This angle reveals changes of plane at the fascia and the way the upper bands meet the post heads."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/elliptical-curved-metal-entrance-pavilion/04-pavilion-front-trial-assembly.webp",
+          "alt": "Front view of an elliptical entrance pavilion standing in the workshop",
+          "caption": "The front view records the full-size assembly with the curved fascia, paired posts and bracing visible together."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/elliptical-curved-metal-entrance-pavilion/05-pavilion-oblique-trial-assembly.webp",
+          "alt": "Oblique view of the entrance pavilion during full-size workshop trial fit",
+          "caption": "The oblique view shows the relationship between the oval fascia above and the curved base below."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/elliptical-curved-metal-entrance-pavilion/06-interior-fascia-alignment.webp",
+          "alt": "Inner face of the curved fascia and posts during factory pre-assembly",
+          "caption": "From inside the frame, the curved upper bands and vertical posts can be viewed together across the span."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/elliptical-curved-metal-entrance-pavilion/07-oblique-inner-ring-fit.webp",
+          "alt": "Oblique underside view of an assembled pavilion ring and steel ties",
+          "caption": "Looking upward from one side makes the junction of the two ring bands and diagonal ties visible."
+        }
+      ]
+    },
+    {
+      "id": "finish-and-detail-verification",
+      "title": "Follow the fascia return and its connections into the posts",
+      "navLabel": "Finish & Detail Verification",
+      "paragraphs": [
+        "Close workshop views show the angled fascia return and the transition from outer trim to curved infill at the post head. An underside view shows where the inner band and steel tie approach the same node.",
+        "At floor level, the curved plinth ends against a post group. This junction shows how the exposed trim returns into the foot of the upright during fit-up."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/elliptical-curved-metal-entrance-pavilion/08-curved-base-post-return.webp",
+          "alt": "Detail of the end of the curved plinth and adjacent vertical post",
+          "caption": "The lower return shows how the curved base terminates against the post group while the frame is still in the workshop."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/elliptical-curved-metal-entrance-pavilion/09-fascia-corner-return-joint.webp",
+          "alt": "Close side view of the fascia return joint at a pavilion post head",
+          "caption": "The close-up records the angled meeting line at the fascia return and the post head."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/elliptical-curved-metal-entrance-pavilion/10-fascia-trim-transition.webp",
+          "alt": "Detailed view of the curved fascia trim crossing a pavilion post",
+          "caption": "The junction shows the transition between the finished outer trim, curved infill panel and inner framing."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/elliptical-curved-metal-entrance-pavilion/11-underside-ring-junction.webp",
+          "alt": "Underside view of the ring joint and paired upright ends",
+          "caption": "From below, the boxed connection makes the alignment between the two ring edges and upright ends visible."
+        }
+      ]
+    },
+    {
+      "id": "buyer-specification-checklist",
+      "title": "Specify the oval, its supports and the assembly route",
+      "navLabel": "Specification Checklist",
+      "paragraphs": [
+        "An elliptical layout benefits from a coordinated plan, elevation and node sections so the visible joints can be reviewed against the hidden supports."
+      ],
+      "points": [
+        {
+          "title": "Setting-out drawings",
+          "text": "Provide CAD or PDF plans with the oval axes, post positions and opening dimensions. Add head-node and base sections with available anchoring points."
+        },
+        {
+          "title": "Finish sample and joint intent",
+          "text": "Sequence the visible split joints and set their look in the fascia sample. Confirm which junctions require access and which should read as a continuous line."
+        },
+        {
+          "title": "Transport and venue access",
+          "text": "Check delivery routes, door openings, headroom and limits on temporary supports before agreeing how to divide the ring and lower plinth for handling."
+        }
+      ]
+    }
+  ],
+  "conclusion": "A full-size workshop assembly lets a curved retail entrance be reviewed from the overall oval down to each post head and fascia joint. The same approach applies to custom portals where a thin curved enclosure has to meet a controlled opening. Send a CAD or PDF plan and sections with the finish and access requirements to scope a representative trial.",
+  "relatedLinks": [
+    {
+      "href": "/case-studies/backlit-fluted-metal-boutique-facade",
+      "label": "Backlit fluted storefront facade"
+    },
+    {
+      "href": "/case-studies/murray-road-column-cladding",
+      "label": "Double-curved stainless steel column cladding trial"
+    },
+    {
+      "href": "/blog/metalwork-assembly-fit-out-process-and-quality-control",
+      "label": "Metalwork assembly and fit-out"
+    },
+    {
+      "href": "/blog/luxury-metalwork-requirements-designers-owners",
+      "label": "Metalwork requirements for designers and owners"
+    }
+  ]
+}

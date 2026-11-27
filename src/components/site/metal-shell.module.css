@@ -49,3 +49,148 @@
 @media (prefers-reduced-motion: reduce) { .headerCta, .footerCta, .desktopNav a::after, .mobileNav[data-motion="true"] { transition: none; } .mobileNav { transform: none; } }
 @media (max-width: 600px) { .footerGrid { grid-template-columns: .8fr 1.4fr; column-gap: 24px; } .contacts a { gap: 8px; font-size: 12px; } }
 @media (max-width: 380px) { .footerGrid { grid-template-columns: 1fr; } }
+
+.header[data-shell-theme="alloy"],
+.footer[data-shell-theme="alloy"] {
+  --shell-text: #f3f5f8;
+  --shell-silver: #dbe3ee;
+  --shell-muted: #a1a9b6;
+  --shell-gold: #f0b670;
+  --shell-line: rgba(255, 255, 255, 0.11);
+  --shell-gutter: clamp(20px, 4.5vw, 72px);
+  color: var(--shell-text);
+}
+
+.header[data-shell-theme="alloy"] {
+  background: rgba(5, 6, 8, 0.94);
+  border-color: var(--shell-line);
+}
+
+.header[data-shell-theme="alloy"] .headerInner,
+.footer[data-shell-theme="alloy"] .footerInner {
+  width: min(1320px, calc(100% - 2 * var(--shell-gutter)));
+}
+
+[data-shell-theme="alloy"] .logoLight {
+  color: var(--shell-text);
+}
+
+[data-shell-theme="alloy"] .logoLight .logoWords > span,
+.header[data-shell-theme="alloy"] .desktopNav a {
+  color: var(--shell-muted);
+}
+
+.header[data-shell-theme="alloy"] .desktopNav a[aria-current="page"] {
+  color: var(--shell-text);
+}
+
+.header[data-shell-theme="alloy"] .desktopNav a::after {
+  background: var(--shell-gold);
+}
+
+.header[data-shell-theme="alloy"] .headerCta {
+  gap: 9px;
+  border: 1px solid rgba(255, 224, 178, 0.5);
+  border-radius: 999px;
+  background: linear-gradient(125deg, #f7e6cf, #e7b575 48%, #c78b46);
+  color: #140f08;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(231, 181, 117, 0.18), inset 0 1px rgba(255, 255, 255, 0.72);
+}
+
+.header[data-shell-theme="alloy"] .readingProgress {
+  height: 2px;
+  background: transparent;
+}
+
+.header[data-shell-theme="alloy"] .readingProgressFill {
+  background: linear-gradient(90deg, #9fb4cc, #fff 45%, var(--shell-gold));
+}
+
+.header[data-shell-theme="alloy"] .menuToggle {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.header[data-shell-theme="alloy"] .mobileNav {
+  padding-inline: var(--shell-gutter);
+  border-color: var(--shell-line);
+  background: #0b0d11;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.header[data-shell-theme="alloy"] .mobileNav > a {
+  border-color: var(--shell-line);
+  color: var(--shell-silver);
+}
+
+.header[data-shell-theme="alloy"] .mobileNav > a[aria-current="page"],
+.header[data-shell-theme="alloy"] .mobileNav > a > span {
+  color: var(--shell-gold);
+}
+
+.header[data-shell-theme="alloy"] .mobileNav p {
+  color: var(--shell-muted);
+}
+
+.footer[data-shell-theme="alloy"] {
+  background: #050608;
+  border-top: 1px solid var(--shell-line);
+}
+
+.footer[data-shell-theme="alloy"] .footerInner {
+  padding-block: clamp(38px, 5vw, 64px) 28px;
+}
+
+.footer[data-shell-theme="alloy"] .footerGrid {
+  row-gap: 26px;
+  padding-block: 0 28px;
+}
+
+.footer[data-shell-theme="alloy"] .company,
+.footer[data-shell-theme="alloy"] .contacts p,
+.footer[data-shell-theme="alloy"] .footerBottom {
+  color: var(--shell-muted);
+}
+
+.footer[data-shell-theme="alloy"] .footerGrid nav,
+.footer[data-shell-theme="alloy"] .contacts {
+  color: var(--shell-silver);
+}
+
+.footer[data-shell-theme="alloy"] :is(.footerGrid nav, .contacts) > span {
+  color: var(--shell-gold);
+}
+
+.footer[data-shell-theme="alloy"] .footerBottom {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px 24px;
+  padding-top: 18px;
+  border-color: var(--shell-line);
+}
+
+.header[data-shell-theme="alloy"] :is(a, button):focus-visible,
+.footer[data-shell-theme="alloy"] a:focus-visible {
+  outline: 2px solid var(--shell-gold);
+  outline-offset: 4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .header[data-shell-theme="alloy"] .desktopNav a:hover,
+  .footer[data-shell-theme="alloy"] a:hover {
+    color: var(--shell-text);
+  }
+
+  .header[data-shell-theme="alloy"] .headerCta:hover {
+    background: linear-gradient(125deg, #fff0db, #f7cb94 48%, #d79d54);
+    color: #140f08;
+  }
+}
+
+@media (max-width: 720px) {
+  .footer[data-shell-theme="alloy"] .footerBottom {
+    padding-inline-end: max(0px, calc(114px - var(--shell-gutter)));
+  }
+}

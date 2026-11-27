@@ -21,11 +21,11 @@ const GALLERY_CHAPTERS = [
     num: "Chapter I · Boutique Storefront",
     title: "Light, reflection & the quiet rhythm of a facade.",
     description:
-      "Observed from both its front elevation and corner wrap, a reflective architectural metal storefront shifts continuously with ambient interior glow and passing daylight.",
-    href: "/case-studies/tiffany-boutique-backlit-facade",
+      "Backlit fluted profiles and illuminated surrounds carry the storefront rhythm across a retail corner and around the display openings.",
+    href: "/case-studies/backlit-fluted-metal-boutique-facade",
     linkLabel: "View boutique study",
-    primary: REDESIGN_IMAGES.tiffanyFrontPanoramic,
-    secondary: REDESIGN_IMAGES.tiffanyCornerPanoramic,
+    primary: REDESIGN_IMAGES.backlitFacadeTwilight,
+    secondary: REDESIGN_IMAGES.backlitFacadeWindowDetail,
   },
   {
     id: "chapter-column",
@@ -44,8 +44,8 @@ const GALLERY_CHAPTERS = [
     title: "A continuous metallic line drawn through space.",
     description:
       "From sweeping vertical balustrade proportions to the overhead spiral of a continuous dark handrail, stair metalwork demands seamless geometry across every level transition.",
-    href: "/case-studies",
-    linkLabel: "Explore project archive",
+    href: "/case-studies/helical-metal-feature-staircase",
+    linkLabel: "View staircase study",
     primary: REDESIGN_IMAGES.stairElevation,
     secondary: REDESIGN_IMAGES.stairSpiralOverhead,
   },

@@ -19,7 +19,7 @@ import {
   type CSSProperties,
   type PointerEvent,
 } from "react";
-import { InquiryButton } from "@/components/site/inquiry-contact";
+import { HeaderContactBar, InquiryButton } from "@/components/site/inquiry-contact";
 import {
   BRIEF_CHECKLIST,
   DISCIPLINES,
@@ -31,24 +31,15 @@ import {
   projectBrands,
   projectRecords,
 } from "@/data/homepage-redesign-data";
-import { SALES_EMAIL } from "@/lib/site-identity";
+import { PRIMARY_NAVIGATION, SALES_EMAIL } from "@/lib/site-identity";
 import {
   EmberField,
-  LiquidMetalCanvas,
   ParticleMorph,
   type MorphShape,
 } from "./style-10-liquid-effects";
 import { FoldedAlloyCanvas } from "./style-13-folded-alloy-canvas";
 import styles from "./style-10-liquid.module.css";
 import alloyStyles from "./style-13-folded-alloy.module.css";
-
-const NAV_ITEMS = [
-  { href: "#liquid-disciplines", label: "Disciplines" },
-  { href: "#liquid-works", label: "Works" },
-  { href: "#liquid-workshop", label: "1:1 Workshop" },
-  { href: "#liquid-finishes", label: "Finishes" },
-  { href: "#liquid-register", label: "Register" },
-] as const;
 
 const MORPH_LABELS: Record<MorphShape, { tag: string; readout: string }> = {
   cloud: { tag: "STATE 00 · AMBIENT ALLOY", readout: "2,000 suspended alloy particles" },
@@ -401,6 +392,8 @@ export function Style13FoldedAlloy() {
   const [showAllRecords, setShowAllRecords] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const pageRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const onScroll = () => {
@@ -412,6 +405,33 @@ export function Style13FoldedAlloy() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const desktop = window.matchMedia("(width > 960px)");
+    const closeOnDesktop = () => { if (desktop.matches) setMenuOpen(false); };
+    // Keep the inquiry button available when the dialog restores focus.
+    const dialogIsOpen = () => document.querySelector("dialog[open]") !== null;
+    const closeOnOutsidePress = (event: globalThis.PointerEvent) => {
+      if (dialogIsOpen()) return;
+      if (event.target instanceof Node && !headerRef.current?.contains(event.target)) setMenuOpen(false);
+    };
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key !== "Escape" || event.defaultPrevented || dialogIsOpen()) return;
+      if (headerRef.current?.contains(document.activeElement)) menuButtonRef.current?.focus();
+      setMenuOpen(false);
+    };
+
+    desktop.addEventListener("change", closeOnDesktop);
+    document.addEventListener("pointerdown", closeOnOutsidePress);
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      desktop.removeEventListener("change", closeOnDesktop);
+      document.removeEventListener("pointerdown", closeOnOutsidePress);
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [menuOpen]);
 
   const filteredRecords = useMemo(() => {
     if (region === "All") return projectRecords;
@@ -428,7 +448,7 @@ export function Style13FoldedAlloy() {
     <div
       ref={pageRef}
       id="liquid-home"
-      className={styles.page}
+      className={`${styles.page} ${alloyStyles.home}`}
       data-redesign-home="style-13"
     >
       <div
@@ -437,44 +457,55 @@ export function Style13FoldedAlloy() {
         aria-hidden="true"
       />
 
-      <header className={styles.header}>
+      <header ref={headerRef} className={`${styles.header} ${alloyStyles.navigationHeader}`}>
         <div className={styles.headerInner}>
-          <a href="#liquid-home" className={styles.brand} aria-label="Guoyao Metal, back to top">
+          <a href="#liquid-home" className={styles.brand} aria-label="Guoyao Metal, back to top" onClick={() => setMenuOpen(false)}>
             <span className={styles.brandOrb} aria-hidden="true" />
             <span>GUOYAO</span>
             <span className={styles.brandSub}>METAL</span>
           </a>
 
-          <nav className={styles.nav} aria-label="Primary sections">
-            {NAV_ITEMS.map(({ href, label }) => (
-              <a key={href} href={href}>
+          <nav className={`${styles.nav} ${alloyStyles.primaryNav}`} aria-label="Primary navigation">
+            {PRIMARY_NAVIGATION.map(({ href, label }) => (
+              <Link key={href} href={href} aria-current={href === "/" ? "page" : undefined}>
                 {label}
-              </a>
+              </Link>
             ))}
           </nav>
 
           <div className={styles.headerRight}>
-            <InquiryButton className={styles.moltenCta}>
+            <HeaderContactBar />
+            <InquiryButton className={`${styles.moltenCta} ${alloyStyles.desktopInquiry}`}>
               Start a Project <ArrowUpRight size={15} aria-hidden="true" />
             </InquiryButton>
             <button
               type="button"
-              className={styles.menuBtn}
+              ref={menuButtonRef}
+              className={`${styles.menuBtn} ${alloyStyles.menuToggle}`}
               aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={menuOpen}
               aria-controls="liquid-mobile-nav"
               onClick={() => setMenuOpen((v) => !v)}
             >
-              {menuOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
+              {menuOpen ? <X size={18} aria-hidden="true" /> : <Menu size={18} aria-hidden="true" />}
+              Menu
             </button>
           </div>
         </div>
 
-        <nav id="liquid-mobile-nav" className={styles.mobileNav} hidden={!menuOpen} aria-label="Mobile navigation">
-          {NAV_ITEMS.map(({ href, label }) => (
-            <a key={href} href={href} onClick={() => setMenuOpen(false)}>
+        <nav id="liquid-mobile-nav" className={`${styles.mobileNav} ${alloyStyles.mobileMenu}`} hidden={!menuOpen} aria-label="Mobile navigation">
+          {PRIMARY_NAVIGATION.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              aria-current={href === "/" ? "page" : undefined}
+              onNavigate={() => {
+                if (href === "/") menuButtonRef.current?.focus();
+                setMenuOpen(false);
+              }}
+            >
               {label}
-            </a>
+            </Link>
           ))}
           <InquiryButton className={styles.moltenCta}>
             Start a Project <ArrowUpRight size={15} aria-hidden="true" />
@@ -585,7 +616,7 @@ export function Style13FoldedAlloy() {
                     <span>{work.index}</span>
                     <span>{work.stage}</span>
                   </div>
-                  <span className={styles.caseHoverCue}>Hover for seam detail</span>
+                  <span className={styles.caseHoverCue}>Hover for another view</span>
                 </div>
 
                 <div className={styles.caseBody}>
@@ -708,12 +739,11 @@ export function Style13FoldedAlloy() {
         </div>
       </section>
 
-      {/* FOOTER: Molten Liquid Metal Finale */}
       <footer id="liquid-contact" className={styles.footer}>
-        <div className={styles.footerCanvasWrap}>
-          <LiquidMetalCanvas className={styles.liquidCanvas} warm={1.25} scale={1.25} resolution={0.45} />
-          <EmberField className={styles.emberCanvas} density={44} />
-          <div className={styles.footerScrim} aria-hidden="true" />
+        <div className={`${styles.footerCanvasWrap} ${alloyStyles.footerStage}`}>
+          <FoldedAlloyCanvas className={`${styles.liquidCanvas} ${alloyStyles.canvas} ${alloyStyles.footerCanvas}`} placement="footer" />
+          <EmberField className={styles.emberCanvas} density={18} />
+          <div className={alloyStyles.footerShade} aria-hidden="true" />
         </div>
 
         <div className={`${styles.container} ${styles.footerInner}`}>
@@ -749,13 +779,13 @@ export function Style13FoldedAlloy() {
             </div>
           </div>
 
-          <div className={styles.footerBottom}>
+          <div className={`${styles.footerBottom} ${alloyStyles.footerBottom}`}>
             <a href="#liquid-home" className={styles.brand}>
               <span className={styles.brandOrb} aria-hidden="true" />
               <span>GUOYAO</span>
               <span className={styles.brandSub}>METAL</span>
             </a>
-            <div className={styles.footerLinks}>
+            <div className={`${styles.footerLinks} ${alloyStyles.footerLinks}`}>
               <Link href="/case-studies">Case Studies</Link>
               <Link href="/blog">Technical Journal</Link>
               <Link href="/about">About Guoyao</Link>

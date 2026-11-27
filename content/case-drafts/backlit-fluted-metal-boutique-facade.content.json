@@ -1,0 +1,232 @@
+{
+  "introduction": "A high-end retail facade combined folded silver metal backing, clear prismatic facing and integrated lighting around large framed openings. Workshop images show the steel support frame, the folded backing and the corner mock-up as separate assemblies. On the lighting test bay, white and warm settings reveal how the repeated folds catch light. Installed views show how the illuminated treatment meets window heads, jambs and the exterior corner.",
+  "stats": [
+    {
+      "value": "Folded silver metal",
+      "label": "Reflective backing"
+    },
+    {
+      "value": "Prismatic facing",
+      "label": "Exposed optical layer"
+    },
+    {
+      "value": "Steel subframe",
+      "label": "Structural support"
+    },
+    {
+      "value": "White and warm light",
+      "label": "Workshop lighting comparisons"
+    }
+  ],
+  "sections": [
+    {
+      "id": "project-scope",
+      "title": "An illuminated panel system for a framed retail elevation",
+      "navLabel": "Project Scope",
+      "paragraphs": [
+        "The visible system brings the folded backing, prismatic outer elements and lights together within a framed panel. The architectural metalwork also defines the edges where these panels meet openings, corner returns and darker vertical trims."
+      ],
+      "table": {
+        "caption": "Storefront facade components and verification views",
+        "headings": [
+          "Component",
+          "Base Material & Finish",
+          "Key Control Focus",
+          "Verification Method"
+        ],
+        "rows": [
+          [
+            "Subframe and opening rails",
+            "Steel framing with finished metal trims",
+            "Alignment of heads, jambs and opening lines",
+            "Upright workshop dry fit"
+          ],
+          [
+            "Fluted backing",
+            "Folded silver metal",
+            "Spacing and direction of repeated folds",
+            "Bench layout and assembled test bay"
+          ],
+          [
+            "Optical facing",
+            "Clear prismatic elements with metal perimeter trims",
+            "Continuity and fit at edges and returns",
+            "Two-sided corner mock-up"
+          ],
+          [
+            "Integrated light sources",
+            "LED lighting behind the facing",
+            "Light distribution across flutes and around the perimeter",
+            "White and warm light comparisons"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "engineering-challenges",
+      "title": "Keep the facade pattern continuous across changing conditions",
+      "navLabel": "Engineering Challenges",
+      "paragraphs": [
+        "The facade is read by reflected and transmitted light. Regular fold spacing matters across the face, but breaks in the rhythm become most visible where two modules meet an opening or turn a corner."
+      ],
+      "points": [
+        {
+          "title": "Repeated fold geometry",
+          "text": "Small changes in fold pitch show as irregular bands of light when neighboring pieces are seen together."
+        },
+        {
+          "title": "Optical layer and light placement",
+          "text": "Use a mock-up to review the distance between the light source, reflective backing and prismatic elements. The relationship changes how individual highlights combine across the face."
+        },
+        {
+          "title": "Perimeter and corner returns",
+          "text": "The steel frame, finished trim and facing must meet in the same piece of geometry so the illuminated pattern can reach the edges cleanly."
+        }
+      ]
+    },
+    {
+      "id": "forming-and-substructure",
+      "title": "Folded backing panels and steel frames for the openings",
+      "navLabel": "Fabrication & Substructure",
+      "paragraphs": [
+        "The fabrication photographs show silver profiles grouped by their folded section. On the bench, timber bars and clamps hold the repeated folds in line across a panel.",
+        "The steel frames were laid out in the workshop and stood upright to bring the window openings and head rails into alignment. Detail views show the bolted brackets and the transition between the frame and finished trim."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/backlit-fluted-metal-boutique-facade/01-folded-metal-profile-stack.webp",
+          "alt": "Stack of silver folded metal profiles with repeated V-shaped cross sections",
+          "caption": "Repeated folds form the backing rhythm behind the illuminated facing."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/backlit-fluted-metal-boutique-facade/02-fluted-panels-on-bench.webp",
+          "alt": "Fluted metal panels held in alignment with timber bars and clamps",
+          "caption": "Temporary bars and clamps hold the repeated profiles across the panel during bench assembly."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/backlit-fluted-metal-boutique-facade/03-flat-steel-subframe.webp",
+          "alt": "Steel facade subframe laid flat on workshop trestles",
+          "caption": "Long rails and transverse members establish the opening and panel lines before erection."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/backlit-fluted-metal-boutique-facade/04-upright-facade-subframe.webp",
+          "alt": "Upright facade steel subframe spanning several workshop openings",
+          "caption": "The upright steel frame shows the relationship between the fascia, structural uprights and window openings."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/backlit-fluted-metal-boutique-facade/05-bolted-head-and-jamb.webp",
+          "alt": "Workshop detail of a steel head, jamb and bolted brackets",
+          "caption": "The head and jamb detail shows where the facade trim meets the bolted steel substructure."
+        }
+      ]
+    },
+    {
+      "id": "workshop-trial-assembly",
+      "title": "Dry-fit the elevation and compare light in the same test bay",
+      "navLabel": "1:1 Trial Assembly",
+      "paragraphs": [
+        "The upright workshop trial brought the folded panels, opening frames and corner trims together at full height. Close-ups show how the trim ends and dark reveals meet at an inside corner.",
+        "In the lighting trial, the same backing geometry was photographed with white and warm light at the edges. A separate two-sided mock-up shows the clear faceted facing where it turns around a corner."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/backlit-fluted-metal-boutique-facade/06-full-height-workshop-fit.webp",
+          "alt": "Workshop workers fitting folded metal panels to an upright storefront mock-up",
+          "caption": "The full-height dry fit brings the fluted panels and framed openings together on an upright trial elevation."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/backlit-fluted-metal-boutique-facade/07-frame-return-joint.webp",
+          "alt": "Close view of two finished facade frame returns at a corner",
+          "caption": "The dry-fit view makes the meeting lines of the corner trims and dark reveals visible."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/backlit-fluted-metal-boutique-facade/08-white-edge-lighting-check.webp",
+          "alt": "Folded metal test bay with light running down the panel edges",
+          "caption": "White edge illumination shows the interaction between the light source and repeated folds before the final facing is fitted."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/backlit-fluted-metal-boutique-facade/09-warm-edge-lighting-check.webp",
+          "alt": "The same folded metal test bay with warm edge lighting",
+          "caption": "A warm-light configuration provides a direct comparison using the same panel geometry."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/backlit-fluted-metal-boutique-facade/10-prismatic-facing-detail.webp",
+          "alt": "Hand pointing to a clear faceted facing piece in a workshop frame",
+          "caption": "The clear faceted element sits in front of the reflective vertical layer to break up the light."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/backlit-fluted-metal-boutique-facade/11-prismatic-corner-mockup.webp",
+          "alt": "Workshop corner mock-up with clear prismatic facing on two sides",
+          "caption": "The two-sided mock-up shows how the facing modules and their metal trims meet around a return."
+        }
+      ]
+    },
+    {
+      "id": "installed-outcome",
+      "title": "Illuminated exterior corners and display surrounds",
+      "navLabel": "Installed Outcome",
+      "paragraphs": [
+        "The dusk exterior shows the vertical prismatic pattern around successive display windows and across two adjoining elevations. The darker steel-and-metal framing between the illuminated sections makes the rhythm of the bays legible at building scale.",
+        "A separate display edge close-up shows the detail at a dark jamb. These installed views give designers both the approach distance and a close reference for how a facing meets a surrounding profile."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/backlit-fluted-metal-boutique-facade/12-illuminated-exterior-corner.webp",
+          "alt": "Illuminated two-story retail facade with fluted sections seen around a corner",
+          "caption": "At dusk, the illuminated panels read around the corner as a continuous vertical rhythm between the darker framing lines."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/backlit-fluted-metal-boutique-facade/13-illuminated-window-surrounds.webp",
+          "alt": "Close exterior view of illuminated faceted window surrounds",
+          "caption": "The cropped exterior view shows the light returning around both openings and meeting the horizontal division between floors."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/backlit-fluted-metal-boutique-facade/14-installed-display-jamb.webp",
+          "alt": "Lit prismatic cladding at the jamb of an installed display window",
+          "caption": "The vertical joint separates the illuminated facing from the darker frame at the edge of the display opening."
+        }
+      ]
+    },
+    {
+      "id": "buyer-specification-checklist",
+      "title": "Scope an illuminated facade mock-up around a real junction",
+      "navLabel": "Specification Checklist",
+      "paragraphs": [
+        "Include a straight bay, one opening edge and a return in the design brief so the lighting review covers the junctions that visitors will see."
+      ],
+      "points": [
+        {
+          "title": "Drawings and services",
+          "text": "Submit CAD or PDF elevations with head, jamb and corner sections. Show allowable build-up, driver and cable locations, drainage requirements, and maintenance access."
+        },
+        {
+          "title": "Sample and viewing conditions",
+          "text": "Define the fold profile, facing finish, lighting target and intended viewing distance. Review the same mock-up under each intended lighting setting and ambient condition."
+        },
+        {
+          "title": "Access and movement",
+          "text": "Confirm module handling dimensions, the erection route, access to connections and movement joints at neighboring construction."
+        }
+      ]
+    }
+  ],
+  "conclusion": "Folded backing and prismatic facing can build a consistent vertical rhythm across a lit flagship elevation. The frame, light placement and facing edges need to be resolved as a single detail around doors, windows and corners. Send your CAD or PDF elevations, sections and lighting intent to define a workshop mock-up around the most visible junction.",
+  "relatedLinks": [
+    {
+      "href": "/case-studies/elliptical-curved-metal-entrance-pavilion",
+      "label": "Elliptical metal entrance pavilion trial assembly"
+    },
+    {
+      "href": "/blog/luxury-metalwork-requirements-designers-owners",
+      "label": "Metalwork requirements for designers and owners"
+    },
+    {
+      "href": "/blog/metalwork-welding-process-and-quality-control",
+      "label": "Architectural metalwork welding and quality control"
+    },
+    {
+      "href": "/blog/metalwork-assembly-fit-out-process-and-quality-control",
+      "label": "Metalwork assembly and fit-out"
+    }
+  ]
+}

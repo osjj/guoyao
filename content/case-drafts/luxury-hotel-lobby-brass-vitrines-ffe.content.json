@@ -1,0 +1,204 @@
+{
+  "introduction": "A luxury hotel lobby furniture package combines hammered brass display vitrines with green lacquered back-bar joinery, a marble-top service station and coordinating round tables. The photographs document workshop fabrication, dry-fit and lighting verification. They show the glazed displays before and during trial illumination, the assembled back bar, and the joints and finish interfaces of the individual pieces.",
+  "stats": [
+    {
+      "value": "Hammered brass",
+      "label": "Vitrine frame finish"
+    },
+    {
+      "value": "Powered trial lighting",
+      "label": "Display verification"
+    },
+    {
+      "value": "Dark green lacquer",
+      "label": "Back-bar joinery finish"
+    },
+    {
+      "value": "Workshop dry-fit",
+      "label": "Recorded assembly stage"
+    }
+  ],
+  "sections": [
+    {
+      "id": "project-scope",
+      "title": "Display Vitrines, Back-Bar Joinery and Coordinating Furniture",
+      "navLabel": "Project Scope",
+      "paragraphs": [
+        "The display units pair textured brass frames and glazing with a lit drawer. The lobby package also includes lacquered tall cabinets, a back bar with brass shelf framing, and separate marble-topped pieces. The case records the fabricated units and how their materials and interfaces were reviewed in the workshop."
+      ],
+      "table": {
+        "caption": "Lobby components and workshop verification",
+        "headings": [
+          "Component",
+          "Base Material & Finish",
+          "Key Control Focus",
+          "Verification Method"
+        ],
+        "rows": [
+          [
+            "Display vitrines",
+            "Hammered brass and clear glazing",
+            "Mitred frame, glazing recess and drawer alignment",
+            "Unlit and illuminated workshop photographs"
+          ],
+          [
+            "Back bar and tall cabinets",
+            "Green lacquer, brass trim and stone worktop",
+            "Shelf divisions, cabinet alignment and worktop cutouts",
+            "Dry-fit elevations in the workshop"
+          ],
+          [
+            "Service station",
+            "Marble top, brass-tone frame and woven metal screen",
+            "Stone seating, screen junction and door arrangement",
+            "Workshop view of the assembled station"
+          ],
+          [
+            "Round occasional tables",
+            "Marble tops, metal edging and painted turnings",
+            "Edge band and alignment with turned bases",
+            "Workshop view of the paired tables"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "engineering-challenges",
+      "title": "Aligning Glazing, Hammered Brass and Lighting",
+      "navLabel": "Engineering Challenges",
+      "paragraphs": [
+        "Under the display light, the mitred brass corners and the line around the glazing remain visible at close range. The glazed drawer also introduces an extra perimeter where the fixed frame has to align with a moving part."
+      ],
+      "points": [
+        {
+          "title": "Hammered finish at the mitre",
+          "text": "The change in plane at the corner creates a bright edge. Reviewing the joint close up shows whether the hammered surface and the visible frame meet cleanly on both faces."
+        },
+        {
+          "title": "Lit drawer and glazing",
+          "text": "The open and closed drawer views make the fit between the glazed frame and lit display surface legible. Both positions matter when reviewing the appearance."
+        },
+        {
+          "title": "Back-bar material junctions",
+          "text": "Brass framing crosses lacquered faces, shelving and stone worktop surfaces. The assembled view exposes where these lines meet and where cutouts interrupt the worktop."
+        }
+      ]
+    },
+    {
+      "id": "forming-and-substructure",
+      "title": "Vitrine Frames and Curved-End Cabinetry",
+      "navLabel": "Fabrication & Substructure",
+      "paragraphs": [
+        "The unlit workshop view makes the vitrine’s top frame, glazed sides and supporting legs easy to read. On the curved-end cabinet, the shelf ends and plinth share a rounded line, while the metal uprights continue past each shelf to form the taller assembly."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/luxury-hotel-lobby-brass-vitrines-ffe/01-unlit-vitrine-frame.webp",
+          "alt": "Unlit hammered-brass display vitrine photographed in the workshop",
+          "caption": "The unlit vitrine shows the relation of the tabletop display frame to its legs and the glazed end panel before a lighting check."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/luxury-hotel-lobby-brass-vitrines-ffe/02-rounded-display-cabinet.webp",
+          "alt": "Curved-end lacquered display cabinet with brass trim and vertical supports",
+          "caption": "The workshop view shows how the shelf ends and plinth turn around the same rounded profile while the metal uprights continue vertically."
+        }
+      ]
+    },
+    {
+      "id": "workshop-trial-assembly",
+      "title": "Workshop Dry-Fit and Powered Display Check",
+      "navLabel": "1:1 Trial Assembly",
+      "paragraphs": [
+        "The full-size vitrine appears with the drawer open and closed under warm trial lighting. The opening view reveals the illuminated display surface and the surrounding frame. The assembled back bar was also photographed as a complete workshop elevation with its worktop cutouts and shelf frame visible."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/luxury-hotel-lobby-brass-vitrines-ffe/03-illuminated-brass-vitrine.webp",
+          "alt": "Hammered-brass and glass display vitrine during a workshop lighting check",
+          "caption": "A front view of the powered vitrine shows warm light beneath the glazing and the textured brass frame around the display opening."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/luxury-hotel-lobby-brass-vitrines-ffe/04-open-lit-display-drawer.webp",
+          "alt": "Extended display drawer lit from inside a hammered-brass vitrine",
+          "caption": "The open drawer makes its illuminated display surface and its interface with the surrounding brass frame visible."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/luxury-hotel-lobby-brass-vitrines-ffe/05-assembled-back-bar.webp",
+          "alt": "Dark green lacquered back-bar assembly with brass shelving and a stone worktop",
+          "caption": "The workshop dry-fit shows the full-width back bar, including the relationship between the shelf framing, the central drawers and the worktop cutouts."
+        }
+      ]
+    },
+    {
+      "id": "finish-and-detail-verification",
+      "title": "Surface Finishes and Furniture Interfaces",
+      "navLabel": "Finish & Detail Verification",
+      "paragraphs": [
+        "Detail photographs record the texture across the mitred brass corner, the green lacquer meeting brass cabinet dividers, and the service station’s stone top and woven screen. The paired occasional tables show the relationship between the marble tops, their thin metal edges and the contrasting finishes of the turned bases."
+      ],
+      "gallery": [
+        {
+          "url": "https://media.guoyaometal.com/case-studies/luxury-hotel-lobby-brass-vitrines-ffe/06-hammered-brass-mitre.webp",
+          "alt": "Mitred corner of a hammered-brass frame surrounding the glazing of a display case",
+          "caption": "The close-up shows the 45-degree meeting of the brass faces at the glazed cabinet corner and the texture on either side of the joint."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/luxury-hotel-lobby-brass-vitrines-ffe/07-lacquered-cabinet-front.webp",
+          "alt": "Front view of a dark green lacquered cabinet with brass-framed compartments",
+          "caption": "The straight-on workshop view reveals the alignment of the brass dividers with the green cabinet and its horizontal shelves."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/luxury-hotel-lobby-brass-vitrines-ffe/08-marble-top-service-station.webp",
+          "alt": "Marble-top service station with brass framing, a metal screen and waste-sorting doors",
+          "caption": "The service station brings a marble top, a woven metal screen and a two-door waste-sorting cabinet into the same brass framing system."
+        },
+        {
+          "url": "https://media.guoyaometal.com/case-studies/luxury-hotel-lobby-brass-vitrines-ffe/09-round-marble-topped-tables.webp",
+          "alt": "Round marble-topped tables with turned two-tone bases and brass-colored trim",
+          "caption": "A workshop view shows the circular tops, metal edge bands and two-tone turned bases of the coordinating tables."
+        }
+      ]
+    },
+    {
+      "id": "buyer-specification-checklist",
+      "title": "What to Specify for Hotel Vitrines and Lobby Joinery",
+      "navLabel": "Specification Checklist",
+      "paragraphs": [
+        "The furniture schedule should show how the display, joinery and stone packages meet. Provide handling and building-services requirements alongside the finish details."
+      ],
+      "points": [
+        {
+          "title": "Drawings and schedules",
+          "text": "Send CAD or PDF drawings identifying display clearances, drawer travel, glazing, joinery, worktop cutouts and the stone-to-metal interfaces."
+        },
+        {
+          "title": "Samples and powered views",
+          "text": "Review a mitred hammered-brass sample, a lacquer sample and the specified stone together. Confirm the intended lighting tone and appearance with the drawer open and closed."
+        },
+        {
+          "title": "Access and servicing",
+          "text": "Show service access for lighting, outlet and driver locations, the site delivery route and any piece-size limits for glazed units or stone tops."
+        }
+      ]
+    }
+  ],
+  "conclusion": "The workshop record shows the vitrine’s lighting and moving parts alongside the finish details of the assembled back bar and furniture. For a luxury hospitality package, submit CAD or PDF elevations, the material and equipment schedules, and the intended lighting so the interfaces and sample checks can be scoped from the same information.",
+  "relatedLinks": [
+    {
+      "href": "/case-studies/backlit-fluted-metal-boutique-facade",
+      "label": "Backlit metal storefront and integrated lighting"
+    },
+    {
+      "href": "/blog/luxury-metalwork-requirements-designers-owners",
+      "label": "Architectural metalwork requirements for designers and owners"
+    },
+    {
+      "href": "/blog/metalwork-raw-material-screening-process-and-quality-control",
+      "label": "Metalwork material selection and quality control"
+    },
+    {
+      "href": "/blog/metalwork-assembly-fit-out-process-and-quality-control",
+      "label": "Metalwork assembly and fit-out"
+    }
+  ]
+}

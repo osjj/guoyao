@@ -10,7 +10,7 @@ export const REDESIGN_NAV = [
 export const REDESIGN_IMAGES = {
   // Escalator & Architectural Cladding (S11 / S12)
   escalatorAtriumWide: {
-    src: "/images/redesign/escalator-atrium-wide.webp",
+    src: "/images/redesign/stage2-projects/escalator-atrium.webp",
     alt: "Symmetrical gold-toned ribbed metal cladding framing twin escalators in a marble atrium",
     stage: "Installed view",
     category: "Cladding",
@@ -28,8 +28,8 @@ export const REDESIGN_IMAGES = {
     category: "Cladding",
   },
   escalatorPodWorkshop: {
-    src: "/images/redesign/escalator-pod-workshop.webp",
-    alt: "Compound-curved ribbed champagne metal cladding assembly supported on steel jigs in the workshop",
+    src: "/images/redesign/stage2-projects/escalator-end-pod.webp",
+    alt: "Champagne-bronze fluted escalator end pod supported at full scale in the workshop",
     stage: "Workshop pre-assembly",
     category: "Cladding",
   },
@@ -121,17 +121,29 @@ export const REDESIGN_IMAGES = {
     stage: "Installed view",
     category: "Facades",
   },
+  backlitFacadeTwilight: {
+    src: "/images/redesign/stage2-projects/backlit-facade-twilight.webp",
+    alt: "Illuminated fluted metal facade wrapping around a retail corner at dusk",
+    stage: "Installed view",
+    category: "Facades",
+  },
+  backlitFacadeWindowDetail: {
+    src: "/images/redesign/stage2-projects/backlit-facade-window-detail.webp",
+    alt: "Backlit silver facade panels framing the glazed display openings",
+    stage: "Installed detail",
+    category: "Facades",
+  },
 
   // Staircases & Balustrades (S08 / S09 / S13)
   stairSpiralOverhead: {
-    src: "/images/redesign/stair-spiral-overhead.webp",
+    src: "/images/redesign/stage2-projects/stair-overhead.webp",
     alt: "Overhead spiral perspective of a curved metal balustrade and sweeping dark handrail during site installation",
     stage: "Site installation",
     category: "Stairs",
   },
   stairElevation: {
-    src: "/images/redesign/stair-elevation.webp",
-    alt: "Sweeping curved staircase with vertical metallic balusters and dark bronze handrail",
+    src: "/images/redesign/stage2-projects/stair-elevation.webp",
+    alt: "Sweeping curved staircase with mirror-finished balusters and a dark handrail",
     stage: "Site installation",
     category: "Stairs",
   },
@@ -190,6 +202,18 @@ export const REDESIGN_IMAGES = {
   lancomeJointDetail: {
     src: "/images/redesign/lancome-joint-detail.webp",
     alt: "Close-up of concealed structural connections and mitered nodes on a curved entrance frame",
+    stage: "Connection detail",
+    category: "Workshop",
+  },
+  pavilionTrialAssembly: {
+    src: "/images/redesign/stage2-projects/pavilion-trial-assembly.webp",
+    alt: "Elliptical metal entrance pavilion with paired posts and an overhead ring during workshop trial assembly",
+    stage: "Workshop pre-assembly",
+    category: "Facades",
+  },
+  pavilionFasciaJoint: {
+    src: "/images/redesign/stage2-projects/pavilion-fascia-joint.webp",
+    alt: "Return joint between adjoining metal fascia faces on the retail pavilion",
     stage: "Connection detail",
     category: "Workshop",
   },
@@ -270,37 +294,37 @@ export const DISCIPLINES = [
 
 export const FEATURED_CASE_STUDIES = [
   {
-    slug: "/case-studies/tiffany-boutique-backlit-facade",
+    slug: "/case-studies/curved-fluted-escalator-atrium-cladding",
     index: "01",
-    category: "Boutique Facade",
-    title: "Reflective & Backlit Storefront Envelope",
+    category: "Curved Cladding",
+    title: "Double-Curved Fluted Escalator Cladding",
     summary:
-      "High-precision vertical facade modules balancing crisp daylight geometry with illuminated evening depth across front and corner elevations.",
+      "Champagne-bronze fluted casings photographed during full-scale fit-up and after installation across a multi-level atrium.",
     stage: "Installed view",
-    leadImage: REDESIGN_IMAGES.tiffanyFrontPanoramic,
-    detailImage: REDESIGN_IMAGES.tiffanyCornerPanoramic,
+    leadImage: REDESIGN_IMAGES.escalatorAtriumWide,
+    detailImage: REDESIGN_IMAGES.escalatorPodWorkshop,
   },
   {
-    slug: "/case-studies/murray-road-column-cladding",
+    slug: "/case-studies/helical-metal-feature-staircase",
     index: "02",
-    category: "Sculptural Cladding",
-    title: "Double-Curved Satin Stainless Column",
+    category: "Stairs & Balustrades",
+    title: "Helical Metal Feature Staircase",
     summary:
-      "Full-scale vertical pre-assembly resolving compound curvature, internal structural rigging, and crisp hairline panel seams.",
-    stage: "Workshop pre-assembly",
-    leadImage: REDESIGN_IMAGES.murrayColumnFull,
-    detailImage: REDESIGN_IMAGES.murrayColumnSeam,
+      "Curved structural steel, mirror-finished balusters and a continuous dark handrail documented through site fit-out.",
+    stage: "Near-completion site view",
+    leadImage: REDESIGN_IMAGES.stairSpiralOverhead,
+    detailImage: REDESIGN_IMAGES.stairElevation,
   },
   {
-    slug: "/case-studies/lancome-boutique-entrance-pavilion",
+    slug: "/case-studies/backlit-fluted-metal-boutique-facade",
     index: "03",
-    category: "Entrance Architecture",
-    title: "Curved Entrance Pavilion Framework",
+    category: "Storefronts & Facades",
+    title: "Backlit Fluted Metal Storefront",
     summary:
-      "Cylindrical architectural metal portal pre-erected in our Guangzhou workshop to verify every structural node, curvature radius, and opening edge.",
-    stage: "Workshop pre-assembly",
-    leadImage: REDESIGN_IMAGES.lancomeFrameFull,
-    detailImage: REDESIGN_IMAGES.lancomeJointDetail,
+      "Folded silver profiles and prismatic facing wrap a retail corner, with a workshop fit-up and lighting checks alongside installed views.",
+    stage: "Installed view",
+    leadImage: REDESIGN_IMAGES.backlitFacadeTwilight,
+    detailImage: REDESIGN_IMAGES.backlitFacadeWindowDetail,
   },
 ] as const;
 
@@ -398,12 +422,15 @@ export const PROCESS_STEPS = [
 ] as const;
 
 export const FEATURED_ARTICLE = {
-  href: "/blog/metalwork-polishing-brushing-process-and-quality-control",
+  href: "/blog/metalwork-welding-process-and-quality-control",
   kicker: "Technical Journal",
-  title: "Metal Polishing and Brushing for Architectural Projects",
+  title: "High-End Metalwork Welding & Quality Control",
   summary:
-    "How to approve stainless steel finish samples, specify mirror polishing or directional brushing, and inspect finished panels before site installation.",
-  image: REDESIGN_IMAGES.murrayColumnSeam,
+    "How to specify visible welds, match base metals and fillers, and check distortion and finishing on architectural metalwork.",
+  image: {
+    src: "https://media.guoyaometal.com/blog/metalwork-welding-process-and-quality-control/hero-cc4cc95d6eaf9f92.webp",
+    alt: "Stainless steel sheet-metal workshop with welding in progress",
+  },
 } as const;
 
 export const BRIEF_CHECKLIST = [

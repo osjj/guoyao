@@ -4,26 +4,44 @@ export type EditorialSeo = { title: string; description: string };
 
 type CuratedEditorialSeo = EditorialSeo & { sourceTitle: string; sourceExcerpt: string };
 
-// Editorial summaries of the seven published stories reviewed on 26 October 2026.
-// Source checks preserve later CMS edits instead of silently applying stale copy.
+// Curated summaries for case studies and reviewed blog posts.
+// Source checks preserve later CMS edits.
 const curatedEditorialSeo: Record<string, CuratedEditorialSeo> = {
-  "case-studies/tiffany-boutique-backlit-facade": {
-    "sourceTitle": "Tiffany & Co. Boutique Backlit Facade — From Inquiry to Acceptance",
-    "sourceExcerpt": "How Guoyao Metalwork delivered a backlit fluted silver facade and illuminated TIFFANY & CO. lettering for luxury boutiques in China — 18 documented stages from the first inquiry through fabrication, mock-up, export packing and site installation to final acceptance and aftercare.",
-    "title": "Tiffany & Co. Backlit Metal Facade",
-    "description": "Explore a Tiffany boutique backlit metal facade, from inquiry and mock-up through fabrication, export packing, installation and final acceptance."
+  "case-studies/curved-fluted-escalator-atrium-cladding": {
+    "sourceTitle": "Double-Curved Fluted Metal Escalator Cladding for a Multi-Level Atrium",
+    "sourceExcerpt": "Champagne-bronze fluted metal cladding wraps the escalator undersides and rounded end pods of a multi-level retail atrium. Workshop and site photographs show the bare panels, the full-scale fit-up and the installed casings.",
+    "title": "Double-Curved Fluted Metal Escalator Cladding",
+    "description": "Explore double-curved fluted champagne-bronze escalator cladding fabricated and 1:1 trial-assembled in our workshop before multi-level atrium installation."
+  },
+  "case-studies/helical-metal-feature-staircase": {
+    "sourceTitle": "Sculptural Helical Metal Staircase & Curved Balustrade Fabrication",
+    "sourceExcerpt": "A commercial feature stair documented from curved steel erection to near-complete fit-out, with dark profiled handrails, mirror-finished stainless steel balusters and black stone treads.",
+    "title": "Helical Metal Feature Staircase & Balustrade",
+    "description": "See a helical metal staircase progress from curved steel erection to mirror-finished stainless steel balusters, dark curved handrails and stone treads."
+  },
+  "case-studies/luxury-hotel-lobby-brass-vitrines-ffe": {
+    "sourceTitle": "Bespoke Hammered Brass Display Vitrines & Hotel Lobby FF&E Metalwork",
+    "sourceExcerpt": "Workshop fabrication, dry-fit and lighting checks for hammered brass display vitrines, lacquered back-bar joinery and coordinating marble-topped lobby furniture.",
+    "title": "Hotel Lobby Brass Display Vitrines & FF&E",
+    "description": "Hammered brass display vitrines, marble-top consoles and lacquered back-bar joinery, documented through workshop dry-fit and lighting checks."
   },
   "case-studies/murray-road-column-cladding": {
-    "sourceTitle": "From Inquiry to Acceptance: The Murray Road Column Cladding Project, Hong Kong, China",
-    "sourceExcerpt": "A complete case study of a sculptural column cladding project at Murray Road, Central, Hong Kong, China: sixteen stages from the first inquiry, site survey, shop drawings and sample approval through curve forming, full-scale factory trial assembly, seam treatment, export packing, site installation to client acceptance and aftercare — documented with 42 project photographs and a factory video.",
-    "title": "Murray Road Sculptural Column Cladding",
-    "description": "Follow the Murray Road column cladding project in Hong Kong, from site survey and curve forming to factory trial assembly, installation and acceptance."
+    "sourceTitle": "Double-Curved Satin Stainless Steel Column Cladding — Workshop 1:1 Trial Assembly",
+    "sourceExcerpt": "A full-height workshop trial for double-curved satin stainless steel column cladding in Central Hong Kong, showing formed skins, steel ring frames, inspection lighting and narrow seams.",
+    "title": "Double-Curved Stainless Steel Column Cladding",
+    "description": "See the 1:1 factory trial for double-curved satin stainless steel column cladding in Central Hong Kong, from steel ring frames to hairline seams."
   },
-  "case-studies/lancome-boutique-entrance-pavilion": {
-    "sourceTitle": "Lancôme Style Boutique Entrance Pavilion — Elliptical Metal Portal, From Inquiry to Acceptance",
-    "sourceExcerpt": "How a Chinese metal factory fabricated an elliptical Lancôme style boutique entrance pavilion: BIM engineering, ring rolling, TIG welding, PVDF coating, LED fascia integration, factory pre-assembly with 21 real workshop photos, export packing and mall installation.",
-    "title": "Lancôme Style Elliptical Entrance Pavilion",
-    "description": "Explore an elliptical Lancôme style boutique entrance pavilion, covering BIM engineering, metal forming, welding, coating and factory pre-assembly."
+  "case-studies/backlit-fluted-metal-boutique-facade": {
+    "sourceTitle": "Backlit Fluted Metal Storefront Facade & Integrated Lighting System",
+    "sourceExcerpt": "Folded silver metal, a steel subframe, prismatic facing and integrated lighting form an illuminated retail facade documented through workshop trials and installed views.",
+    "title": "Backlit Fluted Metal Boutique Storefront Facade",
+    "description": "Explore a backlit fluted retail facade, from steel subframes and LED lighting trials to the installed prismatic facing and illuminated window surrounds."
+  },
+  "case-studies/elliptical-curved-metal-entrance-pavilion": {
+    "sourceTitle": "Elliptical Curved Metal Entrance Pavilion — 1:1 Factory Pre-Assembly",
+    "sourceExcerpt": "A full-size workshop dry fit of a curved metal retail pavilion, documenting the oval ring beams, steel ties, paired uprights, fascia joints and curved base.",
+    "title": "Elliptical Curved Metal Retail Entrance Pavilion",
+    "description": "A 1:1 workshop pre-assembly of an elliptical metal retail pavilion, showing rolled oval ring beams, post connections and curved fascia alignment."
   },
   "blog/luxury-metalwork-requirements-designers-owners": {
     "sourceTitle": "What Luxury Projects Really Demand From Metalwork — Through the Eyes of the Designer and the Owner",
