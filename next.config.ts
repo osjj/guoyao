@@ -16,6 +16,16 @@ const nextConfig: NextConfig = {
         destination: "/case-studies/elliptical-curved-metal-entrance-pavilion",
         permanent: true,
       },
+      {
+        source: "/case-studies/fluted-escalator-cladding-uk-office-tower",
+        destination: "/case-studies/curved-fluted-escalator-atrium-cladding",
+        permanent: true,
+      },
+      {
+        source: "/case-studies/victorias-secret-flagship-helical-staircase",
+        destination: "/case-studies/helical-metal-feature-staircase",
+        permanent: true,
+      },
     ];
   },
   async headers() {
